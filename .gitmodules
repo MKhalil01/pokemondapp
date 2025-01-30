@@ -1,0 +1,3 @@
+[submodule "pokedapp/lib/forge-std"]
+	path = pokedapp/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
