@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.0;
 
-import "openzeppelin-contracts/contracts/token/ERC721/IERC721.sol";
-import "openzeppelin-contracts/contracts/utils/ReentrancyGuard.sol";
-// import "openzeppelin-contracts/contracts/access/Ownable.sol";
-import "openzeppelin-contracts/contracts/utils/math/Math.sol";
+import {IERC721} from "openzeppelin-contracts/contracts/token/ERC721/IERC721.sol";
+import {ReentrancyGuard} from "openzeppelin-contracts/contracts/utils/ReentrancyGuard.sol";
+// import {Ownable} from "openzeppelin-contracts/contracts/access/Ownable.sol";
+import {Math} from "openzeppelin-contracts/contracts/utils/math/Math.sol";
 
 // contract PokemonTrading is Ownable, ReentrancyGuard {
 contract PokemonTrading is ReentrancyGuard {
