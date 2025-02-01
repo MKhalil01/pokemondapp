@@ -32,6 +32,7 @@ contract PokemonTrading is ReentrancyGuard, Ownable {
         uint256 highestBid;
         address highestBidder;
         bool active;
+        uint256 endTime;
     }
 
     mapping(uint256 => Sale) public sales;
@@ -74,7 +75,8 @@ contract PokemonTrading is ReentrancyGuard, Ownable {
             price: price,
             highestBid: 0,
             highestBidder: address(0),
-            active: true
+            active: true,
+            endTime: 0
         });
 
         emit SaleCreated(
@@ -103,7 +105,8 @@ contract PokemonTrading is ReentrancyGuard, Ownable {
             price: startingPrice,
             highestBid: 0,
             highestBidder: address(0),
-            active: true
+            active: true,
+            endTime: block.timestamp + 24 hours // Auctions end after 24 hours
         });
 
         emit SaleCreated(
@@ -141,6 +144,7 @@ contract PokemonTrading is ReentrancyGuard, Ownable {
     ) external payable nonReentrant saleExists(saleId) {
         Sale storage sale = sales[saleId];
         require(sale.saleType == SaleType.Auction, "Not an auction sale");
+        require(block.timestamp < sale.endTime, "Auction has ended");
         require(msg.value > sale.highestBid, "Bid too low");
         require(sale.active, "Sale not active");
 
@@ -160,6 +164,7 @@ contract PokemonTrading is ReentrancyGuard, Ownable {
         Sale storage sale = sales[saleId];
         require(sale.saleType == SaleType.Auction, "Not an auction sale");
         require(sale.active, "Sale not active");
+        require(block.timestamp < sale.endTime, "Auction has ended");
 
         sale.active = false;
         IERC721(sale.nftContract).transferFrom(
@@ -195,11 +200,26 @@ contract PokemonTrading is ReentrancyGuard, Ownable {
         emit SaleCancelled(saleId);
     }
 
-    function emergencyStop() external onlyOwner {
+    function emergencyStop() external onlyOwner nonReentrant {
+        // Refund highest bids for active auctions
+        for (uint256 i = 0; i < saleCount; i++) {
+            if (
+                sales[i].active &&
+                sales[i].saleType == SaleType.Auction &&
+                sales[i].highestBidder != address(0)
+            ) {
+                payable(sales[i].highestBidder).transfer(sales[i].highestBid);
+                sales[i].highestBid = 0;
+                sales[i].highestBidder = address(0);
+            }
+        }
+
+        // Transfer any remaining funds to the owner
+        payable(owner()).transfer(address(this).balance);
+        // Destroy the contract
         selfdestruct(payable(owner()));
     }
 
-    // Add a function to get all active sales
     function getActiveSales() external view returns (Sale[] memory) {
         uint256 activeCount = 0;
         for (uint256 i = 0; i < saleCount; i++) {
@@ -220,10 +240,31 @@ contract PokemonTrading is ReentrancyGuard, Ownable {
         return activeSales;
     }
 
-    // Add a function to get details of a specific sale
     function getSaleDetails(
         uint256 saleId
     ) external view saleExists(saleId) returns (Sale memory) {
         return sales[saleId];
+    }
+
+    function finalizeExpiredAuction(
+        uint256 saleId
+    ) external nonReentrant saleExists(saleId) {
+        Sale storage sale = sales[saleId];
+        require(sale.saleType == SaleType.Auction, "Not an auction sale");
+        require(block.timestamp >= sale.endTime, "Auction has not ended yet");
+        require(sale.active, "Sale not active");
+
+        sale.active = false;
+        IERC721(sale.nftContract).transferFrom(
+            address(this),
+            sale.seller,
+            sale.tokenId
+        );
+
+        if (sale.highestBidder != address(0)) {
+            payable(sale.highestBidder).transfer(sale.highestBid);
+        }
+
+        emit SaleCancelled(saleId);
     }
 }
