@@ -2,4 +2,16 @@
 
 Mohammed + Preston pokemon dapp
 
-test
+
+Set up notes:
+
+Rust:
+https://rustup.rs/
+rustup update stable
+
+Foundry:
+curl -L https://foundry.paradigm.xyz | bash
+
+
+OpenZeppelin libraries:
+forge install Openzeppelin/openzeppelin-contracts

@@ -1,3 +1,6 @@
 [submodule "pokedapp/lib/forge-std"]
 	path = pokedapp/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "pokedapp/lib/openzeppelin-contracts"]
+	path = pokedapp/lib/openzeppelin-contracts
+	url = https://github.com/Openzeppelin/openzeppelin-contracts
