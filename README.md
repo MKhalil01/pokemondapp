@@ -2,7 +2,6 @@
 
 Mohammed + Preston pokemon dapp
 
-
 Set up notes:
 
 Rust:
@@ -12,6 +11,7 @@ rustup update stable
 Foundry:
 curl -L https://foundry.paradigm.xyz | bash
 
-
 OpenZeppelin libraries:
 forge install Openzeppelin/openzeppelin-contracts
+
+https://pokeapi.co/ - Using this to pull all the pokemon data
