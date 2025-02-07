@@ -3,11 +3,10 @@ pragma solidity ^0.8.0;
 
 import {IERC721} from "openzeppelin-contracts/contracts/token/ERC721/IERC721.sol";
 import {ReentrancyGuard} from "openzeppelin-contracts/contracts/utils/ReentrancyGuard.sol";
-// import {Ownable} from "openzeppelin-contracts/contracts/access/Ownable.sol";
+import {Ownable} from "openzeppelin-contracts/contracts/access/Ownable.sol";
 import {Math} from "openzeppelin-contracts/contracts/utils/math/Math.sol";
 
-// contract PokemonTrading is Ownable, ReentrancyGuard {
-contract PokemonTrading is ReentrancyGuard {
+contract PokemonTrading is Ownable, ReentrancyGuard {
     using Math for uint256;
 
     enum SaleType {
@@ -30,7 +29,7 @@ contract PokemonTrading is ReentrancyGuard {
     mapping(uint256 => Sale) public sales;
     uint256 public saleCount;
 
-    constructor() {
+    constructor() Ownable(msg.sender) {
         saleCount = 0;
     }
 
@@ -196,25 +195,23 @@ contract PokemonTrading is ReentrancyGuard {
         emit SaleCancelled(saleId);
     }
 
-    // function emergencyStop() external onlyOwner nonReentrant {
-    //     // Refund highest bids for active auctions
-    //     for (uint256 i = 0; i < saleCount; i++) {
-    //         if (
-    //             sales[i].active &&
-    //             sales[i].saleType == SaleType.Auction &&
-    //             sales[i].highestBidder != address(0)
-    //         ) {
-    //             payable(sales[i].highestBidder).transfer(sales[i].highestBid);
-    //             sales[i].highestBid = 0;
-    //             sales[i].highestBidder = address(0);
-    //         }
-    //     }
+    function emergencyStop() external onlyOwner nonReentrant {
+        // Refund highest bids for active auctions
+        for (uint256 i = 0; i < saleCount; i++) {
+            if (
+                sales[i].active &&
+                sales[i].saleType == SaleType.Auction &&
+                sales[i].highestBidder != address(0)
+            ) {
+                payable(sales[i].highestBidder).transfer(sales[i].highestBid);
+                sales[i].highestBid = 0;
+                sales[i].highestBidder = address(0);
+            }
+        }
 
-    //     // Transfer any remaining funds to the owner
-    //     payable(owner()).transfer(address(this).balance);
-    //     // Destroy the contract
-    //     selfdestruct(payable(owner()));
-    // }
+        // Transfer any remaining funds to the owner
+        payable(owner()).transfer(address(this).balance);
+    }
 
     function getActiveSales() external view returns (Sale[] memory) {
         uint256 activeCount = 0;
