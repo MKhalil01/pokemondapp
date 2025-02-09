@@ -1,0 +1,39 @@
+{
+    "name": "Roaring-moon",
+    "description": "An NFT representing the Pokemon Roaring-moon.",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1005.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 105
+        },
+        {
+            "trait_type": "Attack",
+            "value": 139
+        },
+        {
+            "trait_type": "Defense",
+            "value": 71
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 55
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 101
+        },
+        {
+            "trait_type": "Speed",
+            "value": 119
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 295
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Rare"
+        }
+    ]
+}

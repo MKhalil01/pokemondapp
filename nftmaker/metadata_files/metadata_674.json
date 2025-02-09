@@ -1,0 +1,39 @@
+{
+    "name": "Pancham",
+    "description": "An NFT representing the Pokemon Pancham.",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/674.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 67
+        },
+        {
+            "trait_type": "Attack",
+            "value": 82
+        },
+        {
+            "trait_type": "Defense",
+            "value": 62
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 46
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 48
+        },
+        {
+            "trait_type": "Speed",
+            "value": 43
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 70
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}
