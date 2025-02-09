@@ -7,11 +7,11 @@ Set up notes:
 
 Rust:
 https://rustup.rs/
-rustup update stable
+`rustup update stable`
 
 Foundry:
-curl -L https://foundry.paradigm.xyz | bash
-foundryup
+`curl -L https://foundry.paradigm.xyz | bash`
+`foundryup`
 
 OpenZeppelin libraries:
-forge install Openzeppelin/openzeppelin-contracts
+`forge install Openzeppelin/openzeppelin-contracts`
