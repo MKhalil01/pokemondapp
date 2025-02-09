@@ -1,0 +1,39 @@
+{
+    "name": "Iron-valiant",
+    "description": "An NFT representing the Pokemon Iron-valiant.",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1006.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 74
+        },
+        {
+            "trait_type": "Attack",
+            "value": 130
+        },
+        {
+            "trait_type": "Defense",
+            "value": 90
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 120
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 60
+        },
+        {
+            "trait_type": "Speed",
+            "value": 116
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 295
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Rare"
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "name": "Braixen",
+    "description": "An NFT representing the Pokemon Braixen.",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/654.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 59
+        },
+        {
+            "trait_type": "Attack",
+            "value": 59
+        },
+        {
+            "trait_type": "Defense",
+            "value": 58
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 90
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 70
+        },
+        {
+            "trait_type": "Speed",
+            "value": 73
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 143
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

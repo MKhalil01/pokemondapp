@@ -1,0 +1,39 @@
+{
+    "name": "Krookodile",
+    "description": "An NFT representing the Pokemon Krookodile.",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/553.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 95
+        },
+        {
+            "trait_type": "Attack",
+            "value": 117
+        },
+        {
+            "trait_type": "Defense",
+            "value": 80
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 65
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 70
+        },
+        {
+            "trait_type": "Speed",
+            "value": 92
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 260
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Rare"
+        }
+    ]
+}

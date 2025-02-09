@@ -1,0 +1,39 @@
+{
+    "name": "Woobat",
+    "description": "An NFT representing the Pokemon Woobat.",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/527.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 65
+        },
+        {
+            "trait_type": "Attack",
+            "value": 45
+        },
+        {
+            "trait_type": "Defense",
+            "value": 43
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 55
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 43
+        },
+        {
+            "trait_type": "Speed",
+            "value": 72
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 65
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

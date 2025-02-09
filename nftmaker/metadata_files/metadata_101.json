@@ -1,0 +1,39 @@
+{
+    "name": "Electrode",
+    "description": "An NFT representing the Pokemon Electrode.",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/101.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 60
+        },
+        {
+            "trait_type": "Attack",
+            "value": 50
+        },
+        {
+            "trait_type": "Defense",
+            "value": 70
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 80
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 80
+        },
+        {
+            "trait_type": "Speed",
+            "value": 150
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 172
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Uncommon"
+        }
+    ]
+}

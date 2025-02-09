@@ -1,0 +1,39 @@
+{
+    "name": "Iron-crown",
+    "description": "An NFT representing the Pokemon Iron-crown.",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1023.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 90
+        },
+        {
+            "trait_type": "Attack",
+            "value": 72
+        },
+        {
+            "trait_type": "Defense",
+            "value": 100
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 122
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 108
+        },
+        {
+            "trait_type": "Speed",
+            "value": 98
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 295
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Rare"
+        }
+    ]
+}

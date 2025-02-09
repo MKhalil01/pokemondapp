@@ -1,0 +1,39 @@
+{
+    "name": "Toedscruel",
+    "description": "An NFT representing the Pokemon Toedscruel.",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/949.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 80
+        },
+        {
+            "trait_type": "Attack",
+            "value": 70
+        },
+        {
+            "trait_type": "Defense",
+            "value": 65
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 80
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 120
+        },
+        {
+            "trait_type": "Speed",
+            "value": 100
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 180
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Uncommon"
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "name": "Wynaut",
+    "description": "An NFT representing the Pokemon Wynaut.",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/360.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 95
+        },
+        {
+            "trait_type": "Attack",
+            "value": 23
+        },
+        {
+            "trait_type": "Defense",
+            "value": 48
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 23
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 48
+        },
+        {
+            "trait_type": "Speed",
+            "value": 23
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 52
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

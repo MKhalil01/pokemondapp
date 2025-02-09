@@ -1,0 +1,39 @@
+{
+    "name": "Orbeetle",
+    "description": "An NFT representing the Pokemon Orbeetle.",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/826.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 60
+        },
+        {
+            "trait_type": "Attack",
+            "value": 45
+        },
+        {
+            "trait_type": "Defense",
+            "value": 110
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 80
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 120
+        },
+        {
+            "trait_type": "Speed",
+            "value": 90
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 253
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Rare"
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "name": "Wooper",
+    "description": "An NFT representing the Pokemon Wooper.",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/194.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 55
+        },
+        {
+            "trait_type": "Attack",
+            "value": 45
+        },
+        {
+            "trait_type": "Defense",
+            "value": 45
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 25
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 25
+        },
+        {
+            "trait_type": "Speed",
+            "value": 15
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 42
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

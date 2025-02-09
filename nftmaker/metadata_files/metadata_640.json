@@ -1,0 +1,39 @@
+{
+    "name": "Virizion",
+    "description": "An NFT representing the Pokemon Virizion.",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/640.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 91
+        },
+        {
+            "trait_type": "Attack",
+            "value": 90
+        },
+        {
+            "trait_type": "Defense",
+            "value": 72
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 90
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 129
+        },
+        {
+            "trait_type": "Speed",
+            "value": 108
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 290
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Rare"
+        }
+    ]
+}
