@@ -11,7 +11,7 @@ rustup update stable
 
 Foundry:
 curl -L https://foundry.paradigm.xyz | bash
-
+foundryup
 
 OpenZeppelin libraries:
 forge install Openzeppelin/openzeppelin-contracts
