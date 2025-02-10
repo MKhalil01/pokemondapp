@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.0;
 
-import {IERC721} from "openzeppelin-contracts/contracts/token/ERC721/IERC721.sol";
+import {ERC721A} from "ERC721A/contracts/ERC721A.sol";
 import {ReentrancyGuard} from "openzeppelin-contracts/contracts/utils/ReentrancyGuard.sol";
 import {Ownable} from "openzeppelin-contracts/contracts/access/Ownable.sol";
 import {Math} from "openzeppelin-contracts/contracts/utils/math/Math.sol";
@@ -60,7 +60,7 @@ contract PokemonTrading is Ownable, ReentrancyGuard {
         uint256 tokenId,
         uint256 price
     ) external nonReentrant {
-        IERC721(nftContract).transferFrom(msg.sender, address(this), tokenId);
+        ERC721A(nftContract).transferFrom(msg.sender, address(this), tokenId);
 
         sales[saleCount] = Sale({
             seller: msg.sender,
@@ -90,7 +90,7 @@ contract PokemonTrading is Ownable, ReentrancyGuard {
         uint256 tokenId,
         uint256 startingPrice
     ) external nonReentrant {
-        IERC721(nftContract).transferFrom(msg.sender, address(this), tokenId);
+        ERC721A(nftContract).transferFrom(msg.sender, address(this), tokenId);
 
         sales[saleCount] = Sale({
             seller: msg.sender,
@@ -124,7 +124,7 @@ contract PokemonTrading is Ownable, ReentrancyGuard {
         require(sale.active, "Sale not active");
 
         sale.active = false;
-        IERC721(sale.nftContract).transferFrom(
+        ERC721A(sale.nftContract).transferFrom(
             address(this),
             msg.sender,
             sale.tokenId
@@ -162,7 +162,7 @@ contract PokemonTrading is Ownable, ReentrancyGuard {
         require(block.timestamp < sale.endTime, "Auction has ended");
 
         sale.active = false;
-        IERC721(sale.nftContract).transferFrom(
+        ERC721A(sale.nftContract).transferFrom(
             address(this),
             sale.highestBidder,
             sale.tokenId
@@ -179,7 +179,7 @@ contract PokemonTrading is Ownable, ReentrancyGuard {
         require(sale.active, "Sale not active");
 
         sale.active = false;
-        IERC721(sale.nftContract).transferFrom(
+        ERC721A(sale.nftContract).transferFrom(
             address(this),
             sale.seller,
             sale.tokenId
@@ -248,7 +248,7 @@ contract PokemonTrading is Ownable, ReentrancyGuard {
         require(sale.active, "Sale not active");
 
         sale.active = false;
-        IERC721(sale.nftContract).transferFrom(
+        ERC721A(sale.nftContract).transferFrom(
             address(this),
             sale.seller,
             sale.tokenId
