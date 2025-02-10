@@ -23,3 +23,13 @@ forge install Openzeppelin/openzeppelin-contracts
 ```
 
 https://pokeapi.co/ - Using this to pull all the pokemon data
+
+Chainlink libraries:
+```sh
+forge install smartcontractkit/chainlink-brownie-contracts --no-commit
+```
+
+ERC721A:
+```sh
+forge install chiru-labs/ERC721A
+```
