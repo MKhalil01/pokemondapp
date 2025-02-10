@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.0;
 
-import {ERC721A} from "ERC721A/contracts/ERC721A.sol";
+import {ERC721A} from "lib/ERC721A/contracts/ERC721A.sol";
 import {ReentrancyGuard} from "openzeppelin-contracts/contracts/utils/ReentrancyGuard.sol";
 import {Ownable} from "openzeppelin-contracts/contracts/access/Ownable.sol";
 import {Math} from "openzeppelin-contracts/contracts/utils/math/Math.sol";
