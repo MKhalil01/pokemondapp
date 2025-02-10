@@ -2,16 +2,19 @@
 pragma solidity ^0.8.20;
 
 import {ERC721A} from "lib/ERC721A/contracts/ERC721A.sol";
+import {MockVRFCoordinator} from "./MockVRFCoordinator.sol";
 import {VRFCoordinatorV2Interface} from "chainlink-brownie-contracts/contracts/src/v0.8/vrf/interfaces/VRFCoordinatorV2Interface.sol";
 import {VRFConsumerBaseV2} from "chainlink-brownie-contracts/contracts/src/v0.8/vrf/VRFConsumerBaseV2.sol";
 import {Ownable} from "openzeppelin-contracts/contracts/access/Ownable.sol";
 import {Strings} from "openzeppelin-contracts/contracts/utils/Strings.sol";
 
 contract PokemonNFT is ERC721A, VRFConsumerBaseV2, Ownable {
+    // contract PokemonNFT is ERC721A, Ownable {
     using Strings for uint256;
 
     // Chainlink VRF Variables
     VRFCoordinatorV2Interface COORDINATOR;
+    MockVRFCoordinator mockVRFCoordinator;
     uint64 s_subscriptionId;
     bytes32 keyHash;
     uint32 callbackGasLimit = 2500000;
@@ -22,7 +25,7 @@ contract PokemonNFT is ERC721A, VRFConsumerBaseV2, Ownable {
     uint256 public constant MAX_SUPPLY = 10000;
     uint256 public mintPrice = 0.08 ether;
     string public baseURI;
-    bool public revealed = false;
+    // bool public revealed = false;
 
     // Rarity Variables
     uint256 public constant TOTAL_POKEMON = 1025;
@@ -93,7 +96,8 @@ contract PokemonNFT is ERC721A, VRFConsumerBaseV2, Ownable {
             uint256 randomNum = uint256(
                 keccak256(abi.encode(randomWords[0], i))
             );
-            uint256 pokemonId = selectPokemon(randomNum);
+            // uint256 pokemonId = selectPokemon(randomNum);
+            selectPokemon(randomNum);
 
             _mint(request.minter, 1);
             tokenIds[i] = _nextTokenId() - 1;
@@ -137,8 +141,18 @@ contract PokemonNFT is ERC721A, VRFConsumerBaseV2, Ownable {
             attempts++;
         }
 
-        // Fallback to common if no match found
-        return (randomNum % TOTAL_POKEMON) + 1;
+        // Fallback to linear search for a common Pokemon
+        uint256 startId = (randomNum % TOTAL_POKEMON) + 1;
+        for (uint256 i = 0; i < TOTAL_POKEMON; i++) {
+            uint256 pokemonId = ((startId + i - 1) % TOTAL_POKEMON) + 1;
+            if (pokemonRarity[pokemonId] == 1) {
+                // Common
+                return pokemonId;
+            }
+        }
+
+        // If no common Pokemon found (should not happen), return the startId
+        return startId;
     }
 
     // URI Functions
