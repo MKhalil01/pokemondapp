@@ -88,7 +88,8 @@ contract PokemonNFT is ERC721A, Ownable {
                 keccak256(abi.encode(_randomWords[0], i))
             );
             uint256 pokemonId = selectPokemon(randomNum);
-            uint256 tokenId = pokemonId * 10 + pokemonCopiesMinted[pokemonId];
+            uint256 tokenId = (pokemonId * 10) +
+                (pokemonCopiesMinted[pokemonId] - 1);
 
             _mintSpot(request.minter, tokenId);
             tokenIds[i] = tokenId;
@@ -98,11 +99,12 @@ contract PokemonNFT is ERC721A, Ownable {
         delete mintRequests[requestId];
     }
 
+    // Selects a Pokemon ID based on a random number and ensures the copy limit is not exceeded
     function selectPokemon(uint256 randomNum) internal returns (uint256) {
         uint256 pokemonId = (randomNum % TOTAL_POKEMON) + 1;
 
         // Check how many copies have been made
-        if (pokemonCopiesMinted[pokemonId] < 9) {
+        if (pokemonCopiesMinted[pokemonId] < 10) {
             pokemonCopiesMinted[pokemonId]++;
             return pokemonId;
         }
@@ -111,7 +113,7 @@ contract PokemonNFT is ERC721A, Ownable {
         uint256 startId = pokemonId;
         for (uint256 i = 0; i < TOTAL_POKEMON; i++) {
             pokemonId = ((startId + i - 1) % TOTAL_POKEMON) + 1;
-            if (pokemonCopiesMinted[pokemonId] < 9) {
+            if (pokemonCopiesMinted[pokemonId] < 10) {
                 pokemonCopiesMinted[pokemonId]++;
                 return pokemonId;
             }
