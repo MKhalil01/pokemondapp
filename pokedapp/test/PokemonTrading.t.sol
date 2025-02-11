@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.0;
 
-import {Test, console} from "forge-std/Test.sol";
+import {Test, console, Vm} from "forge-std/Test.sol";
 import {PokemonTrading} from "../src/PokemonTrading.sol";
 import {PokemonNFT} from "../src/PokemonNFT.sol";
 // import {MockVRFCoordinator} from "../src/MockVRFCoordinator.sol";
@@ -111,11 +111,12 @@ contract PokemonTradingTest is Test {
 
         // Request to mint one NFT
         vm.prank(addr1);
+        vm.recordLogs();
         pokemonNFT.requestMint{value: mintPrice}(1);
+        Vm.Log[] memory logs = vm.getRecordedLogs();
 
         // Get the token ID of the minted NFT
-        // TODO: fix below
-        uint256 tokenId = 6680;
+        uint256 tokenId = uint256(logs[1].topics[3]);
 
         // Approve the PokemonTrading contract to transfer the tokenId
         vm.prank(addr1);
@@ -126,7 +127,6 @@ contract PokemonTradingTest is Test {
         vm.prank(addr1);
         pokemonTrading.createFixedPriceSale(tokenId, salePrice);
 
-        // TODO: fix below
         uint256 saleId = 0;
 
         // Verify that the sale has been created
@@ -196,16 +196,17 @@ contract PokemonTradingTest is Test {
 
         // Request to mint one NFT
         vm.prank(addr1);
+        vm.recordLogs();
         pokemonNFT.requestMint{value: mintPrice}(1);
+        Vm.Log[] memory logs = vm.getRecordedLogs();
+
+        // Get the token ID of the minted NFT
+        uint256 tokenId = uint256(logs[1].topics[3]);
 
         // Get balances before the auction
         uint256 balanceAddr1BeforeAuction = addr1.balance;
         uint256 balanceAddr2BeforeAuction = addr2.balance;
         uint256 balanceAddr3BeforeAuction = addr3.balance;
-
-        // Get the token ID of the minted NFT
-        // TODO: fix below
-        uint256 tokenId = 6680;
 
         // Approve the PokemonTrading contract to transfer the tokenId
         vm.prank(addr1);
@@ -217,8 +218,7 @@ contract PokemonTradingTest is Test {
         pokemonTrading.createAuctionSale(tokenId, startingPrice);
 
         // Verify that the auction sale has been created
-        // TODO: fix saleId below?
-        uint256 saleId = 0; // Assuming this is the first sale created
+        uint256 saleId = 0;
         PokemonTrading.Sale memory sale = pokemonTrading.getSaleDetails(saleId);
 
         assertEq(sale.seller, addr1, "Seller should be addr1");
@@ -328,11 +328,12 @@ contract PokemonTradingTest is Test {
 
         // Request to mint one NFT
         vm.prank(addr1);
+        vm.recordLogs();
         pokemonNFT.requestMint{value: mintPrice}(1);
+        Vm.Log[] memory logs = vm.getRecordedLogs();
 
         // Get the token ID of the minted NFT
-        // TODO: fix below
-        uint256 tokenId = 6680;
+        uint256 tokenId = uint256(logs[1].topics[3]);
 
         // Approve the PokemonTrading contract to transfer the tokenId
         vm.prank(addr1);
@@ -344,8 +345,7 @@ contract PokemonTradingTest is Test {
         pokemonTrading.createFixedPriceSale(tokenId, salePrice);
 
         // Verify that the fixed price sale has been created
-        // TODO: fix below
-        uint256 fixedPriceSaleId = 0; // Assuming this is the first sale created
+        uint256 fixedPriceSaleId = 0;
         PokemonTrading.Sale memory fixedPriceSale = pokemonTrading
             .getSaleDetails(fixedPriceSaleId);
         assertTrue(fixedPriceSale.active, "Sale should be active");
@@ -390,8 +390,7 @@ contract PokemonTradingTest is Test {
         pokemonTrading.createAuctionSale(tokenId, startingPrice);
 
         // Verify that the auction sale has been created
-        // TODO: fix below
-        uint256 auctionSaleId = 1; // Assuming this is the second sale created
+        uint256 auctionSaleId = 1;
         PokemonTrading.Sale memory auctionSale = pokemonTrading.getSaleDetails(
             auctionSaleId
         );
@@ -433,11 +432,12 @@ contract PokemonTradingTest is Test {
 
         // Request to mint one NFT
         vm.prank(addr1);
+        vm.recordLogs();
         pokemonNFT.requestMint{value: mintPrice}(1);
+        Vm.Log[] memory logs = vm.getRecordedLogs();
 
         // Get the token ID of the minted NFT
-        // TODO: fix below
-        uint256 tokenId = 6680;
+        uint256 tokenId = uint256(logs[1].topics[3]);
 
         // Approve the PokemonTrading contract to transfer the tokenId
         vm.prank(addr1);
@@ -449,8 +449,7 @@ contract PokemonTradingTest is Test {
         pokemonTrading.createAuctionSale(tokenId, startingPrice);
 
         // Verify that the auction sale has been created
-        // TODO: fix below
-        uint256 saleId = 0; // Assuming this is the first sale created
+        uint256 saleId = 0;
         PokemonTrading.Sale memory sale = pokemonTrading.getSaleDetails(saleId);
 
         assertTrue(sale.active, "Sale should be active");
@@ -490,6 +489,81 @@ contract PokemonTradingTest is Test {
             balanceAddr2AfterFinalize,
             balanceAddr2BeforeFinalize + bidAmount1,
             "addr2 should receive a refund"
+        );
+    }
+
+    function testEmergencyStop() public {
+        uint256 mintPrice = pokemonNFT.mintPrice();
+
+        // Request to mint one NFT
+        vm.prank(addr1);
+        vm.recordLogs();
+        pokemonNFT.requestMint{value: mintPrice}(1);
+        Vm.Log[] memory logs = vm.getRecordedLogs();
+
+        // Get the token ID of the minted NFT
+        uint256 tokenId = uint256(logs[1].topics[3]);
+
+        // Approve the PokemonTrading contract to transfer the tokenId
+        vm.prank(addr1);
+        pokemonNFT.approve(address(pokemonTrading), tokenId);
+
+        // Create an auction sale for the minted NFT
+        uint256 startingPrice = 0.1 ether;
+        vm.prank(addr1);
+        pokemonTrading.createAuctionSale(tokenId, startingPrice);
+
+        // Verify that the auction sale has been created
+        uint256 saleId = 0;
+        PokemonTrading.Sale memory sale = pokemonTrading.getSaleDetails(saleId);
+
+        assertTrue(sale.active, "Sale should be active");
+
+        // Place a bid from addr2
+        uint256 bidAmount1 = 0.2 ether;
+        vm.prank(addr2);
+        pokemonTrading.bid{value: bidAmount1}(saleId);
+
+        // Get balances before emergency stop
+        uint256 balanceAddr1Before = addr1.balance;
+        uint256 balanceAddr2Before = addr2.balance;
+        uint256 contractBalanceBefore = address(pokemonTrading).balance;
+
+        // Transfer ownership to the test owner
+        pokemonTrading.transferOwnership(addr1);
+
+        // Call emergency stop
+        vm.prank(addr1);
+        pokemonTrading.emergencyStop();
+
+        // Verify that the auction sale is no longer active
+        sale = pokemonTrading.getSaleDetails(saleId);
+        assertFalse(
+            sale.active,
+            "Auction sale should be inactive after emergency stop"
+        );
+
+        // Verify that addr1 is the owner of the NFT again
+        assertEq(
+            pokemonNFT.ownerOf(tokenId),
+            addr1,
+            "addr1 should be the owner of the NFT after emergency stop"
+        );
+
+        // Verify that addr2 received a refund
+        uint256 balanceAddr2After = addr2.balance;
+        assertEq(
+            balanceAddr2After,
+            balanceAddr2Before + bidAmount1,
+            "addr2 should receive a refund"
+        );
+
+        // Verify that the contract balance is transferred to the owner, less the refund to addr2
+        uint256 balanceAddr1After = addr1.balance;
+        assertEq(
+            balanceAddr1After,
+            balanceAddr1Before + contractBalanceBefore - bidAmount1,
+            "addr1 should receive the contract balance"
         );
     }
 }
