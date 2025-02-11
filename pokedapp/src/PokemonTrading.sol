@@ -174,7 +174,7 @@ contract PokemonTrading is Ownable, ReentrancyGuard {
 
     function cancelSale(
         uint256 saleId
-    ) external nonReentrant onlySeller(saleId) saleExists(saleId) {
+    ) public onlySeller(saleId) saleExists(saleId) {
         Sale storage sale = sales[saleId];
         require(sale.active, "Sale not active");
 
@@ -191,50 +191,6 @@ contract PokemonTrading is Ownable, ReentrancyGuard {
         emit SaleCancelled(saleId);
     }
 
-    function emergencyStop() external onlyOwner nonReentrant {
-        // Refund highest bids for active auctions
-        for (uint256 i = 0; i < saleCount; i++) {
-            if (
-                sales[i].active &&
-                sales[i].saleType == SaleType.Auction &&
-                sales[i].highestBidder != address(0)
-            ) {
-                payable(sales[i].highestBidder).transfer(sales[i].highestBid);
-                sales[i].highestBid = 0;
-                sales[i].highestBidder = address(0);
-            }
-        }
-
-        // Transfer any remaining funds to the owner
-        payable(owner()).transfer(address(this).balance);
-    }
-
-    function getActiveSales() external view returns (Sale[] memory) {
-        uint256 activeCount = 0;
-        for (uint256 i = 0; i < saleCount; i++) {
-            if (sales[i].active) {
-                activeCount++;
-            }
-        }
-
-        Sale[] memory activeSales = new Sale[](activeCount);
-        uint256 index = 0;
-        for (uint256 i = 0; i < saleCount; i++) {
-            if (sales[i].active) {
-                activeSales[index] = sales[i];
-                index++;
-            }
-        }
-
-        return activeSales;
-    }
-
-    function getSaleDetails(
-        uint256 saleId
-    ) external view saleExists(saleId) returns (Sale memory) {
-        return sales[saleId];
-    }
-
     function finalizeExpiredAuction(
         uint256 saleId
     ) external nonReentrant saleExists(saleId) {
@@ -243,13 +199,44 @@ contract PokemonTrading is Ownable, ReentrancyGuard {
         require(block.timestamp >= sale.endTime, "Auction has not ended yet");
         require(sale.active, "Sale not active");
 
-        sale.active = false;
-        nftContract.transferFrom(address(this), sale.seller, sale.tokenId);
+        cancelSale(saleId);
+    }
 
-        if (sale.highestBidder != address(0)) {
-            payable(sale.highestBidder).transfer(sale.highestBid);
+    function emergencyStop() external onlyOwner nonReentrant {
+        // Refund highest bids for active auctions
+        for (uint256 i = 0; i < saleCount; i++) {
+            if (sales[i].active) {
+                cancelSale(i);
+            }
         }
 
-        emit SaleCancelled(saleId);
+        // Transfer any remaining funds to the owner
+        payable(owner()).transfer(address(this).balance);
     }
+
+    function getSaleDetails(
+        uint256 saleId
+    ) external view saleExists(saleId) returns (Sale memory) {
+        return sales[saleId];
+    }
+
+    // function getActiveSales() external view returns (Sale[] memory) {
+    //     uint256 activeCount = 0;
+    //     for (uint256 i = 0; i < saleCount; i++) {
+    //         if (sales[i].active) {
+    //             activeCount++;
+    //         }
+    //     }
+
+    //     Sale[] memory activeSales = new Sale[](activeCount);
+    //     uint256 index = 0;
+    //     for (uint256 i = 0; i < saleCount; i++) {
+    //         if (sales[i].active) {
+    //             activeSales[index] = sales[i];
+    //             index++;
+    //         }
+    //     }
+
+    //     return activeSales;
+    // }
 }
