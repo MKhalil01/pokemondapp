@@ -1,0 +1,36 @@
+<!-- 
+    Random pokeball svg i made with o1
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- pokeball.svg -->
+<svg width="200" height="200" viewBox="0 0 200 200"
+     xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Clip path to restrict drawing to the outer circle -->
+    <clipPath id="outerCircle">
+      <circle cx="100" cy="100" r="95" />
+    </clipPath>
+    <!-- Clip path for the top half -->
+    <clipPath id="topHalf">
+      <rect x="0" y="0" width="200" height="100" />
+    </clipPath>
+  </defs>
+
+  <!-- Group for the colored halves and the black band,
+       clipped so that everything stays within the outer circle -->
+  <g clip-path="url(#outerCircle)">
+    <!-- Red top half (drawn by clipping a full circle) -->
+    <g clip-path="url(#topHalf)">
+      <circle cx="100" cy="100" r="95" fill="red" />
+    </g>
+    <!-- Black horizontal band across the middle -->
+    <rect x="5" y="90" width="190" height="20" fill="black" />
+  </g>
+
+  <!-- Outer border of the Pokéball -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="black" stroke-width="10" />
+
+  <!-- Center button -->
+  <circle cx="100" cy="100" r="30" fill="white" stroke="black" stroke-width="10" />
+</svg>
