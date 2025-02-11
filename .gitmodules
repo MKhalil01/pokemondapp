@@ -3,7 +3,7 @@
 	url = https://github.com/foundry-rs/forge-std
 [submodule "pokedapp/lib/openzeppelin-contracts"]
 	path = pokedapp/lib/openzeppelin-contracts
-	url = https://github.com/Openzeppelin/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts
 [submodule "pokedapp/lib/chainlink-brownie-contracts"]
 	path = pokedapp/lib/chainlink-brownie-contracts
 	url = https://github.com/smartcontractkit/chainlink-brownie-contracts
