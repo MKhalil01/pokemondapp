@@ -14,7 +14,7 @@ contract PokemonTradingTest is Test {
 
     function setUp() public {
         // Fund the owner address with Ether
-        vm.deal(addr1, 10 ether);
+        vm.deal(addr1, 500 ether);
 
         // Deploy the contracts
         pokemonTrading = new PokemonTrading();
@@ -39,6 +39,7 @@ contract PokemonTradingTest is Test {
     function testMintOneNFT() public {
         uint256 mintPrice = pokemonNFT.mintPrice();
         uint256 initialSupply = pokemonNFT.totalSupply();
+        vm.prank(addr1);
 
         // Request to mint one NFT
         pokemonNFT.requestMint{value: mintPrice}(1);
@@ -54,6 +55,7 @@ contract PokemonTradingTest is Test {
     function testMintTwoNFTs() public {
         uint256 mintPrice = pokemonNFT.mintPrice();
         uint256 initialSupply = pokemonNFT.totalSupply();
+        vm.prank(addr1);
 
         // Request to mint two NFTs
         pokemonNFT.requestMint{value: 2 * mintPrice}(2);
@@ -69,6 +71,7 @@ contract PokemonTradingTest is Test {
     function testMintManyNFTs() public {
         uint256 mintPrice = pokemonNFT.mintPrice();
         uint256 initialSupply = pokemonNFT.totalSupply();
+        vm.prank(addr1);
 
         // Request to mint one thousand NFTs
         pokemonNFT.requestMint{value: 1000 * mintPrice}(1000);
@@ -79,5 +82,17 @@ contract PokemonTradingTest is Test {
             initialSupply + 1000,
             "Total supply should be 1000"
         );
+    }
+
+    function testWrongMints() public {
+        vm.prank(addr1);
+
+        // Request to mint more than the max supply
+        vm.expectRevert("Would exceed max supply");
+        pokemonNFT.requestMint(10251);
+
+        // Request to mint without enough payment
+        vm.expectRevert("Insufficient payment");
+        pokemonNFT.requestMint{value: 0}(1);
     }
 }

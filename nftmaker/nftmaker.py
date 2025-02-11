@@ -83,7 +83,7 @@ def main():
         # Pause to avoid hitting API rate limits
         time.sleep(0.1)
 
-    print("Finished generating metadata for all unique Pokemon.")
+    print("Finished generating metadata for all Pokemon.")
 
 if __name__ == "__main__":
     main()
