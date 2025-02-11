@@ -1,39 +1,40 @@
 {
-    "name": "Dusknoir",
-    "description": "An NFT representing the Pokemon Dusknoir.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/477.png",
+    "name": "Parasect",
+    "description": "An NFT representing the Pokemon Parasect.",
+    "copy_number": 7,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/47.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 45
+            "value": 60
         },
         {
             "trait_type": "Attack",
-            "value": 100
+            "value": 95
         },
         {
             "trait_type": "Defense",
-            "value": 135
+            "value": 80
         },
         {
             "trait_type": "Special-attack",
-            "value": 65
+            "value": 60
         },
         {
             "trait_type": "Special-defense",
-            "value": 135
+            "value": 80
         },
         {
             "trait_type": "Speed",
-            "value": 45
+            "value": 30
         },
         {
             "trait_type": "Base Experience",
-            "value": 263
+            "value": 142
         },
         {
             "trait_type": "Rarity",
-            "value": "Rare"
+            "value": "Common"
         }
     ]
 }

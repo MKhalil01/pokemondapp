@@ -1,39 +1,40 @@
 {
-    "name": "Claydol",
-    "description": "An NFT representing the Pokemon Claydol.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/344.png",
+    "name": "Nidoking",
+    "description": "An NFT representing the Pokemon Nidoking.",
+    "copy_number": 4,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/34.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 60
+            "value": 81
         },
         {
             "trait_type": "Attack",
-            "value": 70
+            "value": 102
         },
         {
             "trait_type": "Defense",
-            "value": 105
+            "value": 77
         },
         {
             "trait_type": "Special-attack",
-            "value": 70
+            "value": 85
         },
         {
             "trait_type": "Special-defense",
-            "value": 120
-        },
-        {
-            "trait_type": "Speed",
             "value": 75
         },
         {
+            "trait_type": "Speed",
+            "value": 85
+        },
+        {
             "trait_type": "Base Experience",
-            "value": 175
+            "value": 253
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Rare"
         }
     ]
 }

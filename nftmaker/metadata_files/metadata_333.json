@@ -1,35 +1,36 @@
 {
-    "name": "Swablu",
-    "description": "An NFT representing the Pokemon Swablu.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/333.png",
+    "name": "Nidorino",
+    "description": "An NFT representing the Pokemon Nidorino.",
+    "copy_number": 3,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/33.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 45
+            "value": 61
         },
         {
             "trait_type": "Attack",
-            "value": 40
+            "value": 72
         },
         {
             "trait_type": "Defense",
-            "value": 60
+            "value": 57
         },
         {
             "trait_type": "Special-attack",
-            "value": 40
+            "value": 55
         },
         {
             "trait_type": "Special-defense",
-            "value": 75
+            "value": 55
         },
         {
             "trait_type": "Speed",
-            "value": 50
+            "value": 65
         },
         {
             "trait_type": "Base Experience",
-            "value": 62
+            "value": 128
         },
         {
             "trait_type": "Rarity",

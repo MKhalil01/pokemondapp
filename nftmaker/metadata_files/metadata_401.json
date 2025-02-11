@@ -1,39 +1,40 @@
 {
-    "name": "Kricketot",
-    "description": "An NFT representing the Pokemon Kricketot.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/401.png",
+    "name": "Wigglytuff",
+    "description": "An NFT representing the Pokemon Wigglytuff.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/40.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 37
+            "value": 140
         },
         {
             "trait_type": "Attack",
-            "value": 25
+            "value": 70
         },
         {
             "trait_type": "Defense",
-            "value": 41
+            "value": 45
         },
         {
             "trait_type": "Special-attack",
-            "value": 25
+            "value": 85
         },
         {
             "trait_type": "Special-defense",
-            "value": 41
+            "value": 50
         },
         {
             "trait_type": "Speed",
-            "value": 25
+            "value": 45
         },
         {
             "trait_type": "Base Experience",
-            "value": 39
+            "value": 218
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Uncommon"
         }
     ]
 }

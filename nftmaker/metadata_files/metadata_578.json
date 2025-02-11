@@ -1,7 +1,8 @@
 {
-    "name": "Duosion",
-    "description": "An NFT representing the Pokemon Duosion.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/578.png",
+    "name": "Primeape",
+    "description": "An NFT representing the Pokemon Primeape.",
+    "copy_number": 8,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/57.png",
     "attributes": [
         {
             "trait_type": "Hp",
@@ -9,31 +10,31 @@
         },
         {
             "trait_type": "Attack",
-            "value": 40
+            "value": 105
         },
         {
             "trait_type": "Defense",
-            "value": 50
-        },
-        {
-            "trait_type": "Special-attack",
-            "value": 125
-        },
-        {
-            "trait_type": "Special-defense",
             "value": 60
         },
         {
+            "trait_type": "Special-attack",
+            "value": 60
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 70
+        },
+        {
             "trait_type": "Speed",
-            "value": 30
+            "value": 95
         },
         {
             "trait_type": "Base Experience",
-            "value": 130
+            "value": 159
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Uncommon"
         }
     ]
 }

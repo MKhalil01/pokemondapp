@@ -1,39 +1,40 @@
 {
-    "name": "Slowking",
-    "description": "An NFT representing the Pokemon Slowking.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/199.png",
+    "name": "Rattata",
+    "description": "An NFT representing the Pokemon Rattata.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/19.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 95
-        },
-        {
-            "trait_type": "Attack",
-            "value": 75
-        },
-        {
-            "trait_type": "Defense",
-            "value": 80
-        },
-        {
-            "trait_type": "Special-attack",
-            "value": 100
-        },
-        {
-            "trait_type": "Special-defense",
-            "value": 110
-        },
-        {
-            "trait_type": "Speed",
             "value": 30
         },
         {
+            "trait_type": "Attack",
+            "value": 56
+        },
+        {
+            "trait_type": "Defense",
+            "value": 35
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 25
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 35
+        },
+        {
+            "trait_type": "Speed",
+            "value": 72
+        },
+        {
             "trait_type": "Base Experience",
-            "value": 172
+            "value": 51
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

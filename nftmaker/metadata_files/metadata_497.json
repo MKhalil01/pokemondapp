@@ -1,39 +1,40 @@
 {
-    "name": "Serperior",
-    "description": "An NFT representing the Pokemon Serperior.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/497.png",
+    "name": "Venomoth",
+    "description": "An NFT representing the Pokemon Venomoth.",
+    "copy_number": 7,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/49.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 75
+            "value": 70
         },
         {
             "trait_type": "Attack",
-            "value": 75
+            "value": 65
         },
         {
             "trait_type": "Defense",
-            "value": 95
+            "value": 60
         },
         {
             "trait_type": "Special-attack",
-            "value": 75
+            "value": 90
         },
         {
             "trait_type": "Special-defense",
-            "value": 95
+            "value": 75
         },
         {
             "trait_type": "Speed",
-            "value": 113
+            "value": 90
         },
         {
             "trait_type": "Base Experience",
-            "value": 238
+            "value": 158
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

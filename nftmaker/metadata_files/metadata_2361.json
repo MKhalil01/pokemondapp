@@ -1,0 +1,40 @@
+{
+    "name": "Tyrogue",
+    "description": "An NFT representing the Pokemon Tyrogue.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/236.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 35
+        },
+        {
+            "trait_type": "Attack",
+            "value": 35
+        },
+        {
+            "trait_type": "Defense",
+            "value": 35
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 35
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 35
+        },
+        {
+            "trait_type": "Speed",
+            "value": 35
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 42
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

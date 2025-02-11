@@ -1,23 +1,24 @@
 {
-    "name": "Petilil",
-    "description": "An NFT representing the Pokemon Petilil.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/548.png",
+    "name": "Psyduck",
+    "description": "An NFT representing the Pokemon Psyduck.",
+    "copy_number": 8,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/54.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 45
-        },
-        {
-            "trait_type": "Attack",
-            "value": 35
-        },
-        {
-            "trait_type": "Defense",
             "value": 50
         },
         {
+            "trait_type": "Attack",
+            "value": 52
+        },
+        {
+            "trait_type": "Defense",
+            "value": 48
+        },
+        {
             "trait_type": "Special-attack",
-            "value": 70
+            "value": 65
         },
         {
             "trait_type": "Special-defense",
@@ -25,11 +26,11 @@
         },
         {
             "trait_type": "Speed",
-            "value": 30
+            "value": 55
         },
         {
             "trait_type": "Base Experience",
-            "value": 56
+            "value": 64
         },
         {
             "trait_type": "Rarity",

@@ -1,35 +1,36 @@
 {
-    "name": "Magby",
-    "description": "An NFT representing the Pokemon Magby.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/240.png",
+    "name": "Arbok",
+    "description": "An NFT representing the Pokemon Arbok.",
+    "copy_number": 0,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/24.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 45
+            "value": 60
         },
         {
             "trait_type": "Attack",
-            "value": 75
+            "value": 95
         },
         {
             "trait_type": "Defense",
-            "value": 37
+            "value": 69
         },
         {
             "trait_type": "Special-attack",
-            "value": 70
+            "value": 65
         },
         {
             "trait_type": "Special-defense",
-            "value": 55
+            "value": 79
         },
         {
             "trait_type": "Speed",
-            "value": 83
+            "value": 80
         },
         {
             "trait_type": "Base Experience",
-            "value": 73
+            "value": 157
         },
         {
             "trait_type": "Rarity",

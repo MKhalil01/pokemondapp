@@ -1,35 +1,36 @@
 {
-    "name": "Diggersby",
-    "description": "An NFT representing the Pokemon Diggersby.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/660.png",
+    "name": "Machop",
+    "description": "An NFT representing the Pokemon Machop.",
+    "copy_number": 0,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/66.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 85
+            "value": 70
         },
         {
             "trait_type": "Attack",
-            "value": 56
+            "value": 80
         },
         {
             "trait_type": "Defense",
-            "value": 77
-        },
-        {
-            "trait_type": "Special-attack",
             "value": 50
         },
         {
+            "trait_type": "Special-attack",
+            "value": 35
+        },
+        {
             "trait_type": "Special-defense",
-            "value": 77
+            "value": 35
         },
         {
             "trait_type": "Speed",
-            "value": 78
+            "value": 35
         },
         {
             "trait_type": "Base Experience",
-            "value": 148
+            "value": 61
         },
         {
             "trait_type": "Rarity",

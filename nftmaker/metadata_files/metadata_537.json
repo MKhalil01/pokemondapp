@@ -1,39 +1,40 @@
 {
-    "name": "Seismitoad",
-    "description": "An NFT representing the Pokemon Seismitoad.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/537.png",
+    "name": "Persian",
+    "description": "An NFT representing the Pokemon Persian.",
+    "copy_number": 7,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/53.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 105
+            "value": 65
         },
         {
             "trait_type": "Attack",
-            "value": 95
+            "value": 70
         },
         {
             "trait_type": "Defense",
-            "value": 75
+            "value": 60
         },
         {
             "trait_type": "Special-attack",
-            "value": 85
+            "value": 65
         },
         {
             "trait_type": "Special-defense",
-            "value": 75
+            "value": 65
         },
         {
             "trait_type": "Speed",
-            "value": 74
+            "value": 115
         },
         {
             "trait_type": "Base Experience",
-            "value": 255
+            "value": 154
         },
         {
             "trait_type": "Rarity",
-            "value": "Rare"
+            "value": "Common"
         }
     ]
 }

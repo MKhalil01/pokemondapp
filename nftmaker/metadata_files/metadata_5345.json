@@ -1,0 +1,40 @@
+{
+    "name": "Conkeldurr",
+    "description": "An NFT representing the Pokemon Conkeldurr.",
+    "copy_number": 5,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/534.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 105
+        },
+        {
+            "trait_type": "Attack",
+            "value": 140
+        },
+        {
+            "trait_type": "Defense",
+            "value": 95
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 55
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 65
+        },
+        {
+            "trait_type": "Speed",
+            "value": 45
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 253
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Rare"
+        }
+    ]
+}

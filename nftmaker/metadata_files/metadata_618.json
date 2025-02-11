@@ -1,39 +1,40 @@
 {
-    "name": "Stunfisk",
-    "description": "An NFT representing the Pokemon Stunfisk.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/618.png",
+    "name": "Poliwhirl",
+    "description": "An NFT representing the Pokemon Poliwhirl.",
+    "copy_number": 8,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/61.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 109
+            "value": 65
         },
         {
             "trait_type": "Attack",
-            "value": 66
+            "value": 65
         },
         {
             "trait_type": "Defense",
-            "value": 84
+            "value": 65
         },
         {
             "trait_type": "Special-attack",
-            "value": 81
+            "value": 50
         },
         {
             "trait_type": "Special-defense",
-            "value": 99
+            "value": 50
         },
         {
             "trait_type": "Speed",
-            "value": 32
+            "value": 90
         },
         {
             "trait_type": "Base Experience",
-            "value": 165
+            "value": 135
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

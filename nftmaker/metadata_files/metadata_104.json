@@ -1,35 +1,36 @@
 {
-    "name": "Cubone",
-    "description": "An NFT representing the Pokemon Cubone.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/104.png",
+    "name": "Caterpie",
+    "description": "An NFT representing the Pokemon Caterpie.",
+    "copy_number": 4,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 50
+            "value": 45
         },
         {
             "trait_type": "Attack",
-            "value": 50
+            "value": 30
         },
         {
             "trait_type": "Defense",
-            "value": 95
-        },
-        {
-            "trait_type": "Special-attack",
-            "value": 40
-        },
-        {
-            "trait_type": "Special-defense",
-            "value": 50
-        },
-        {
-            "trait_type": "Speed",
             "value": 35
         },
         {
+            "trait_type": "Special-attack",
+            "value": 20
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 20
+        },
+        {
+            "trait_type": "Speed",
+            "value": 45
+        },
+        {
             "trait_type": "Base Experience",
-            "value": 64
+            "value": 39
         },
         {
             "trait_type": "Rarity",

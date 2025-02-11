@@ -1,39 +1,40 @@
 {
-    "name": "Buzzwole",
-    "description": "An NFT representing the Pokemon Buzzwole.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/794.png",
+    "name": "Slowpoke",
+    "description": "An NFT representing the Pokemon Slowpoke.",
+    "copy_number": 4,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/79.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 107
+            "value": 90
         },
         {
             "trait_type": "Attack",
-            "value": 139
+            "value": 65
         },
         {
             "trait_type": "Defense",
-            "value": 139
+            "value": 65
         },
         {
             "trait_type": "Special-attack",
-            "value": 53
+            "value": 40
         },
         {
             "trait_type": "Special-defense",
-            "value": 53
+            "value": 40
         },
         {
             "trait_type": "Speed",
-            "value": 79
+            "value": 15
         },
         {
             "trait_type": "Base Experience",
-            "value": 285
+            "value": 63
         },
         {
             "trait_type": "Rarity",
-            "value": "Rare"
+            "value": "Common"
         }
     ]
 }

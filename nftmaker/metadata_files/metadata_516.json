@@ -1,39 +1,40 @@
 {
-    "name": "Simipour",
-    "description": "An NFT representing the Pokemon Simipour.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/516.png",
+    "name": "Dugtrio",
+    "description": "An NFT representing the Pokemon Dugtrio.",
+    "copy_number": 6,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/51.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 75
+            "value": 35
         },
         {
             "trait_type": "Attack",
-            "value": 98
+            "value": 100
         },
         {
             "trait_type": "Defense",
-            "value": 63
+            "value": 50
         },
         {
             "trait_type": "Special-attack",
-            "value": 98
+            "value": 50
         },
         {
             "trait_type": "Special-defense",
-            "value": 63
+            "value": 70
         },
         {
             "trait_type": "Speed",
-            "value": 101
+            "value": 120
         },
         {
             "trait_type": "Base Experience",
-            "value": 174
+            "value": 149
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

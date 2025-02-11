@@ -1,27 +1,28 @@
 {
-    "name": "Grafaiai",
-    "description": "An NFT representing the Pokemon Grafaiai.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/945.png",
+    "name": "Gengar",
+    "description": "An NFT representing the Pokemon Gengar.",
+    "copy_number": 5,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/94.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 63
+            "value": 60
         },
         {
             "trait_type": "Attack",
-            "value": 95
-        },
-        {
-            "trait_type": "Defense",
             "value": 65
         },
         {
+            "trait_type": "Defense",
+            "value": 60
+        },
+        {
             "trait_type": "Special-attack",
-            "value": 80
+            "value": 130
         },
         {
             "trait_type": "Special-defense",
-            "value": 72
+            "value": 75
         },
         {
             "trait_type": "Speed",
@@ -29,11 +30,11 @@
         },
         {
             "trait_type": "Base Experience",
-            "value": 170
+            "value": 250
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Rare"
         }
     ]
 }

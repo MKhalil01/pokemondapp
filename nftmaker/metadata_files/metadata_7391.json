@@ -1,0 +1,40 @@
+{
+    "name": "Crabrawler",
+    "description": "An NFT representing the Pokemon Crabrawler.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/739.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 47
+        },
+        {
+            "trait_type": "Attack",
+            "value": 82
+        },
+        {
+            "trait_type": "Defense",
+            "value": 57
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 42
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 47
+        },
+        {
+            "trait_type": "Speed",
+            "value": 63
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 68
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

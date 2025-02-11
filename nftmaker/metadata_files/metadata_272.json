@@ -1,39 +1,40 @@
 {
-    "name": "Ludicolo",
-    "description": "An NFT representing the Pokemon Ludicolo.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/272.png",
+    "name": "Sandshrew",
+    "description": "An NFT representing the Pokemon Sandshrew.",
+    "copy_number": 2,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/27.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 80
+            "value": 50
         },
         {
             "trait_type": "Attack",
-            "value": 70
+            "value": 75
         },
         {
             "trait_type": "Defense",
-            "value": 70
+            "value": 85
         },
         {
             "trait_type": "Special-attack",
-            "value": 90
+            "value": 20
         },
         {
             "trait_type": "Special-defense",
-            "value": 100
+            "value": 30
         },
         {
             "trait_type": "Speed",
-            "value": 70
+            "value": 40
         },
         {
             "trait_type": "Base Experience",
-            "value": 240
+            "value": 60
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

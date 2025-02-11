@@ -1,39 +1,40 @@
 {
-    "name": "Charjabug",
-    "description": "An NFT representing the Pokemon Charjabug.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/737.png",
+    "name": "Tentacruel",
+    "description": "An NFT representing the Pokemon Tentacruel.",
+    "copy_number": 7,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/73.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 57
+            "value": 80
         },
         {
             "trait_type": "Attack",
-            "value": 82
+            "value": 70
         },
         {
             "trait_type": "Defense",
-            "value": 95
+            "value": 65
         },
         {
             "trait_type": "Special-attack",
-            "value": 55
+            "value": 80
         },
         {
             "trait_type": "Special-defense",
-            "value": 75
+            "value": 120
         },
         {
             "trait_type": "Speed",
-            "value": 36
+            "value": 100
         },
         {
             "trait_type": "Base Experience",
-            "value": 140
+            "value": 180
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Uncommon"
         }
     ]
 }

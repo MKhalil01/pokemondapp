@@ -1,11 +1,12 @@
 {
-    "name": "Mightyena",
-    "description": "An NFT representing the Pokemon Mightyena.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/262.png",
+    "name": "Raichu",
+    "description": "An NFT representing the Pokemon Raichu.",
+    "copy_number": 2,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/26.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 70
+            "value": 60
         },
         {
             "trait_type": "Attack",
@@ -13,27 +14,27 @@
         },
         {
             "trait_type": "Defense",
-            "value": 70
+            "value": 55
         },
         {
             "trait_type": "Special-attack",
-            "value": 60
+            "value": 90
         },
         {
             "trait_type": "Special-defense",
-            "value": 60
+            "value": 80
         },
         {
             "trait_type": "Speed",
-            "value": 70
+            "value": 110
         },
         {
             "trait_type": "Base Experience",
-            "value": 147
+            "value": 243
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Uncommon"
         }
     ]
 }

@@ -1,39 +1,40 @@
 {
-    "name": "Gallade",
-    "description": "An NFT representing the Pokemon Gallade.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/475.png",
+    "name": "Parasect",
+    "description": "An NFT representing the Pokemon Parasect.",
+    "copy_number": 5,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/47.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 68
+            "value": 60
         },
         {
             "trait_type": "Attack",
-            "value": 125
+            "value": 95
         },
         {
             "trait_type": "Defense",
-            "value": 65
-        },
-        {
-            "trait_type": "Special-attack",
-            "value": 65
-        },
-        {
-            "trait_type": "Special-defense",
-            "value": 115
-        },
-        {
-            "trait_type": "Speed",
             "value": 80
         },
         {
+            "trait_type": "Special-attack",
+            "value": 60
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 80
+        },
+        {
+            "trait_type": "Speed",
+            "value": 30
+        },
+        {
             "trait_type": "Base Experience",
-            "value": 259
+            "value": 142
         },
         {
             "trait_type": "Rarity",
-            "value": "Rare"
+            "value": "Common"
         }
     ]
 }

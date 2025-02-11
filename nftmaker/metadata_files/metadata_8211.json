@@ -1,0 +1,40 @@
+{
+    "name": "Rookidee",
+    "description": "An NFT representing the Pokemon Rookidee.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/821.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 38
+        },
+        {
+            "trait_type": "Attack",
+            "value": 47
+        },
+        {
+            "trait_type": "Defense",
+            "value": 35
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 33
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 35
+        },
+        {
+            "trait_type": "Speed",
+            "value": 57
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 49
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

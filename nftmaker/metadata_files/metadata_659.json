@@ -1,39 +1,40 @@
 {
-    "name": "Bunnelby",
-    "description": "An NFT representing the Pokemon Bunnelby.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/659.png",
+    "name": "Alakazam",
+    "description": "An NFT representing the Pokemon Alakazam.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/65.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 38
+            "value": 55
         },
         {
             "trait_type": "Attack",
-            "value": 36
+            "value": 50
         },
         {
             "trait_type": "Defense",
-            "value": 38
+            "value": 45
         },
         {
             "trait_type": "Special-attack",
-            "value": 32
+            "value": 135
         },
         {
             "trait_type": "Special-defense",
-            "value": 36
+            "value": 95
         },
         {
             "trait_type": "Speed",
-            "value": 57
+            "value": 120
         },
         {
             "trait_type": "Base Experience",
-            "value": 47
+            "value": 250
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Rare"
         }
     ]
 }

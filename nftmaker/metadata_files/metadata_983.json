@@ -1,27 +1,28 @@
 {
-    "name": "Kingambit",
-    "description": "An NFT representing the Pokemon Kingambit.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/983.png",
+    "name": "Krabby",
+    "description": "An NFT representing the Pokemon Krabby.",
+    "copy_number": 3,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/98.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 100
+            "value": 30
         },
         {
             "trait_type": "Attack",
-            "value": 135
+            "value": 105
         },
         {
             "trait_type": "Defense",
-            "value": 120
+            "value": 90
         },
         {
             "trait_type": "Special-attack",
-            "value": 60
+            "value": 25
         },
         {
             "trait_type": "Special-defense",
-            "value": 85
+            "value": 25
         },
         {
             "trait_type": "Speed",
@@ -29,11 +30,11 @@
         },
         {
             "trait_type": "Base Experience",
-            "value": 275
+            "value": 65
         },
         {
             "trait_type": "Rarity",
-            "value": "Rare"
+            "value": "Common"
         }
     ]
 }

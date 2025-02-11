@@ -1,23 +1,24 @@
 {
-    "name": "Decidueye",
-    "description": "An NFT representing the Pokemon Decidueye.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/724.png",
+    "name": "Tentacool",
+    "description": "An NFT representing the Pokemon Tentacool.",
+    "copy_number": 4,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/72.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 78
+            "value": 40
         },
         {
             "trait_type": "Attack",
-            "value": 107
+            "value": 40
         },
         {
             "trait_type": "Defense",
-            "value": 75
+            "value": 35
         },
         {
             "trait_type": "Special-attack",
-            "value": 100
+            "value": 50
         },
         {
             "trait_type": "Special-defense",
@@ -29,11 +30,11 @@
         },
         {
             "trait_type": "Base Experience",
-            "value": 265
+            "value": 67
         },
         {
             "trait_type": "Rarity",
-            "value": "Rare"
+            "value": "Common"
         }
     ]
 }

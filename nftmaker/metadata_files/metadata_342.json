@@ -1,39 +1,40 @@
 {
-    "name": "Crawdaunt",
-    "description": "An NFT representing the Pokemon Crawdaunt.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/342.png",
+    "name": "Nidoking",
+    "description": "An NFT representing the Pokemon Nidoking.",
+    "copy_number": 2,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/34.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 63
+            "value": 81
         },
         {
             "trait_type": "Attack",
-            "value": 120
+            "value": 102
         },
         {
             "trait_type": "Defense",
-            "value": 85
+            "value": 77
         },
         {
             "trait_type": "Special-attack",
-            "value": 90
+            "value": 85
         },
         {
             "trait_type": "Special-defense",
-            "value": 55
+            "value": 75
         },
         {
             "trait_type": "Speed",
-            "value": 55
+            "value": 85
         },
         {
             "trait_type": "Base Experience",
-            "value": 164
+            "value": 253
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Rare"
         }
     ]
 }

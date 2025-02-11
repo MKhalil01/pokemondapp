@@ -1,39 +1,40 @@
 {
-    "name": "Cresselia",
-    "description": "An NFT representing the Pokemon Cresselia.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/488.png",
+    "name": "Venonat",
+    "description": "An NFT representing the Pokemon Venonat.",
+    "copy_number": 8,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/48.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 120
+            "value": 60
         },
         {
             "trait_type": "Attack",
-            "value": 70
+            "value": 55
         },
         {
             "trait_type": "Defense",
-            "value": 110
+            "value": 50
         },
         {
             "trait_type": "Special-attack",
-            "value": 75
+            "value": 40
         },
         {
             "trait_type": "Special-defense",
-            "value": 120
+            "value": 55
         },
         {
             "trait_type": "Speed",
-            "value": 85
+            "value": 45
         },
         {
             "trait_type": "Base Experience",
-            "value": 300
+            "value": 61
         },
         {
             "trait_type": "Rarity",
-            "value": "Rare"
+            "value": "Common"
         }
     ]
 }

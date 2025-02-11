@@ -1,35 +1,36 @@
 {
-    "name": "Klang",
-    "description": "An NFT representing the Pokemon Klang.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/600.png",
+    "name": "Poliwag",
+    "description": "An NFT representing the Pokemon Poliwag.",
+    "copy_number": 0,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/60.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 60
+            "value": 40
         },
         {
             "trait_type": "Attack",
-            "value": 80
-        },
-        {
-            "trait_type": "Defense",
-            "value": 95
-        },
-        {
-            "trait_type": "Special-attack",
-            "value": 70
-        },
-        {
-            "trait_type": "Special-defense",
-            "value": 85
-        },
-        {
-            "trait_type": "Speed",
             "value": 50
         },
         {
+            "trait_type": "Defense",
+            "value": 40
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 40
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 40
+        },
+        {
+            "trait_type": "Speed",
+            "value": 90
+        },
+        {
             "trait_type": "Base Experience",
-            "value": 154
+            "value": 60
         },
         {
             "trait_type": "Rarity",

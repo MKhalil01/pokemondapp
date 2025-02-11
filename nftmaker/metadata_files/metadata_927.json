@@ -1,39 +1,40 @@
 {
-    "name": "Dachsbun",
-    "description": "An NFT representing the Pokemon Dachsbun.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/927.png",
+    "name": "Gastly",
+    "description": "An NFT representing the Pokemon Gastly.",
+    "copy_number": 7,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/92.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 57
+            "value": 30
         },
         {
             "trait_type": "Attack",
-            "value": 80
+            "value": 35
         },
         {
             "trait_type": "Defense",
-            "value": 115
+            "value": 30
         },
         {
             "trait_type": "Special-attack",
-            "value": 50
+            "value": 100
         },
         {
             "trait_type": "Special-defense",
-            "value": 80
+            "value": 35
         },
         {
             "trait_type": "Speed",
-            "value": 95
+            "value": 80
         },
         {
             "trait_type": "Base Experience",
-            "value": 167
+            "value": 62
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

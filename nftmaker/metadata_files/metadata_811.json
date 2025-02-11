@@ -1,15 +1,16 @@
 {
-    "name": "Thwackey",
-    "description": "An NFT representing the Pokemon Thwackey.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/811.png",
+    "name": "Magnemite",
+    "description": "An NFT representing the Pokemon Magnemite.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/81.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 70
+            "value": 25
         },
         {
             "trait_type": "Attack",
-            "value": 85
+            "value": 35
         },
         {
             "trait_type": "Defense",
@@ -17,19 +18,19 @@
         },
         {
             "trait_type": "Special-attack",
-            "value": 55
+            "value": 95
         },
         {
             "trait_type": "Special-defense",
-            "value": 60
+            "value": 55
         },
         {
             "trait_type": "Speed",
-            "value": 80
+            "value": 45
         },
         {
             "trait_type": "Base Experience",
-            "value": 147
+            "value": 65
         },
         {
             "trait_type": "Rarity",

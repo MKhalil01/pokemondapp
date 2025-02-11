@@ -1,39 +1,40 @@
 {
-    "name": "Golduck",
-    "description": "An NFT representing the Pokemon Golduck.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/55.png",
+    "name": "Charmeleon",
+    "description": "An NFT representing the Pokemon Charmeleon.",
+    "copy_number": 5,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/5.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 80
+            "value": 58
         },
         {
             "trait_type": "Attack",
-            "value": 82
+            "value": 64
         },
         {
             "trait_type": "Defense",
-            "value": 78
+            "value": 58
         },
         {
             "trait_type": "Special-attack",
-            "value": 95
-        },
-        {
-            "trait_type": "Special-defense",
             "value": 80
         },
         {
+            "trait_type": "Special-defense",
+            "value": 65
+        },
+        {
             "trait_type": "Speed",
-            "value": 85
+            "value": 80
         },
         {
             "trait_type": "Base Experience",
-            "value": 175
+            "value": 142
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

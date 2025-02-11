@@ -1,35 +1,36 @@
 {
-    "name": "Yanma",
-    "description": "An NFT representing the Pokemon Yanma.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/193.png",
+    "name": "Rattata",
+    "description": "An NFT representing the Pokemon Rattata.",
+    "copy_number": 3,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/19.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 65
+            "value": 30
         },
         {
             "trait_type": "Attack",
-            "value": 65
+            "value": 56
         },
         {
             "trait_type": "Defense",
-            "value": 45
+            "value": 35
         },
         {
             "trait_type": "Special-attack",
-            "value": 75
+            "value": 25
         },
         {
             "trait_type": "Special-defense",
-            "value": 45
+            "value": 35
         },
         {
             "trait_type": "Speed",
-            "value": 95
+            "value": 72
         },
         {
             "trait_type": "Base Experience",
-            "value": 78
+            "value": 51
         },
         {
             "trait_type": "Rarity",

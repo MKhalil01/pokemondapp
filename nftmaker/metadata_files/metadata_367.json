@@ -1,35 +1,36 @@
 {
-    "name": "Huntail",
-    "description": "An NFT representing the Pokemon Huntail.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/367.png",
+    "name": "Clefable",
+    "description": "An NFT representing the Pokemon Clefable.",
+    "copy_number": 7,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/36.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 55
+            "value": 95
         },
         {
             "trait_type": "Attack",
-            "value": 104
+            "value": 70
         },
         {
             "trait_type": "Defense",
-            "value": 105
+            "value": 73
         },
         {
             "trait_type": "Special-attack",
-            "value": 94
+            "value": 95
         },
         {
             "trait_type": "Special-defense",
-            "value": 75
+            "value": 90
         },
         {
             "trait_type": "Speed",
-            "value": 52
+            "value": 60
         },
         {
             "trait_type": "Base Experience",
-            "value": 170
+            "value": 242
         },
         {
             "trait_type": "Rarity",

@@ -1,11 +1,12 @@
 {
-    "name": "Drakloak",
-    "description": "An NFT representing the Pokemon Drakloak.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/886.png",
+    "name": "Grimer",
+    "description": "An NFT representing the Pokemon Grimer.",
+    "copy_number": 6,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/88.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 68
+            "value": 80
         },
         {
             "trait_type": "Attack",
@@ -17,7 +18,7 @@
         },
         {
             "trait_type": "Special-attack",
-            "value": 60
+            "value": 40
         },
         {
             "trait_type": "Special-defense",
@@ -25,11 +26,11 @@
         },
         {
             "trait_type": "Speed",
-            "value": 102
+            "value": 25
         },
         {
             "trait_type": "Base Experience",
-            "value": 144
+            "value": 65
         },
         {
             "trait_type": "Rarity",

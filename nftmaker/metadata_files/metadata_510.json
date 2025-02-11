@@ -1,15 +1,16 @@
 {
-    "name": "Liepard",
-    "description": "An NFT representing the Pokemon Liepard.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/510.png",
+    "name": "Dugtrio",
+    "description": "An NFT representing the Pokemon Dugtrio.",
+    "copy_number": 0,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/51.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 64
+            "value": 35
         },
         {
             "trait_type": "Attack",
-            "value": 88
+            "value": 100
         },
         {
             "trait_type": "Defense",
@@ -17,19 +18,19 @@
         },
         {
             "trait_type": "Special-attack",
-            "value": 88
-        },
-        {
-            "trait_type": "Special-defense",
             "value": 50
         },
         {
+            "trait_type": "Special-defense",
+            "value": 70
+        },
+        {
             "trait_type": "Speed",
-            "value": 106
+            "value": 120
         },
         {
             "trait_type": "Base Experience",
-            "value": 156
+            "value": 149
         },
         {
             "trait_type": "Rarity",

@@ -1,39 +1,40 @@
 {
-    "name": "Mandibuzz",
-    "description": "An NFT representing the Pokemon Mandibuzz.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/630.png",
+    "name": "Abra",
+    "description": "An NFT representing the Pokemon Abra.",
+    "copy_number": 0,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/63.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 110
+            "value": 25
         },
         {
             "trait_type": "Attack",
-            "value": 65
+            "value": 20
         },
         {
             "trait_type": "Defense",
-            "value": 105
+            "value": 15
         },
         {
             "trait_type": "Special-attack",
-            "value": 55
+            "value": 105
         },
         {
             "trait_type": "Special-defense",
-            "value": 95
+            "value": 55
         },
         {
             "trait_type": "Speed",
-            "value": 80
+            "value": 90
         },
         {
             "trait_type": "Base Experience",
-            "value": 179
+            "value": 62
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

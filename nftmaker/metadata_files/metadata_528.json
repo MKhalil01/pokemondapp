@@ -1,35 +1,36 @@
 {
-    "name": "Swoobat",
-    "description": "An NFT representing the Pokemon Swoobat.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/528.png",
+    "name": "Meowth",
+    "description": "An NFT representing the Pokemon Meowth.",
+    "copy_number": 8,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/52.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 67
+            "value": 40
         },
         {
             "trait_type": "Attack",
-            "value": 57
+            "value": 45
         },
         {
             "trait_type": "Defense",
-            "value": 55
+            "value": 35
         },
         {
             "trait_type": "Special-attack",
-            "value": 77
+            "value": 40
         },
         {
             "trait_type": "Special-defense",
-            "value": 55
+            "value": 40
         },
         {
             "trait_type": "Speed",
-            "value": 114
+            "value": 90
         },
         {
             "trait_type": "Base Experience",
-            "value": 149
+            "value": 58
         },
         {
             "trait_type": "Rarity",

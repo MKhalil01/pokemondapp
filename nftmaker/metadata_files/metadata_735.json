@@ -1,39 +1,40 @@
 {
-    "name": "Gumshoos",
-    "description": "An NFT representing the Pokemon Gumshoos.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/735.png",
+    "name": "Tentacruel",
+    "description": "An NFT representing the Pokemon Tentacruel.",
+    "copy_number": 5,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/73.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 88
+            "value": 80
         },
         {
             "trait_type": "Attack",
-            "value": 110
+            "value": 70
         },
         {
             "trait_type": "Defense",
-            "value": 60
+            "value": 65
         },
         {
             "trait_type": "Special-attack",
-            "value": 55
+            "value": 80
         },
         {
             "trait_type": "Special-defense",
-            "value": 60
+            "value": 120
         },
         {
             "trait_type": "Speed",
-            "value": 45
+            "value": 100
         },
         {
             "trait_type": "Base Experience",
-            "value": 146
+            "value": 180
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Uncommon"
         }
     ]
 }

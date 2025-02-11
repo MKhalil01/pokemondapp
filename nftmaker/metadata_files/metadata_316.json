@@ -1,39 +1,40 @@
 {
-    "name": "Gulpin",
-    "description": "An NFT representing the Pokemon Gulpin.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/316.png",
+    "name": "Nidoqueen",
+    "description": "An NFT representing the Pokemon Nidoqueen.",
+    "copy_number": 6,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/31.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 70
+            "value": 90
         },
         {
             "trait_type": "Attack",
-            "value": 43
+            "value": 92
         },
         {
             "trait_type": "Defense",
-            "value": 53
+            "value": 87
         },
         {
             "trait_type": "Special-attack",
-            "value": 43
+            "value": 75
         },
         {
             "trait_type": "Special-defense",
-            "value": 53
+            "value": 85
         },
         {
             "trait_type": "Speed",
-            "value": 40
+            "value": 76
         },
         {
             "trait_type": "Base Experience",
-            "value": 60
+            "value": 253
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Rare"
         }
     ]
 }

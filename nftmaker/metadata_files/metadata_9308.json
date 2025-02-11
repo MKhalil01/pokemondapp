@@ -1,0 +1,40 @@
+{
+    "name": "Arboliva",
+    "description": "An NFT representing the Pokemon Arboliva.",
+    "copy_number": 8,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/930.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 78
+        },
+        {
+            "trait_type": "Attack",
+            "value": 69
+        },
+        {
+            "trait_type": "Defense",
+            "value": 90
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 125
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 109
+        },
+        {
+            "trait_type": "Speed",
+            "value": 39
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 255
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Rare"
+        }
+    ]
+}

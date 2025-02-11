@@ -1,11 +1,12 @@
 {
-    "name": "Yungoos",
-    "description": "An NFT representing the Pokemon Yungoos.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/734.png",
+    "name": "Tentacruel",
+    "description": "An NFT representing the Pokemon Tentacruel.",
+    "copy_number": 4,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/73.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 48
+            "value": 80
         },
         {
             "trait_type": "Attack",
@@ -13,27 +14,27 @@
         },
         {
             "trait_type": "Defense",
-            "value": 30
+            "value": 65
         },
         {
             "trait_type": "Special-attack",
-            "value": 30
+            "value": 80
         },
         {
             "trait_type": "Special-defense",
-            "value": 30
+            "value": 120
         },
         {
             "trait_type": "Speed",
-            "value": 45
+            "value": 100
         },
         {
             "trait_type": "Base Experience",
-            "value": 51
+            "value": 180
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Uncommon"
         }
     ]
 }

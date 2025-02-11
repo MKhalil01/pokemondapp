@@ -1,0 +1,40 @@
+{
+    "name": "Hatterene",
+    "description": "An NFT representing the Pokemon Hatterene.",
+    "copy_number": 8,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/858.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 57
+        },
+        {
+            "trait_type": "Attack",
+            "value": 90
+        },
+        {
+            "trait_type": "Defense",
+            "value": 95
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 136
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 103
+        },
+        {
+            "trait_type": "Speed",
+            "value": 29
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 255
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Rare"
+        }
+    ]
+}

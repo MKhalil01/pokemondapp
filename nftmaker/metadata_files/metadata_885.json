@@ -1,19 +1,20 @@
 {
-    "name": "Dreepy",
-    "description": "An NFT representing the Pokemon Dreepy.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/885.png",
+    "name": "Grimer",
+    "description": "An NFT representing the Pokemon Grimer.",
+    "copy_number": 5,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/88.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 28
+            "value": 80
         },
         {
             "trait_type": "Attack",
-            "value": 60
+            "value": 80
         },
         {
             "trait_type": "Defense",
-            "value": 30
+            "value": 50
         },
         {
             "trait_type": "Special-attack",
@@ -21,15 +22,15 @@
         },
         {
             "trait_type": "Special-defense",
-            "value": 30
+            "value": 50
         },
         {
             "trait_type": "Speed",
-            "value": 82
+            "value": 25
         },
         {
             "trait_type": "Base Experience",
-            "value": 54
+            "value": 65
         },
         {
             "trait_type": "Rarity",

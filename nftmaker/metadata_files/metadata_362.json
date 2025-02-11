@@ -1,35 +1,36 @@
 {
-    "name": "Glalie",
-    "description": "An NFT representing the Pokemon Glalie.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/362.png",
+    "name": "Clefable",
+    "description": "An NFT representing the Pokemon Clefable.",
+    "copy_number": 2,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/36.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 80
+            "value": 95
         },
         {
             "trait_type": "Attack",
-            "value": 80
+            "value": 70
         },
         {
             "trait_type": "Defense",
-            "value": 80
+            "value": 73
         },
         {
             "trait_type": "Special-attack",
-            "value": 80
+            "value": 95
         },
         {
             "trait_type": "Special-defense",
-            "value": 80
+            "value": 90
         },
         {
             "trait_type": "Speed",
-            "value": 80
+            "value": 60
         },
         {
             "trait_type": "Base Experience",
-            "value": 168
+            "value": 242
         },
         {
             "trait_type": "Rarity",

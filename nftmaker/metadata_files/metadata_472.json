@@ -1,11 +1,12 @@
 {
-    "name": "Gliscor",
-    "description": "An NFT representing the Pokemon Gliscor.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/472.png",
+    "name": "Parasect",
+    "description": "An NFT representing the Pokemon Parasect.",
+    "copy_number": 2,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/47.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 75
+            "value": 60
         },
         {
             "trait_type": "Attack",
@@ -13,27 +14,27 @@
         },
         {
             "trait_type": "Defense",
-            "value": 125
+            "value": 80
         },
         {
             "trait_type": "Special-attack",
-            "value": 45
+            "value": 60
         },
         {
             "trait_type": "Special-defense",
-            "value": 75
+            "value": 80
         },
         {
             "trait_type": "Speed",
-            "value": 95
+            "value": 30
         },
         {
             "trait_type": "Base Experience",
-            "value": 179
+            "value": 142
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

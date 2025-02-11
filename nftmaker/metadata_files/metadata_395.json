@@ -1,39 +1,40 @@
 {
-    "name": "Empoleon",
-    "description": "An NFT representing the Pokemon Empoleon.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/395.png",
+    "name": "Jigglypuff",
+    "description": "An NFT representing the Pokemon Jigglypuff.",
+    "copy_number": 5,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/39.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 84
+            "value": 115
         },
         {
             "trait_type": "Attack",
-            "value": 86
+            "value": 45
         },
         {
             "trait_type": "Defense",
-            "value": 88
+            "value": 20
         },
         {
             "trait_type": "Special-attack",
-            "value": 111
+            "value": 45
         },
         {
             "trait_type": "Special-defense",
-            "value": 101
+            "value": 25
         },
         {
             "trait_type": "Speed",
-            "value": 60
+            "value": 20
         },
         {
             "trait_type": "Base Experience",
-            "value": 239
+            "value": 95
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

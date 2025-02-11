@@ -1,39 +1,40 @@
 {
-    "name": "Exploud",
-    "description": "An NFT representing the Pokemon Exploud.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/295.png",
+    "name": "Nidoran-f",
+    "description": "An NFT representing the Pokemon Nidoran-f.",
+    "copy_number": 5,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/29.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 104
+            "value": 55
         },
         {
             "trait_type": "Attack",
-            "value": 91
+            "value": 47
         },
         {
             "trait_type": "Defense",
-            "value": 63
+            "value": 52
         },
         {
             "trait_type": "Special-attack",
-            "value": 91
+            "value": 40
         },
         {
             "trait_type": "Special-defense",
-            "value": 73
+            "value": 40
         },
         {
             "trait_type": "Speed",
-            "value": 68
+            "value": 41
         },
         {
             "trait_type": "Base Experience",
-            "value": 245
+            "value": 55
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

@@ -1,0 +1,40 @@
+{
+    "name": "Honedge",
+    "description": "An NFT representing the Pokemon Honedge.",
+    "copy_number": 2,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/679.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 45
+        },
+        {
+            "trait_type": "Attack",
+            "value": 80
+        },
+        {
+            "trait_type": "Defense",
+            "value": 100
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 35
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 37
+        },
+        {
+            "trait_type": "Speed",
+            "value": 28
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 65
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

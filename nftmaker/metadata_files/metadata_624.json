@@ -1,39 +1,40 @@
 {
-    "name": "Pawniard",
-    "description": "An NFT representing the Pokemon Pawniard.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/624.png",
+    "name": "Poliwrath",
+    "description": "An NFT representing the Pokemon Poliwrath.",
+    "copy_number": 4,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/62.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 45
+            "value": 90
         },
         {
             "trait_type": "Attack",
-            "value": 85
+            "value": 95
         },
         {
             "trait_type": "Defense",
-            "value": 70
+            "value": 95
         },
         {
             "trait_type": "Special-attack",
-            "value": 40
+            "value": 70
         },
         {
             "trait_type": "Special-defense",
-            "value": 40
+            "value": 90
         },
         {
             "trait_type": "Speed",
-            "value": 60
+            "value": 70
         },
         {
             "trait_type": "Base Experience",
-            "value": 68
+            "value": 255
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Rare"
         }
     ]
 }

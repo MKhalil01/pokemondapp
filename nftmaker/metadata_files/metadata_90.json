@@ -1,15 +1,16 @@
 {
-    "name": "Shellder",
-    "description": "An NFT representing the Pokemon Shellder.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/90.png",
+    "name": "Blastoise",
+    "description": "An NFT representing the Pokemon Blastoise.",
+    "copy_number": 0,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 30
+            "value": 79
         },
         {
             "trait_type": "Attack",
-            "value": 65
+            "value": 83
         },
         {
             "trait_type": "Defense",
@@ -17,23 +18,23 @@
         },
         {
             "trait_type": "Special-attack",
-            "value": 45
+            "value": 85
         },
         {
             "trait_type": "Special-defense",
-            "value": 25
+            "value": 105
         },
         {
             "trait_type": "Speed",
-            "value": 40
+            "value": 78
         },
         {
             "trait_type": "Base Experience",
-            "value": 61
+            "value": 265
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Rare"
         }
     ]
 }

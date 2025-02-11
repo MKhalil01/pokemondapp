@@ -1,39 +1,40 @@
 {
-    "name": "Bastiodon",
-    "description": "An NFT representing the Pokemon Bastiodon.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/411.png",
+    "name": "Zubat",
+    "description": "An NFT representing the Pokemon Zubat.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/41.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 60
+            "value": 40
         },
         {
             "trait_type": "Attack",
-            "value": 52
+            "value": 45
         },
         {
             "trait_type": "Defense",
-            "value": 168
+            "value": 35
         },
         {
             "trait_type": "Special-attack",
-            "value": 47
-        },
-        {
-            "trait_type": "Special-defense",
-            "value": 138
-        },
-        {
-            "trait_type": "Speed",
             "value": 30
         },
         {
+            "trait_type": "Special-defense",
+            "value": 40
+        },
+        {
+            "trait_type": "Speed",
+            "value": 55
+        },
+        {
             "trait_type": "Base Experience",
-            "value": 173
+            "value": 49
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

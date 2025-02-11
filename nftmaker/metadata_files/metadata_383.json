@@ -1,39 +1,40 @@
 {
-    "name": "Groudon",
-    "description": "An NFT representing the Pokemon Groudon.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/383.png",
+    "name": "Ninetales",
+    "description": "An NFT representing the Pokemon Ninetales.",
+    "copy_number": 3,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/38.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 100
+            "value": 73
         },
         {
             "trait_type": "Attack",
-            "value": 150
+            "value": 76
         },
         {
             "trait_type": "Defense",
-            "value": 140
+            "value": 75
         },
         {
             "trait_type": "Special-attack",
-            "value": 100
+            "value": 81
         },
         {
             "trait_type": "Special-defense",
-            "value": 90
+            "value": 100
         },
         {
             "trait_type": "Speed",
-            "value": 90
+            "value": 100
         },
         {
             "trait_type": "Base Experience",
-            "value": 335
+            "value": 177
         },
         {
             "trait_type": "Rarity",
-            "value": "Legendary"
+            "value": "Uncommon"
         }
     ]
 }

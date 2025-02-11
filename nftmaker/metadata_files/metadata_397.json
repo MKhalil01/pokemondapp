@@ -1,35 +1,36 @@
 {
-    "name": "Staravia",
-    "description": "An NFT representing the Pokemon Staravia.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/397.png",
+    "name": "Jigglypuff",
+    "description": "An NFT representing the Pokemon Jigglypuff.",
+    "copy_number": 7,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/39.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 55
+            "value": 115
         },
         {
             "trait_type": "Attack",
-            "value": 75
+            "value": 45
         },
         {
             "trait_type": "Defense",
-            "value": 50
+            "value": 20
         },
         {
             "trait_type": "Special-attack",
-            "value": 40
+            "value": 45
         },
         {
             "trait_type": "Special-defense",
-            "value": 40
+            "value": 25
         },
         {
             "trait_type": "Speed",
-            "value": 80
+            "value": 20
         },
         {
             "trait_type": "Base Experience",
-            "value": 119
+            "value": 95
         },
         {
             "trait_type": "Rarity",

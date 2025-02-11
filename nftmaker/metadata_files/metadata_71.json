@@ -1,15 +1,16 @@
 {
-    "name": "Victreebel",
-    "description": "An NFT representing the Pokemon Victreebel.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/71.png",
+    "name": "Squirtle",
+    "description": "An NFT representing the Pokemon Squirtle.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 80
+            "value": 44
         },
         {
             "trait_type": "Attack",
-            "value": 105
+            "value": 48
         },
         {
             "trait_type": "Defense",
@@ -17,23 +18,23 @@
         },
         {
             "trait_type": "Special-attack",
-            "value": 100
+            "value": 50
         },
         {
             "trait_type": "Special-defense",
-            "value": 70
+            "value": 64
         },
         {
             "trait_type": "Speed",
-            "value": 70
+            "value": 43
         },
         {
             "trait_type": "Base Experience",
-            "value": 221
+            "value": 63
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

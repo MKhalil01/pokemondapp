@@ -1,39 +1,40 @@
 {
-    "name": "Oricorio-baile",
-    "description": "An NFT representing the Pokemon Oricorio-baile.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/741.png",
+    "name": "Geodude",
+    "description": "An NFT representing the Pokemon Geodude.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/74.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 75
+            "value": 40
         },
         {
             "trait_type": "Attack",
-            "value": 70
+            "value": 80
         },
         {
             "trait_type": "Defense",
-            "value": 70
+            "value": 100
         },
         {
             "trait_type": "Special-attack",
-            "value": 98
+            "value": 30
         },
         {
             "trait_type": "Special-defense",
-            "value": 70
+            "value": 30
         },
         {
             "trait_type": "Speed",
-            "value": 93
+            "value": 20
         },
         {
             "trait_type": "Base Experience",
-            "value": 167
+            "value": 60
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

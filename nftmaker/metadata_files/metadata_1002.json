@@ -1,39 +1,40 @@
 {
-    "name": "Chien-pao",
-    "description": "An NFT representing the Pokemon Chien-pao.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1002.png",
+    "name": "Voltorb",
+    "description": "An NFT representing the Pokemon Voltorb.",
+    "copy_number": 2,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/100.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 80
+            "value": 40
         },
         {
             "trait_type": "Attack",
-            "value": 120
+            "value": 30
         },
         {
             "trait_type": "Defense",
-            "value": 80
+            "value": 50
         },
         {
             "trait_type": "Special-attack",
-            "value": 90
+            "value": 55
         },
         {
             "trait_type": "Special-defense",
-            "value": 65
+            "value": 55
         },
         {
             "trait_type": "Speed",
-            "value": 135
+            "value": 100
         },
         {
             "trait_type": "Base Experience",
-            "value": 285
+            "value": 66
         },
         {
             "trait_type": "Rarity",
-            "value": "Rare"
+            "value": "Common"
         }
     ]
 }

@@ -1,35 +1,36 @@
 {
-    "name": "Copperajah",
-    "description": "An NFT representing the Pokemon Copperajah.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/879.png",
+    "name": "Dewgong",
+    "description": "An NFT representing the Pokemon Dewgong.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/87.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 122
+            "value": 90
         },
         {
             "trait_type": "Attack",
-            "value": 130
+            "value": 70
         },
         {
             "trait_type": "Defense",
-            "value": 69
-        },
-        {
-            "trait_type": "Special-attack",
             "value": 80
         },
         {
+            "trait_type": "Special-attack",
+            "value": 70
+        },
+        {
             "trait_type": "Special-defense",
-            "value": 69
+            "value": 95
         },
         {
             "trait_type": "Speed",
-            "value": 30
+            "value": 70
         },
         {
             "trait_type": "Base Experience",
-            "value": 175
+            "value": 166
         },
         {
             "trait_type": "Rarity",

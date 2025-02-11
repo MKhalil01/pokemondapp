@@ -1,35 +1,36 @@
 {
-    "name": "Meganium",
-    "description": "An NFT representing the Pokemon Meganium.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/154.png",
+    "name": "Beedrill",
+    "description": "An NFT representing the Pokemon Beedrill.",
+    "copy_number": 4,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/15.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 80
+            "value": 65
         },
         {
             "trait_type": "Attack",
-            "value": 82
+            "value": 90
         },
         {
             "trait_type": "Defense",
-            "value": 100
+            "value": 40
         },
         {
             "trait_type": "Special-attack",
-            "value": 83
+            "value": 45
         },
         {
             "trait_type": "Special-defense",
-            "value": 100
-        },
-        {
-            "trait_type": "Speed",
             "value": 80
         },
         {
+            "trait_type": "Speed",
+            "value": 75
+        },
+        {
             "trait_type": "Base Experience",
-            "value": 236
+            "value": 178
         },
         {
             "trait_type": "Rarity",

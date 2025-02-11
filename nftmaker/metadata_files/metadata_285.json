@@ -1,35 +1,36 @@
 {
-    "name": "Shroomish",
-    "description": "An NFT representing the Pokemon Shroomish.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/285.png",
+    "name": "Sandslash",
+    "description": "An NFT representing the Pokemon Sandslash.",
+    "copy_number": 5,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/28.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 60
+            "value": 75
         },
         {
             "trait_type": "Attack",
-            "value": 40
+            "value": 100
         },
         {
             "trait_type": "Defense",
-            "value": 60
+            "value": 110
         },
         {
             "trait_type": "Special-attack",
-            "value": 40
+            "value": 45
         },
         {
             "trait_type": "Special-defense",
-            "value": 60
+            "value": 55
         },
         {
             "trait_type": "Speed",
-            "value": 35
+            "value": 65
         },
         {
             "trait_type": "Base Experience",
-            "value": 59
+            "value": 158
         },
         {
             "trait_type": "Rarity",

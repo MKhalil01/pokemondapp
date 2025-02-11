@@ -1,35 +1,36 @@
 {
-    "name": "Ferrothorn",
-    "description": "An NFT representing the Pokemon Ferrothorn.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/598.png",
+    "name": "Arcanine",
+    "description": "An NFT representing the Pokemon Arcanine.",
+    "copy_number": 8,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/59.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 74
+            "value": 90
         },
         {
             "trait_type": "Attack",
-            "value": 94
+            "value": 110
         },
         {
             "trait_type": "Defense",
-            "value": 131
+            "value": 80
         },
         {
             "trait_type": "Special-attack",
-            "value": 54
+            "value": 100
         },
         {
             "trait_type": "Special-defense",
-            "value": 116
+            "value": 80
         },
         {
             "trait_type": "Speed",
-            "value": 20
+            "value": 95
         },
         {
             "trait_type": "Base Experience",
-            "value": 171
+            "value": 194
         },
         {
             "trait_type": "Rarity",

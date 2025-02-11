@@ -1,35 +1,36 @@
 {
-    "name": "Shelgon",
-    "description": "An NFT representing the Pokemon Shelgon.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/372.png",
+    "name": "Vulpix",
+    "description": "An NFT representing the Pokemon Vulpix.",
+    "copy_number": 2,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/37.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 65
+            "value": 38
         },
         {
             "trait_type": "Attack",
-            "value": 95
+            "value": 41
         },
         {
             "trait_type": "Defense",
-            "value": 100
+            "value": 40
         },
         {
             "trait_type": "Special-attack",
-            "value": 60
+            "value": 50
         },
         {
             "trait_type": "Special-defense",
-            "value": 50
+            "value": 65
         },
         {
             "trait_type": "Speed",
-            "value": 50
+            "value": 65
         },
         {
             "trait_type": "Base Experience",
-            "value": 147
+            "value": 60
         },
         {
             "trait_type": "Rarity",

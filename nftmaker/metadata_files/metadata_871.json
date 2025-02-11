@@ -1,39 +1,40 @@
 {
-    "name": "Pincurchin",
-    "description": "An NFT representing the Pokemon Pincurchin.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/871.png",
+    "name": "Dewgong",
+    "description": "An NFT representing the Pokemon Dewgong.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/87.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 48
+            "value": 90
         },
         {
             "trait_type": "Attack",
-            "value": 101
+            "value": 70
         },
         {
             "trait_type": "Defense",
-            "value": 95
+            "value": 80
         },
         {
             "trait_type": "Special-attack",
-            "value": 91
+            "value": 70
         },
         {
             "trait_type": "Special-defense",
-            "value": 85
+            "value": 95
         },
         {
             "trait_type": "Speed",
-            "value": 15
+            "value": 70
         },
         {
             "trait_type": "Base Experience",
-            "value": 152
+            "value": 166
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Uncommon"
         }
     ]
 }

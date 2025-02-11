@@ -1,35 +1,36 @@
 {
-    "name": "Zweilous",
-    "description": "An NFT representing the Pokemon Zweilous.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/634.png",
+    "name": "Abra",
+    "description": "An NFT representing the Pokemon Abra.",
+    "copy_number": 4,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/63.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 72
+            "value": 25
         },
         {
             "trait_type": "Attack",
-            "value": 85
+            "value": 20
         },
         {
             "trait_type": "Defense",
-            "value": 70
+            "value": 15
         },
         {
             "trait_type": "Special-attack",
-            "value": 65
+            "value": 105
         },
         {
             "trait_type": "Special-defense",
-            "value": 70
+            "value": 55
         },
         {
             "trait_type": "Speed",
-            "value": 58
+            "value": 90
         },
         {
             "trait_type": "Base Experience",
-            "value": 147
+            "value": 62
         },
         {
             "trait_type": "Rarity",

@@ -1,35 +1,36 @@
 {
-    "name": "Ledian",
-    "description": "An NFT representing the Pokemon Ledian.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/166.png",
+    "name": "Pidgey",
+    "description": "An NFT representing the Pokemon Pidgey.",
+    "copy_number": 6,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/16.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 55
+            "value": 40
         },
         {
             "trait_type": "Attack",
-            "value": 35
+            "value": 45
         },
         {
             "trait_type": "Defense",
-            "value": 50
+            "value": 40
         },
         {
             "trait_type": "Special-attack",
-            "value": 55
+            "value": 35
         },
         {
             "trait_type": "Special-defense",
-            "value": 110
+            "value": 35
         },
         {
             "trait_type": "Speed",
-            "value": 85
+            "value": 56
         },
         {
             "trait_type": "Base Experience",
-            "value": 137
+            "value": 50
         },
         {
             "trait_type": "Rarity",

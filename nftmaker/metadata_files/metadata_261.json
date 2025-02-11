@@ -1,39 +1,40 @@
 {
-    "name": "Poochyena",
-    "description": "An NFT representing the Pokemon Poochyena.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/261.png",
+    "name": "Raichu",
+    "description": "An NFT representing the Pokemon Raichu.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/26.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 35
+            "value": 60
         },
         {
             "trait_type": "Attack",
-            "value": 55
+            "value": 90
         },
         {
             "trait_type": "Defense",
-            "value": 35
+            "value": 55
         },
         {
             "trait_type": "Special-attack",
-            "value": 30
+            "value": 90
         },
         {
             "trait_type": "Special-defense",
-            "value": 30
+            "value": 80
         },
         {
             "trait_type": "Speed",
-            "value": 35
+            "value": 110
         },
         {
             "trait_type": "Base Experience",
-            "value": 56
+            "value": 243
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Uncommon"
         }
     ]
 }

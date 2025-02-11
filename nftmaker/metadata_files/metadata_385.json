@@ -1,23 +1,24 @@
 {
-    "name": "Jirachi",
-    "description": "An NFT representing the Pokemon Jirachi.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/385.png",
+    "name": "Ninetales",
+    "description": "An NFT representing the Pokemon Ninetales.",
+    "copy_number": 5,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/38.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 100
+            "value": 73
         },
         {
             "trait_type": "Attack",
-            "value": 100
+            "value": 76
         },
         {
             "trait_type": "Defense",
-            "value": 100
+            "value": 75
         },
         {
             "trait_type": "Special-attack",
-            "value": 100
+            "value": 81
         },
         {
             "trait_type": "Special-defense",
@@ -29,11 +30,11 @@
         },
         {
             "trait_type": "Base Experience",
-            "value": 300
+            "value": 177
         },
         {
             "trait_type": "Rarity",
-            "value": "Rare"
+            "value": "Uncommon"
         }
     ]
 }

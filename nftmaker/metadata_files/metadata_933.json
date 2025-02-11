@@ -1,35 +1,36 @@
 {
-    "name": "Naclstack",
-    "description": "An NFT representing the Pokemon Naclstack.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/933.png",
+    "name": "Haunter",
+    "description": "An NFT representing the Pokemon Haunter.",
+    "copy_number": 3,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/93.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 60
+            "value": 45
         },
         {
             "trait_type": "Attack",
-            "value": 60
+            "value": 50
         },
         {
             "trait_type": "Defense",
-            "value": 100
+            "value": 45
         },
         {
             "trait_type": "Special-attack",
-            "value": 35
+            "value": 115
         },
         {
             "trait_type": "Special-defense",
-            "value": 65
+            "value": 55
         },
         {
             "trait_type": "Speed",
-            "value": 35
+            "value": 95
         },
         {
             "trait_type": "Base Experience",
-            "value": 124
+            "value": 142
         },
         {
             "trait_type": "Rarity",

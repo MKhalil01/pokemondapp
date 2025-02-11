@@ -1,7 +1,8 @@
 {
-    "name": "Probopass",
-    "description": "An NFT representing the Pokemon Probopass.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/476.png",
+    "name": "Parasect",
+    "description": "An NFT representing the Pokemon Parasect.",
+    "copy_number": 6,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/47.png",
     "attributes": [
         {
             "trait_type": "Hp",
@@ -9,31 +10,31 @@
         },
         {
             "trait_type": "Attack",
-            "value": 55
+            "value": 95
         },
         {
             "trait_type": "Defense",
-            "value": 145
+            "value": 80
         },
         {
             "trait_type": "Special-attack",
-            "value": 75
+            "value": 60
         },
         {
             "trait_type": "Special-defense",
-            "value": 150
+            "value": 80
         },
         {
             "trait_type": "Speed",
-            "value": 40
+            "value": 30
         },
         {
             "trait_type": "Base Experience",
-            "value": 184
+            "value": 142
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

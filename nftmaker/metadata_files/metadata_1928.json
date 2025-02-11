@@ -1,0 +1,40 @@
+{
+    "name": "Sunflora",
+    "description": "An NFT representing the Pokemon Sunflora.",
+    "copy_number": 8,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/192.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 75
+        },
+        {
+            "trait_type": "Attack",
+            "value": 75
+        },
+        {
+            "trait_type": "Defense",
+            "value": 55
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 105
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 85
+        },
+        {
+            "trait_type": "Speed",
+            "value": 30
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 149
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

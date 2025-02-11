@@ -1,39 +1,40 @@
 {
-    "name": "Meloetta-aria",
-    "description": "An NFT representing the Pokemon Meloetta-aria.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/648.png",
+    "name": "Kadabra",
+    "description": "An NFT representing the Pokemon Kadabra.",
+    "copy_number": 8,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/64.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 100
+            "value": 40
         },
         {
             "trait_type": "Attack",
-            "value": 77
+            "value": 35
         },
         {
             "trait_type": "Defense",
-            "value": 77
+            "value": 30
         },
         {
             "trait_type": "Special-attack",
-            "value": 128
+            "value": 120
         },
         {
             "trait_type": "Special-defense",
-            "value": 128
+            "value": 70
         },
         {
             "trait_type": "Speed",
-            "value": 90
+            "value": 105
         },
         {
             "trait_type": "Base Experience",
-            "value": 270
+            "value": 140
         },
         {
             "trait_type": "Rarity",
-            "value": "Rare"
+            "value": "Common"
         }
     ]
 }

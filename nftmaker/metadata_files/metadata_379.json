@@ -1,39 +1,40 @@
 {
-    "name": "Registeel",
-    "description": "An NFT representing the Pokemon Registeel.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/379.png",
+    "name": "Vulpix",
+    "description": "An NFT representing the Pokemon Vulpix.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/37.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 80
+            "value": 38
         },
         {
             "trait_type": "Attack",
-            "value": 75
+            "value": 41
         },
         {
             "trait_type": "Defense",
-            "value": 150
+            "value": 40
         },
         {
             "trait_type": "Special-attack",
-            "value": 75
-        },
-        {
-            "trait_type": "Special-defense",
-            "value": 150
-        },
-        {
-            "trait_type": "Speed",
             "value": 50
         },
         {
+            "trait_type": "Special-defense",
+            "value": 65
+        },
+        {
+            "trait_type": "Speed",
+            "value": 65
+        },
+        {
             "trait_type": "Base Experience",
-            "value": 290
+            "value": 60
         },
         {
             "trait_type": "Rarity",
-            "value": "Rare"
+            "value": "Common"
         }
     ]
 }

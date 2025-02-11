@@ -1,0 +1,40 @@
+{
+    "name": "Litleo",
+    "description": "An NFT representing the Pokemon Litleo.",
+    "copy_number": 5,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/667.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 62
+        },
+        {
+            "trait_type": "Attack",
+            "value": 50
+        },
+        {
+            "trait_type": "Defense",
+            "value": 58
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 73
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 54
+        },
+        {
+            "trait_type": "Speed",
+            "value": 72
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 74
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

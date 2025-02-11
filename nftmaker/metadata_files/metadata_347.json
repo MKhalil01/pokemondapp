@@ -1,39 +1,40 @@
 {
-    "name": "Anorith",
-    "description": "An NFT representing the Pokemon Anorith.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/347.png",
+    "name": "Nidoking",
+    "description": "An NFT representing the Pokemon Nidoking.",
+    "copy_number": 7,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/34.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 45
+            "value": 81
         },
         {
             "trait_type": "Attack",
-            "value": 95
+            "value": 102
         },
         {
             "trait_type": "Defense",
-            "value": 50
+            "value": 77
         },
         {
             "trait_type": "Special-attack",
-            "value": 40
+            "value": 85
         },
         {
             "trait_type": "Special-defense",
-            "value": 50
-        },
-        {
-            "trait_type": "Speed",
             "value": 75
         },
         {
+            "trait_type": "Speed",
+            "value": 85
+        },
+        {
             "trait_type": "Base Experience",
-            "value": 71
+            "value": 253
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Rare"
         }
     ]
 }

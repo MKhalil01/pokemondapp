@@ -1,35 +1,36 @@
 {
-    "name": "Diglett",
-    "description": "An NFT representing the Pokemon Diglett.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/50.png",
+    "name": "Charmeleon",
+    "description": "An NFT representing the Pokemon Charmeleon.",
+    "copy_number": 0,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/5.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 10
+            "value": 58
         },
         {
             "trait_type": "Attack",
-            "value": 55
+            "value": 64
         },
         {
             "trait_type": "Defense",
-            "value": 25
+            "value": 58
         },
         {
             "trait_type": "Special-attack",
-            "value": 35
+            "value": 80
         },
         {
             "trait_type": "Special-defense",
-            "value": 45
+            "value": 65
         },
         {
             "trait_type": "Speed",
-            "value": 95
+            "value": 80
         },
         {
             "trait_type": "Base Experience",
-            "value": 53
+            "value": 142
         },
         {
             "trait_type": "Rarity",

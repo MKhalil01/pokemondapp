@@ -1,39 +1,40 @@
 {
-    "name": "Scizor",
-    "description": "An NFT representing the Pokemon Scizor.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/212.png",
+    "name": "Spearow",
+    "description": "An NFT representing the Pokemon Spearow.",
+    "copy_number": 2,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/21.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 70
+            "value": 40
         },
         {
             "trait_type": "Attack",
-            "value": 130
+            "value": 60
         },
         {
             "trait_type": "Defense",
-            "value": 100
+            "value": 30
         },
         {
             "trait_type": "Special-attack",
-            "value": 55
+            "value": 31
         },
         {
             "trait_type": "Special-defense",
-            "value": 80
+            "value": 31
         },
         {
             "trait_type": "Speed",
-            "value": 65
+            "value": 70
         },
         {
             "trait_type": "Base Experience",
-            "value": 175
+            "value": 52
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

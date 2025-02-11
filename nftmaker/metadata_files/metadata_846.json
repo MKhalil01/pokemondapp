@@ -1,35 +1,36 @@
 {
-    "name": "Arrokuda",
-    "description": "An NFT representing the Pokemon Arrokuda.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/846.png",
+    "name": "Doduo",
+    "description": "An NFT representing the Pokemon Doduo.",
+    "copy_number": 6,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/84.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 41
+            "value": 35
         },
         {
             "trait_type": "Attack",
-            "value": 63
+            "value": 85
         },
         {
             "trait_type": "Defense",
-            "value": 40
+            "value": 45
         },
         {
             "trait_type": "Special-attack",
-            "value": 40
+            "value": 35
         },
         {
             "trait_type": "Special-defense",
-            "value": 30
+            "value": 35
         },
         {
             "trait_type": "Speed",
-            "value": 66
+            "value": 75
         },
         {
             "trait_type": "Base Experience",
-            "value": 56
+            "value": 62
         },
         {
             "trait_type": "Rarity",

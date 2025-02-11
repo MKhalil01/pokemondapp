@@ -1,35 +1,36 @@
 {
-    "name": "Tranquill",
-    "description": "An NFT representing the Pokemon Tranquill.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/520.png",
+    "name": "Meowth",
+    "description": "An NFT representing the Pokemon Meowth.",
+    "copy_number": 0,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/52.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 62
+            "value": 40
         },
         {
             "trait_type": "Attack",
-            "value": 77
+            "value": 45
         },
         {
             "trait_type": "Defense",
-            "value": 62
+            "value": 35
         },
         {
             "trait_type": "Special-attack",
-            "value": 50
+            "value": 40
         },
         {
             "trait_type": "Special-defense",
-            "value": 42
+            "value": 40
         },
         {
             "trait_type": "Speed",
-            "value": 65
+            "value": 90
         },
         {
             "trait_type": "Base Experience",
-            "value": 125
+            "value": 58
         },
         {
             "trait_type": "Rarity",

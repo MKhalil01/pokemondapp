@@ -1,0 +1,40 @@
+{
+    "name": "Stunfisk",
+    "description": "An NFT representing the Pokemon Stunfisk.",
+    "copy_number": 5,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/618.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 109
+        },
+        {
+            "trait_type": "Attack",
+            "value": 66
+        },
+        {
+            "trait_type": "Defense",
+            "value": 84
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 81
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 99
+        },
+        {
+            "trait_type": "Speed",
+            "value": 32
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 165
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Uncommon"
+        }
+    ]
+}

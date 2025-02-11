@@ -1,39 +1,40 @@
 {
-    "name": "Hawlucha",
-    "description": "An NFT representing the Pokemon Hawlucha.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/701.png",
+    "name": "Weepinbell",
+    "description": "An NFT representing the Pokemon Weepinbell.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/70.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 78
+            "value": 65
         },
         {
             "trait_type": "Attack",
-            "value": 92
+            "value": 90
         },
         {
             "trait_type": "Defense",
-            "value": 75
+            "value": 50
         },
         {
             "trait_type": "Special-attack",
-            "value": 74
+            "value": 85
         },
         {
             "trait_type": "Special-defense",
-            "value": 63
+            "value": 45
         },
         {
             "trait_type": "Speed",
-            "value": 118
+            "value": 55
         },
         {
             "trait_type": "Base Experience",
-            "value": 175
+            "value": 137
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

@@ -1,0 +1,40 @@
+{
+    "name": "Decidueye",
+    "description": "An NFT representing the Pokemon Decidueye.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/724.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 78
+        },
+        {
+            "trait_type": "Attack",
+            "value": 107
+        },
+        {
+            "trait_type": "Defense",
+            "value": 75
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 100
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 100
+        },
+        {
+            "trait_type": "Speed",
+            "value": 70
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 265
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Rare"
+        }
+    ]
+}

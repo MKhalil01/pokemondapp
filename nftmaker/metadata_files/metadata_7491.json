@@ -1,0 +1,40 @@
+{
+    "name": "Mudbray",
+    "description": "An NFT representing the Pokemon Mudbray.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/749.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 70
+        },
+        {
+            "trait_type": "Attack",
+            "value": 100
+        },
+        {
+            "trait_type": "Defense",
+            "value": 70
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 45
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 55
+        },
+        {
+            "trait_type": "Speed",
+            "value": 45
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 77
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

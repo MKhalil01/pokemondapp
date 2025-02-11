@@ -1,7 +1,8 @@
 {
-    "name": "Maschiff",
-    "description": "An NFT representing the Pokemon Maschiff.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/942.png",
+    "name": "Gengar",
+    "description": "An NFT representing the Pokemon Gengar.",
+    "copy_number": 2,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/94.png",
     "attributes": [
         {
             "trait_type": "Hp",
@@ -9,7 +10,7 @@
         },
         {
             "trait_type": "Attack",
-            "value": 78
+            "value": 65
         },
         {
             "trait_type": "Defense",
@@ -17,23 +18,23 @@
         },
         {
             "trait_type": "Special-attack",
-            "value": 40
+            "value": 130
         },
         {
             "trait_type": "Special-defense",
-            "value": 51
+            "value": 75
         },
         {
             "trait_type": "Speed",
-            "value": 51
+            "value": 110
         },
         {
             "trait_type": "Base Experience",
-            "value": 68
+            "value": 250
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Rare"
         }
     ]
 }

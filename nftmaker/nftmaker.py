@@ -31,7 +31,7 @@ def determine_rarity(base_experience):
     else:
         return "Legendary"
 
-def generate_metadata(pokemon_data):
+def generate_metadata(pokemon_data, copy_num):
     """
     Generate a metadata dictionary for a Pokemon.
     Uses the official artwork image and includes Pokemon stats and rarity.
@@ -54,6 +54,7 @@ def generate_metadata(pokemon_data):
     metadata = {
         "name": pokemon_data["name"].capitalize(),
         "description": f"An NFT representing the Pokemon {pokemon_data['name'].capitalize()}.",
+        "copy_number": copy_num,
         "image": official_artwork,
         "attributes": stats_attributes + [
             {"trait_type": "Base Experience", "value": base_experience},
@@ -64,15 +65,18 @@ def generate_metadata(pokemon_data):
 
 def main():
     total_unique_pokemon = 1025  # Total unique Pokemon available in the PokeAPI
-    print("Starting metadata generation for unique Pokemon...")
+    copies_per_pokemon = 10 # Number of the same Pokemon
+    print("Starting metadata generation for Pokemon...")
 
     for pokemon_id in range(1, total_unique_pokemon + 1):
         data = fetch_pokemon_data(pokemon_id)
         if data:
-            metadata = generate_metadata(data)
-            filename = f"metadata_files/metadata_{pokemon_id}.json"
-            with open(filename, "w") as f:
-                json.dump(metadata, f, indent=4)
+            for copy_num in range(copies_per_pokemon):
+                metadata = generate_metadata(data, copy_num)
+                filenum = pokemon_id * 10 + copy_num
+                filename = f"metadata_files/metadata_{filenum}.json"
+                with open(filename, "w") as f:
+                    json.dump(metadata, f, indent=4)
             print(f"Generated metadata for Pokemon ID {pokemon_id}")
         else:
             print(f"Skipping Pokemon ID {pokemon_id} due to an error.")

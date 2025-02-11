@@ -1,7 +1,8 @@
 {
-    "name": "Sunkern",
-    "description": "An NFT representing the Pokemon Sunkern.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/191.png",
+    "name": "Rattata",
+    "description": "An NFT representing the Pokemon Rattata.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/19.png",
     "attributes": [
         {
             "trait_type": "Hp",
@@ -9,27 +10,27 @@
         },
         {
             "trait_type": "Attack",
-            "value": 30
+            "value": 56
         },
         {
             "trait_type": "Defense",
-            "value": 30
+            "value": 35
         },
         {
             "trait_type": "Special-attack",
-            "value": 30
+            "value": 25
         },
         {
             "trait_type": "Special-defense",
-            "value": 30
+            "value": 35
         },
         {
             "trait_type": "Speed",
-            "value": 30
+            "value": 72
         },
         {
             "trait_type": "Base Experience",
-            "value": 36
+            "value": 51
         },
         {
             "trait_type": "Rarity",

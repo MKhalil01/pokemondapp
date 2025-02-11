@@ -1,0 +1,40 @@
+{
+    "name": "Nymble",
+    "description": "An NFT representing the Pokemon Nymble.",
+    "copy_number": 7,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/919.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 33
+        },
+        {
+            "trait_type": "Attack",
+            "value": 46
+        },
+        {
+            "trait_type": "Defense",
+            "value": 40
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 21
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 25
+        },
+        {
+            "trait_type": "Speed",
+            "value": 45
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 42
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

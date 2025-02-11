@@ -1,39 +1,40 @@
 {
-    "name": "Luxio",
-    "description": "An NFT representing the Pokemon Luxio.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/404.png",
+    "name": "Wigglytuff",
+    "description": "An NFT representing the Pokemon Wigglytuff.",
+    "copy_number": 4,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/40.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 60
+            "value": 140
         },
         {
             "trait_type": "Attack",
-            "value": 85
+            "value": 70
         },
         {
             "trait_type": "Defense",
-            "value": 49
+            "value": 45
         },
         {
             "trait_type": "Special-attack",
-            "value": 60
+            "value": 85
         },
         {
             "trait_type": "Special-defense",
-            "value": 49
+            "value": 50
         },
         {
             "trait_type": "Speed",
-            "value": 60
+            "value": 45
         },
         {
             "trait_type": "Base Experience",
-            "value": 127
+            "value": 218
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Uncommon"
         }
     ]
 }

@@ -1,35 +1,36 @@
 {
-    "name": "Klawf",
-    "description": "An NFT representing the Pokemon Klawf.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/950.png",
+    "name": "Onix",
+    "description": "An NFT representing the Pokemon Onix.",
+    "copy_number": 0,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/95.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 70
-        },
-        {
-            "trait_type": "Attack",
-            "value": 100
-        },
-        {
-            "trait_type": "Defense",
-            "value": 115
-        },
-        {
-            "trait_type": "Special-attack",
             "value": 35
         },
         {
+            "trait_type": "Attack",
+            "value": 45
+        },
+        {
+            "trait_type": "Defense",
+            "value": 160
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 30
+        },
+        {
             "trait_type": "Special-defense",
-            "value": 55
+            "value": 45
         },
         {
             "trait_type": "Speed",
-            "value": 75
+            "value": 70
         },
         {
             "trait_type": "Base Experience",
-            "value": 158
+            "value": 77
         },
         {
             "trait_type": "Rarity",

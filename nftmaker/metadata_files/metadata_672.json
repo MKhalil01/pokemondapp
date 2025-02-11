@@ -1,35 +1,36 @@
 {
-    "name": "Skiddo",
-    "description": "An NFT representing the Pokemon Skiddo.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/672.png",
+    "name": "Machoke",
+    "description": "An NFT representing the Pokemon Machoke.",
+    "copy_number": 2,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/67.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 66
+            "value": 80
         },
         {
             "trait_type": "Attack",
-            "value": 65
+            "value": 100
         },
         {
             "trait_type": "Defense",
-            "value": 48
+            "value": 70
         },
         {
             "trait_type": "Special-attack",
-            "value": 62
+            "value": 50
         },
         {
             "trait_type": "Special-defense",
-            "value": 57
+            "value": 60
         },
         {
             "trait_type": "Speed",
-            "value": 52
+            "value": 45
         },
         {
             "trait_type": "Base Experience",
-            "value": 70
+            "value": 142
         },
         {
             "trait_type": "Rarity",
