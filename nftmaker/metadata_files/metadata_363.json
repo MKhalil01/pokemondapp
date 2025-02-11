@@ -1,39 +1,40 @@
 {
-    "name": "Spheal",
-    "description": "An NFT representing the Pokemon Spheal.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/363.png",
+    "name": "Clefable",
+    "description": "An NFT representing the Pokemon Clefable.",
+    "copy_number": 3,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/36.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 70
+            "value": 95
         },
         {
             "trait_type": "Attack",
-            "value": 40
+            "value": 70
         },
         {
             "trait_type": "Defense",
-            "value": 50
+            "value": 73
         },
         {
             "trait_type": "Special-attack",
-            "value": 55
+            "value": 95
         },
         {
             "trait_type": "Special-defense",
-            "value": 50
+            "value": 90
         },
         {
             "trait_type": "Speed",
-            "value": 25
+            "value": 60
         },
         {
             "trait_type": "Base Experience",
-            "value": 58
+            "value": 242
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Uncommon"
         }
     ]
 }

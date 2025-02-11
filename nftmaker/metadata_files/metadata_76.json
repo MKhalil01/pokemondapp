@@ -1,39 +1,40 @@
 {
-    "name": "Golem",
-    "description": "An NFT representing the Pokemon Golem.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/76.png",
+    "name": "Squirtle",
+    "description": "An NFT representing the Pokemon Squirtle.",
+    "copy_number": 6,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 80
+            "value": 44
         },
         {
             "trait_type": "Attack",
-            "value": 120
+            "value": 48
         },
         {
             "trait_type": "Defense",
-            "value": 130
-        },
-        {
-            "trait_type": "Special-attack",
-            "value": 55
-        },
-        {
-            "trait_type": "Special-defense",
             "value": 65
         },
         {
+            "trait_type": "Special-attack",
+            "value": 50
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 64
+        },
+        {
             "trait_type": "Speed",
-            "value": 45
+            "value": 43
         },
         {
             "trait_type": "Base Experience",
-            "value": 223
+            "value": 63
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

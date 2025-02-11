@@ -1,39 +1,40 @@
 {
-    "name": "Darumaka",
-    "description": "An NFT representing the Pokemon Darumaka.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/554.png",
+    "name": "Golduck",
+    "description": "An NFT representing the Pokemon Golduck.",
+    "copy_number": 4,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/55.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 70
+            "value": 80
         },
         {
             "trait_type": "Attack",
-            "value": 90
+            "value": 82
         },
         {
             "trait_type": "Defense",
-            "value": 45
+            "value": 78
         },
         {
             "trait_type": "Special-attack",
-            "value": 15
+            "value": 95
         },
         {
             "trait_type": "Special-defense",
-            "value": 45
+            "value": 80
         },
         {
             "trait_type": "Speed",
-            "value": 50
+            "value": 85
         },
         {
             "trait_type": "Base Experience",
-            "value": 63
+            "value": 175
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Uncommon"
         }
     ]
 }

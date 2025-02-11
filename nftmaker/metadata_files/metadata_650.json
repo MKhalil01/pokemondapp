@@ -1,39 +1,40 @@
 {
-    "name": "Chespin",
-    "description": "An NFT representing the Pokemon Chespin.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/650.png",
+    "name": "Alakazam",
+    "description": "An NFT representing the Pokemon Alakazam.",
+    "copy_number": 0,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/65.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 56
+            "value": 55
         },
         {
             "trait_type": "Attack",
-            "value": 61
+            "value": 50
         },
         {
             "trait_type": "Defense",
-            "value": 65
-        },
-        {
-            "trait_type": "Special-attack",
-            "value": 48
-        },
-        {
-            "trait_type": "Special-defense",
             "value": 45
         },
         {
+            "trait_type": "Special-attack",
+            "value": 135
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 95
+        },
+        {
             "trait_type": "Speed",
-            "value": 38
+            "value": 120
         },
         {
             "trait_type": "Base Experience",
-            "value": 63
+            "value": 250
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Rare"
         }
     ]
 }

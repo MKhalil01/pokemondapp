@@ -1,35 +1,36 @@
 {
-    "name": "Snubbull",
-    "description": "An NFT representing the Pokemon Snubbull.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/209.png",
+    "name": "Raticate",
+    "description": "An NFT representing the Pokemon Raticate.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/20.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 60
+            "value": 55
         },
         {
             "trait_type": "Attack",
-            "value": 80
+            "value": 81
         },
         {
             "trait_type": "Defense",
-            "value": 50
+            "value": 60
         },
         {
             "trait_type": "Special-attack",
-            "value": 40
+            "value": 50
         },
         {
             "trait_type": "Special-defense",
-            "value": 40
+            "value": 70
         },
         {
             "trait_type": "Speed",
-            "value": 30
+            "value": 97
         },
         {
             "trait_type": "Base Experience",
-            "value": 60
+            "value": 145
         },
         {
             "trait_type": "Rarity",

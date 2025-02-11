@@ -1,39 +1,40 @@
 {
-    "name": "Xurkitree",
-    "description": "An NFT representing the Pokemon Xurkitree.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/796.png",
+    "name": "Slowpoke",
+    "description": "An NFT representing the Pokemon Slowpoke.",
+    "copy_number": 6,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/79.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 83
+            "value": 90
         },
         {
             "trait_type": "Attack",
-            "value": 89
+            "value": 65
         },
         {
             "trait_type": "Defense",
-            "value": 71
+            "value": 65
         },
         {
             "trait_type": "Special-attack",
-            "value": 173
+            "value": 40
         },
         {
             "trait_type": "Special-defense",
-            "value": 71
+            "value": 40
         },
         {
             "trait_type": "Speed",
-            "value": 83
+            "value": 15
         },
         {
             "trait_type": "Base Experience",
-            "value": 285
+            "value": 63
         },
         {
             "trait_type": "Rarity",
-            "value": "Rare"
+            "value": "Common"
         }
     ]
 }

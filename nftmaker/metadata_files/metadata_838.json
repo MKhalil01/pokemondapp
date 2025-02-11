@@ -1,35 +1,36 @@
 {
-    "name": "Carkol",
-    "description": "An NFT representing the Pokemon Carkol.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/838.png",
+    "name": "Farfetchd",
+    "description": "An NFT representing the Pokemon Farfetchd.",
+    "copy_number": 8,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/83.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 80
+            "value": 52
         },
         {
             "trait_type": "Attack",
-            "value": 60
-        },
-        {
-            "trait_type": "Defense",
             "value": 90
         },
         {
+            "trait_type": "Defense",
+            "value": 55
+        },
+        {
             "trait_type": "Special-attack",
-            "value": 60
+            "value": 58
         },
         {
             "trait_type": "Special-defense",
-            "value": 70
+            "value": 62
         },
         {
             "trait_type": "Speed",
-            "value": 50
+            "value": 60
         },
         {
             "trait_type": "Base Experience",
-            "value": 144
+            "value": 132
         },
         {
             "trait_type": "Rarity",

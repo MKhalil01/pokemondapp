@@ -1,11 +1,12 @@
 {
-    "name": "Wyrdeer",
-    "description": "An NFT representing the Pokemon Wyrdeer.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/899.png",
+    "name": "Muk",
+    "description": "An NFT representing the Pokemon Muk.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/89.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 103
+            "value": 105
         },
         {
             "trait_type": "Attack",
@@ -13,27 +14,27 @@
         },
         {
             "trait_type": "Defense",
-            "value": 72
-        },
-        {
-            "trait_type": "Special-attack",
-            "value": 105
-        },
-        {
-            "trait_type": "Special-defense",
             "value": 75
         },
         {
-            "trait_type": "Speed",
+            "trait_type": "Special-attack",
             "value": 65
         },
         {
+            "trait_type": "Special-defense",
+            "value": 100
+        },
+        {
+            "trait_type": "Speed",
+            "value": 50
+        },
+        {
             "trait_type": "Base Experience",
-            "value": 263
+            "value": 175
         },
         {
             "trait_type": "Rarity",
-            "value": "Rare"
+            "value": "Uncommon"
         }
     ]
 }

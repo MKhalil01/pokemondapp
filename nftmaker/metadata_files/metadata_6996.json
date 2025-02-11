@@ -1,0 +1,40 @@
+{
+    "name": "Aurorus",
+    "description": "An NFT representing the Pokemon Aurorus.",
+    "copy_number": 6,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/699.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 123
+        },
+        {
+            "trait_type": "Attack",
+            "value": 77
+        },
+        {
+            "trait_type": "Defense",
+            "value": 72
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 99
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 92
+        },
+        {
+            "trait_type": "Speed",
+            "value": 58
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 104
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

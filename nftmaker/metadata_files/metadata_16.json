@@ -1,35 +1,36 @@
 {
-    "name": "Pidgey",
-    "description": "An NFT representing the Pokemon Pidgey.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/16.png",
+    "name": "Bulbasaur",
+    "description": "An NFT representing the Pokemon Bulbasaur.",
+    "copy_number": 6,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 40
-        },
-        {
-            "trait_type": "Attack",
             "value": 45
         },
         {
+            "trait_type": "Attack",
+            "value": 49
+        },
+        {
             "trait_type": "Defense",
-            "value": 40
+            "value": 49
         },
         {
             "trait_type": "Special-attack",
-            "value": 35
+            "value": 65
         },
         {
             "trait_type": "Special-defense",
-            "value": 35
+            "value": 65
         },
         {
             "trait_type": "Speed",
-            "value": 56
+            "value": 45
         },
         {
             "trait_type": "Base Experience",
-            "value": 50
+            "value": 64
         },
         {
             "trait_type": "Rarity",

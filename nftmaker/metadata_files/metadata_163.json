@@ -1,35 +1,36 @@
 {
-    "name": "Hoothoot",
-    "description": "An NFT representing the Pokemon Hoothoot.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/163.png",
+    "name": "Pidgey",
+    "description": "An NFT representing the Pokemon Pidgey.",
+    "copy_number": 3,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/16.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 60
+            "value": 40
         },
         {
             "trait_type": "Attack",
-            "value": 30
+            "value": 45
         },
         {
             "trait_type": "Defense",
-            "value": 30
+            "value": 40
         },
         {
             "trait_type": "Special-attack",
-            "value": 36
+            "value": 35
         },
         {
             "trait_type": "Special-defense",
-            "value": 56
+            "value": 35
         },
         {
             "trait_type": "Speed",
-            "value": 50
+            "value": 56
         },
         {
             "trait_type": "Base Experience",
-            "value": 52
+            "value": 50
         },
         {
             "trait_type": "Rarity",

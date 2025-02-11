@@ -1,39 +1,40 @@
 {
-    "name": "Camerupt",
-    "description": "An NFT representing the Pokemon Camerupt.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/323.png",
+    "name": "Nidoran-m",
+    "description": "An NFT representing the Pokemon Nidoran-m.",
+    "copy_number": 3,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/32.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 70
+            "value": 46
         },
         {
             "trait_type": "Attack",
-            "value": 100
+            "value": 57
         },
         {
             "trait_type": "Defense",
-            "value": 70
-        },
-        {
-            "trait_type": "Special-attack",
-            "value": 105
-        },
-        {
-            "trait_type": "Special-defense",
-            "value": 75
-        },
-        {
-            "trait_type": "Speed",
             "value": 40
         },
         {
+            "trait_type": "Special-attack",
+            "value": 40
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 40
+        },
+        {
+            "trait_type": "Speed",
+            "value": 50
+        },
+        {
             "trait_type": "Base Experience",
-            "value": 161
+            "value": 55
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

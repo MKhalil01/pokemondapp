@@ -1,23 +1,24 @@
 {
-    "name": "Slowbro",
-    "description": "An NFT representing the Pokemon Slowbro.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/80.png",
+    "name": "Wartortle",
+    "description": "An NFT representing the Pokemon Wartortle.",
+    "copy_number": 0,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/8.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 95
+            "value": 59
         },
         {
             "trait_type": "Attack",
-            "value": 75
+            "value": 63
         },
         {
             "trait_type": "Defense",
-            "value": 110
+            "value": 80
         },
         {
             "trait_type": "Special-attack",
-            "value": 100
+            "value": 65
         },
         {
             "trait_type": "Special-defense",
@@ -25,15 +26,15 @@
         },
         {
             "trait_type": "Speed",
-            "value": 30
+            "value": 58
         },
         {
             "trait_type": "Base Experience",
-            "value": 172
+            "value": 142
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

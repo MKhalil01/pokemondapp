@@ -1,39 +1,40 @@
 {
-    "name": "Sceptile",
-    "description": "An NFT representing the Pokemon Sceptile.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/254.png",
+    "name": "Pikachu",
+    "description": "An NFT representing the Pokemon Pikachu.",
+    "copy_number": 4,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 70
+            "value": 35
         },
         {
             "trait_type": "Attack",
-            "value": 85
+            "value": 55
         },
         {
             "trait_type": "Defense",
-            "value": 65
+            "value": 40
         },
         {
             "trait_type": "Special-attack",
-            "value": 105
+            "value": 50
         },
         {
             "trait_type": "Special-defense",
-            "value": 85
+            "value": 50
         },
         {
             "trait_type": "Speed",
-            "value": 120
+            "value": 90
         },
         {
             "trait_type": "Base Experience",
-            "value": 265
+            "value": 112
         },
         {
             "trait_type": "Rarity",
-            "value": "Rare"
+            "value": "Common"
         }
     ]
 }

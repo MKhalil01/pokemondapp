@@ -1,0 +1,40 @@
+{
+    "name": "Iron-jugulis",
+    "description": "An NFT representing the Pokemon Iron-jugulis.",
+    "copy_number": 5,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/993.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 94
+        },
+        {
+            "trait_type": "Attack",
+            "value": 80
+        },
+        {
+            "trait_type": "Defense",
+            "value": 86
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 122
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 80
+        },
+        {
+            "trait_type": "Speed",
+            "value": 108
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 285
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Rare"
+        }
+    ]
+}

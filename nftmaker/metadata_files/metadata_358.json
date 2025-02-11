@@ -1,39 +1,40 @@
 {
-    "name": "Chimecho",
-    "description": "An NFT representing the Pokemon Chimecho.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/358.png",
+    "name": "Clefairy",
+    "description": "An NFT representing the Pokemon Clefairy.",
+    "copy_number": 8,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/35.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 75
+            "value": 70
         },
         {
             "trait_type": "Attack",
-            "value": 50
+            "value": 45
         },
         {
             "trait_type": "Defense",
-            "value": 80
+            "value": 48
         },
         {
             "trait_type": "Special-attack",
-            "value": 95
+            "value": 60
         },
         {
             "trait_type": "Special-defense",
-            "value": 90
-        },
-        {
-            "trait_type": "Speed",
             "value": 65
         },
         {
+            "trait_type": "Speed",
+            "value": 35
+        },
+        {
             "trait_type": "Base Experience",
-            "value": 159
+            "value": 113
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

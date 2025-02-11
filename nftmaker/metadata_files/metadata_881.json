@@ -1,39 +1,40 @@
 {
-    "name": "Arctozolt",
-    "description": "An NFT representing the Pokemon Arctozolt.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/881.png",
+    "name": "Grimer",
+    "description": "An NFT representing the Pokemon Grimer.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/88.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 90
-        },
-        {
-            "trait_type": "Attack",
-            "value": 100
-        },
-        {
-            "trait_type": "Defense",
-            "value": 90
-        },
-        {
-            "trait_type": "Special-attack",
-            "value": 90
-        },
-        {
-            "trait_type": "Special-defense",
             "value": 80
         },
         {
+            "trait_type": "Attack",
+            "value": 80
+        },
+        {
+            "trait_type": "Defense",
+            "value": 50
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 40
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 50
+        },
+        {
             "trait_type": "Speed",
-            "value": 55
+            "value": 25
         },
         {
             "trait_type": "Base Experience",
-            "value": 177
+            "value": 65
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

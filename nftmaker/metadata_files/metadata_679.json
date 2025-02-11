@@ -1,35 +1,36 @@
 {
-    "name": "Honedge",
-    "description": "An NFT representing the Pokemon Honedge.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/679.png",
+    "name": "Machoke",
+    "description": "An NFT representing the Pokemon Machoke.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/67.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 45
-        },
-        {
-            "trait_type": "Attack",
             "value": 80
         },
         {
-            "trait_type": "Defense",
+            "trait_type": "Attack",
             "value": 100
         },
         {
+            "trait_type": "Defense",
+            "value": 70
+        },
+        {
             "trait_type": "Special-attack",
-            "value": 35
+            "value": 50
         },
         {
             "trait_type": "Special-defense",
-            "value": 37
+            "value": 60
         },
         {
             "trait_type": "Speed",
-            "value": 28
+            "value": 45
         },
         {
             "trait_type": "Base Experience",
-            "value": 65
+            "value": 142
         },
         {
             "trait_type": "Rarity",

@@ -1,0 +1,40 @@
+{
+    "name": "Empoleon",
+    "description": "An NFT representing the Pokemon Empoleon.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/395.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 84
+        },
+        {
+            "trait_type": "Attack",
+            "value": 86
+        },
+        {
+            "trait_type": "Defense",
+            "value": 88
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 111
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 101
+        },
+        {
+            "trait_type": "Speed",
+            "value": 60
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 239
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Uncommon"
+        }
+    ]
+}

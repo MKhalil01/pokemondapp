@@ -1,19 +1,20 @@
 {
-    "name": "Hariyama",
-    "description": "An NFT representing the Pokemon Hariyama.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/297.png",
+    "name": "Nidoran-f",
+    "description": "An NFT representing the Pokemon Nidoran-f.",
+    "copy_number": 7,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/29.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 144
+            "value": 55
         },
         {
             "trait_type": "Attack",
-            "value": 120
+            "value": 47
         },
         {
             "trait_type": "Defense",
-            "value": 60
+            "value": 52
         },
         {
             "trait_type": "Special-attack",
@@ -21,19 +22,19 @@
         },
         {
             "trait_type": "Special-defense",
-            "value": 60
+            "value": 40
         },
         {
             "trait_type": "Speed",
-            "value": 50
+            "value": 41
         },
         {
             "trait_type": "Base Experience",
-            "value": 166
+            "value": 55
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

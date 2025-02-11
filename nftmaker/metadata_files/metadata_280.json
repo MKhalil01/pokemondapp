@@ -1,19 +1,20 @@
 {
-    "name": "Ralts",
-    "description": "An NFT representing the Pokemon Ralts.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/280.png",
+    "name": "Sandslash",
+    "description": "An NFT representing the Pokemon Sandslash.",
+    "copy_number": 0,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/28.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 28
+            "value": 75
         },
         {
             "trait_type": "Attack",
-            "value": 25
+            "value": 100
         },
         {
             "trait_type": "Defense",
-            "value": 25
+            "value": 110
         },
         {
             "trait_type": "Special-attack",
@@ -21,15 +22,15 @@
         },
         {
             "trait_type": "Special-defense",
-            "value": 35
+            "value": 55
         },
         {
             "trait_type": "Speed",
-            "value": 40
+            "value": 65
         },
         {
             "trait_type": "Base Experience",
-            "value": 40
+            "value": 158
         },
         {
             "trait_type": "Rarity",

@@ -1,35 +1,36 @@
 {
-    "name": "Nidoran-f",
-    "description": "An NFT representing the Pokemon Nidoran-f.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/29.png",
+    "name": "Ivysaur",
+    "description": "An NFT representing the Pokemon Ivysaur.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 55
+            "value": 60
         },
         {
             "trait_type": "Attack",
-            "value": 47
+            "value": 62
         },
         {
             "trait_type": "Defense",
-            "value": 52
+            "value": 63
         },
         {
             "trait_type": "Special-attack",
-            "value": 40
+            "value": 80
         },
         {
             "trait_type": "Special-defense",
-            "value": 40
+            "value": 80
         },
         {
             "trait_type": "Speed",
-            "value": 41
+            "value": 60
         },
         {
             "trait_type": "Base Experience",
-            "value": 55
+            "value": 142
         },
         {
             "trait_type": "Rarity",

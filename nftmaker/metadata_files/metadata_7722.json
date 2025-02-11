@@ -1,0 +1,40 @@
+{
+    "name": "Type-null",
+    "description": "An NFT representing the Pokemon Type-null.",
+    "copy_number": 2,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/772.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 95
+        },
+        {
+            "trait_type": "Attack",
+            "value": 95
+        },
+        {
+            "trait_type": "Defense",
+            "value": 95
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 95
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 95
+        },
+        {
+            "trait_type": "Speed",
+            "value": 59
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 107
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

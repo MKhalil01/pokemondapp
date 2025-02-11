@@ -1,19 +1,20 @@
 {
-    "name": "Iron-hands",
-    "description": "An NFT representing the Pokemon Iron-hands.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/992.png",
+    "name": "Kingler",
+    "description": "An NFT representing the Pokemon Kingler.",
+    "copy_number": 2,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/99.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 154
+            "value": 55
         },
         {
             "trait_type": "Attack",
-            "value": 140
+            "value": 130
         },
         {
             "trait_type": "Defense",
-            "value": 108
+            "value": 115
         },
         {
             "trait_type": "Special-attack",
@@ -21,19 +22,19 @@
         },
         {
             "trait_type": "Special-defense",
-            "value": 68
-        },
-        {
-            "trait_type": "Speed",
             "value": 50
         },
         {
+            "trait_type": "Speed",
+            "value": 75
+        },
+        {
             "trait_type": "Base Experience",
-            "value": 285
+            "value": 166
         },
         {
             "trait_type": "Rarity",
-            "value": "Rare"
+            "value": "Uncommon"
         }
     ]
 }

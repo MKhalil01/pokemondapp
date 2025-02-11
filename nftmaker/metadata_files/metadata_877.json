@@ -1,19 +1,20 @@
 {
-    "name": "Morpeko-full-belly",
-    "description": "An NFT representing the Pokemon Morpeko-full-belly.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/877.png",
+    "name": "Dewgong",
+    "description": "An NFT representing the Pokemon Dewgong.",
+    "copy_number": 7,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/87.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 58
+            "value": 90
         },
         {
             "trait_type": "Attack",
-            "value": 95
+            "value": 70
         },
         {
             "trait_type": "Defense",
-            "value": 58
+            "value": 80
         },
         {
             "trait_type": "Special-attack",
@@ -21,19 +22,19 @@
         },
         {
             "trait_type": "Special-defense",
-            "value": 58
+            "value": 95
         },
         {
             "trait_type": "Speed",
-            "value": 97
+            "value": 70
         },
         {
             "trait_type": "Base Experience",
-            "value": 153
+            "value": 166
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Uncommon"
         }
     ]
 }

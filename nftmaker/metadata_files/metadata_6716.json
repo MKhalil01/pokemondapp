@@ -1,0 +1,40 @@
+{
+    "name": "Florges",
+    "description": "An NFT representing the Pokemon Florges.",
+    "copy_number": 6,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/671.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 78
+        },
+        {
+            "trait_type": "Attack",
+            "value": 65
+        },
+        {
+            "trait_type": "Defense",
+            "value": 68
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 112
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 154
+        },
+        {
+            "trait_type": "Speed",
+            "value": 75
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 248
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Rare"
+        }
+    ]
+}

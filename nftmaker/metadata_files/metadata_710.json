@@ -1,39 +1,40 @@
 {
-    "name": "Pumpkaboo-average",
-    "description": "An NFT representing the Pokemon Pumpkaboo-average.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/710.png",
+    "name": "Victreebel",
+    "description": "An NFT representing the Pokemon Victreebel.",
+    "copy_number": 0,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/71.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 49
+            "value": 80
         },
         {
             "trait_type": "Attack",
-            "value": 66
+            "value": 105
         },
         {
             "trait_type": "Defense",
-            "value": 70
+            "value": 65
         },
         {
             "trait_type": "Special-attack",
-            "value": 44
+            "value": 100
         },
         {
             "trait_type": "Special-defense",
-            "value": 55
+            "value": 70
         },
         {
             "trait_type": "Speed",
-            "value": 51
+            "value": 70
         },
         {
             "trait_type": "Base Experience",
-            "value": 67
+            "value": 221
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Uncommon"
         }
     ]
 }

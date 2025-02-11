@@ -1,39 +1,40 @@
 {
-    "name": "Yanmega",
-    "description": "An NFT representing the Pokemon Yanmega.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/469.png",
+    "name": "Paras",
+    "description": "An NFT representing the Pokemon Paras.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/46.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 86
+            "value": 35
         },
         {
             "trait_type": "Attack",
-            "value": 76
+            "value": 70
         },
         {
             "trait_type": "Defense",
-            "value": 86
+            "value": 55
         },
         {
             "trait_type": "Special-attack",
-            "value": 116
+            "value": 45
         },
         {
             "trait_type": "Special-defense",
-            "value": 56
+            "value": 55
         },
         {
             "trait_type": "Speed",
-            "value": 95
+            "value": 25
         },
         {
             "trait_type": "Base Experience",
-            "value": 180
+            "value": 57
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

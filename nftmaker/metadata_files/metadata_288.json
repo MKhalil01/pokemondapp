@@ -1,23 +1,24 @@
 {
-    "name": "Vigoroth",
-    "description": "An NFT representing the Pokemon Vigoroth.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/288.png",
+    "name": "Sandslash",
+    "description": "An NFT representing the Pokemon Sandslash.",
+    "copy_number": 8,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/28.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 80
+            "value": 75
         },
         {
             "trait_type": "Attack",
-            "value": 80
+            "value": 100
         },
         {
             "trait_type": "Defense",
-            "value": 80
+            "value": 110
         },
         {
             "trait_type": "Special-attack",
-            "value": 55
+            "value": 45
         },
         {
             "trait_type": "Special-defense",
@@ -25,11 +26,11 @@
         },
         {
             "trait_type": "Speed",
-            "value": 90
+            "value": 65
         },
         {
             "trait_type": "Base Experience",
-            "value": 154
+            "value": 158
         },
         {
             "trait_type": "Rarity",

@@ -1,23 +1,24 @@
 {
-    "name": "Zeraora",
-    "description": "An NFT representing the Pokemon Zeraora.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/807.png",
+    "name": "Slowbro",
+    "description": "An NFT representing the Pokemon Slowbro.",
+    "copy_number": 7,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/80.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 88
+            "value": 95
         },
         {
             "trait_type": "Attack",
-            "value": 112
-        },
-        {
-            "trait_type": "Defense",
             "value": 75
         },
         {
+            "trait_type": "Defense",
+            "value": 110
+        },
+        {
             "trait_type": "Special-attack",
-            "value": 102
+            "value": 100
         },
         {
             "trait_type": "Special-defense",
@@ -25,15 +26,15 @@
         },
         {
             "trait_type": "Speed",
-            "value": 143
+            "value": 30
         },
         {
             "trait_type": "Base Experience",
-            "value": 300
+            "value": 172
         },
         {
             "trait_type": "Rarity",
-            "value": "Rare"
+            "value": "Uncommon"
         }
     ]
 }

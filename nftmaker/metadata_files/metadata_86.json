@@ -1,35 +1,36 @@
 {
-    "name": "Seel",
-    "description": "An NFT representing the Pokemon Seel.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/86.png",
+    "name": "Wartortle",
+    "description": "An NFT representing the Pokemon Wartortle.",
+    "copy_number": 6,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/8.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 65
+            "value": 59
         },
         {
             "trait_type": "Attack",
-            "value": 45
+            "value": 63
         },
         {
             "trait_type": "Defense",
-            "value": 55
+            "value": 80
         },
         {
             "trait_type": "Special-attack",
-            "value": 45
+            "value": 65
         },
         {
             "trait_type": "Special-defense",
-            "value": 70
+            "value": 80
         },
         {
             "trait_type": "Speed",
-            "value": 45
+            "value": 58
         },
         {
             "trait_type": "Base Experience",
-            "value": 65
+            "value": 142
         },
         {
             "trait_type": "Rarity",

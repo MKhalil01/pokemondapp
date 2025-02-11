@@ -1,7 +1,8 @@
 {
-    "name": "Croconaw",
-    "description": "An NFT representing the Pokemon Croconaw.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/159.png",
+    "name": "Beedrill",
+    "description": "An NFT representing the Pokemon Beedrill.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/15.png",
     "attributes": [
         {
             "trait_type": "Hp",
@@ -9,31 +10,31 @@
         },
         {
             "trait_type": "Attack",
-            "value": 80
+            "value": 90
         },
         {
             "trait_type": "Defense",
-            "value": 80
+            "value": 40
         },
         {
             "trait_type": "Special-attack",
-            "value": 59
+            "value": 45
         },
         {
             "trait_type": "Special-defense",
-            "value": 63
+            "value": 80
         },
         {
             "trait_type": "Speed",
-            "value": 58
+            "value": 75
         },
         {
             "trait_type": "Base Experience",
-            "value": 142
+            "value": 178
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Uncommon"
         }
     ]
 }

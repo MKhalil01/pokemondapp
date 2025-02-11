@@ -1,15 +1,16 @@
 {
-    "name": "Misdreavus",
-    "description": "An NFT representing the Pokemon Misdreavus.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/200.png",
+    "name": "Raticate",
+    "description": "An NFT representing the Pokemon Raticate.",
+    "copy_number": 0,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/20.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 60
+            "value": 55
         },
         {
             "trait_type": "Attack",
-            "value": 60
+            "value": 81
         },
         {
             "trait_type": "Defense",
@@ -17,19 +18,19 @@
         },
         {
             "trait_type": "Special-attack",
-            "value": 85
+            "value": 50
         },
         {
             "trait_type": "Special-defense",
-            "value": 85
+            "value": 70
         },
         {
             "trait_type": "Speed",
-            "value": 85
+            "value": 97
         },
         {
             "trait_type": "Base Experience",
-            "value": 87
+            "value": 145
         },
         {
             "trait_type": "Rarity",

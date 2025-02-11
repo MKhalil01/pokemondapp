@@ -1,0 +1,40 @@
+{
+    "name": "Charcadet",
+    "description": "An NFT representing the Pokemon Charcadet.",
+    "copy_number": 0,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/935.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 40
+        },
+        {
+            "trait_type": "Attack",
+            "value": 50
+        },
+        {
+            "trait_type": "Defense",
+            "value": 40
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 50
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 40
+        },
+        {
+            "trait_type": "Speed",
+            "value": 35
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 51
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

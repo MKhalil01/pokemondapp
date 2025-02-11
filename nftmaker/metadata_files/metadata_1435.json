@@ -1,0 +1,40 @@
+{
+    "name": "Snorlax",
+    "description": "An NFT representing the Pokemon Snorlax.",
+    "copy_number": 5,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/143.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 160
+        },
+        {
+            "trait_type": "Attack",
+            "value": 110
+        },
+        {
+            "trait_type": "Defense",
+            "value": 65
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 65
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 110
+        },
+        {
+            "trait_type": "Speed",
+            "value": 30
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 189
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Uncommon"
+        }
+    ]
+}

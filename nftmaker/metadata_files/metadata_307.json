@@ -1,23 +1,24 @@
 {
-    "name": "Meditite",
-    "description": "An NFT representing the Pokemon Meditite.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/307.png",
+    "name": "Nidorina",
+    "description": "An NFT representing the Pokemon Nidorina.",
+    "copy_number": 7,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/30.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 30
+            "value": 70
         },
         {
             "trait_type": "Attack",
-            "value": 40
+            "value": 62
         },
         {
             "trait_type": "Defense",
-            "value": 55
+            "value": 67
         },
         {
             "trait_type": "Special-attack",
-            "value": 40
+            "value": 55
         },
         {
             "trait_type": "Special-defense",
@@ -25,11 +26,11 @@
         },
         {
             "trait_type": "Speed",
-            "value": 60
+            "value": 56
         },
         {
             "trait_type": "Base Experience",
-            "value": 56
+            "value": 128
         },
         {
             "trait_type": "Rarity",

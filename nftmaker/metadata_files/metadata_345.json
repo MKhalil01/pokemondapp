@@ -1,15 +1,16 @@
 {
-    "name": "Lileep",
-    "description": "An NFT representing the Pokemon Lileep.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/345.png",
+    "name": "Nidoking",
+    "description": "An NFT representing the Pokemon Nidoking.",
+    "copy_number": 5,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/34.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 66
+            "value": 81
         },
         {
             "trait_type": "Attack",
-            "value": 41
+            "value": 102
         },
         {
             "trait_type": "Defense",
@@ -17,23 +18,23 @@
         },
         {
             "trait_type": "Special-attack",
-            "value": 61
+            "value": 85
         },
         {
             "trait_type": "Special-defense",
-            "value": 87
+            "value": 75
         },
         {
             "trait_type": "Speed",
-            "value": 23
+            "value": 85
         },
         {
             "trait_type": "Base Experience",
-            "value": 71
+            "value": 253
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Rare"
         }
     ]
 }

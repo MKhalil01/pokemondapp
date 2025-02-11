@@ -1,39 +1,40 @@
 {
-    "name": "Swellow",
-    "description": "An NFT representing the Pokemon Swellow.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/277.png",
+    "name": "Sandshrew",
+    "description": "An NFT representing the Pokemon Sandshrew.",
+    "copy_number": 7,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/27.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 60
-        },
-        {
-            "trait_type": "Attack",
-            "value": 85
-        },
-        {
-            "trait_type": "Defense",
-            "value": 60
-        },
-        {
-            "trait_type": "Special-attack",
-            "value": 75
-        },
-        {
-            "trait_type": "Special-defense",
             "value": 50
         },
         {
+            "trait_type": "Attack",
+            "value": 75
+        },
+        {
+            "trait_type": "Defense",
+            "value": 85
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 20
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 30
+        },
+        {
             "trait_type": "Speed",
-            "value": 125
+            "value": 40
         },
         {
             "trait_type": "Base Experience",
-            "value": 159
+            "value": 60
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

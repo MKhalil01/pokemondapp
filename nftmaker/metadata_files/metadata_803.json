@@ -1,35 +1,36 @@
 {
-    "name": "Poipole",
-    "description": "An NFT representing the Pokemon Poipole.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/803.png",
+    "name": "Slowbro",
+    "description": "An NFT representing the Pokemon Slowbro.",
+    "copy_number": 3,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/80.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 67
+            "value": 95
         },
         {
             "trait_type": "Attack",
-            "value": 73
+            "value": 75
         },
         {
             "trait_type": "Defense",
-            "value": 67
+            "value": 110
         },
         {
             "trait_type": "Special-attack",
-            "value": 73
+            "value": 100
         },
         {
             "trait_type": "Special-defense",
-            "value": 67
+            "value": 80
         },
         {
             "trait_type": "Speed",
-            "value": 73
+            "value": 30
         },
         {
             "trait_type": "Base Experience",
-            "value": 210
+            "value": 172
         },
         {
             "trait_type": "Rarity",

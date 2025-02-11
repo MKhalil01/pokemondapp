@@ -1,39 +1,40 @@
 {
-    "name": "Foongus",
-    "description": "An NFT representing the Pokemon Foongus.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/590.png",
+    "name": "Arcanine",
+    "description": "An NFT representing the Pokemon Arcanine.",
+    "copy_number": 0,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/59.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 69
+            "value": 90
         },
         {
             "trait_type": "Attack",
-            "value": 55
+            "value": 110
         },
         {
             "trait_type": "Defense",
-            "value": 45
+            "value": 80
         },
         {
             "trait_type": "Special-attack",
-            "value": 55
+            "value": 100
         },
         {
             "trait_type": "Special-defense",
-            "value": 55
+            "value": 80
         },
         {
             "trait_type": "Speed",
-            "value": 15
+            "value": 95
         },
         {
             "trait_type": "Base Experience",
-            "value": 59
+            "value": 194
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Uncommon"
         }
     ]
 }

@@ -1,35 +1,36 @@
 {
-    "name": "Ekans",
-    "description": "An NFT representing the Pokemon Ekans.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/23.png",
+    "name": "Ivysaur",
+    "description": "An NFT representing the Pokemon Ivysaur.",
+    "copy_number": 3,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 35
-        },
-        {
-            "trait_type": "Attack",
             "value": 60
         },
         {
+            "trait_type": "Attack",
+            "value": 62
+        },
+        {
             "trait_type": "Defense",
-            "value": 44
+            "value": 63
         },
         {
             "trait_type": "Special-attack",
-            "value": 40
+            "value": 80
         },
         {
             "trait_type": "Special-defense",
-            "value": 54
+            "value": 80
         },
         {
             "trait_type": "Speed",
-            "value": 55
+            "value": 60
         },
         {
             "trait_type": "Base Experience",
-            "value": 58
+            "value": 142
         },
         {
             "trait_type": "Rarity",

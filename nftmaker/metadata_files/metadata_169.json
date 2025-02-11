@@ -1,39 +1,40 @@
 {
-    "name": "Crobat",
-    "description": "An NFT representing the Pokemon Crobat.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/169.png",
+    "name": "Pidgey",
+    "description": "An NFT representing the Pokemon Pidgey.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/16.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 85
+            "value": 40
         },
         {
             "trait_type": "Attack",
-            "value": 90
+            "value": 45
         },
         {
             "trait_type": "Defense",
-            "value": 80
+            "value": 40
         },
         {
             "trait_type": "Special-attack",
-            "value": 70
+            "value": 35
         },
         {
             "trait_type": "Special-defense",
-            "value": 80
+            "value": 35
         },
         {
             "trait_type": "Speed",
-            "value": 130
+            "value": 56
         },
         {
             "trait_type": "Base Experience",
-            "value": 268
+            "value": 50
         },
         {
             "trait_type": "Rarity",
-            "value": "Rare"
+            "value": "Common"
         }
     ]
 }

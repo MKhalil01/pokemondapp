@@ -1,39 +1,40 @@
 {
-    "name": "Milotic",
-    "description": "An NFT representing the Pokemon Milotic.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/350.png",
+    "name": "Clefairy",
+    "description": "An NFT representing the Pokemon Clefairy.",
+    "copy_number": 0,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/35.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 95
+            "value": 70
         },
         {
             "trait_type": "Attack",
-            "value": 60
+            "value": 45
         },
         {
             "trait_type": "Defense",
-            "value": 79
+            "value": 48
         },
         {
             "trait_type": "Special-attack",
-            "value": 100
+            "value": 60
         },
         {
             "trait_type": "Special-defense",
-            "value": 125
+            "value": 65
         },
         {
             "trait_type": "Speed",
-            "value": 81
+            "value": 35
         },
         {
             "trait_type": "Base Experience",
-            "value": 189
+            "value": 113
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

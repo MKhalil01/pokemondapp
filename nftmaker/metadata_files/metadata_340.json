@@ -1,39 +1,40 @@
 {
-    "name": "Whiscash",
-    "description": "An NFT representing the Pokemon Whiscash.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/340.png",
+    "name": "Nidoking",
+    "description": "An NFT representing the Pokemon Nidoking.",
+    "copy_number": 0,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/34.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 110
+            "value": 81
         },
         {
             "trait_type": "Attack",
-            "value": 78
+            "value": 102
         },
         {
             "trait_type": "Defense",
-            "value": 73
+            "value": 77
         },
         {
             "trait_type": "Special-attack",
-            "value": 76
+            "value": 85
         },
         {
             "trait_type": "Special-defense",
-            "value": 71
+            "value": 75
         },
         {
             "trait_type": "Speed",
-            "value": 60
+            "value": 85
         },
         {
             "trait_type": "Base Experience",
-            "value": 164
+            "value": 253
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Rare"
         }
     ]
 }

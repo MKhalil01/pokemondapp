@@ -1,35 +1,36 @@
 {
-    "name": "Venomoth",
-    "description": "An NFT representing the Pokemon Venomoth.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/49.png",
+    "name": "Charmander",
+    "description": "An NFT representing the Pokemon Charmander.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 70
+            "value": 39
         },
         {
             "trait_type": "Attack",
-            "value": 65
+            "value": 52
         },
         {
             "trait_type": "Defense",
-            "value": 60
+            "value": 43
         },
         {
             "trait_type": "Special-attack",
-            "value": 90
+            "value": 60
         },
         {
             "trait_type": "Special-defense",
-            "value": 75
+            "value": 50
         },
         {
             "trait_type": "Speed",
-            "value": 90
+            "value": 65
         },
         {
             "trait_type": "Base Experience",
-            "value": 158
+            "value": 62
         },
         {
             "trait_type": "Rarity",

@@ -1,35 +1,36 @@
 {
-    "name": "Squawkabilly-green-plumage",
-    "description": "An NFT representing the Pokemon Squawkabilly-green-plumage.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/931.png",
+    "name": "Haunter",
+    "description": "An NFT representing the Pokemon Haunter.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/93.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 82
-        },
-        {
-            "trait_type": "Attack",
-            "value": 96
-        },
-        {
-            "trait_type": "Defense",
-            "value": 51
-        },
-        {
-            "trait_type": "Special-attack",
             "value": 45
         },
         {
+            "trait_type": "Attack",
+            "value": 50
+        },
+        {
+            "trait_type": "Defense",
+            "value": 45
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 115
+        },
+        {
             "trait_type": "Special-defense",
-            "value": 51
+            "value": 55
         },
         {
             "trait_type": "Speed",
-            "value": 92
+            "value": 95
         },
         {
             "trait_type": "Base Experience",
-            "value": 146
+            "value": 142
         },
         {
             "trait_type": "Rarity",

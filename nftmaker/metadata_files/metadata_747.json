@@ -1,35 +1,36 @@
 {
-    "name": "Mareanie",
-    "description": "An NFT representing the Pokemon Mareanie.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/747.png",
+    "name": "Geodude",
+    "description": "An NFT representing the Pokemon Geodude.",
+    "copy_number": 7,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/74.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 50
+            "value": 40
         },
         {
             "trait_type": "Attack",
-            "value": 53
+            "value": 80
         },
         {
             "trait_type": "Defense",
-            "value": 62
+            "value": 100
         },
         {
             "trait_type": "Special-attack",
-            "value": 43
+            "value": 30
         },
         {
             "trait_type": "Special-defense",
-            "value": 52
+            "value": 30
         },
         {
             "trait_type": "Speed",
-            "value": 45
+            "value": 20
         },
         {
             "trait_type": "Base Experience",
-            "value": 61
+            "value": 60
         },
         {
             "trait_type": "Rarity",

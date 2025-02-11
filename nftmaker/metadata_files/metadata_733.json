@@ -1,7 +1,8 @@
 {
-    "name": "Toucannon",
-    "description": "An NFT representing the Pokemon Toucannon.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/733.png",
+    "name": "Tentacruel",
+    "description": "An NFT representing the Pokemon Tentacruel.",
+    "copy_number": 3,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/73.png",
     "attributes": [
         {
             "trait_type": "Hp",
@@ -9,27 +10,27 @@
         },
         {
             "trait_type": "Attack",
-            "value": 120
+            "value": 70
         },
         {
             "trait_type": "Defense",
-            "value": 75
+            "value": 65
         },
         {
             "trait_type": "Special-attack",
-            "value": 75
+            "value": 80
         },
         {
             "trait_type": "Special-defense",
-            "value": 75
+            "value": 120
         },
         {
             "trait_type": "Speed",
-            "value": 60
+            "value": 100
         },
         {
             "trait_type": "Base Experience",
-            "value": 218
+            "value": 180
         },
         {
             "trait_type": "Rarity",

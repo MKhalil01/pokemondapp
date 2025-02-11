@@ -1,0 +1,40 @@
+{
+    "name": "Simisear",
+    "description": "An NFT representing the Pokemon Simisear.",
+    "copy_number": 4,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/514.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 75
+        },
+        {
+            "trait_type": "Attack",
+            "value": 98
+        },
+        {
+            "trait_type": "Defense",
+            "value": 63
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 98
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 63
+        },
+        {
+            "trait_type": "Speed",
+            "value": 101
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 174
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Uncommon"
+        }
+    ]
+}

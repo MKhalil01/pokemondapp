@@ -1,11 +1,12 @@
 {
-    "name": "Voltorb",
-    "description": "An NFT representing the Pokemon Voltorb.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/100.png",
+    "name": "Caterpie",
+    "description": "An NFT representing the Pokemon Caterpie.",
+    "copy_number": 0,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 40
+            "value": 45
         },
         {
             "trait_type": "Attack",
@@ -13,23 +14,23 @@
         },
         {
             "trait_type": "Defense",
-            "value": 50
+            "value": 35
         },
         {
             "trait_type": "Special-attack",
-            "value": 55
+            "value": 20
         },
         {
             "trait_type": "Special-defense",
-            "value": 55
+            "value": 20
         },
         {
             "trait_type": "Speed",
-            "value": 100
+            "value": 45
         },
         {
             "trait_type": "Base Experience",
-            "value": 66
+            "value": 39
         },
         {
             "trait_type": "Rarity",

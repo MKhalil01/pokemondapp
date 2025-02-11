@@ -1,39 +1,40 @@
 {
-    "name": "Spritzee",
-    "description": "An NFT representing the Pokemon Spritzee.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/682.png",
+    "name": "Machamp",
+    "description": "An NFT representing the Pokemon Machamp.",
+    "copy_number": 2,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/68.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 78
+            "value": 90
         },
         {
             "trait_type": "Attack",
-            "value": 52
+            "value": 130
         },
         {
             "trait_type": "Defense",
-            "value": 60
+            "value": 80
         },
         {
             "trait_type": "Special-attack",
-            "value": 63
-        },
-        {
-            "trait_type": "Special-defense",
             "value": 65
         },
         {
+            "trait_type": "Special-defense",
+            "value": 85
+        },
+        {
             "trait_type": "Speed",
-            "value": 23
+            "value": 55
         },
         {
             "trait_type": "Base Experience",
-            "value": 68
+            "value": 253
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Rare"
         }
     ]
 }

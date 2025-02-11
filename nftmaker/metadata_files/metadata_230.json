@@ -1,39 +1,40 @@
 {
-    "name": "Kingdra",
-    "description": "An NFT representing the Pokemon Kingdra.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/230.png",
+    "name": "Ekans",
+    "description": "An NFT representing the Pokemon Ekans.",
+    "copy_number": 0,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/23.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 75
+            "value": 35
         },
         {
             "trait_type": "Attack",
-            "value": 95
+            "value": 60
         },
         {
             "trait_type": "Defense",
-            "value": 95
+            "value": 44
         },
         {
             "trait_type": "Special-attack",
-            "value": 95
+            "value": 40
         },
         {
             "trait_type": "Special-defense",
-            "value": 95
+            "value": 54
         },
         {
             "trait_type": "Speed",
-            "value": 85
+            "value": 55
         },
         {
             "trait_type": "Base Experience",
-            "value": 270
+            "value": 58
         },
         {
             "trait_type": "Rarity",
-            "value": "Rare"
+            "value": "Common"
         }
     ]
 }

@@ -1,0 +1,40 @@
+{
+    "name": "Gastrodon",
+    "description": "An NFT representing the Pokemon Gastrodon.",
+    "copy_number": 6,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/423.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 111
+        },
+        {
+            "trait_type": "Attack",
+            "value": 83
+        },
+        {
+            "trait_type": "Defense",
+            "value": 68
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 92
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 82
+        },
+        {
+            "trait_type": "Speed",
+            "value": 39
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 166
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Uncommon"
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "name": "Aromatisse",
+    "description": "An NFT representing the Pokemon Aromatisse.",
+    "copy_number": 8,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/683.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 101
+        },
+        {
+            "trait_type": "Attack",
+            "value": 72
+        },
+        {
+            "trait_type": "Defense",
+            "value": 72
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 99
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 89
+        },
+        {
+            "trait_type": "Speed",
+            "value": 29
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 162
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Uncommon"
+        }
+    ]
+}

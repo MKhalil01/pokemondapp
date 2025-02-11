@@ -1,39 +1,40 @@
 {
-    "name": "Nymble",
-    "description": "An NFT representing the Pokemon Nymble.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/919.png",
+    "name": "Cloyster",
+    "description": "An NFT representing the Pokemon Cloyster.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/91.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 33
+            "value": 50
         },
         {
             "trait_type": "Attack",
-            "value": 46
+            "value": 95
         },
         {
             "trait_type": "Defense",
-            "value": 40
+            "value": 180
         },
         {
             "trait_type": "Special-attack",
-            "value": 21
+            "value": 85
         },
         {
             "trait_type": "Special-defense",
-            "value": 25
-        },
-        {
-            "trait_type": "Speed",
             "value": 45
         },
         {
+            "trait_type": "Speed",
+            "value": 70
+        },
+        {
             "trait_type": "Base Experience",
-            "value": 42
+            "value": 184
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Uncommon"
         }
     ]
 }

@@ -1,0 +1,40 @@
+{
+    "name": "Veluza",
+    "description": "An NFT representing the Pokemon Veluza.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/976.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 90
+        },
+        {
+            "trait_type": "Attack",
+            "value": 102
+        },
+        {
+            "trait_type": "Defense",
+            "value": 73
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 78
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 65
+        },
+        {
+            "trait_type": "Speed",
+            "value": 70
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 167
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Uncommon"
+        }
+    ]
+}

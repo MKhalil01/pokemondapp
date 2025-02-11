@@ -1,0 +1,40 @@
+{
+    "name": "Cleffa",
+    "description": "An NFT representing the Pokemon Cleffa.",
+    "copy_number": 5,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/173.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 50
+        },
+        {
+            "trait_type": "Attack",
+            "value": 25
+        },
+        {
+            "trait_type": "Defense",
+            "value": 28
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 45
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 55
+        },
+        {
+            "trait_type": "Speed",
+            "value": 15
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 44
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

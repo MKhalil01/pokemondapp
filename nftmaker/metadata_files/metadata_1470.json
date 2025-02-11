@@ -1,0 +1,40 @@
+{
+    "name": "Dratini",
+    "description": "An NFT representing the Pokemon Dratini.",
+    "copy_number": 0,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/147.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 41
+        },
+        {
+            "trait_type": "Attack",
+            "value": 64
+        },
+        {
+            "trait_type": "Defense",
+            "value": 45
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 50
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 50
+        },
+        {
+            "trait_type": "Speed",
+            "value": 50
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 60
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

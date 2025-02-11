@@ -1,0 +1,40 @@
+{
+    "name": "Braviary",
+    "description": "An NFT representing the Pokemon Braviary.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/628.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 100
+        },
+        {
+            "trait_type": "Attack",
+            "value": 123
+        },
+        {
+            "trait_type": "Defense",
+            "value": 75
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 57
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 75
+        },
+        {
+            "trait_type": "Speed",
+            "value": 80
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 179
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Uncommon"
+        }
+    ]
+}

@@ -1,35 +1,36 @@
 {
-    "name": "Grimer",
-    "description": "An NFT representing the Pokemon Grimer.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/88.png",
+    "name": "Wartortle",
+    "description": "An NFT representing the Pokemon Wartortle.",
+    "copy_number": 8,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/8.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 80
+            "value": 59
         },
         {
             "trait_type": "Attack",
-            "value": 80
+            "value": 63
         },
         {
             "trait_type": "Defense",
-            "value": 50
+            "value": 80
         },
         {
             "trait_type": "Special-attack",
-            "value": 40
+            "value": 65
         },
         {
             "trait_type": "Special-defense",
-            "value": 50
+            "value": 80
         },
         {
             "trait_type": "Speed",
-            "value": 25
+            "value": 58
         },
         {
             "trait_type": "Base Experience",
-            "value": 65
+            "value": 142
         },
         {
             "trait_type": "Rarity",

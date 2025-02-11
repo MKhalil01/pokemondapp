@@ -1,0 +1,40 @@
+{
+    "name": "Honchkrow",
+    "description": "An NFT representing the Pokemon Honchkrow.",
+    "copy_number": 6,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/430.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 100
+        },
+        {
+            "trait_type": "Attack",
+            "value": 125
+        },
+        {
+            "trait_type": "Defense",
+            "value": 52
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 105
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 52
+        },
+        {
+            "trait_type": "Speed",
+            "value": 71
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 177
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Uncommon"
+        }
+    ]
+}

@@ -1,35 +1,36 @@
 {
-    "name": "Darmanitan-standard",
-    "description": "An NFT representing the Pokemon Darmanitan-standard.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/555.png",
+    "name": "Golduck",
+    "description": "An NFT representing the Pokemon Golduck.",
+    "copy_number": 5,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/55.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 105
+            "value": 80
         },
         {
             "trait_type": "Attack",
-            "value": 140
+            "value": 82
         },
         {
             "trait_type": "Defense",
-            "value": 55
+            "value": 78
         },
         {
             "trait_type": "Special-attack",
-            "value": 30
-        },
-        {
-            "trait_type": "Special-defense",
-            "value": 55
-        },
-        {
-            "trait_type": "Speed",
             "value": 95
         },
         {
+            "trait_type": "Special-defense",
+            "value": 80
+        },
+        {
+            "trait_type": "Speed",
+            "value": 85
+        },
+        {
             "trait_type": "Base Experience",
-            "value": 168
+            "value": 175
         },
         {
             "trait_type": "Rarity",

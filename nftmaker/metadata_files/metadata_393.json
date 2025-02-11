@@ -1,35 +1,36 @@
 {
-    "name": "Piplup",
-    "description": "An NFT representing the Pokemon Piplup.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/393.png",
+    "name": "Jigglypuff",
+    "description": "An NFT representing the Pokemon Jigglypuff.",
+    "copy_number": 3,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/39.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 53
+            "value": 115
         },
         {
             "trait_type": "Attack",
-            "value": 51
+            "value": 45
         },
         {
             "trait_type": "Defense",
-            "value": 53
+            "value": 20
         },
         {
             "trait_type": "Special-attack",
-            "value": 61
+            "value": 45
         },
         {
             "trait_type": "Special-defense",
-            "value": 56
+            "value": 25
         },
         {
             "trait_type": "Speed",
-            "value": 40
+            "value": 20
         },
         {
             "trait_type": "Base Experience",
-            "value": 63
+            "value": 95
         },
         {
             "trait_type": "Rarity",

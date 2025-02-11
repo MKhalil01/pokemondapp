@@ -1,39 +1,40 @@
 {
-    "name": "Tapu-fini",
-    "description": "An NFT representing the Pokemon Tapu-fini.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/788.png",
+    "name": "Rapidash",
+    "description": "An NFT representing the Pokemon Rapidash.",
+    "copy_number": 8,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/78.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 70
+            "value": 65
         },
         {
             "trait_type": "Attack",
-            "value": 75
+            "value": 100
         },
         {
             "trait_type": "Defense",
-            "value": 115
+            "value": 70
         },
         {
             "trait_type": "Special-attack",
-            "value": 95
+            "value": 80
         },
         {
             "trait_type": "Special-defense",
-            "value": 130
+            "value": 80
         },
         {
             "trait_type": "Speed",
-            "value": 85
+            "value": 105
         },
         {
             "trait_type": "Base Experience",
-            "value": 285
+            "value": 175
         },
         {
             "trait_type": "Rarity",
-            "value": "Rare"
+            "value": "Uncommon"
         }
     ]
 }

@@ -1,0 +1,40 @@
+{
+    "name": "Arrokuda",
+    "description": "An NFT representing the Pokemon Arrokuda.",
+    "copy_number": 2,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/846.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 41
+        },
+        {
+            "trait_type": "Attack",
+            "value": 63
+        },
+        {
+            "trait_type": "Defense",
+            "value": 40
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 40
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 30
+        },
+        {
+            "trait_type": "Speed",
+            "value": 66
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 56
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

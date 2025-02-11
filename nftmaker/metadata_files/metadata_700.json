@@ -1,39 +1,40 @@
 {
-    "name": "Sylveon",
-    "description": "An NFT representing the Pokemon Sylveon.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/700.png",
+    "name": "Weepinbell",
+    "description": "An NFT representing the Pokemon Weepinbell.",
+    "copy_number": 0,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/70.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 95
+            "value": 65
         },
         {
             "trait_type": "Attack",
-            "value": 65
+            "value": 90
         },
         {
             "trait_type": "Defense",
-            "value": 65
+            "value": 50
         },
         {
             "trait_type": "Special-attack",
-            "value": 110
+            "value": 85
         },
         {
             "trait_type": "Special-defense",
-            "value": 130
+            "value": 45
         },
         {
             "trait_type": "Speed",
-            "value": 60
+            "value": 55
         },
         {
             "trait_type": "Base Experience",
-            "value": 184
+            "value": 137
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

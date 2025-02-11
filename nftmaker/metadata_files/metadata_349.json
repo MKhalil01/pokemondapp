@@ -1,39 +1,40 @@
 {
-    "name": "Feebas",
-    "description": "An NFT representing the Pokemon Feebas.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/349.png",
+    "name": "Nidoking",
+    "description": "An NFT representing the Pokemon Nidoking.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/34.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 20
+            "value": 81
         },
         {
             "trait_type": "Attack",
-            "value": 15
+            "value": 102
         },
         {
             "trait_type": "Defense",
-            "value": 20
+            "value": 77
         },
         {
             "trait_type": "Special-attack",
-            "value": 10
+            "value": 85
         },
         {
             "trait_type": "Special-defense",
-            "value": 55
+            "value": 75
         },
         {
             "trait_type": "Speed",
-            "value": 80
+            "value": 85
         },
         {
             "trait_type": "Base Experience",
-            "value": 40
+            "value": 253
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Rare"
         }
     ]
 }

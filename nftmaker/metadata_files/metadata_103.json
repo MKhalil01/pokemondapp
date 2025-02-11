@@ -1,39 +1,40 @@
 {
-    "name": "Exeggutor",
-    "description": "An NFT representing the Pokemon Exeggutor.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/103.png",
+    "name": "Caterpie",
+    "description": "An NFT representing the Pokemon Caterpie.",
+    "copy_number": 3,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 95
+            "value": 45
         },
         {
             "trait_type": "Attack",
-            "value": 95
+            "value": 30
         },
         {
             "trait_type": "Defense",
-            "value": 85
+            "value": 35
         },
         {
             "trait_type": "Special-attack",
-            "value": 125
+            "value": 20
         },
         {
             "trait_type": "Special-defense",
-            "value": 75
+            "value": 20
         },
         {
             "trait_type": "Speed",
-            "value": 55
+            "value": 45
         },
         {
             "trait_type": "Base Experience",
-            "value": 186
+            "value": 39
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

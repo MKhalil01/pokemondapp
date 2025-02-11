@@ -1,15 +1,16 @@
 {
-    "name": "Tynamo",
-    "description": "An NFT representing the Pokemon Tynamo.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/602.png",
+    "name": "Poliwag",
+    "description": "An NFT representing the Pokemon Poliwag.",
+    "copy_number": 2,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/60.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 35
+            "value": 40
         },
         {
             "trait_type": "Attack",
-            "value": 55
+            "value": 50
         },
         {
             "trait_type": "Defense",
@@ -17,7 +18,7 @@
         },
         {
             "trait_type": "Special-attack",
-            "value": 45
+            "value": 40
         },
         {
             "trait_type": "Special-defense",
@@ -25,11 +26,11 @@
         },
         {
             "trait_type": "Speed",
-            "value": 60
+            "value": 90
         },
         {
             "trait_type": "Base Experience",
-            "value": 55
+            "value": 60
         },
         {
             "trait_type": "Rarity",

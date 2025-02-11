@@ -1,39 +1,40 @@
 {
-    "name": "Delphox",
-    "description": "An NFT representing the Pokemon Delphox.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/655.png",
+    "name": "Alakazam",
+    "description": "An NFT representing the Pokemon Alakazam.",
+    "copy_number": 5,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/65.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 75
+            "value": 55
         },
         {
             "trait_type": "Attack",
-            "value": 69
+            "value": 50
         },
         {
             "trait_type": "Defense",
-            "value": 72
+            "value": 45
         },
         {
             "trait_type": "Special-attack",
-            "value": 114
+            "value": 135
         },
         {
             "trait_type": "Special-defense",
-            "value": 100
+            "value": 95
         },
         {
             "trait_type": "Speed",
-            "value": 104
+            "value": 120
         },
         {
             "trait_type": "Base Experience",
-            "value": 240
+            "value": 250
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Rare"
         }
     ]
 }

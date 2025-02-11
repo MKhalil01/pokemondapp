@@ -1,35 +1,36 @@
 {
-    "name": "Dragonair",
-    "description": "An NFT representing the Pokemon Dragonair.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/148.png",
+    "name": "Kakuna",
+    "description": "An NFT representing the Pokemon Kakuna.",
+    "copy_number": 8,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/14.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 61
+            "value": 45
         },
         {
             "trait_type": "Attack",
-            "value": 84
+            "value": 25
         },
         {
             "trait_type": "Defense",
-            "value": 65
+            "value": 50
         },
         {
             "trait_type": "Special-attack",
-            "value": 70
+            "value": 25
         },
         {
             "trait_type": "Special-defense",
-            "value": 70
+            "value": 25
         },
         {
             "trait_type": "Speed",
-            "value": 70
+            "value": 35
         },
         {
             "trait_type": "Base Experience",
-            "value": 147
+            "value": 72
         },
         {
             "trait_type": "Rarity",

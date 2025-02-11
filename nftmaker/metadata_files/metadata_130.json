@@ -1,39 +1,40 @@
 {
-    "name": "Gyarados",
-    "description": "An NFT representing the Pokemon Gyarados.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/130.png",
+    "name": "Weedle",
+    "description": "An NFT representing the Pokemon Weedle.",
+    "copy_number": 0,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/13.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 95
+            "value": 40
         },
         {
             "trait_type": "Attack",
-            "value": 125
+            "value": 35
         },
         {
             "trait_type": "Defense",
-            "value": 79
+            "value": 30
         },
         {
             "trait_type": "Special-attack",
-            "value": 60
+            "value": 20
         },
         {
             "trait_type": "Special-defense",
-            "value": 100
+            "value": 20
         },
         {
             "trait_type": "Speed",
-            "value": 81
+            "value": 50
         },
         {
             "trait_type": "Base Experience",
-            "value": 189
+            "value": 39
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

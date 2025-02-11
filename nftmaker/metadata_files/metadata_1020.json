@@ -1,39 +1,40 @@
 {
-    "name": "Gouging-fire",
-    "description": "An NFT representing the Pokemon Gouging-fire.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1020.png",
+    "name": "Exeggcute",
+    "description": "An NFT representing the Pokemon Exeggcute.",
+    "copy_number": 0,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/102.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 105
+            "value": 60
         },
         {
             "trait_type": "Attack",
-            "value": 115
+            "value": 40
         },
         {
             "trait_type": "Defense",
-            "value": 121
+            "value": 80
         },
         {
             "trait_type": "Special-attack",
-            "value": 65
+            "value": 60
         },
         {
             "trait_type": "Special-defense",
-            "value": 93
+            "value": 45
         },
         {
             "trait_type": "Speed",
-            "value": 91
+            "value": 40
         },
         {
             "trait_type": "Base Experience",
-            "value": 295
+            "value": 65
         },
         {
             "trait_type": "Rarity",
-            "value": "Rare"
+            "value": "Common"
         }
     ]
 }

@@ -1,19 +1,20 @@
 {
-    "name": "Genesect",
-    "description": "An NFT representing the Pokemon Genesect.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/649.png",
+    "name": "Kadabra",
+    "description": "An NFT representing the Pokemon Kadabra.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/64.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 71
+            "value": 40
         },
         {
             "trait_type": "Attack",
-            "value": 120
+            "value": 35
         },
         {
             "trait_type": "Defense",
-            "value": 95
+            "value": 30
         },
         {
             "trait_type": "Special-attack",
@@ -21,19 +22,19 @@
         },
         {
             "trait_type": "Special-defense",
-            "value": 95
+            "value": 70
         },
         {
             "trait_type": "Speed",
-            "value": 99
+            "value": 105
         },
         {
             "trait_type": "Base Experience",
-            "value": 300
+            "value": 140
         },
         {
             "trait_type": "Rarity",
-            "value": "Rare"
+            "value": "Common"
         }
     ]
 }

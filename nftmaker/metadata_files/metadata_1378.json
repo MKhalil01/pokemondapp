@@ -1,0 +1,40 @@
+{
+    "name": "Porygon",
+    "description": "An NFT representing the Pokemon Porygon.",
+    "copy_number": 8,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/137.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 65
+        },
+        {
+            "trait_type": "Attack",
+            "value": 60
+        },
+        {
+            "trait_type": "Defense",
+            "value": 70
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 85
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 75
+        },
+        {
+            "trait_type": "Speed",
+            "value": 40
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 79
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

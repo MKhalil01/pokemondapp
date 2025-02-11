@@ -1,35 +1,36 @@
 {
-    "name": "Sliggoo",
-    "description": "An NFT representing the Pokemon Sliggoo.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/705.png",
+    "name": "Weepinbell",
+    "description": "An NFT representing the Pokemon Weepinbell.",
+    "copy_number": 5,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/70.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 68
+            "value": 65
         },
         {
             "trait_type": "Attack",
-            "value": 75
+            "value": 90
         },
         {
             "trait_type": "Defense",
-            "value": 53
+            "value": 50
         },
         {
             "trait_type": "Special-attack",
-            "value": 83
+            "value": 85
         },
         {
             "trait_type": "Special-defense",
-            "value": 113
+            "value": 45
         },
         {
             "trait_type": "Speed",
-            "value": 60
+            "value": 55
         },
         {
             "trait_type": "Base Experience",
-            "value": 158
+            "value": 137
         },
         {
             "trait_type": "Rarity",

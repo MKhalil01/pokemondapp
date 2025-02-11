@@ -1,39 +1,40 @@
 {
-    "name": "Turtwig",
-    "description": "An NFT representing the Pokemon Turtwig.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/387.png",
+    "name": "Ninetales",
+    "description": "An NFT representing the Pokemon Ninetales.",
+    "copy_number": 7,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/38.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 55
+            "value": 73
         },
         {
             "trait_type": "Attack",
-            "value": 68
+            "value": 76
         },
         {
             "trait_type": "Defense",
-            "value": 64
+            "value": 75
         },
         {
             "trait_type": "Special-attack",
-            "value": 45
+            "value": 81
         },
         {
             "trait_type": "Special-defense",
-            "value": 55
+            "value": 100
         },
         {
             "trait_type": "Speed",
-            "value": 31
+            "value": 100
         },
         {
             "trait_type": "Base Experience",
-            "value": 64
+            "value": 177
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Uncommon"
         }
     ]
 }

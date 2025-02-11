@@ -1,39 +1,40 @@
 {
-    "name": "Breloom",
-    "description": "An NFT representing the Pokemon Breloom.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/286.png",
+    "name": "Sandslash",
+    "description": "An NFT representing the Pokemon Sandslash.",
+    "copy_number": 6,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/28.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 60
+            "value": 75
         },
         {
             "trait_type": "Attack",
-            "value": 130
+            "value": 100
         },
         {
             "trait_type": "Defense",
-            "value": 80
+            "value": 110
         },
         {
             "trait_type": "Special-attack",
-            "value": 60
+            "value": 45
         },
         {
             "trait_type": "Special-defense",
-            "value": 60
+            "value": 55
         },
         {
             "trait_type": "Speed",
-            "value": 70
+            "value": 65
         },
         {
             "trait_type": "Base Experience",
-            "value": 161
+            "value": 158
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

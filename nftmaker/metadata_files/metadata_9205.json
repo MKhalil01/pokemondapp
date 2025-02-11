@@ -1,0 +1,40 @@
+{
+    "name": "Lokix",
+    "description": "An NFT representing the Pokemon Lokix.",
+    "copy_number": 5,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/920.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 71
+        },
+        {
+            "trait_type": "Attack",
+            "value": 102
+        },
+        {
+            "trait_type": "Defense",
+            "value": 78
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 52
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 55
+        },
+        {
+            "trait_type": "Speed",
+            "value": 92
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 158
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

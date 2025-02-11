@@ -1,39 +1,40 @@
 {
-    "name": "Snom",
-    "description": "An NFT representing the Pokemon Snom.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/872.png",
+    "name": "Dewgong",
+    "description": "An NFT representing the Pokemon Dewgong.",
+    "copy_number": 2,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/87.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 30
+            "value": 90
         },
         {
             "trait_type": "Attack",
-            "value": 25
+            "value": 70
         },
         {
             "trait_type": "Defense",
-            "value": 35
+            "value": 80
         },
         {
             "trait_type": "Special-attack",
-            "value": 45
+            "value": 70
         },
         {
             "trait_type": "Special-defense",
-            "value": 30
+            "value": 95
         },
         {
             "trait_type": "Speed",
-            "value": 20
+            "value": 70
         },
         {
             "trait_type": "Base Experience",
-            "value": 37
+            "value": 166
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Uncommon"
         }
     ]
 }

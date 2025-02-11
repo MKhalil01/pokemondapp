@@ -1,0 +1,40 @@
+{
+    "name": "Combee",
+    "description": "An NFT representing the Pokemon Combee.",
+    "copy_number": 8,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/415.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 30
+        },
+        {
+            "trait_type": "Attack",
+            "value": 30
+        },
+        {
+            "trait_type": "Defense",
+            "value": 42
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 30
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 42
+        },
+        {
+            "trait_type": "Speed",
+            "value": 70
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 49
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

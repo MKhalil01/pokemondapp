@@ -1,39 +1,40 @@
 {
-    "name": "Stakataka",
-    "description": "An NFT representing the Pokemon Stakataka.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/805.png",
+    "name": "Slowbro",
+    "description": "An NFT representing the Pokemon Slowbro.",
+    "copy_number": 5,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/80.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 61
+            "value": 95
         },
         {
             "trait_type": "Attack",
-            "value": 131
+            "value": 75
         },
         {
             "trait_type": "Defense",
-            "value": 211
+            "value": 110
         },
         {
             "trait_type": "Special-attack",
-            "value": 53
+            "value": 100
         },
         {
             "trait_type": "Special-defense",
-            "value": 101
+            "value": 80
         },
         {
             "trait_type": "Speed",
-            "value": 13
+            "value": 30
         },
         {
             "trait_type": "Base Experience",
-            "value": 285
+            "value": 172
         },
         {
             "trait_type": "Rarity",
-            "value": "Rare"
+            "value": "Uncommon"
         }
     ]
 }

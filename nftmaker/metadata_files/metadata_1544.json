@@ -1,0 +1,40 @@
+{
+    "name": "Meganium",
+    "description": "An NFT representing the Pokemon Meganium.",
+    "copy_number": 4,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/154.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 80
+        },
+        {
+            "trait_type": "Attack",
+            "value": 82
+        },
+        {
+            "trait_type": "Defense",
+            "value": 100
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 83
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 100
+        },
+        {
+            "trait_type": "Speed",
+            "value": 80
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 236
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Uncommon"
+        }
+    ]
+}

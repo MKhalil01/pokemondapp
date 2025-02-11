@@ -1,15 +1,16 @@
 {
-    "name": "Torchic",
-    "description": "An NFT representing the Pokemon Torchic.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/255.png",
+    "name": "Pikachu",
+    "description": "An NFT representing the Pokemon Pikachu.",
+    "copy_number": 5,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 45
+            "value": 35
         },
         {
             "trait_type": "Attack",
-            "value": 60
+            "value": 55
         },
         {
             "trait_type": "Defense",
@@ -17,7 +18,7 @@
         },
         {
             "trait_type": "Special-attack",
-            "value": 70
+            "value": 50
         },
         {
             "trait_type": "Special-defense",
@@ -25,11 +26,11 @@
         },
         {
             "trait_type": "Speed",
-            "value": 45
+            "value": 90
         },
         {
             "trait_type": "Base Experience",
-            "value": 62
+            "value": 112
         },
         {
             "trait_type": "Rarity",

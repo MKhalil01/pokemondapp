@@ -1,23 +1,24 @@
 {
-    "name": "Hydrapple",
-    "description": "An NFT representing the Pokemon Hydrapple.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1019.png",
+    "name": "Electrode",
+    "description": "An NFT representing the Pokemon Electrode.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/101.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 106
+            "value": 60
         },
         {
             "trait_type": "Attack",
-            "value": 80
+            "value": 50
         },
         {
             "trait_type": "Defense",
-            "value": 110
+            "value": 70
         },
         {
             "trait_type": "Special-attack",
-            "value": 120
+            "value": 80
         },
         {
             "trait_type": "Special-defense",
@@ -25,15 +26,15 @@
         },
         {
             "trait_type": "Speed",
-            "value": 44
+            "value": 150
         },
         {
             "trait_type": "Base Experience",
-            "value": 270
+            "value": 172
         },
         {
             "trait_type": "Rarity",
-            "value": "Rare"
+            "value": "Uncommon"
         }
     ]
 }

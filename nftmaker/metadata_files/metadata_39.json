@@ -1,39 +1,40 @@
 {
-    "name": "Jigglypuff",
-    "description": "An NFT representing the Pokemon Jigglypuff.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/39.png",
+    "name": "Venusaur",
+    "description": "An NFT representing the Pokemon Venusaur.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 115
+            "value": 80
         },
         {
             "trait_type": "Attack",
-            "value": 45
+            "value": 82
         },
         {
             "trait_type": "Defense",
-            "value": 20
+            "value": 83
         },
         {
             "trait_type": "Special-attack",
-            "value": 45
+            "value": 100
         },
         {
             "trait_type": "Special-defense",
-            "value": 25
+            "value": 100
         },
         {
             "trait_type": "Speed",
-            "value": 20
+            "value": 80
         },
         {
             "trait_type": "Base Experience",
-            "value": 95
+            "value": 263
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Rare"
         }
     ]
 }

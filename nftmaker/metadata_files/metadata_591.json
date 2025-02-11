@@ -1,23 +1,24 @@
 {
-    "name": "Amoonguss",
-    "description": "An NFT representing the Pokemon Amoonguss.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/591.png",
+    "name": "Arcanine",
+    "description": "An NFT representing the Pokemon Arcanine.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/59.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 114
+            "value": 90
         },
         {
             "trait_type": "Attack",
-            "value": 85
+            "value": 110
         },
         {
             "trait_type": "Defense",
-            "value": 70
+            "value": 80
         },
         {
             "trait_type": "Special-attack",
-            "value": 85
+            "value": 100
         },
         {
             "trait_type": "Special-defense",
@@ -25,11 +26,11 @@
         },
         {
             "trait_type": "Speed",
-            "value": 30
+            "value": 95
         },
         {
             "trait_type": "Base Experience",
-            "value": 162
+            "value": 194
         },
         {
             "trait_type": "Rarity",
