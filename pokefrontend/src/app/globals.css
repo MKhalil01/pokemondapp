@@ -5,6 +5,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-primary: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Poppins', var(--font-primary);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,5 +19,20 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+.card-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+.stats-text {
+  font-family: var(--font-primary);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
