@@ -33,3 +33,10 @@ ERC721A:
 ```sh
 forge install chiru-labs/ERC721A
 ```
+
+
+FRONTEND:
+```sh
+npm install
+npm run dev
+```
