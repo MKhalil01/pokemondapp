@@ -67,11 +67,8 @@ const BidModal: React.FC<BidModalProps> = ({
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Minimum Required Bid
+                  Minimum Required Bid: {minRequired} ETH
                 </label>
-                <p className="text-sm text-gray-600 mb-2">
-                  Must bid higher than {minRequired} ETH
-                </p>
                 <input
                   type="number"
                   step="0.01"
@@ -93,7 +90,7 @@ const BidModal: React.FC<BidModalProps> = ({
                 />
                 {bidAmount && parseFloat(bidAmount) <= minRequired && (
                   <p className="mt-1 text-sm text-red-500">
-                    Bid must be higher than current highest bid ({minRequired} ETH)
+                    Bid must be higher than {minRequired} ETH
                   </p>
                 )}
               </div>

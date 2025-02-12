@@ -79,6 +79,17 @@ const Home: React.FC = () => {
     }));
   };
 
+  const handleAcceptBid = (tokenId: number) => {
+    const sale = activeSales.find(s => s.tokenId === tokenId);
+    if (!sale || !sale.highestBid || !sale.highestBidder) return;
+
+    // TODO: Add contract interaction for accepting bid
+    console.log(`Accepting bid of ${sale.highestBid} ETH from ${sale.highestBidder}`);
+
+    // Remove the sale from active sales
+    setActiveSales(prev => prev.filter(s => s.tokenId !== tokenId));
+  };
+
   return (
     <>
       <Head>
@@ -94,6 +105,7 @@ const Home: React.FC = () => {
             activeSales={activeSales} 
             onCancelSale={handleCancelSale}
             onPlaceBid={handlePlaceBid}
+            onAcceptBid={handleAcceptBid}
           />
         </main>
       </div>
