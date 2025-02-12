@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import CountdownTimer from './CountdownTimer';
 import { useAccount } from 'wagmi';
+import BidModal from './BidModal';
 
 type SaleType = 'fixed' | 'auction';
 
@@ -32,13 +33,28 @@ interface Sale {
 interface TradingMarketplaceProps {
   activeSales: Sale[];
   onCancelSale: (tokenId: number) => void;
+  onPlaceBid: (tokenId: number, bidAmount: number) => void;
 }
 
-const TradingMarketplace: React.FC<TradingMarketplaceProps> = ({ activeSales, onCancelSale }) => {
+const TradingMarketplace: React.FC<TradingMarketplaceProps> = ({ 
+  activeSales, 
+  onCancelSale,
+  onPlaceBid 
+}) => {
   const { address } = useAccount();
+  const [selectedAuction, setSelectedAuction] = useState<Sale | null>(null);
 
   const isOwner = (seller: string) => 
     address && seller.toLowerCase() === address.toLowerCase();
+
+  const handleActionClick = (sale: Sale) => {
+    if (sale.saleType === 'auction') {
+      setSelectedAuction(sale);
+    } else {
+      // TODO: Handle fixed price purchase
+      console.log('Purchasing NFT at fixed price:', sale.price);
+    }
+  };
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -96,6 +112,7 @@ const TradingMarketplace: React.FC<TradingMarketplaceProps> = ({ activeSales, on
                     </button>
                   ) : (
                     <button
+                      onClick={() => handleActionClick(sale)}
                       className="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 
                                 transition-colors"
                     >
@@ -107,6 +124,19 @@ const TradingMarketplace: React.FC<TradingMarketplaceProps> = ({ activeSales, on
             </div>
           ))}
         </div>
+      )}
+
+      {selectedAuction && (
+        <BidModal
+          isOpen={!!selectedAuction}
+          onClose={() => setSelectedAuction(null)}
+          tokenId={selectedAuction.tokenId}
+          nftName={selectedAuction.name}
+          image={selectedAuction.image}
+          minimumBid={selectedAuction.minimumBid || 0}
+          highestBid={selectedAuction.highestBid || 0}
+          onPlaceBid={onPlaceBid}
+        />
       )}
     </div>
   );

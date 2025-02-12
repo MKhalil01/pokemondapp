@@ -66,6 +66,19 @@ const Home: React.FC = () => {
     setActiveSales(prev => prev.filter(sale => sale.tokenId !== tokenId));
   };
 
+  const handlePlaceBid = (tokenId: number, bidAmount: number) => {
+    setActiveSales(prev => prev.map(sale => {
+      if (sale.tokenId === tokenId) {
+        return {
+          ...sale,
+          highestBid: bidAmount,
+          highestBidder: address,
+        };
+      }
+      return sale;
+    }));
+  };
+
   return (
     <>
       <Head>
@@ -80,6 +93,7 @@ const Home: React.FC = () => {
           <TradingMarketplace 
             activeSales={activeSales} 
             onCancelSale={handleCancelSale}
+            onPlaceBid={handlePlaceBid}
           />
         </main>
       </div>
