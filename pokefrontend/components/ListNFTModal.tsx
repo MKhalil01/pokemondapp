@@ -108,10 +108,21 @@ const ListNFTModal: React.FC<ListNFTModalProps> = ({ isOpen, onClose, ownedNFTs,
                     <input
                       type="number"
                       step="0.01"
+                      min="0"
                       value={price}
-                      onChange={(e) => setPrice(e.target.value)}
+                      onChange={(e) => {
+                        const value = parseFloat(e.target.value);
+                        if (value >= 0 || e.target.value === '') {
+                          setPrice(e.target.value);
+                        }
+                      }}
                       className="w-full p-2 border rounded"
                       placeholder={saleType === 'fixed' ? 'Enter price in ETH' : 'Enter minimum bid in ETH'}
+                      onKeyDown={(e) => {
+                        if (e.key === '-' || e.key === 'e') {
+                          e.preventDefault();
+                        }
+                      }}
                     />
                     {saleType === 'auction' && (
                       <p className="mt-1 text-sm text-gray-500">
