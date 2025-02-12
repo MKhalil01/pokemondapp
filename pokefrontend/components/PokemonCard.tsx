@@ -10,6 +10,7 @@ export interface NFTData {
   baseExperience: number;
   stats: { [key: string]: number };
   types: string[];
+  isOwned?: boolean;
 }
 
 const rarityColors: Record<string, string> = {
@@ -31,65 +32,71 @@ interface PokemonCardProps {
   nft: NFTData;
 }
 
-const PokemonCard: React.FC<PokemonCardProps> = ({ nft }) => {
-  const [flipped, setFlipped] = useState<boolean>(false);
+const PokemonCard = ({ nft }: PokemonCardProps) => {
+  const [showRadar, setShowRadar] = useState<boolean>(false);
   const [imageLoaded, setImageLoaded] = useState<boolean>(false);
 
+  const toggleView = () => {
+    setShowRadar(!showRadar);
+  };
+
   return (
-    <div
-      className="relative w-full h-80 cursor-pointer"
-      onClick={() => setFlipped(!flipped)}
-      // Note: For proper 3D flip effects, ensure your global CSS sets:
-      // .perspective { perspective: 1000px; }
-      // .backface-hidden { backface-visibility: hidden; }
-    >
-      <motion.div
-        className="absolute w-full h-full"
-        style={{ transformStyle: 'preserve-3d' }}
-        animate={{ rotateY: flipped ? 180 : 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        {/* Front side: NFT image with rarity badge */}
-        <div className="absolute w-full h-full backface-hidden bg-white border rounded-lg shadow-lg overflow-hidden">
-          {!imageLoaded && (
-            <div className="animate-pulse w-full h-full bg-gray-200"></div>
+    <div className="bg-white rounded-lg shadow-lg p-4 w-full max-w-[320px] h-[420px] flex flex-col">
+      <div className="flex justify-between items-center mb-3">
+        <h2 className="text-xl font-bold">{nft.name}</h2>
+        <button 
+          onClick={toggleView}
+          className="text-sm px-3 py-1 rounded-md bg-gray-100 hover:bg-gray-200 transition-colors"
+        >
+          {showRadar ? 'Show Image' : 'Show Stats'}
+        </button>
+      </div>
+      
+      <div className="flex-grow flex flex-col items-center justify-center">
+        <div className="w-full aspect-square relative">
+          {showRadar ? (
+            <RadarChart stats={nft.stats} />
+          ) : (
+            <div className="relative w-full h-full">
+              <img
+                src={nft.imageUrl}
+                alt={nft.name}
+                className={`w-full h-full object-contain transition-opacity duration-300 ${
+                  imageLoaded ? 'opacity-100' : 'opacity-0'
+                }`}
+                onLoad={() => setImageLoaded(true)}
+              />
+              {!imageLoaded && (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900"></div>
+                </div>
+              )}
+            </div>
           )}
-          <img
-            src={nft.imageUrl}
-            alt={nft.name}
-            onLoad={() => setImageLoaded(true)}
-            className={`w-full h-full object-cover ${!imageLoaded ? 'hidden' : ''}`}
-          />
-          <div className="absolute top-2 left-2">
-            <span className={`text-xs px-2 py-1 rounded ${rarityColors[nft.rarity]}`}>
-              {nft.rarity}
+        </div>
+        
+        <div className="w-full mt-4">
+          <div className="flex items-center gap-2 mb-2">
+            <span className="text-sm text-gray-600">Base Experience:</span>
+            <div className="flex-grow h-2 bg-gray-200 rounded-full">
+              <div 
+                className="h-full bg-yellow-400 rounded-full" 
+                style={{ width: `${(nft.baseExperience / 255) * 100}%` }}
+              />
+            </div>
+          </div>
+          
+          <div className="flex justify-start">
+            <span className={`px-3 py-1 rounded-full text-sm ${
+              nft.types[0] === 'Electric' ? 'bg-yellow-400' : 
+              nft.types[0] === 'Fire' ? 'bg-red-500 text-white' :
+              'bg-gray-200'
+            }`}>
+              {nft.types[0]}
             </span>
           </div>
         </div>
-        {/* Back side: Metadata (name, radar chart, base experience meter, and type badges) */}
-        <div className="absolute w-full h-full backface-hidden bg-white border rounded-lg shadow-lg overflow-hidden rotateY-180 p-4">
-          <h3 className="text-lg font-bold mb-2">{nft.name}</h3>
-          <div className="mb-2">
-            <RadarChart stats={nft.stats} />
-          </div>
-          <div className="mb-2">
-            <p className="text-sm">Base Experience:</p>
-            <div className="w-full bg-gray-300 rounded-full h-3">
-              <div
-                className="h-3 rounded-full bg-yellow-500"
-                style={{ width: `${Math.min(nft.baseExperience, 100)}%` }}
-              ></div>
-            </div>
-          </div>
-          <div className="flex space-x-2">
-            {nft.types.map((type) => (
-              <span key={type} className={`text-xs px-2 py-1 rounded ${typeColors[type] || 'bg-gray-400'}`}>
-                {type}
-              </span>
-            ))}
-          </div>
-        </div>
-      </motion.div>
+      </div>
     </div>
   );
 };

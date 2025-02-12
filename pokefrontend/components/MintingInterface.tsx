@@ -8,8 +8,8 @@ import PokemonNFTAbi from '../abis/PokemonNFT.json';
 
 const MINT_PRICE = 0.08; // ETH per NFT
 
-const MintingInterface: React.FC = () => {
-  const [quantity, setQuantity] = useState<number>(1);
+const MintingInterface = () => {
+  const [quantity, setQuantity] = useState<string>('1');
   const [isMinting, setIsMinting] = useState<boolean>(false);
   const [particles, setParticles] = useState<number[]>([]);
 
@@ -18,12 +18,12 @@ const MintingInterface: React.FC = () => {
     address: process.env.NEXT_PUBLIC_POKEMON_NFT_ADDRESS as `0x${string}`,
     abi: PokemonNFTAbi,
     functionName: 'mint',
-    args: [quantity],
-    value: BigInt(quantity * MINT_PRICE * 1e18),
+    args: [parseInt(quantity) || 0],
+    value: BigInt((parseInt(quantity) || 0) * MINT_PRICE * 1e18),
   });
 
   const handleMint = async () => {
-    if (!mint) return;
+    if (!mint || !parseInt(quantity)) return;
     setIsMinting(true);
     spawnParticles();
     try {
@@ -40,53 +40,39 @@ const MintingInterface: React.FC = () => {
     setTimeout(() => setParticles([]), 1000);
   };
 
+  const totalPrice = ((parseInt(quantity) || 0) * MINT_PRICE).toFixed(2);
+
   return (
-    <div className="my-8 p-4 bg-white rounded shadow-md">
-      <h2 className="text-xl font-bold mb-4 text-black">Mint your Pokemon NFT</h2>
-      <div className="flex items-center space-x-4">
-        <span className="font-semibold text-black">Quantity:</span>
-        {[1, 3, 5].map((q) => (
-          <button
-            key={q}
-            onClick={() => setQuantity(q)}
-            className={`px-4 py-2 border rounded font-medium ${
-              quantity === q 
-                ? 'bg-blue-600 text-white' 
-                : 'bg-gray-200 text-black hover:bg-gray-300'
-            }`}
-          >
-            {q}
-          </button>
-        ))}
-      </div>
-      <div className="mt-4">
-        <p className="text-lg text-black">
-          Total Price: <span className="font-bold text-black">{(quantity * MINT_PRICE).toFixed(2)} ETH</span>
-        </p>
-      </div>
-      <div className="relative mt-6">
-        <motion.button
-          onClick={handleMint}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          disabled={isMinting}
-          className="relative z-10 w-full bg-red-500 text-white py-3 rounded shadow-lg hover:bg-red-600 transition font-semibold"
-        >
-          {isMinting ? 'Minting...' : 'Mint Pokemon'}
-        </motion.button>
-        <AnimatePresence>
-          {particles.map((id) => (
-            <motion.div
-              key={id}
-              initial={{ opacity: 1, y: 0, x: 0 }}
-              animate={{ opacity: 0, y: -50, x: Math.random() * 100 - 50 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 1, ease: 'easeOut' }}
-              className="absolute w-2 h-2 bg-yellow-300 rounded-full"
-              style={{ top: 0, left: '50%' }}
+    <div className="w-full max-w-xl mx-auto px-4">
+      <div className="bg-white rounded-lg shadow-lg p-8 w-full">
+        <h2 className="text-3xl font-bold mb-8 text-center">Mint your Pokemon NFT</h2>
+        
+        <div className="space-y-6">
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Quantity:
+            </label>
+            <input
+              type="number"
+              min="1"
+              value={quantity}
+              onChange={(e) => setQuantity(Number(e.target.value))}
+              className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-lg"
             />
-          ))}
-        </AnimatePresence>
+          </div>
+          
+          <div className="flex justify-between items-center py-4 border-t border-b border-gray-200">
+            <span className="text-lg font-medium text-gray-700">Total Price:</span>
+            <span className="text-2xl font-bold">{totalPrice} ETH</span>
+          </div>
+          
+          <button
+            onClick={handleMint}
+            className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-6 rounded-md transition duration-200 text-lg"
+          >
+            {isMinting ? 'Minting...' : 'Mint Pokemon'}
+          </button>
+        </div>
       </div>
     </div>
   );

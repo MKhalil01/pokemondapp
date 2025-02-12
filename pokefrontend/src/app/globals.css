@@ -1,13 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --font-primary: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-display: 'Poppins', var(--font-primary);
-}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -17,9 +11,9 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: var(--font-primary);
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-dark);
+  color: var(--text-light);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -35,4 +29,18 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-primary);
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.pokemon-button {
+  background-color: var(--primary-red);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.pokemon-button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
 }

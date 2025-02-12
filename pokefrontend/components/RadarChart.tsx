@@ -1,49 +1,69 @@
 // components/RadarChart.tsx
 import React from 'react';
+import {
+  Chart as ChartJS,
+  RadialLinearScale,
+  PointElement,
+  LineElement,
+  Filler,
+  Tooltip,
+  Legend,
+} from 'chart.js';
+import { Radar } from 'react-chartjs-2';
+
+ChartJS.register(
+  RadialLinearScale,
+  PointElement,
+  LineElement,
+  Filler,
+  Tooltip,
+  Legend
+);
 
 interface RadarChartProps {
   stats: { [key: string]: number };
 }
 
-const RadarChart: React.FC<RadarChartProps> = ({ stats }) => {
-  // For simplicity, we render a basic radar chart using an SVG polygon.
-  const statEntries = Object.entries(stats);
-  const numStats = statEntries.length;
-  const angleSlice = (2 * Math.PI) / numStats;
-  const radius = 50; // radius of the radar chart
-
-  const points = statEntries
-    .map(([stat, value], i) => {
-      const angle = i * angleSlice - Math.PI / 2;
-      const normalizedValue = Math.min(value, 100) / 100;
-      const x = radius + radius * normalizedValue * Math.cos(angle);
-      const y = radius + radius * normalizedValue * Math.sin(angle);
-      return `${x},${y}`;
-    })
-    .join(' ');
-
+const RadarChart = ({ stats }: RadarChartProps) => {
   return (
-    <svg width={radius * 2} height={radius * 2} className="mx-auto">
-      <polygon points={points} fill="rgba(255,0,0,0.3)" stroke="red" strokeWidth="2" />
-      {statEntries.map(([stat, value], i) => {
-        const angle = i * angleSlice - Math.PI / 2;
-        const x = radius + radius * Math.cos(angle);
-        const y = radius + radius * Math.sin(angle);
-        return (
-          <text
-            key={stat}
-            x={x}
-            y={y}
-            textAnchor="middle"
-            dominantBaseline="central"
-            fontSize="10"
-            fill="black"
-          >
-            {stat}
-          </text>
-        );
-      })}
-    </svg>
+    <div className="w-full h-full relative">
+      <Radar
+        data={{
+          labels: ['hp', 'attack', 'defense', 'spAttack', 'spDefense', 'speed'],
+          datasets: [{
+            data: [
+              stats.hp,
+              stats.attack,
+              stats.defense,
+              stats.spAttack,
+              stats.spDefense,
+              stats.speed
+            ],
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            borderWidth: 1,
+          }]
+        }}
+        options={{
+          responsive: true,
+          maintainAspectRatio: true,
+          scales: {
+            r: {
+              angleLines: {
+                display: true
+              },
+              suggestedMin: 0,
+              suggestedMax: 100
+            }
+          },
+          plugins: {
+            legend: {
+              display: false
+            }
+          }
+        }}
+      />
+    </div>
   );
 };
 

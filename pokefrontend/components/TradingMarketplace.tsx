@@ -1,7 +1,6 @@
 // components/TradingMarketplace.tsx
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import ListNFTModal from './ListNFTModal';
 
 interface MarketplaceItem {
   id: number;
@@ -31,7 +30,6 @@ const dummyListings: MarketplaceItem[] = [
 
 const TradingMarketplace: React.FC = () => {
   const [listings, setListings] = useState<MarketplaceItem[]>(dummyListings);
-  const [showModal, setShowModal] = useState<boolean>(false);
   const [now, setNow] = useState<Date | null>(null);
 
   // Update the countdown timers every second.
@@ -57,12 +55,6 @@ const TradingMarketplace: React.FC = () => {
     <section className="mt-12">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-2xl font-bold text-gray-900">Marketplace</h2>
-        <button
-          onClick={() => setShowModal(true)}
-          className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
-        >
-          List NFT
-        </button>
       </div>
       <div className="space-y-4">
         {listings.map((item) => (
@@ -88,7 +80,6 @@ const TradingMarketplace: React.FC = () => {
           </motion.div>
         ))}
       </div>
-      {showModal && <ListNFTModal onClose={() => setShowModal(false)} />}
     </section>
   );
 };

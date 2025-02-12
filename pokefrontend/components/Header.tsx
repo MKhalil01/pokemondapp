@@ -3,7 +3,7 @@ import { useWeb3React } from '@web3-react/core';
 import { useAccount, useConnect, useDisconnect } from 'wagmi';
 import { injected } from '../connectors';
 
-const Header: React.FC = () => {
+const Header = () => {
   const { connector, isConnected } = useAccount();
   const { connect } = useConnect();
   const { disconnect } = useDisconnect();
@@ -23,17 +23,26 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="flex justify-between items-center p-4 bg-yellow-300 shadow-md">
-      <div className="flex items-center">
-        <img src="/pokeball.svg" alt="Pokeball Icon" className="w-8 h-8 mr-2 animate-spin-slow" />
-        <h1 className="text-2xl font-bold text-gray-900">UCL DeFi Pokemon dApp</h1>
+    <header className="bg-[#FFCB05] py-4 px-6 shadow-md">
+      <div className="max-w-7xl mx-auto flex justify-between items-center">
+        <div className="flex items-center gap-2">
+          <img 
+            src="/pokeball.svg" 
+            alt="Pokeball" 
+            className="w-8 h-8 object-contain"
+          />
+          <h1 className="text-2xl font-bold text-[#3B4CCA]">
+            UCL DeFi Pokemon dApp
+          </h1>
+        </div>
+        
+        <button 
+          onClick={connectWallet}
+          className="bg-[#3B4CCA] text-white px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all"
+        >
+          {isConnected ? formatAddress(account) : 'Connect Wallet'}
+        </button>
       </div>
-      <button
-        onClick={isConnected ? () => disconnect() : connectWallet}
-        className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
-      >
-        {isConnected && account ? `Connected: ${formatAddress(account)}` : 'Connect Wallet'}
-      </button>
     </header>
   );
 };
