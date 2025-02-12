@@ -1,7 +1,13 @@
 // components/MintingInterface.tsx
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useContractWrite, useSimulateContract, useWatchContractEvent, useContractRead, useAccount } from 'wagmi';
+import { 
+  useContractWrite, 
+  usePrepareContractWrite, 
+  useContractEvent,
+  useContractRead, 
+  useAccount 
+} from 'wagmi';
 import { parseEther } from 'viem';
 import PokemonNFTAbi from '../abis/PokemonNFT.json';
 
@@ -19,51 +25,35 @@ const MintingInterface = () => {
     functionName: 'mintPrice',
   }) as { data: bigint };
 
-  console.log('Contract config:', {
-    address: process.env.NEXT_PUBLIC_POKEMON_NFT_ADDRESS,
-    mintPrice,
-    hasAbi: !!PokemonNFTAbi
-  });
-
-  console.log('Wallet status:', { address, isConnected });
-
-  const { data: simulateData, error: simulateError } = useSimulateContract({
+  // Prepare the contract write
+  const { config: contractConfig, error: prepareError } = usePrepareContractWrite({
     address: process.env.NEXT_PUBLIC_POKEMON_NFT_ADDRESS as `0x${string}`,
     abi: PokemonNFTAbi,
     functionName: 'requestMint',
     args: [BigInt(quantity)],
     value: mintPrice ? mintPrice * BigInt(quantity) : BigInt(0),
-    account: address,
+    enabled: Boolean(address && mintPrice),
   });
 
-  // Add more detailed logging
-  console.log('Detailed simulation:', { 
-    hasSimulateData: !!simulateData,
-    simulateError: simulateError?.message,
-    account: address,
-    args: [quantity],
-    value: mintPrice ? mintPrice * BigInt(quantity) : BigInt(0)
-  });
-
-  const { writeContract: mint, isPending } = useContractWrite(simulateData?.request);
-  
-  // Add this log
-  console.log('Contract write setup:', {
-    canMint: !!mint,
-    isPending,
-    hasRequest: !!simulateData?.request
-  });
+  const { write: mint, isLoading: isPending, data: txData } = useContractWrite(contractConfig);
 
   // Watch for MintCompleted event
-  useWatchContractEvent({
+  useContractEvent({
     address: process.env.NEXT_PUBLIC_POKEMON_NFT_ADDRESS as `0x${string}`,
     abi: PokemonNFTAbi,
     eventName: 'MintCompleted',
-    onLogs(logs) {
+    listener(logs) {
       setMintSuccess(true);
       spawnParticles();
       setTimeout(() => setMintSuccess(false), 5000);
     },
+  });
+
+  console.log('Contract config:', {
+    address: process.env.NEXT_PUBLIC_POKEMON_NFT_ADDRESS,
+    mintPrice,
+    hasAbi: !!PokemonNFTAbi,
+    prepareError
   });
 
   const handleMint = async () => {
@@ -75,42 +65,25 @@ const MintingInterface = () => {
     try {
       setIsLoading(true);
       
-      // Check all prerequisites
       if (!address) {
         throw new Error('No wallet address');
       }
       if (!mintPrice) {
         throw new Error('Mint price not loaded');
       }
-      if (!simulateData?.request) {
-        throw new Error('Simulation failed');
+      if (!mint) {
+        throw new Error('Mint function not available');
       }
 
       console.log('Pre-mint checks:', {
         hasAddress: !!address,
         hasMintPrice: !!mintPrice,
-        hasSimulation: !!simulateData,
-        simulationRequest: simulateData?.request
+        canMint: !!mint
       });
 
-      if (!mint) {
-        throw new Error('Mint function not available');
-      }
-
-      // Try with explicit transaction parameters
-      console.log('Sending transaction with:', {
-        to: process.env.NEXT_PUBLIC_POKEMON_NFT_ADDRESS,
-        from: address,
-        args: [BigInt(quantity)],
-        value: mintPrice * BigInt(quantity)
-      });
-
-      const tx = await mint({
-        args: [BigInt(quantity)],
-        value: mintPrice * BigInt(quantity),
-      });
+      mint?.();
       
-      console.log('Transaction response:', tx);
+      console.log('Transaction data:', txData);
 
     } catch (error) {
       console.error('Detailed mint error:', {

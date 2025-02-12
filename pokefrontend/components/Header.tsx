@@ -1,54 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { useWeb3React } from '@web3-react/core';
-import { metaMask } from '../connectors';
-import { NETWORK_DETAILS } from '../connectors';
+import React from 'react';
+import { useAccount, useConnect, useDisconnect } from 'wagmi';
+import { web3Modal } from '../connectors';
 
 const Header: React.FC = () => {
-  const { account, isActive } = useWeb3React();
-  const [connecting, setConnecting] = useState(false);
-
-  useEffect(() => {
-    void metaMask.connectEagerly();
-  }, []);
+  const { address, isConnected } = useAccount();
+  const { disconnect } = useDisconnect();
 
   const formatAddress = (address: string | undefined) => {
     if (!address) return '';
     return `${address.substring(0, 6)}...${address.substring(address.length - 4)}`;
   };
-
-  async function connect() {
-    try {
-      setConnecting(true);
-      await metaMask.activate();
-      
-      // Check if we need to add the network to MetaMask
-      const provider = window.ethereum;
-      if (provider) {
-        try {
-          await provider.request({
-            method: 'wallet_switchEthereumChain',
-            params: [{ chainId: NETWORK_DETAILS.chainId }],
-          });
-        } catch (switchError: any) {
-          // This error code indicates that the chain has not been added to MetaMask
-          if (switchError.code === 4902) {
-            try {
-              await provider.request({
-                method: 'wallet_addEthereumChain',
-                params: [NETWORK_DETAILS],
-              });
-            } catch (addError) {
-              console.error('Error adding network:', addError);
-            }
-          }
-        }
-      }
-    } catch (error) {
-      console.error('Error connecting:', error);
-    } finally {
-      setConnecting(false);
-    }
-  }
 
   return (
     <header className="bg-[#FFCB05] py-4 px-6 shadow-md">
@@ -65,21 +26,15 @@ const Header: React.FC = () => {
         </div>
         
         <div>
-          {isActive ? (
+          {isConnected ? (
             <button 
-              onClick={() => metaMask.deactivate()}
+              onClick={() => disconnect()}
               className="bg-[#3B4CCA] text-white px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all"
             >
-              {formatAddress(account)}
+              {formatAddress(address)}
             </button>
           ) : (
-            <button 
-              onClick={connect} 
-              disabled={connecting}
-              className="bg-[#3B4CCA] text-white px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all"
-            >
-              {connecting ? 'Connecting...' : 'Connect Wallet'}
-            </button>
+            <w3m-button />
           )}
         </div>
       </div>
