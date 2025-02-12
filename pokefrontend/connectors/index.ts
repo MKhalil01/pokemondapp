@@ -1,11 +1,22 @@
 // Using the injectedconnector and walletconnectconnecto to connect to metamask
 
-import { InjectedConnector } from '@web3-react/injected-connector';
-import { WalletConnectConnector } from '@web3-react/walletconnect-connector';
+import { initializeConnector } from '@web3-react/core'
+import { MetaMask } from '@web3-react/metamask'
 
-export const injected = new InjectedConnector({ supportedChainIds: [1, 3, 4, 5, 42] });
+const [metaMask, hooks] = initializeConnector<MetaMask>(
+  (actions) => new MetaMask({ actions, options: { supportedChainIds: [1337] } })
+)
 
-export const walletconnect = new WalletConnectConnector({
-  rpc: { 1: process.env.NEXT_PUBLIC_RPC_URL! },
-  qrcode: true,
-});
+// Local Anvil network configuration
+export const NETWORK_DETAILS = {
+  chainId: '0x539', // 1337 in hex
+  chainName: 'Anvil Local Network',
+  rpcUrls: ['http://localhost:8545'],
+  nativeCurrency: {
+    name: 'ETH',
+    symbol: 'ETH',
+    decimals: 18,
+  },
+}
+
+export { metaMask, hooks }
