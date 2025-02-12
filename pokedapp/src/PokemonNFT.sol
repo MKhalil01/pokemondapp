@@ -2,25 +2,16 @@
 pragma solidity ^0.8.20;
 
 import {ERC721A} from "lib/ERC721A/contracts/ERC721A.sol";
-// import {MockVRFCoordinator} from "./MockVRFCoordinator.sol";
-// import {VRFCoordinatorV2Interface} from "chainlink-brownie-contracts/contracts/src/v0.8/vrf/interfaces/VRFCoordinatorV2Interface.sol";
-// import {VRFConsumerBaseV2} from "chainlink-brownie-contracts/contracts/src/v0.8/vrf/VRFConsumerBaseV2.sol";
+import {MockVRFCoordinator} from "./MockVRFCoordinator.sol";
 import {Ownable} from "openzeppelin-contracts/contracts/access/Ownable.sol";
 import {Strings} from "openzeppelin-contracts/contracts/utils/Strings.sol";
 
-// contract PokemonNFT is ERC721A, VRFConsumerBaseV2, Ownable {
 contract PokemonNFT is ERC721A, Ownable {
     using Strings for uint256;
 
-    // Chainlink VRF Variables
-    // VRFCoordinatorV2Interface COORDINATOR;
-    // MockVRFCoordinator mockVRFCoordinator;
-    // uint64 s_subscriptionId;
-    // bytes32 keyHash;
-    // uint32 callbackGasLimit = 2500000;
-    // uint16 requestConfirmations = 3;
-    // uint32 numWords = 1;
-    uint256[] randomWords = new uint256[](1);
+    // Mock Chainlink VRF Variables
+    MockVRFCoordinator public mockVRFCoordinator;
+    uint32 numWords = 1;
     uint256 public requestId;
 
     // NFT Variables
@@ -51,7 +42,11 @@ contract PokemonNFT is ERC721A, Ownable {
         uint256 requestId
     );
 
-    constructor() ERC721A("Pokemon NFT", "PKMN") Ownable(msg.sender) {}
+    constructor(
+        address _mockVRFCoordinator
+    ) ERC721A("Pokemon NFT", "PKMN") Ownable(msg.sender) {
+        mockVRFCoordinator = MockVRFCoordinator(_mockVRFCoordinator);
+    }
 
     // Override _sequentialUpTo to return 1
     // This allows for spot minting instead of sequential minting
@@ -73,9 +68,9 @@ contract PokemonNFT is ERC721A, Ownable {
         );
         require(msg.value >= mintPrice * quantity, "Insufficient payment");
 
-        // Generate a pseudo-random requestId using block.timestamp and block.difficulty
-        randomWords[0] = uint256(
-            keccak256(abi.encodePacked(block.timestamp, block.prevrandao))
+        uint256[] memory randomWords = mockVRFCoordinator.requestRandomWords(
+            requestId,
+            numWords
         );
 
         mintRequests[requestId] = MintRequest(msg.sender, quantity);
@@ -88,14 +83,14 @@ contract PokemonNFT is ERC721A, Ownable {
     // Callback function for VRF
     function fulfillRandomWords(
         uint256 _requestId,
-        uint256[] memory _randomWords
+        uint256[] memory randomWords
     ) internal {
         MintRequest memory request = mintRequests[_requestId];
         uint256[] memory tokenIds = new uint256[](request.quantity);
 
         for (uint256 i = 0; i < request.quantity; i++) {
             uint256 randomNum = uint256(
-                keccak256(abi.encode(_randomWords[0], i))
+                keccak256(abi.encode(randomWords[0], i))
             );
             uint256 pokemonId = selectPokemon(randomNum);
             uint256 tokenId = (pokemonId * num_copies) +

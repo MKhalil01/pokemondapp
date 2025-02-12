@@ -4,12 +4,12 @@ pragma solidity ^0.8.0;
 import {Test, console, Vm} from "forge-std/Test.sol";
 import {PokemonTrading} from "../src/PokemonTrading.sol";
 import {PokemonNFT} from "../src/PokemonNFT.sol";
-// import {MockVRFCoordinator} from "../src/MockVRFCoordinator.sol";
+import {MockVRFCoordinator} from "../src/MockVRFCoordinator.sol";
 
 contract PokemonTradingTest is Test {
     PokemonTrading pokemonTrading;
     PokemonNFT pokemonNFT;
-    // MockVRFCoordinator mockVRFCoordinator;
+    MockVRFCoordinator mockVRFCoordinator;
 
     address addr1 = address(0x123);
     address addr2 = address(0x456);
@@ -22,9 +22,9 @@ contract PokemonTradingTest is Test {
         vm.deal(addr3, 500 ether);
 
         // Deploy the contracts
-        pokemonNFT = new PokemonNFT();
+        mockVRFCoordinator = new MockVRFCoordinator();
+        pokemonNFT = new PokemonNFT(address(mockVRFCoordinator));
         pokemonTrading = new PokemonTrading(address(pokemonNFT));
-        // mockVRFCoordinator = new MockVRFCoordinator(address(pokemonNFT));
     }
 
     function testOwners() public {
@@ -92,8 +92,6 @@ contract PokemonTradingTest is Test {
             1000 * mintPrice,
             "addr2 balance should decrease by the mint price"
         );
-
-        // Incorrect mints
 
         // Request to mint more than the max supply
         vm.prank(addr2);
