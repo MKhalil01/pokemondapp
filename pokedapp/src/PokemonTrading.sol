@@ -31,7 +31,6 @@ contract PokemonTrading is Ownable, ReentrancyGuard {
 
     constructor(address _nftContract) Ownable(msg.sender) {
         nftContract = ERC721A(_nftContract);
-        saleCount = 0;
     }
 
     event SaleCreated(

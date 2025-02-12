@@ -4,12 +4,12 @@ pragma solidity ^0.8.0;
 import {Test, console, Vm} from "forge-std/Test.sol";
 import {PokemonTrading} from "../src/PokemonTrading.sol";
 import {PokemonNFT} from "../src/PokemonNFT.sol";
-// import {MockVRFCoordinator} from "../src/MockVRFCoordinator.sol";
+import {MockVRFCoordinator} from "../src/MockVRFCoordinator.sol";
 
 contract PokemonTradingTest is Test {
     PokemonTrading pokemonTrading;
     PokemonNFT pokemonNFT;
-    // MockVRFCoordinator mockVRFCoordinator;
+    MockVRFCoordinator mockVRFCoordinator;
 
     address addr1 = address(0x123);
     address addr2 = address(0x456);
@@ -22,9 +22,9 @@ contract PokemonTradingTest is Test {
         vm.deal(addr3, 500 ether);
 
         // Deploy the contracts
-        pokemonNFT = new PokemonNFT();
+        mockVRFCoordinator = new MockVRFCoordinator();
+        pokemonNFT = new PokemonNFT(address(mockVRFCoordinator));
         pokemonTrading = new PokemonTrading(address(pokemonNFT));
-        // mockVRFCoordinator = new MockVRFCoordinator(address(pokemonNFT));
     }
 
     function testOwners() public {
@@ -92,8 +92,6 @@ contract PokemonTradingTest is Test {
             1000 * mintPrice,
             "addr2 balance should decrease by the mint price"
         );
-
-        // Incorrect mints
 
         // Request to mint more than the max supply
         vm.prank(addr2);
@@ -189,6 +187,17 @@ contract PokemonTradingTest is Test {
             salePrice,
             "addr1 balance should increase by the sale price"
         );
+
+        // Attempt to buy a non-existent fixed price sale
+        saleId = 1;
+        vm.prank(addr2);
+        vm.expectRevert("Sale does not exist");
+        pokemonTrading.buy{value: salePrice}(saleId);
+
+        // Attempt to create a fixed price sale without approval
+        vm.prank(addr1);
+        vm.expectRevert("Contract not approved to transfer token");
+        pokemonTrading.createFixedPriceSale(tokenId, salePrice);
     }
 
     function testAuctionSale() public {
@@ -278,6 +287,12 @@ contract PokemonTradingTest is Test {
         );
         assertEq(sale.highestBidder, addr3, "Highest bidder should be addr3");
 
+        // Attempt to place a lower bid from addr2
+        uint256 lowerBidAmount = 0.25 ether;
+        vm.prank(addr2);
+        vm.expectRevert("Bid too low");
+        pokemonTrading.bid{value: lowerBidAmount}(saleId);
+
         // Accept the highest bid
         vm.prank(addr1);
         pokemonTrading.acceptHighestBid(saleId);
@@ -321,6 +336,17 @@ contract PokemonTradingTest is Test {
             balanceAddr2BeforeAuction,
             "addr2 balance should be refunded"
         );
+
+        // Attempt to place a bid on a non-existent auction
+        saleId = 1;
+        vm.prank(addr2);
+        vm.expectRevert("Sale does not exist");
+        pokemonTrading.bid{value: bidAmount1}(saleId);
+
+        // Attempt to create an auction sale without approval
+        vm.prank(addr1);
+        vm.expectRevert("Contract not approved to transfer token");
+        pokemonTrading.createAuctionSale(tokenId, startingPrice);
     }
 
     function testCancelSales() public {
@@ -356,6 +382,11 @@ contract PokemonTradingTest is Test {
             address(pokemonTrading),
             "pokemonTrading should be the owner of the NFT during the sale"
         );
+
+        // Attempt to cancel the sale by a non-seller
+        vm.prank(addr2);
+        vm.expectRevert("Not the seller");
+        pokemonTrading.cancelSale(fixedPriceSaleId);
 
         // Cancel the fixed price sale
         vm.prank(addr1);
@@ -402,6 +433,11 @@ contract PokemonTradingTest is Test {
             address(pokemonTrading),
             "pokemonTrading should be the owner of the NFT during the sale"
         );
+
+        // Attempt to cancel the sale by a non-seller
+        vm.prank(addr2);
+        vm.expectRevert("Not the seller");
+        pokemonTrading.cancelSale(auctionSaleId);
 
         // Cancel the auction sale
         vm.prank(addr1);
@@ -451,13 +487,17 @@ contract PokemonTradingTest is Test {
         // Verify that the auction sale has been created
         uint256 saleId = 0;
         PokemonTrading.Sale memory sale = pokemonTrading.getSaleDetails(saleId);
-
         assertTrue(sale.active, "Sale should be active");
 
         // Place a bid from addr2
         uint256 bidAmount1 = 0.2 ether;
         vm.prank(addr2);
         pokemonTrading.bid{value: bidAmount1}(saleId);
+
+        // Attempt to finalize the auction before it has ended
+        vm.prank(addr1);
+        vm.expectRevert("Auction has not ended yet");
+        pokemonTrading.finalizeExpiredAuction(saleId);
 
         // Fast forward time to after the auction end time
         vm.warp(block.timestamp + 25 hours);
@@ -490,6 +530,11 @@ contract PokemonTradingTest is Test {
             balanceAddr2BeforeFinalize + bidAmount1,
             "addr2 should receive a refund"
         );
+
+        // Attempt to accept the highest bid after the auction has ended
+        vm.prank(addr1);
+        vm.expectRevert("Sale not active");
+        pokemonTrading.acceptHighestBid(saleId);
     }
 
     function testEmergencyStop() public {
@@ -531,6 +576,11 @@ contract PokemonTradingTest is Test {
 
         // Transfer ownership to the test owner
         pokemonTrading.transferOwnership(addr1);
+
+        // Attempt to call emergency stop by a non-owner
+        vm.prank(addr2);
+        vm.expectRevert();
+        pokemonTrading.emergencyStop();
 
         // Call emergency stop
         vm.prank(addr1);

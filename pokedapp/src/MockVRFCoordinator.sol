@@ -5,25 +5,24 @@ import {VRFConsumerBaseV2} from "chainlink-brownie-contracts/contracts/src/v0.8/
 
 contract MockVRFCoordinator {
     VRFConsumerBaseV2 public consumer;
-    uint256 public requestId;
-
-    constructor(address _consumer) {
-        consumer = VRFConsumerBaseV2(_consumer);
-    }
 
     function requestRandomWords(
-        // bytes32 keyHash,
-        // uint64 subId,
-        // uint16 minReqConfs,
-        // uint32 callbackGasLimit,
+        uint256 requestId,
         uint32 numWords
-    ) external returns (uint256) {
+    ) external view returns (uint256[] memory) {
         uint256[] memory randomWords = new uint256[](numWords);
         for (uint256 i = 0; i < numWords; i++) {
-            randomWords[i] = requestId + i;
+            randomWords[i] = uint256(
+                keccak256(
+                    abi.encodePacked(
+                        block.timestamp,
+                        block.prevrandao,
+                        requestId,
+                        i
+                    )
+                )
+            );
         }
-        consumer.rawFulfillRandomWords(requestId, randomWords);
-        requestId += numWords;
-        return requestId;
+        return randomWords;
     }
 }
