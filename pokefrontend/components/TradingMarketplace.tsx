@@ -34,12 +34,14 @@ interface TradingMarketplaceProps {
   activeSales: Sale[];
   onCancelSale: (tokenId: number) => void;
   onPlaceBid: (tokenId: number, bidAmount: number) => void;
+  onAcceptBid: (tokenId: number) => void;
 }
 
 const TradingMarketplace: React.FC<TradingMarketplaceProps> = ({ 
   activeSales, 
   onCancelSale,
-  onPlaceBid 
+  onPlaceBid,
+  onAcceptBid
 }) => {
   const { address } = useAccount();
   const [selectedAuction, setSelectedAuction] = useState<Sale | null>(null);
@@ -103,13 +105,25 @@ const TradingMarketplace: React.FC<TradingMarketplaceProps> = ({
 
                 <div className="flex gap-2">
                   {isOwner(sale.seller) ? (
-                    <button
-                      onClick={() => onCancelSale(sale.tokenId)}
-                      className="w-full bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600 
-                                transition-colors"
-                    >
-                      Cancel Sale
-                    </button>
+                    <>
+                      {sale.saleType === 'auction' && sale.highestBid ? (
+                        <button
+                          onClick={() => onAcceptBid(sale.tokenId)}
+                          className="w-full bg-green-500 text-white py-2 px-4 rounded 
+                                    hover:bg-green-600 transition-colors"
+                        >
+                          Accept Bid ({sale.highestBid} ETH)
+                        </button>
+                      ) : (
+                        <button
+                          onClick={() => onCancelSale(sale.tokenId)}
+                          className="w-full bg-red-500 text-white py-2 px-4 rounded 
+                                    hover:bg-red-600 transition-colors"
+                        >
+                          Cancel Sale
+                        </button>
+                      )}
+                    </>
                   ) : (
                     <button
                       onClick={() => handleActionClick(sale)}
