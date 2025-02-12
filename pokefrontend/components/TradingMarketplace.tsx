@@ -1,86 +1,114 @@
 // components/TradingMarketplace.tsx
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import Image from 'next/image';
+import CountdownTimer from './CountdownTimer';
+import { useAccount } from 'wagmi';
 
-interface MarketplaceItem {
-  id: number;
-  name: string;
-  imageUrl: string;
+type SaleType = 'fixed' | 'auction';
+
+interface Sale {
+  tokenId: number;
+  seller: string;
   price: number;
-  saleEnd: Date;
+  saleType: SaleType;
+  name: string;
+  image: string;
+  rarity: string;
+  stats: {
+    hp: number;
+    attack: number;
+    defense: number;
+    speed: number;
+    spAttack: number;
+    spDefense: number;
+  };
+  // Auction specific fields
+  minimumBid?: number;
+  highestBid?: number;
+  highestBidder?: string;
+  endTime?: number;
 }
 
-// Here we need to link to the metadata of the NFTs that the user has minted, save this for later
-const dummyListings: MarketplaceItem[] = [
-  {
-    id: 1,
-    name: 'Bulbasaur',
-    imageUrl: 'https:/testtest.com',
-    price: 0.1,
-    saleEnd: new Date(Date.now() + 3600 * 1000),
-  },
-  {
-    id: 2,
-    name: 'Squirtle',
-    imageUrl: 'https:/testtest.com',
-    price: 0.12,
-    saleEnd: new Date(Date.now() + 7200 * 1000),
-  },
-];
+interface TradingMarketplaceProps {
+  activeSales: Sale[];
+  onCancelSale: (tokenId: number) => void;
+}
 
-const TradingMarketplace: React.FC = () => {
-  const [listings, setListings] = useState<MarketplaceItem[]>(dummyListings);
-  const [now, setNow] = useState<Date | null>(null);
+const TradingMarketplace: React.FC<TradingMarketplaceProps> = ({ activeSales, onCancelSale }) => {
+  const { address } = useAccount();
 
-  // Update the countdown timers every second.
-  useEffect(() => {
-    setNow(new Date()); // Set initial time
-    const timer = setInterval(() => setNow(new Date()), 1000);
-    return () => clearInterval(timer);
-  }, []);
-
-  const formatTimeRemaining = (end: Date) => {
-    if (!now) return '...'; // Initial loading state
-    
-    const diff = end.getTime() - now.getTime();
-    if (diff <= 0) return 'Ended';
-    
-    const hours = Math.floor(diff / 3600000);
-    const minutes = Math.floor((diff % 3600000) / 60000);
-    const seconds = Math.floor((diff % 60000) / 1000);
-    return `${hours}h ${minutes}m ${seconds}s`;
-  };
+  const isOwner = (seller: string) => 
+    address && seller.toLowerCase() === address.toLowerCase();
 
   return (
-    <section className="mt-12">
-      <div className="flex justify-between items-center mb-4">
-        <h2 className="text-2xl font-bold text-gray-900">Marketplace</h2>
-      </div>
-      <div className="space-y-4">
-        {listings.map((item) => (
-          <motion.div
-            key={item.id}
-            className="flex items-center p-4 bg-white rounded shadow"
-            whileHover={{ scale: 1.02 }}
-          >
-            <img src={item.imageUrl} alt={item.name} className="w-16 h-16 rounded mr-4" />
-            <div className="flex-1">
-              <h3 className="font-bold text-black">{item.name}</h3>
-              <p className="text-black">{item.price} ETH</p>
-              <p className="text-sm text-black">Ends in: {formatTimeRemaining(item.saleEnd)}</p>
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold mb-8">Pokemon Trading Marketplace</h1>
+      
+      {activeSales.length === 0 ? (
+        <div className="text-center py-12 text-gray-500">
+          No active listings at the moment
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {activeSales.map((sale) => (
+            <div 
+              key={sale.tokenId} 
+              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+            >
+              <img 
+                src={sale.image} 
+                alt={sale.name}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <div className="flex justify-between items-start mb-2">
+                  <h3 className="font-bold text-lg">{sale.name}</h3>
+                  <span className="text-sm text-gray-500">#{sale.tokenId}</span>
+                </div>
+                
+                <div className="mb-4">
+                  <div className="text-sm text-gray-600">
+                    Seller: {sale.seller.slice(0, 6)}...{sale.seller.slice(-4)}
+                  </div>
+                  {sale.saleType === 'fixed' ? (
+                    <div className="text-lg font-bold text-blue-600">{sale.price} ETH</div>
+                  ) : (
+                    <div className="space-y-1">
+                      <div className="text-sm">Minimum Bid: {sale.minimumBid} ETH</div>
+                      <div className="text-sm">
+                        Highest Bid: {sale.highestBid ? `${sale.highestBid} ETH` : 'No bids yet'}
+                      </div>
+                      <div className="text-sm">
+                        Time Remaining: <CountdownTimer endTime={sale.endTime!} />
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                <div className="flex gap-2">
+                  {isOwner(sale.seller) ? (
+                    <button
+                      onClick={() => onCancelSale(sale.tokenId)}
+                      className="w-full bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600 
+                                transition-colors"
+                    >
+                      Cancel Sale
+                    </button>
+                  ) : (
+                    <button
+                      className="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 
+                                transition-colors"
+                    >
+                      {sale.saleType === 'fixed' ? 'Buy Now' : 'Place Bid'}
+                    </button>
+                  )}
+                </div>
+              </div>
             </div>
-            <div className="space-x-2">
-              <button className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 transition">
-                Bid
-              </button>
-              <button className="bg-purple-500 text-white px-3 py-1 rounded hover:bg-purple-600 transition">
-                Offer
-              </button>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-    </section>
+          ))}
+        </div>
+      )}
+    </div>
   );
 };
 

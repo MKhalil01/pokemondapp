@@ -65,7 +65,11 @@ const getCardStyle = (rarity: string) => {
   }
 };
 
-const NFTGallery: React.FC = () => {
+interface NFTGalleryProps {
+  onCreateListing: (tokenId: number, price: number, saleType: SaleType) => void;
+}
+
+const NFTGallery: React.FC<NFTGalleryProps> = ({ onCreateListing }) => {
   const { address } = useAccount();
   const [nfts, setNfts] = useState<NFTMetadata[]>([]);
   const [loading, setLoading] = useState(true);
@@ -234,7 +238,7 @@ const NFTGallery: React.FC = () => {
         isOpen={isListModalOpen}
         onClose={() => setIsListModalOpen(false)}
         ownedNFTs={nfts}
-        onListNFT={handleListNFT}
+        onListNFT={onCreateListing}
       />
     </div>
   );
