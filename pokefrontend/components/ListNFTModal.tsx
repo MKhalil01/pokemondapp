@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+type SaleType = 'fixed' | 'auction';
+
 interface ListNFTModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -17,12 +19,24 @@ interface ListNFTModalProps {
       spDefense: number;
     };
   }[];
-  onListNFT: (tokenId: number, price: number) => void;
+  onListNFT: (tokenId: number, price: number, saleType: SaleType) => void;
 }
 
 const ListNFTModal: React.FC<ListNFTModalProps> = ({ isOpen, onClose, ownedNFTs, onListNFT }) => {
   const [selectedNFT, setSelectedNFT] = useState<number | null>(null);
+  const [saleType, setSaleType] = useState<SaleType>('fixed');
   const [price, setPrice] = useState<string>('');
+
+  const handleSubmit = () => {
+    if (selectedNFT && price) {
+      onListNFT(selectedNFT, parseFloat(price), saleType);
+      onClose();
+      // Reset form
+      setSelectedNFT(null);
+      setPrice('');
+      setSaleType('fixed');
+    }
+  };
 
   return (
     <div className={`fixed inset-0 ${isOpen ? 'block' : 'hidden'}`}>
@@ -56,18 +70,55 @@ const ListNFTModal: React.FC<ListNFTModalProps> = ({ isOpen, onClose, ownedNFTs,
               </div>
 
               {selectedNFT && (
-                <div className="mb-4">
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Price (ETH)
-                  </label>
-                  <input
-                    type="number"
-                    step="0.01"
-                    value={price}
-                    onChange={(e) => setPrice(e.target.value)}
-                    className="w-full p-2 border rounded"
-                    placeholder="Enter price in ETH"
-                  />
+                <div className="space-y-4">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Sale Type
+                    </label>
+                    <div className="grid grid-cols-2 gap-2">
+                      <button
+                        type="button"
+                        onClick={() => setSaleType('fixed')}
+                        className={`py-2 px-4 text-sm rounded-md ${
+                          saleType === 'fixed'
+                            ? 'bg-blue-500 text-white'
+                            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                        }`}
+                      >
+                        Fixed Price
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setSaleType('auction')}
+                        className={`py-2 px-4 text-sm rounded-md ${
+                          saleType === 'auction'
+                            ? 'bg-blue-500 text-white'
+                            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                        }`}
+                      >
+                        Auction
+                      </button>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      {saleType === 'fixed' ? 'Price (ETH)' : 'Minimum Bid (ETH)'}
+                    </label>
+                    <input
+                      type="number"
+                      step="0.01"
+                      value={price}
+                      onChange={(e) => setPrice(e.target.value)}
+                      className="w-full p-2 border rounded"
+                      placeholder={saleType === 'fixed' ? 'Enter price in ETH' : 'Enter minimum bid in ETH'}
+                    />
+                    {saleType === 'auction' && (
+                      <p className="mt-1 text-sm text-gray-500">
+                        Auctions will run for 7 days from listing
+                      </p>
+                    )}
+                  </div>
                 </div>
               )}
             </div>
@@ -80,16 +131,11 @@ const ListNFTModal: React.FC<ListNFTModalProps> = ({ isOpen, onClose, ownedNFTs,
                 Cancel
               </button>
               <button
-                onClick={() => {
-                  if (selectedNFT && price) {
-                    onListNFT(selectedNFT, parseFloat(price));
-                    onClose();
-                  }
-                }}
+                onClick={handleSubmit}
                 disabled={!selectedNFT || !price}
                 className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 disabled:opacity-50"
               >
-                List NFT
+                {saleType === 'fixed' ? 'List for Sale' : 'Start Auction'}
               </button>
             </div>
           </div>
