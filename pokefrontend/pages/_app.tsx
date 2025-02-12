@@ -1,27 +1,11 @@
 import type { AppProps } from 'next/app';
 import { Web3ReactProvider } from '@web3-react/core';
+import { metaMask, hooks } from '../connectors';
 import { createConfig, WagmiConfig } from 'wagmi';
-import { mainnet, sepolia } from 'wagmi/chains';
-import { http } from 'viem';
-import { MetaMask } from '@web3-react/metamask';
-import { hooks as metaMaskHooks, metaMask } from '../connectors/metaMask';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { http } from 'viem';
 import '../src/app/globals.css';
 import { Inter, Poppins } from 'next/font/google';
-
-const queryClient = new QueryClient();
-
-const connectors: [MetaMask, typeof metaMaskHooks][] = [
-  [metaMask, metaMaskHooks],
-];
-
-const config = createConfig({
-  chains: [mainnet, sepolia],
-  transports: {
-    [mainnet.id]: http(),
-    [sepolia.id]: http(),
-  },
-});
 
 const inter = Inter({ subsets: ['latin'] });
 const poppins = Poppins({ 
@@ -30,16 +14,46 @@ const poppins = Poppins({
   variable: '--font-display'
 });
 
+const connectors: [MetaMask, typeof hooks][] = [[metaMask, hooks]];
+
+// Create a client for React Query
+const queryClient = new QueryClient();
+
+// Configure Wagmi for the local Anvil network
+const config = createConfig({
+  chains: [{
+    id: 1337,
+    name: 'Anvil Local Network',
+    network: 'anvil',
+    nativeCurrency: {
+      name: 'Ethereum',
+      symbol: 'ETH',
+      decimals: 18,
+    },
+    rpcUrls: {
+      default: { 
+        http: ['http://localhost:8545']
+      },
+      public: {
+        http: ['http://localhost:8545']
+      }
+    }
+  }],
+  transports: {
+    1337: http('http://localhost:8545'),
+  },
+});
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={`${inter.className} ${poppins.variable}`}>
-      <QueryClientProvider client={queryClient}>
-        <WagmiConfig config={config}>
-          <Web3ReactProvider connectors={connectors}>
+    <QueryClientProvider client={queryClient}>
+      <WagmiConfig config={config}>
+        <Web3ReactProvider connectors={connectors}>
+          <main className={`${inter.className} ${poppins.variable}`}>
             <Component {...pageProps} />
-          </Web3ReactProvider>
-        </WagmiConfig>
-      </QueryClientProvider>
-    </main>
+          </main>
+        </Web3ReactProvider>
+      </WagmiConfig>
+    </QueryClientProvider>
   );
 }
