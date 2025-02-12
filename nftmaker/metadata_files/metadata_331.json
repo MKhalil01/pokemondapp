@@ -1,35 +1,36 @@
 {
-    "name": "Cacnea",
-    "description": "An NFT representing the Pokemon Cacnea.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/331.png",
+    "name": "Nidorino",
+    "description": "An NFT representing the Pokemon Nidorino.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/33.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 50
+            "value": 61
         },
         {
             "trait_type": "Attack",
-            "value": 85
+            "value": 72
         },
         {
             "trait_type": "Defense",
-            "value": 40
+            "value": 57
         },
         {
             "trait_type": "Special-attack",
-            "value": 85
+            "value": 55
         },
         {
             "trait_type": "Special-defense",
-            "value": 40
+            "value": 55
         },
         {
             "trait_type": "Speed",
-            "value": 35
+            "value": 65
         },
         {
             "trait_type": "Base Experience",
-            "value": 67
+            "value": 128
         },
         {
             "trait_type": "Rarity",

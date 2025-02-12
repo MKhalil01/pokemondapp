@@ -1,27 +1,28 @@
 {
-    "name": "Seviper",
-    "description": "An NFT representing the Pokemon Seviper.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/336.png",
+    "name": "Nidorino",
+    "description": "An NFT representing the Pokemon Nidorino.",
+    "copy_number": 6,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/33.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 73
+            "value": 61
         },
         {
             "trait_type": "Attack",
-            "value": 100
+            "value": 72
         },
         {
             "trait_type": "Defense",
-            "value": 60
+            "value": 57
         },
         {
             "trait_type": "Special-attack",
-            "value": 100
+            "value": 55
         },
         {
             "trait_type": "Special-defense",
-            "value": 60
+            "value": 55
         },
         {
             "trait_type": "Speed",
@@ -29,11 +30,11 @@
         },
         {
             "trait_type": "Base Experience",
-            "value": 160
+            "value": 128
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

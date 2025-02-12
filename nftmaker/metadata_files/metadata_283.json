@@ -1,27 +1,28 @@
 {
-    "name": "Surskit",
-    "description": "An NFT representing the Pokemon Surskit.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/283.png",
+    "name": "Sandslash",
+    "description": "An NFT representing the Pokemon Sandslash.",
+    "copy_number": 3,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/28.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 40
+            "value": 75
         },
         {
             "trait_type": "Attack",
-            "value": 30
+            "value": 100
         },
         {
             "trait_type": "Defense",
-            "value": 32
+            "value": 110
         },
         {
             "trait_type": "Special-attack",
-            "value": 50
+            "value": 45
         },
         {
             "trait_type": "Special-defense",
-            "value": 52
+            "value": 55
         },
         {
             "trait_type": "Speed",
@@ -29,7 +30,7 @@
         },
         {
             "trait_type": "Base Experience",
-            "value": 54
+            "value": 158
         },
         {
             "trait_type": "Rarity",

@@ -1,39 +1,40 @@
 {
-    "name": "Noibat",
-    "description": "An NFT representing the Pokemon Noibat.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/714.png",
+    "name": "Victreebel",
+    "description": "An NFT representing the Pokemon Victreebel.",
+    "copy_number": 4,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/71.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 40
+            "value": 80
         },
         {
             "trait_type": "Attack",
-            "value": 30
+            "value": 105
         },
         {
             "trait_type": "Defense",
-            "value": 35
+            "value": 65
         },
         {
             "trait_type": "Special-attack",
-            "value": 45
+            "value": 100
         },
         {
             "trait_type": "Special-defense",
-            "value": 40
+            "value": 70
         },
         {
             "trait_type": "Speed",
-            "value": 55
+            "value": 70
         },
         {
             "trait_type": "Base Experience",
-            "value": 49
+            "value": 221
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Uncommon"
         }
     ]
 }

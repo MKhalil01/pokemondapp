@@ -1,0 +1,40 @@
+{
+    "name": "Annihilape",
+    "description": "An NFT representing the Pokemon Annihilape.",
+    "copy_number": 2,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/979.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 110
+        },
+        {
+            "trait_type": "Attack",
+            "value": 115
+        },
+        {
+            "trait_type": "Defense",
+            "value": 80
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 50
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 90
+        },
+        {
+            "trait_type": "Speed",
+            "value": 90
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 268
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Rare"
+        }
+    ]
+}

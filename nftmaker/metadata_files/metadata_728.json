@@ -1,35 +1,36 @@
 {
-    "name": "Popplio",
-    "description": "An NFT representing the Pokemon Popplio.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/728.png",
+    "name": "Tentacool",
+    "description": "An NFT representing the Pokemon Tentacool.",
+    "copy_number": 8,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/72.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 50
-        },
-        {
-            "trait_type": "Attack",
-            "value": 54
-        },
-        {
-            "trait_type": "Defense",
-            "value": 54
-        },
-        {
-            "trait_type": "Special-attack",
-            "value": 66
-        },
-        {
-            "trait_type": "Special-defense",
-            "value": 56
-        },
-        {
-            "trait_type": "Speed",
             "value": 40
         },
         {
+            "trait_type": "Attack",
+            "value": 40
+        },
+        {
+            "trait_type": "Defense",
+            "value": 35
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 50
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 100
+        },
+        {
+            "trait_type": "Speed",
+            "value": 70
+        },
+        {
             "trait_type": "Base Experience",
-            "value": 64
+            "value": 67
         },
         {
             "trait_type": "Rarity",

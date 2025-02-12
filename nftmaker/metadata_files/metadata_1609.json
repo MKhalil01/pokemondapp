@@ -1,0 +1,40 @@
+{
+    "name": "Feraligatr",
+    "description": "An NFT representing the Pokemon Feraligatr.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/160.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 85
+        },
+        {
+            "trait_type": "Attack",
+            "value": 105
+        },
+        {
+            "trait_type": "Defense",
+            "value": 100
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 79
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 83
+        },
+        {
+            "trait_type": "Speed",
+            "value": 78
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 239
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Uncommon"
+        }
+    ]
+}

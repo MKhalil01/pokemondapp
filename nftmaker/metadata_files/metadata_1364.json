@@ -1,0 +1,40 @@
+{
+    "name": "Flareon",
+    "description": "An NFT representing the Pokemon Flareon.",
+    "copy_number": 4,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/136.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 65
+        },
+        {
+            "trait_type": "Attack",
+            "value": 130
+        },
+        {
+            "trait_type": "Defense",
+            "value": 60
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 95
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 110
+        },
+        {
+            "trait_type": "Speed",
+            "value": 65
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 184
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Uncommon"
+        }
+    ]
+}

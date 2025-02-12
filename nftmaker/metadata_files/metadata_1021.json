@@ -1,39 +1,40 @@
 {
-    "name": "Raging-bolt",
-    "description": "An NFT representing the Pokemon Raging-bolt.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1021.png",
+    "name": "Exeggcute",
+    "description": "An NFT representing the Pokemon Exeggcute.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/102.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 125
+            "value": 60
         },
         {
             "trait_type": "Attack",
-            "value": 73
+            "value": 40
         },
         {
             "trait_type": "Defense",
-            "value": 91
+            "value": 80
         },
         {
             "trait_type": "Special-attack",
-            "value": 137
+            "value": 60
         },
         {
             "trait_type": "Special-defense",
-            "value": 89
+            "value": 45
         },
         {
             "trait_type": "Speed",
-            "value": 75
+            "value": 40
         },
         {
             "trait_type": "Base Experience",
-            "value": 295
+            "value": 65
         },
         {
             "trait_type": "Rarity",
-            "value": "Rare"
+            "value": "Common"
         }
     ]
 }

@@ -1,39 +1,40 @@
 {
-    "name": "Salazzle",
-    "description": "An NFT representing the Pokemon Salazzle.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/758.png",
+    "name": "Graveler",
+    "description": "An NFT representing the Pokemon Graveler.",
+    "copy_number": 8,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/75.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 68
+            "value": 55
         },
         {
             "trait_type": "Attack",
-            "value": 64
+            "value": 95
         },
         {
             "trait_type": "Defense",
-            "value": 60
+            "value": 115
         },
         {
             "trait_type": "Special-attack",
-            "value": 111
+            "value": 45
         },
         {
             "trait_type": "Special-defense",
-            "value": 60
+            "value": 45
         },
         {
             "trait_type": "Speed",
-            "value": 117
+            "value": 35
         },
         {
             "trait_type": "Base Experience",
-            "value": 168
+            "value": 137
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

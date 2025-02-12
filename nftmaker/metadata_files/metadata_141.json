@@ -1,39 +1,40 @@
 {
-    "name": "Kabutops",
-    "description": "An NFT representing the Pokemon Kabutops.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/141.png",
+    "name": "Kakuna",
+    "description": "An NFT representing the Pokemon Kakuna.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/14.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 60
+            "value": 45
         },
         {
             "trait_type": "Attack",
-            "value": 115
+            "value": 25
         },
         {
             "trait_type": "Defense",
-            "value": 105
+            "value": 50
         },
         {
             "trait_type": "Special-attack",
-            "value": 65
+            "value": 25
         },
         {
             "trait_type": "Special-defense",
-            "value": 70
+            "value": 25
         },
         {
             "trait_type": "Speed",
-            "value": 80
+            "value": 35
         },
         {
             "trait_type": "Base Experience",
-            "value": 173
+            "value": 72
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

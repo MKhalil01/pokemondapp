@@ -1,39 +1,40 @@
 {
-    "name": "Crabrawler",
-    "description": "An NFT representing the Pokemon Crabrawler.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/739.png",
+    "name": "Tentacruel",
+    "description": "An NFT representing the Pokemon Tentacruel.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/73.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 47
+            "value": 80
         },
         {
             "trait_type": "Attack",
-            "value": 82
+            "value": 70
         },
         {
             "trait_type": "Defense",
-            "value": 57
+            "value": 65
         },
         {
             "trait_type": "Special-attack",
-            "value": 42
+            "value": 80
         },
         {
             "trait_type": "Special-defense",
-            "value": 47
+            "value": 120
         },
         {
             "trait_type": "Speed",
-            "value": 63
+            "value": 100
         },
         {
             "trait_type": "Base Experience",
-            "value": 68
+            "value": 180
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Uncommon"
         }
     ]
 }

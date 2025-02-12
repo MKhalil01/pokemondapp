@@ -1,23 +1,24 @@
 {
-    "name": "Luvdisc",
-    "description": "An NFT representing the Pokemon Luvdisc.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/370.png",
+    "name": "Vulpix",
+    "description": "An NFT representing the Pokemon Vulpix.",
+    "copy_number": 0,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/37.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 43
+            "value": 38
         },
         {
             "trait_type": "Attack",
-            "value": 30
+            "value": 41
         },
         {
             "trait_type": "Defense",
-            "value": 55
+            "value": 40
         },
         {
             "trait_type": "Special-attack",
-            "value": 40
+            "value": 50
         },
         {
             "trait_type": "Special-defense",
@@ -25,11 +26,11 @@
         },
         {
             "trait_type": "Speed",
-            "value": 97
+            "value": 65
         },
         {
             "trait_type": "Base Experience",
-            "value": 116
+            "value": 60
         },
         {
             "trait_type": "Rarity",

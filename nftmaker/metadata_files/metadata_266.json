@@ -1,15 +1,16 @@
 {
-    "name": "Silcoon",
-    "description": "An NFT representing the Pokemon Silcoon.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/266.png",
+    "name": "Raichu",
+    "description": "An NFT representing the Pokemon Raichu.",
+    "copy_number": 6,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/26.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 50
+            "value": 60
         },
         {
             "trait_type": "Attack",
-            "value": 35
+            "value": 90
         },
         {
             "trait_type": "Defense",
@@ -17,23 +18,23 @@
         },
         {
             "trait_type": "Special-attack",
-            "value": 25
+            "value": 90
         },
         {
             "trait_type": "Special-defense",
-            "value": 25
+            "value": 80
         },
         {
             "trait_type": "Speed",
-            "value": 15
+            "value": 110
         },
         {
             "trait_type": "Base Experience",
-            "value": 72
+            "value": 243
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Uncommon"
         }
     ]
 }

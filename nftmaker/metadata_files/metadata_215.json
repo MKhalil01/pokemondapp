@@ -1,35 +1,36 @@
 {
-    "name": "Sneasel",
-    "description": "An NFT representing the Pokemon Sneasel.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/215.png",
+    "name": "Spearow",
+    "description": "An NFT representing the Pokemon Spearow.",
+    "copy_number": 5,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/21.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 55
+            "value": 40
         },
         {
             "trait_type": "Attack",
-            "value": 95
+            "value": 60
         },
         {
             "trait_type": "Defense",
-            "value": 55
+            "value": 30
         },
         {
             "trait_type": "Special-attack",
-            "value": 35
+            "value": 31
         },
         {
             "trait_type": "Special-defense",
-            "value": 75
+            "value": 31
         },
         {
             "trait_type": "Speed",
-            "value": 115
+            "value": 70
         },
         {
             "trait_type": "Base Experience",
-            "value": 86
+            "value": 52
         },
         {
             "trait_type": "Rarity",

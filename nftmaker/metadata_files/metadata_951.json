@@ -1,35 +1,36 @@
 {
-    "name": "Capsakid",
-    "description": "An NFT representing the Pokemon Capsakid.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/951.png",
+    "name": "Onix",
+    "description": "An NFT representing the Pokemon Onix.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/95.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 50
+            "value": 35
         },
         {
             "trait_type": "Attack",
-            "value": 62
+            "value": 45
         },
         {
             "trait_type": "Defense",
-            "value": 40
+            "value": 160
         },
         {
             "trait_type": "Special-attack",
-            "value": 62
+            "value": 30
         },
         {
             "trait_type": "Special-defense",
-            "value": 40
+            "value": 45
         },
         {
             "trait_type": "Speed",
-            "value": 50
+            "value": 70
         },
         {
             "trait_type": "Base Experience",
-            "value": 61
+            "value": 77
         },
         {
             "trait_type": "Rarity",

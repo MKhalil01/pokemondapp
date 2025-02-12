@@ -1,35 +1,36 @@
 {
-    "name": "Dratini",
-    "description": "An NFT representing the Pokemon Dratini.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/147.png",
+    "name": "Kakuna",
+    "description": "An NFT representing the Pokemon Kakuna.",
+    "copy_number": 7,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/14.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 41
-        },
-        {
-            "trait_type": "Attack",
-            "value": 64
-        },
-        {
-            "trait_type": "Defense",
             "value": 45
         },
         {
-            "trait_type": "Special-attack",
+            "trait_type": "Attack",
+            "value": 25
+        },
+        {
+            "trait_type": "Defense",
             "value": 50
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 25
         },
         {
             "trait_type": "Special-defense",
-            "value": 50
+            "value": 25
         },
         {
             "trait_type": "Speed",
-            "value": 50
+            "value": 35
         },
         {
             "trait_type": "Base Experience",
-            "value": 60
+            "value": 72
         },
         {
             "trait_type": "Rarity",

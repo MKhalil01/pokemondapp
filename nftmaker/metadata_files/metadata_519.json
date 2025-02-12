@@ -1,15 +1,16 @@
 {
-    "name": "Pidove",
-    "description": "An NFT representing the Pokemon Pidove.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/519.png",
+    "name": "Dugtrio",
+    "description": "An NFT representing the Pokemon Dugtrio.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/51.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 50
+            "value": 35
         },
         {
             "trait_type": "Attack",
-            "value": 55
+            "value": 100
         },
         {
             "trait_type": "Defense",
@@ -17,19 +18,19 @@
         },
         {
             "trait_type": "Special-attack",
-            "value": 36
+            "value": 50
         },
         {
             "trait_type": "Special-defense",
-            "value": 30
+            "value": 70
         },
         {
             "trait_type": "Speed",
-            "value": 43
+            "value": 120
         },
         {
             "trait_type": "Base Experience",
-            "value": 53
+            "value": 149
         },
         {
             "trait_type": "Rarity",

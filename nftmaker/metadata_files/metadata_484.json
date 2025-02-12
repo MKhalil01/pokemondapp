@@ -1,39 +1,40 @@
 {
-    "name": "Palkia",
-    "description": "An NFT representing the Pokemon Palkia.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/484.png",
+    "name": "Venonat",
+    "description": "An NFT representing the Pokemon Venonat.",
+    "copy_number": 4,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/48.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 90
+            "value": 60
         },
         {
             "trait_type": "Attack",
-            "value": 120
+            "value": 55
         },
         {
             "trait_type": "Defense",
-            "value": 100
+            "value": 50
         },
         {
             "trait_type": "Special-attack",
-            "value": 150
+            "value": 40
         },
         {
             "trait_type": "Special-defense",
-            "value": 120
+            "value": 55
         },
         {
             "trait_type": "Speed",
-            "value": 100
+            "value": 45
         },
         {
             "trait_type": "Base Experience",
-            "value": 340
+            "value": 61
         },
         {
             "trait_type": "Rarity",
-            "value": "Legendary"
+            "value": "Common"
         }
     ]
 }

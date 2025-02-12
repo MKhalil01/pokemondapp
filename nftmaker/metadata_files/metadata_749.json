@@ -1,35 +1,36 @@
 {
-    "name": "Mudbray",
-    "description": "An NFT representing the Pokemon Mudbray.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/749.png",
+    "name": "Geodude",
+    "description": "An NFT representing the Pokemon Geodude.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/74.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 70
+            "value": 40
         },
         {
             "trait_type": "Attack",
-            "value": 100
+            "value": 80
         },
         {
             "trait_type": "Defense",
-            "value": 70
+            "value": 100
         },
         {
             "trait_type": "Special-attack",
-            "value": 45
+            "value": 30
         },
         {
             "trait_type": "Special-defense",
-            "value": 55
+            "value": 30
         },
         {
             "trait_type": "Speed",
-            "value": 45
+            "value": 20
         },
         {
             "trait_type": "Base Experience",
-            "value": 77
+            "value": 60
         },
         {
             "trait_type": "Rarity",

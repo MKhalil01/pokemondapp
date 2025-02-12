@@ -1,19 +1,20 @@
 {
-    "name": "Leafeon",
-    "description": "An NFT representing the Pokemon Leafeon.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/470.png",
+    "name": "Parasect",
+    "description": "An NFT representing the Pokemon Parasect.",
+    "copy_number": 0,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/47.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 65
+            "value": 60
         },
         {
             "trait_type": "Attack",
-            "value": 110
+            "value": 95
         },
         {
             "trait_type": "Defense",
-            "value": 130
+            "value": 80
         },
         {
             "trait_type": "Special-attack",
@@ -21,19 +22,19 @@
         },
         {
             "trait_type": "Special-defense",
-            "value": 65
+            "value": 80
         },
         {
             "trait_type": "Speed",
-            "value": 95
+            "value": 30
         },
         {
             "trait_type": "Base Experience",
-            "value": 184
+            "value": 142
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

@@ -1,19 +1,20 @@
 {
-    "name": "Regirock",
-    "description": "An NFT representing the Pokemon Regirock.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/377.png",
+    "name": "Vulpix",
+    "description": "An NFT representing the Pokemon Vulpix.",
+    "copy_number": 7,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/37.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 80
+            "value": 38
         },
         {
             "trait_type": "Attack",
-            "value": 100
+            "value": 41
         },
         {
             "trait_type": "Defense",
-            "value": 200
+            "value": 40
         },
         {
             "trait_type": "Special-attack",
@@ -21,19 +22,19 @@
         },
         {
             "trait_type": "Special-defense",
-            "value": 100
+            "value": 65
         },
         {
             "trait_type": "Speed",
-            "value": 50
+            "value": 65
         },
         {
             "trait_type": "Base Experience",
-            "value": 290
+            "value": 60
         },
         {
             "trait_type": "Rarity",
-            "value": "Rare"
+            "value": "Common"
         }
     ]
 }

@@ -1,39 +1,40 @@
 {
-    "name": "Lunala",
-    "description": "An NFT representing the Pokemon Lunala.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/792.png",
+    "name": "Slowpoke",
+    "description": "An NFT representing the Pokemon Slowpoke.",
+    "copy_number": 2,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/79.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 137
+            "value": 90
         },
         {
             "trait_type": "Attack",
-            "value": 113
+            "value": 65
         },
         {
             "trait_type": "Defense",
-            "value": 89
+            "value": 65
         },
         {
             "trait_type": "Special-attack",
-            "value": 137
+            "value": 40
         },
         {
             "trait_type": "Special-defense",
-            "value": 107
+            "value": 40
         },
         {
             "trait_type": "Speed",
-            "value": 97
+            "value": 15
         },
         {
             "trait_type": "Base Experience",
-            "value": 340
+            "value": 63
         },
         {
             "trait_type": "Rarity",
-            "value": "Legendary"
+            "value": "Common"
         }
     ]
 }

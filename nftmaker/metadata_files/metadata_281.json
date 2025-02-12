@@ -1,23 +1,24 @@
 {
-    "name": "Kirlia",
-    "description": "An NFT representing the Pokemon Kirlia.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/281.png",
+    "name": "Sandslash",
+    "description": "An NFT representing the Pokemon Sandslash.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/28.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 38
+            "value": 75
         },
         {
             "trait_type": "Attack",
-            "value": 35
+            "value": 100
         },
         {
             "trait_type": "Defense",
-            "value": 35
+            "value": 110
         },
         {
             "trait_type": "Special-attack",
-            "value": 65
+            "value": 45
         },
         {
             "trait_type": "Special-defense",
@@ -25,11 +26,11 @@
         },
         {
             "trait_type": "Speed",
-            "value": 50
+            "value": 65
         },
         {
             "trait_type": "Base Experience",
-            "value": 97
+            "value": 158
         },
         {
             "trait_type": "Rarity",

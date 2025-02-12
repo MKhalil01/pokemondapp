@@ -1,0 +1,40 @@
+{
+    "name": "Turtwig",
+    "description": "An NFT representing the Pokemon Turtwig.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/387.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 55
+        },
+        {
+            "trait_type": "Attack",
+            "value": 68
+        },
+        {
+            "trait_type": "Defense",
+            "value": 64
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 45
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 55
+        },
+        {
+            "trait_type": "Speed",
+            "value": 31
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 64
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

@@ -1,39 +1,40 @@
 {
-    "name": "Chikorita",
-    "description": "An NFT representing the Pokemon Chikorita.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/152.png",
+    "name": "Beedrill",
+    "description": "An NFT representing the Pokemon Beedrill.",
+    "copy_number": 2,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/15.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 45
+            "value": 65
         },
         {
             "trait_type": "Attack",
-            "value": 49
+            "value": 90
         },
         {
             "trait_type": "Defense",
-            "value": 65
+            "value": 40
         },
         {
             "trait_type": "Special-attack",
-            "value": 49
-        },
-        {
-            "trait_type": "Special-defense",
-            "value": 65
-        },
-        {
-            "trait_type": "Speed",
             "value": 45
         },
         {
+            "trait_type": "Special-defense",
+            "value": 80
+        },
+        {
+            "trait_type": "Speed",
+            "value": 75
+        },
+        {
             "trait_type": "Base Experience",
-            "value": 64
+            "value": 178
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Uncommon"
         }
     ]
 }

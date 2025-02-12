@@ -23,14 +23,11 @@ contract PokemonNFT is ERC721A, Ownable {
     uint256[] randomWords = new uint256[](1);
 
     // NFT Variables
-    uint256 public constant MAX_SUPPLY = 10000;
+    uint256 public constant MAX_SUPPLY = 10250;
     uint256 public mintPrice = 0.08 ether;
     string public baseURI;
-
-    // Rarity Variables
     uint256 public constant TOTAL_POKEMON = 1025;
-    mapping(uint256 => bool) public legendaryMinted;
-    mapping(uint256 => uint8) public pokemonRarity; // 1=Common, 2=Uncommon, 3=Rare, 4=Legendary
+    mapping(uint256 => uint8) pokemonCopiesMinted;
 
     // Mint request tracking
     struct MintRequest {
@@ -47,9 +44,18 @@ contract PokemonNFT is ERC721A, Ownable {
     );
     event MintCompleted(address indexed minter, uint256[] tokenIds);
 
-    constructor() ERC721A("Pokemon NFT", "PKMN") Ownable(msg.sender) {
-        // Initialize rarity mapping (this would be done in deployment script)
-        // Example: pokemonRarity[1] = 1; // Common
+    constructor() ERC721A("Pokemon NFT", "PKMN") Ownable(msg.sender) {}
+
+    // Override _sequentialUpTo to return 1
+    // This allows for spot minting instead of sequential minting
+    function _sequentialUpTo()
+        internal
+        view
+        virtual
+        override
+        returns (uint256)
+    {
+        return 1;
     }
 
     // Request to mint NFTs
@@ -81,63 +87,40 @@ contract PokemonNFT is ERC721A, Ownable {
             uint256 randomNum = uint256(
                 keccak256(abi.encode(_randomWords[0], i))
             );
-            // uint256 pokemonId = selectPokemon(randomNum);
-            selectPokemon(randomNum);
+            uint256 pokemonId = selectPokemon(randomNum);
+            uint256 tokenId = (pokemonId * 10) +
+                (pokemonCopiesMinted[pokemonId] - 1);
 
-            _mint(request.minter, 1);
-            tokenIds[i] = _nextTokenId() - 1;
+            _mintSpot(request.minter, tokenId);
+            tokenIds[i] = tokenId;
         }
 
         emit MintCompleted(request.minter, tokenIds);
         delete mintRequests[requestId];
     }
 
-    // Select Pokemon based on rarity weights
+    // Selects a Pokemon ID based on a random number and ensures the copy limit is not exceeded
     function selectPokemon(uint256 randomNum) internal returns (uint256) {
-        uint256 rarity = randomNum % 100;
-        uint256 attempts = 0;
+        uint256 pokemonId = (randomNum % TOTAL_POKEMON) + 1;
 
-        // Rarity distribution: 50% Common, 30% Uncommon, 15% Rare, 5% Legendary
-        uint8 selectedRarity;
-        if (rarity < 50)
-            selectedRarity = 1; // Common
-        else if (rarity < 80)
-            selectedRarity = 2; // Uncommon
-        else if (rarity < 95)
-            selectedRarity = 3; // Rare
-        else selectedRarity = 4; // Legendary
-
-        while (attempts < 100) {
-            uint256 pokemonId = (uint256(
-                keccak256(abi.encode(randomNum, attempts))
-            ) % TOTAL_POKEMON) + 1;
-
-            if (pokemonRarity[pokemonId] == selectedRarity) {
-                if (selectedRarity == 4) {
-                    // Legendary
-                    if (!legendaryMinted[pokemonId]) {
-                        legendaryMinted[pokemonId] = true;
-                        return pokemonId;
-                    }
-                } else {
-                    return pokemonId;
-                }
-            }
-            attempts++;
+        // Check how many copies have been made
+        if (pokemonCopiesMinted[pokemonId] < 10) {
+            pokemonCopiesMinted[pokemonId]++;
+            return pokemonId;
         }
 
-        // Fallback to linear search for a common Pokemon
-        uint256 startId = (randomNum % TOTAL_POKEMON) + 1;
+        // If the selected Pokemon has reached the copy limit, perform a linear search for an available Pokemon
+        uint256 startId = pokemonId;
         for (uint256 i = 0; i < TOTAL_POKEMON; i++) {
-            uint256 pokemonId = ((startId + i - 1) % TOTAL_POKEMON) + 1;
-            if (pokemonRarity[pokemonId] == 1) {
-                // Common
+            pokemonId = ((startId + i - 1) % TOTAL_POKEMON) + 1;
+            if (pokemonCopiesMinted[pokemonId] < 10) {
+                pokemonCopiesMinted[pokemonId]++;
                 return pokemonId;
             }
         }
 
-        // If no common Pokemon found (should not happen), return the startId
-        return startId;
+        // If no available Pokemon found (should not happen), revert the transaction
+        revert("No available Pokemon to mint");
     }
 
     // URI Functions

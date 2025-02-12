@@ -1,0 +1,40 @@
+{
+    "name": "Thievul",
+    "description": "An NFT representing the Pokemon Thievul.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/828.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 70
+        },
+        {
+            "trait_type": "Attack",
+            "value": 58
+        },
+        {
+            "trait_type": "Defense",
+            "value": 58
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 87
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 92
+        },
+        {
+            "trait_type": "Speed",
+            "value": 90
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 159
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Uncommon"
+        }
+    ]
+}

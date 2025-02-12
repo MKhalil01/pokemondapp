@@ -1,39 +1,40 @@
 {
-    "name": "Finneon",
-    "description": "An NFT representing the Pokemon Finneon.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/456.png",
+    "name": "Vileplume",
+    "description": "An NFT representing the Pokemon Vileplume.",
+    "copy_number": 6,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/45.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 49
+            "value": 75
         },
         {
             "trait_type": "Attack",
-            "value": 49
+            "value": 80
         },
         {
             "trait_type": "Defense",
-            "value": 56
+            "value": 85
         },
         {
             "trait_type": "Special-attack",
-            "value": 49
+            "value": 110
         },
         {
             "trait_type": "Special-defense",
-            "value": 61
+            "value": 90
         },
         {
             "trait_type": "Speed",
-            "value": 66
+            "value": 50
         },
         {
             "trait_type": "Base Experience",
-            "value": 66
+            "value": 245
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Uncommon"
         }
     ]
 }

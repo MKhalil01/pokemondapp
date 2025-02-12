@@ -1,0 +1,40 @@
+{
+    "name": "Sandygast",
+    "description": "An NFT representing the Pokemon Sandygast.",
+    "copy_number": 4,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/769.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 55
+        },
+        {
+            "trait_type": "Attack",
+            "value": 55
+        },
+        {
+            "trait_type": "Defense",
+            "value": 80
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 70
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 45
+        },
+        {
+            "trait_type": "Speed",
+            "value": 15
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 64
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

@@ -1,11 +1,12 @@
 {
-    "name": "Bramblin",
-    "description": "An NFT representing the Pokemon Bramblin.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/946.png",
+    "name": "Gengar",
+    "description": "An NFT representing the Pokemon Gengar.",
+    "copy_number": 6,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/94.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 40
+            "value": 60
         },
         {
             "trait_type": "Attack",
@@ -13,27 +14,27 @@
         },
         {
             "trait_type": "Defense",
-            "value": 30
-        },
-        {
-            "trait_type": "Special-attack",
-            "value": 45
-        },
-        {
-            "trait_type": "Special-defense",
-            "value": 35
-        },
-        {
-            "trait_type": "Speed",
             "value": 60
         },
         {
+            "trait_type": "Special-attack",
+            "value": 130
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 75
+        },
+        {
+            "trait_type": "Speed",
+            "value": 110
+        },
+        {
             "trait_type": "Base Experience",
-            "value": 55
+            "value": 250
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Rare"
         }
     ]
 }

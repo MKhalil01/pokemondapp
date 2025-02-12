@@ -1,23 +1,24 @@
 {
-    "name": "Larvesta",
-    "description": "An NFT representing the Pokemon Larvesta.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/636.png",
+    "name": "Abra",
+    "description": "An NFT representing the Pokemon Abra.",
+    "copy_number": 6,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/63.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 55
+            "value": 25
         },
         {
             "trait_type": "Attack",
-            "value": 85
+            "value": 20
         },
         {
             "trait_type": "Defense",
-            "value": 55
+            "value": 15
         },
         {
             "trait_type": "Special-attack",
-            "value": 50
+            "value": 105
         },
         {
             "trait_type": "Special-defense",
@@ -25,11 +26,11 @@
         },
         {
             "trait_type": "Speed",
-            "value": 60
+            "value": 90
         },
         {
             "trait_type": "Base Experience",
-            "value": 72
+            "value": 62
         },
         {
             "trait_type": "Rarity",

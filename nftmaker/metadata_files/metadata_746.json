@@ -1,35 +1,36 @@
 {
-    "name": "Wishiwashi-solo",
-    "description": "An NFT representing the Pokemon Wishiwashi-solo.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/746.png",
+    "name": "Geodude",
+    "description": "An NFT representing the Pokemon Geodude.",
+    "copy_number": 6,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/74.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 45
-        },
-        {
-            "trait_type": "Attack",
-            "value": 20
-        },
-        {
-            "trait_type": "Defense",
-            "value": 20
-        },
-        {
-            "trait_type": "Special-attack",
-            "value": 25
-        },
-        {
-            "trait_type": "Special-defense",
-            "value": 25
-        },
-        {
-            "trait_type": "Speed",
             "value": 40
         },
         {
+            "trait_type": "Attack",
+            "value": 80
+        },
+        {
+            "trait_type": "Defense",
+            "value": 100
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 30
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 30
+        },
+        {
+            "trait_type": "Speed",
+            "value": 20
+        },
+        {
             "trait_type": "Base Experience",
-            "value": 61
+            "value": 60
         },
         {
             "trait_type": "Rarity",

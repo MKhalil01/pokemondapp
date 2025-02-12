@@ -1,0 +1,40 @@
+{
+    "name": "Magby",
+    "description": "An NFT representing the Pokemon Magby.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/240.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 45
+        },
+        {
+            "trait_type": "Attack",
+            "value": 75
+        },
+        {
+            "trait_type": "Defense",
+            "value": 37
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 70
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 55
+        },
+        {
+            "trait_type": "Speed",
+            "value": 83
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 73
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

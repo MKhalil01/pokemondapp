@@ -1,0 +1,40 @@
+{
+    "name": "Rotom",
+    "description": "An NFT representing the Pokemon Rotom.",
+    "copy_number": 2,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/479.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 50
+        },
+        {
+            "trait_type": "Attack",
+            "value": 50
+        },
+        {
+            "trait_type": "Defense",
+            "value": 77
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 95
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 77
+        },
+        {
+            "trait_type": "Speed",
+            "value": 91
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 154
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

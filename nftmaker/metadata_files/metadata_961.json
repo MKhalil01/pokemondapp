@@ -1,35 +1,36 @@
 {
-    "name": "Wugtrio",
-    "description": "An NFT representing the Pokemon Wugtrio.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/961.png",
+    "name": "Drowzee",
+    "description": "An NFT representing the Pokemon Drowzee.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/96.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 35
+            "value": 60
         },
         {
             "trait_type": "Attack",
-            "value": 100
+            "value": 48
         },
         {
             "trait_type": "Defense",
-            "value": 50
+            "value": 45
         },
         {
             "trait_type": "Special-attack",
-            "value": 50
+            "value": 43
         },
         {
             "trait_type": "Special-defense",
-            "value": 70
+            "value": 90
         },
         {
             "trait_type": "Speed",
-            "value": 120
+            "value": 42
         },
         {
             "trait_type": "Base Experience",
-            "value": 149
+            "value": 66
         },
         {
             "trait_type": "Rarity",

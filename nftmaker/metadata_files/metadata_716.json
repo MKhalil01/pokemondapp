@@ -1,39 +1,40 @@
 {
-    "name": "Xerneas",
-    "description": "An NFT representing the Pokemon Xerneas.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/716.png",
+    "name": "Victreebel",
+    "description": "An NFT representing the Pokemon Victreebel.",
+    "copy_number": 6,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/71.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 126
+            "value": 80
         },
         {
             "trait_type": "Attack",
-            "value": 131
+            "value": 105
         },
         {
             "trait_type": "Defense",
-            "value": 95
+            "value": 65
         },
         {
             "trait_type": "Special-attack",
-            "value": 131
+            "value": 100
         },
         {
             "trait_type": "Special-defense",
-            "value": 98
+            "value": 70
         },
         {
             "trait_type": "Speed",
-            "value": 99
+            "value": 70
         },
         {
             "trait_type": "Base Experience",
-            "value": 340
+            "value": 221
         },
         {
             "trait_type": "Rarity",
-            "value": "Legendary"
+            "value": "Uncommon"
         }
     ]
 }

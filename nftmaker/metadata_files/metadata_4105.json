@@ -1,0 +1,40 @@
+{
+    "name": "Shieldon",
+    "description": "An NFT representing the Pokemon Shieldon.",
+    "copy_number": 5,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/410.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 30
+        },
+        {
+            "trait_type": "Attack",
+            "value": 42
+        },
+        {
+            "trait_type": "Defense",
+            "value": 118
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 42
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 88
+        },
+        {
+            "trait_type": "Speed",
+            "value": 30
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 70
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

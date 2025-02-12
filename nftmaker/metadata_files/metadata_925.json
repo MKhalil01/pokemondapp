@@ -1,39 +1,40 @@
 {
-    "name": "Maushold-family-of-four",
-    "description": "An NFT representing the Pokemon Maushold-family-of-four.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/925.png",
+    "name": "Gastly",
+    "description": "An NFT representing the Pokemon Gastly.",
+    "copy_number": 5,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/92.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 74
+            "value": 30
         },
         {
             "trait_type": "Attack",
-            "value": 75
+            "value": 35
         },
         {
             "trait_type": "Defense",
-            "value": 70
+            "value": 30
         },
         {
             "trait_type": "Special-attack",
-            "value": 65
+            "value": 100
         },
         {
             "trait_type": "Special-defense",
-            "value": 75
+            "value": 35
         },
         {
             "trait_type": "Speed",
-            "value": 111
+            "value": 80
         },
         {
             "trait_type": "Base Experience",
-            "value": 165
+            "value": 62
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

@@ -1,39 +1,40 @@
 {
-    "name": "Blacephalon",
-    "description": "An NFT representing the Pokemon Blacephalon.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/806.png",
+    "name": "Slowbro",
+    "description": "An NFT representing the Pokemon Slowbro.",
+    "copy_number": 6,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/80.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 53
+            "value": 95
         },
         {
             "trait_type": "Attack",
-            "value": 127
+            "value": 75
         },
         {
             "trait_type": "Defense",
-            "value": 53
+            "value": 110
         },
         {
             "trait_type": "Special-attack",
-            "value": 151
+            "value": 100
         },
         {
             "trait_type": "Special-defense",
-            "value": 79
+            "value": 80
         },
         {
             "trait_type": "Speed",
-            "value": 107
+            "value": 30
         },
         {
             "trait_type": "Base Experience",
-            "value": 285
+            "value": 172
         },
         {
             "trait_type": "Rarity",
-            "value": "Rare"
+            "value": "Uncommon"
         }
     ]
 }

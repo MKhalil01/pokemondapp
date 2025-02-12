@@ -1,35 +1,36 @@
 {
-    "name": "Barboach",
-    "description": "An NFT representing the Pokemon Barboach.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/339.png",
+    "name": "Nidorino",
+    "description": "An NFT representing the Pokemon Nidorino.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/33.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 50
+            "value": 61
         },
         {
             "trait_type": "Attack",
-            "value": 48
+            "value": 72
         },
         {
             "trait_type": "Defense",
-            "value": 43
+            "value": 57
         },
         {
             "trait_type": "Special-attack",
-            "value": 46
+            "value": 55
         },
         {
             "trait_type": "Special-defense",
-            "value": 41
+            "value": 55
         },
         {
             "trait_type": "Speed",
-            "value": 60
+            "value": 65
         },
         {
             "trait_type": "Base Experience",
-            "value": 58
+            "value": 128
         },
         {
             "trait_type": "Rarity",

@@ -1,35 +1,36 @@
 {
-    "name": "Monferno",
-    "description": "An NFT representing the Pokemon Monferno.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/391.png",
+    "name": "Jigglypuff",
+    "description": "An NFT representing the Pokemon Jigglypuff.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/39.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 64
+            "value": 115
         },
         {
             "trait_type": "Attack",
-            "value": 78
+            "value": 45
         },
         {
             "trait_type": "Defense",
-            "value": 52
+            "value": 20
         },
         {
             "trait_type": "Special-attack",
-            "value": 78
+            "value": 45
         },
         {
             "trait_type": "Special-defense",
-            "value": 52
+            "value": 25
         },
         {
             "trait_type": "Speed",
-            "value": 81
+            "value": 20
         },
         {
             "trait_type": "Base Experience",
-            "value": 142
+            "value": 95
         },
         {
             "trait_type": "Rarity",

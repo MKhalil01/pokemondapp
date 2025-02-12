@@ -1,11 +1,12 @@
 {
-    "name": "Bidoof",
-    "description": "An NFT representing the Pokemon Bidoof.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/399.png",
+    "name": "Jigglypuff",
+    "description": "An NFT representing the Pokemon Jigglypuff.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/39.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 59
+            "value": 115
         },
         {
             "trait_type": "Attack",
@@ -13,23 +14,23 @@
         },
         {
             "trait_type": "Defense",
-            "value": 40
+            "value": 20
         },
         {
             "trait_type": "Special-attack",
-            "value": 35
+            "value": 45
         },
         {
             "trait_type": "Special-defense",
-            "value": 40
+            "value": 25
         },
         {
             "trait_type": "Speed",
-            "value": 31
+            "value": 20
         },
         {
             "trait_type": "Base Experience",
-            "value": 50
+            "value": 95
         },
         {
             "trait_type": "Rarity",

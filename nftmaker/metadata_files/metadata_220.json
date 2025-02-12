@@ -1,35 +1,36 @@
 {
-    "name": "Swinub",
-    "description": "An NFT representing the Pokemon Swinub.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/220.png",
+    "name": "Fearow",
+    "description": "An NFT representing the Pokemon Fearow.",
+    "copy_number": 0,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/22.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 50
+            "value": 65
         },
         {
             "trait_type": "Attack",
-            "value": 50
+            "value": 90
         },
         {
             "trait_type": "Defense",
-            "value": 40
+            "value": 65
         },
         {
             "trait_type": "Special-attack",
-            "value": 30
+            "value": 61
         },
         {
             "trait_type": "Special-defense",
-            "value": 30
+            "value": 61
         },
         {
             "trait_type": "Speed",
-            "value": 50
+            "value": 100
         },
         {
             "trait_type": "Base Experience",
-            "value": 50
+            "value": 155
         },
         {
             "trait_type": "Rarity",

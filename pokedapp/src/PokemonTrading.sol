@@ -16,7 +16,6 @@ contract PokemonTrading is Ownable, ReentrancyGuard {
 
     struct Sale {
         address seller;
-        address nftContract;
         uint256 tokenId;
         SaleType saleType;
         uint256 price;
@@ -28,15 +27,16 @@ contract PokemonTrading is Ownable, ReentrancyGuard {
 
     mapping(uint256 => Sale) public sales;
     uint256 public saleCount;
+    ERC721A public nftContract;
 
-    constructor() Ownable(msg.sender) {
+    constructor(address _nftContract) Ownable(msg.sender) {
+        nftContract = ERC721A(_nftContract);
         saleCount = 0;
     }
 
     event SaleCreated(
         uint256 saleId,
         address seller,
-        address nftContract,
         uint256 tokenId,
         SaleType saleType,
         uint256 price
@@ -56,15 +56,18 @@ contract PokemonTrading is Ownable, ReentrancyGuard {
     }
 
     function createFixedPriceSale(
-        address nftContract,
         uint256 tokenId,
         uint256 price
     ) external nonReentrant {
-        ERC721A(nftContract).transferFrom(msg.sender, address(this), tokenId);
+        // Ensure the contract is approved to transfer the token
+        require(
+            nftContract.getApproved(tokenId) == address(this),
+            "Contract not approved to transfer token"
+        );
+        nftContract.transferFrom(msg.sender, address(this), tokenId);
 
         sales[saleCount] = Sale({
             seller: msg.sender,
-            nftContract: nftContract,
             tokenId: tokenId,
             saleType: SaleType.FixedPrice,
             price: price,
@@ -77,7 +80,6 @@ contract PokemonTrading is Ownable, ReentrancyGuard {
         emit SaleCreated(
             saleCount,
             msg.sender,
-            nftContract,
             tokenId,
             SaleType.FixedPrice,
             price
@@ -86,15 +88,18 @@ contract PokemonTrading is Ownable, ReentrancyGuard {
     }
 
     function createAuctionSale(
-        address nftContract,
         uint256 tokenId,
         uint256 startingPrice
     ) external nonReentrant {
-        ERC721A(nftContract).transferFrom(msg.sender, address(this), tokenId);
+        // Ensure the contract is approved to transfer the token
+        require(
+            nftContract.getApproved(tokenId) == address(this),
+            "Contract not approved to transfer token"
+        );
+        nftContract.transferFrom(msg.sender, address(this), tokenId);
 
         sales[saleCount] = Sale({
             seller: msg.sender,
-            nftContract: nftContract,
             tokenId: tokenId,
             saleType: SaleType.Auction,
             price: startingPrice,
@@ -107,7 +112,6 @@ contract PokemonTrading is Ownable, ReentrancyGuard {
         emit SaleCreated(
             saleCount,
             msg.sender,
-            nftContract,
             tokenId,
             SaleType.Auction,
             startingPrice
@@ -124,11 +128,7 @@ contract PokemonTrading is Ownable, ReentrancyGuard {
         require(sale.active, "Sale not active");
 
         sale.active = false;
-        ERC721A(sale.nftContract).transferFrom(
-            address(this),
-            msg.sender,
-            sale.tokenId
-        );
+        nftContract.transferFrom(address(this), msg.sender, sale.tokenId);
         payable(sale.seller).transfer(msg.value);
 
         emit SaleCompleted(saleId, msg.sender);
@@ -162,7 +162,7 @@ contract PokemonTrading is Ownable, ReentrancyGuard {
         require(block.timestamp < sale.endTime, "Auction has ended");
 
         sale.active = false;
-        ERC721A(sale.nftContract).transferFrom(
+        nftContract.transferFrom(
             address(this),
             sale.highestBidder,
             sale.tokenId
@@ -174,16 +174,12 @@ contract PokemonTrading is Ownable, ReentrancyGuard {
 
     function cancelSale(
         uint256 saleId
-    ) external nonReentrant onlySeller(saleId) saleExists(saleId) {
+    ) public onlySeller(saleId) saleExists(saleId) {
         Sale storage sale = sales[saleId];
         require(sale.active, "Sale not active");
 
         sale.active = false;
-        ERC721A(sale.nftContract).transferFrom(
-            address(this),
-            sale.seller,
-            sale.tokenId
-        );
+        nftContract.transferFrom(address(this), sale.seller, sale.tokenId);
 
         if (
             sale.saleType == SaleType.Auction &&
@@ -195,50 +191,6 @@ contract PokemonTrading is Ownable, ReentrancyGuard {
         emit SaleCancelled(saleId);
     }
 
-    function emergencyStop() external onlyOwner nonReentrant {
-        // Refund highest bids for active auctions
-        for (uint256 i = 0; i < saleCount; i++) {
-            if (
-                sales[i].active &&
-                sales[i].saleType == SaleType.Auction &&
-                sales[i].highestBidder != address(0)
-            ) {
-                payable(sales[i].highestBidder).transfer(sales[i].highestBid);
-                sales[i].highestBid = 0;
-                sales[i].highestBidder = address(0);
-            }
-        }
-
-        // Transfer any remaining funds to the owner
-        payable(owner()).transfer(address(this).balance);
-    }
-
-    function getActiveSales() external view returns (Sale[] memory) {
-        uint256 activeCount = 0;
-        for (uint256 i = 0; i < saleCount; i++) {
-            if (sales[i].active) {
-                activeCount++;
-            }
-        }
-
-        Sale[] memory activeSales = new Sale[](activeCount);
-        uint256 index = 0;
-        for (uint256 i = 0; i < saleCount; i++) {
-            if (sales[i].active) {
-                activeSales[index] = sales[i];
-                index++;
-            }
-        }
-
-        return activeSales;
-    }
-
-    function getSaleDetails(
-        uint256 saleId
-    ) external view saleExists(saleId) returns (Sale memory) {
-        return sales[saleId];
-    }
-
     function finalizeExpiredAuction(
         uint256 saleId
     ) external nonReentrant saleExists(saleId) {
@@ -247,17 +199,44 @@ contract PokemonTrading is Ownable, ReentrancyGuard {
         require(block.timestamp >= sale.endTime, "Auction has not ended yet");
         require(sale.active, "Sale not active");
 
-        sale.active = false;
-        ERC721A(sale.nftContract).transferFrom(
-            address(this),
-            sale.seller,
-            sale.tokenId
-        );
+        cancelSale(saleId);
+    }
 
-        if (sale.highestBidder != address(0)) {
-            payable(sale.highestBidder).transfer(sale.highestBid);
+    function emergencyStop() external onlyOwner nonReentrant {
+        // Refund highest bids for active auctions
+        for (uint256 i = 0; i < saleCount; i++) {
+            if (sales[i].active) {
+                cancelSale(i);
+            }
         }
 
-        emit SaleCancelled(saleId);
+        // Transfer any remaining funds to the owner
+        payable(owner()).transfer(address(this).balance);
     }
+
+    function getSaleDetails(
+        uint256 saleId
+    ) external view saleExists(saleId) returns (Sale memory) {
+        return sales[saleId];
+    }
+
+    // function getActiveSales() external view returns (Sale[] memory) {
+    //     uint256 activeCount = 0;
+    //     for (uint256 i = 0; i < saleCount; i++) {
+    //         if (sales[i].active) {
+    //             activeCount++;
+    //         }
+    //     }
+
+    //     Sale[] memory activeSales = new Sale[](activeCount);
+    //     uint256 index = 0;
+    //     for (uint256 i = 0; i < saleCount; i++) {
+    //         if (sales[i].active) {
+    //             activeSales[index] = sales[i];
+    //             index++;
+    //         }
+    //     }
+
+    //     return activeSales;
+    // }
 }

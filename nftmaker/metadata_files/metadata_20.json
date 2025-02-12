@@ -1,35 +1,36 @@
 {
-    "name": "Raticate",
-    "description": "An NFT representing the Pokemon Raticate.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/20.png",
+    "name": "Ivysaur",
+    "description": "An NFT representing the Pokemon Ivysaur.",
+    "copy_number": 0,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 55
-        },
-        {
-            "trait_type": "Attack",
-            "value": 81
-        },
-        {
-            "trait_type": "Defense",
             "value": 60
         },
         {
+            "trait_type": "Attack",
+            "value": 62
+        },
+        {
+            "trait_type": "Defense",
+            "value": 63
+        },
+        {
             "trait_type": "Special-attack",
-            "value": 50
+            "value": 80
         },
         {
             "trait_type": "Special-defense",
-            "value": 70
+            "value": 80
         },
         {
             "trait_type": "Speed",
-            "value": 97
+            "value": 60
         },
         {
             "trait_type": "Base Experience",
-            "value": 145
+            "value": 142
         },
         {
             "trait_type": "Rarity",

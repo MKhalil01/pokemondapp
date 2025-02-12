@@ -1,39 +1,40 @@
 {
-    "name": "Great-tusk",
-    "description": "An NFT representing the Pokemon Great-tusk.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/984.png",
+    "name": "Krabby",
+    "description": "An NFT representing the Pokemon Krabby.",
+    "copy_number": 4,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/98.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 115
+            "value": 30
         },
         {
             "trait_type": "Attack",
-            "value": 131
+            "value": 105
         },
         {
             "trait_type": "Defense",
-            "value": 131
+            "value": 90
         },
         {
             "trait_type": "Special-attack",
-            "value": 53
+            "value": 25
         },
         {
             "trait_type": "Special-defense",
-            "value": 53
+            "value": 25
         },
         {
             "trait_type": "Speed",
-            "value": 87
+            "value": 50
         },
         {
             "trait_type": "Base Experience",
-            "value": 285
+            "value": 65
         },
         {
             "trait_type": "Rarity",
-            "value": "Rare"
+            "value": "Common"
         }
     ]
 }

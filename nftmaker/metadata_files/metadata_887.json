@@ -1,39 +1,40 @@
 {
-    "name": "Dragapult",
-    "description": "An NFT representing the Pokemon Dragapult.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/887.png",
+    "name": "Grimer",
+    "description": "An NFT representing the Pokemon Grimer.",
+    "copy_number": 7,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/88.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 88
+            "value": 80
         },
         {
             "trait_type": "Attack",
-            "value": 120
+            "value": 80
         },
         {
             "trait_type": "Defense",
-            "value": 75
+            "value": 50
         },
         {
             "trait_type": "Special-attack",
-            "value": 100
+            "value": 40
         },
         {
             "trait_type": "Special-defense",
-            "value": 75
+            "value": 50
         },
         {
             "trait_type": "Speed",
-            "value": 142
+            "value": 25
         },
         {
             "trait_type": "Base Experience",
-            "value": 300
+            "value": 65
         },
         {
             "trait_type": "Rarity",
-            "value": "Rare"
+            "value": "Common"
         }
     ]
 }

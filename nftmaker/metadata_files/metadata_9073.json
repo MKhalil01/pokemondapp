@@ -1,0 +1,40 @@
+{
+    "name": "Floragato",
+    "description": "An NFT representing the Pokemon Floragato.",
+    "copy_number": 3,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/907.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 61
+        },
+        {
+            "trait_type": "Attack",
+            "value": 80
+        },
+        {
+            "trait_type": "Defense",
+            "value": 63
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 60
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 63
+        },
+        {
+            "trait_type": "Speed",
+            "value": 83
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 144
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

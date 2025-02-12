@@ -1,0 +1,40 @@
+{
+    "name": "Munchlax",
+    "description": "An NFT representing the Pokemon Munchlax.",
+    "copy_number": 8,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/446.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 135
+        },
+        {
+            "trait_type": "Attack",
+            "value": 85
+        },
+        {
+            "trait_type": "Defense",
+            "value": 40
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 40
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 85
+        },
+        {
+            "trait_type": "Speed",
+            "value": 5
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 78
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

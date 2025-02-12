@@ -1,27 +1,28 @@
 {
-    "name": "Fomantis",
-    "description": "An NFT representing the Pokemon Fomantis.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/753.png",
+    "name": "Graveler",
+    "description": "An NFT representing the Pokemon Graveler.",
+    "copy_number": 3,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/75.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 40
-        },
-        {
-            "trait_type": "Attack",
             "value": 55
         },
         {
+            "trait_type": "Attack",
+            "value": 95
+        },
+        {
             "trait_type": "Defense",
-            "value": 35
+            "value": 115
         },
         {
             "trait_type": "Special-attack",
-            "value": 50
+            "value": 45
         },
         {
             "trait_type": "Special-defense",
-            "value": 35
+            "value": 45
         },
         {
             "trait_type": "Speed",
@@ -29,7 +30,7 @@
         },
         {
             "trait_type": "Base Experience",
-            "value": 50
+            "value": 137
         },
         {
             "trait_type": "Rarity",

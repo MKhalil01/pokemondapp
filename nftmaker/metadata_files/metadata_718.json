@@ -1,39 +1,40 @@
 {
-    "name": "Zygarde-50",
-    "description": "An NFT representing the Pokemon Zygarde-50.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/718.png",
+    "name": "Victreebel",
+    "description": "An NFT representing the Pokemon Victreebel.",
+    "copy_number": 8,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/71.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 108
+            "value": 80
         },
         {
             "trait_type": "Attack",
-            "value": 100
+            "value": 105
         },
         {
             "trait_type": "Defense",
-            "value": 121
+            "value": 65
         },
         {
             "trait_type": "Special-attack",
-            "value": 81
+            "value": 100
         },
         {
             "trait_type": "Special-defense",
-            "value": 95
+            "value": 70
         },
         {
             "trait_type": "Speed",
-            "value": 95
+            "value": 70
         },
         {
             "trait_type": "Base Experience",
-            "value": 300
+            "value": 221
         },
         {
             "trait_type": "Rarity",
-            "value": "Rare"
+            "value": "Uncommon"
         }
     ]
 }

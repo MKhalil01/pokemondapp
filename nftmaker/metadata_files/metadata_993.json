@@ -1,39 +1,40 @@
 {
-    "name": "Iron-jugulis",
-    "description": "An NFT representing the Pokemon Iron-jugulis.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/993.png",
+    "name": "Kingler",
+    "description": "An NFT representing the Pokemon Kingler.",
+    "copy_number": 3,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/99.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 94
+            "value": 55
         },
         {
             "trait_type": "Attack",
-            "value": 80
+            "value": 130
         },
         {
             "trait_type": "Defense",
-            "value": 86
+            "value": 115
         },
         {
             "trait_type": "Special-attack",
-            "value": 122
+            "value": 50
         },
         {
             "trait_type": "Special-defense",
-            "value": 80
+            "value": 50
         },
         {
             "trait_type": "Speed",
-            "value": 108
+            "value": 75
         },
         {
             "trait_type": "Base Experience",
-            "value": 285
+            "value": 166
         },
         {
             "trait_type": "Rarity",
-            "value": "Rare"
+            "value": "Uncommon"
         }
     ]
 }

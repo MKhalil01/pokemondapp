@@ -1,0 +1,40 @@
+{
+    "name": "Tirtouga",
+    "description": "An NFT representing the Pokemon Tirtouga.",
+    "copy_number": 3,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/564.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 54
+        },
+        {
+            "trait_type": "Attack",
+            "value": 78
+        },
+        {
+            "trait_type": "Defense",
+            "value": 103
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 53
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 45
+        },
+        {
+            "trait_type": "Speed",
+            "value": 22
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 71
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

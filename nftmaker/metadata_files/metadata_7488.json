@@ -1,0 +1,40 @@
+{
+    "name": "Toxapex",
+    "description": "An NFT representing the Pokemon Toxapex.",
+    "copy_number": 8,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/748.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 50
+        },
+        {
+            "trait_type": "Attack",
+            "value": 63
+        },
+        {
+            "trait_type": "Defense",
+            "value": 152
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 53
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 142
+        },
+        {
+            "trait_type": "Speed",
+            "value": 35
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 173
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Uncommon"
+        }
+    ]
+}

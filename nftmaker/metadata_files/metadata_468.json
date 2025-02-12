@@ -1,39 +1,40 @@
 {
-    "name": "Togekiss",
-    "description": "An NFT representing the Pokemon Togekiss.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/468.png",
+    "name": "Paras",
+    "description": "An NFT representing the Pokemon Paras.",
+    "copy_number": 8,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/46.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 85
+            "value": 35
         },
         {
             "trait_type": "Attack",
-            "value": 50
+            "value": 70
         },
         {
             "trait_type": "Defense",
-            "value": 95
+            "value": 55
         },
         {
             "trait_type": "Special-attack",
-            "value": 120
+            "value": 45
         },
         {
             "trait_type": "Special-defense",
-            "value": 115
+            "value": 55
         },
         {
             "trait_type": "Speed",
-            "value": 80
+            "value": 25
         },
         {
             "trait_type": "Base Experience",
-            "value": 273
+            "value": 57
         },
         {
             "trait_type": "Rarity",
-            "value": "Rare"
+            "value": "Common"
         }
     ]
 }

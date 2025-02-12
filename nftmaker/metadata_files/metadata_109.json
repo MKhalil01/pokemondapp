@@ -1,35 +1,36 @@
 {
-    "name": "Koffing",
-    "description": "An NFT representing the Pokemon Koffing.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/109.png",
+    "name": "Caterpie",
+    "description": "An NFT representing the Pokemon Caterpie.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 40
-        },
-        {
-            "trait_type": "Attack",
-            "value": 65
-        },
-        {
-            "trait_type": "Defense",
-            "value": 95
-        },
-        {
-            "trait_type": "Special-attack",
-            "value": 60
-        },
-        {
-            "trait_type": "Special-defense",
             "value": 45
         },
         {
-            "trait_type": "Speed",
+            "trait_type": "Attack",
+            "value": 30
+        },
+        {
+            "trait_type": "Defense",
             "value": 35
         },
         {
+            "trait_type": "Special-attack",
+            "value": 20
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 20
+        },
+        {
+            "trait_type": "Speed",
+            "value": 45
+        },
+        {
             "trait_type": "Base Experience",
-            "value": 68
+            "value": 39
         },
         {
             "trait_type": "Rarity",

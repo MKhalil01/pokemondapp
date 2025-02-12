@@ -1,0 +1,40 @@
+{
+    "name": "Inkay",
+    "description": "An NFT representing the Pokemon Inkay.",
+    "copy_number": 5,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/686.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 53
+        },
+        {
+            "trait_type": "Attack",
+            "value": 54
+        },
+        {
+            "trait_type": "Defense",
+            "value": 53
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 37
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 46
+        },
+        {
+            "trait_type": "Speed",
+            "value": 45
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 58
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

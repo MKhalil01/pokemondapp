@@ -1,15 +1,16 @@
 {
-    "name": "Excadrill",
-    "description": "An NFT representing the Pokemon Excadrill.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/530.png",
+    "name": "Persian",
+    "description": "An NFT representing the Pokemon Persian.",
+    "copy_number": 0,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/53.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 110
+            "value": 65
         },
         {
             "trait_type": "Attack",
-            "value": 135
+            "value": 70
         },
         {
             "trait_type": "Defense",
@@ -17,7 +18,7 @@
         },
         {
             "trait_type": "Special-attack",
-            "value": 50
+            "value": 65
         },
         {
             "trait_type": "Special-defense",
@@ -25,15 +26,15 @@
         },
         {
             "trait_type": "Speed",
-            "value": 88
+            "value": 115
         },
         {
             "trait_type": "Base Experience",
-            "value": 178
+            "value": 154
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

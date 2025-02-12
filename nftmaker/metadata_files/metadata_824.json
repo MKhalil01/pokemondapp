@@ -1,39 +1,40 @@
 {
-    "name": "Blipbug",
-    "description": "An NFT representing the Pokemon Blipbug.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/824.png",
+    "name": "Magneton",
+    "description": "An NFT representing the Pokemon Magneton.",
+    "copy_number": 4,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/82.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 25
+            "value": 50
         },
         {
             "trait_type": "Attack",
-            "value": 20
+            "value": 60
         },
         {
             "trait_type": "Defense",
-            "value": 20
+            "value": 95
         },
         {
             "trait_type": "Special-attack",
-            "value": 25
+            "value": 120
         },
         {
             "trait_type": "Special-defense",
-            "value": 45
+            "value": 70
         },
         {
             "trait_type": "Speed",
-            "value": 45
+            "value": 70
         },
         {
             "trait_type": "Base Experience",
-            "value": 36
+            "value": 163
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Uncommon"
         }
     ]
 }

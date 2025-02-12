@@ -1,39 +1,40 @@
 {
-    "name": "Lanturn",
-    "description": "An NFT representing the Pokemon Lanturn.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/171.png",
+    "name": "Pidgeotto",
+    "description": "An NFT representing the Pokemon Pidgeotto.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/17.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 125
+            "value": 63
         },
         {
             "trait_type": "Attack",
-            "value": 58
+            "value": 60
         },
         {
             "trait_type": "Defense",
-            "value": 58
+            "value": 55
         },
         {
             "trait_type": "Special-attack",
-            "value": 76
+            "value": 50
         },
         {
             "trait_type": "Special-defense",
-            "value": 76
+            "value": 50
         },
         {
             "trait_type": "Speed",
-            "value": 67
+            "value": 71
         },
         {
             "trait_type": "Base Experience",
-            "value": 161
+            "value": 122
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

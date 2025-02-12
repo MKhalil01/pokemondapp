@@ -1,39 +1,40 @@
 {
-    "name": "Ceruledge",
-    "description": "An NFT representing the Pokemon Ceruledge.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/937.png",
+    "name": "Haunter",
+    "description": "An NFT representing the Pokemon Haunter.",
+    "copy_number": 7,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/93.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 75
+            "value": 45
         },
         {
             "trait_type": "Attack",
-            "value": 125
+            "value": 50
         },
         {
             "trait_type": "Defense",
-            "value": 80
+            "value": 45
         },
         {
             "trait_type": "Special-attack",
-            "value": 60
+            "value": 115
         },
         {
             "trait_type": "Special-defense",
-            "value": 100
+            "value": 55
         },
         {
             "trait_type": "Speed",
-            "value": 85
+            "value": 95
         },
         {
             "trait_type": "Base Experience",
-            "value": 263
+            "value": 142
         },
         {
             "trait_type": "Rarity",
-            "value": "Rare"
+            "value": "Common"
         }
     ]
 }

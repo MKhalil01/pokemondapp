@@ -1,35 +1,36 @@
 {
-    "name": "Alakazam",
-    "description": "An NFT representing the Pokemon Alakazam.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/65.png",
+    "name": "Charizard",
+    "description": "An NFT representing the Pokemon Charizard.",
+    "copy_number": 5,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 55
+            "value": 78
         },
         {
             "trait_type": "Attack",
-            "value": 50
+            "value": 84
         },
         {
             "trait_type": "Defense",
-            "value": 45
+            "value": 78
         },
         {
             "trait_type": "Special-attack",
-            "value": 135
+            "value": 109
         },
         {
             "trait_type": "Special-defense",
-            "value": 95
+            "value": 85
         },
         {
             "trait_type": "Speed",
-            "value": 120
+            "value": 100
         },
         {
             "trait_type": "Base Experience",
-            "value": 250
+            "value": 267
         },
         {
             "trait_type": "Rarity",

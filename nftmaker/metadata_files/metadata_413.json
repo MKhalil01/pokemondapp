@@ -1,35 +1,36 @@
 {
-    "name": "Wormadam-plant",
-    "description": "An NFT representing the Pokemon Wormadam-plant.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/413.png",
+    "name": "Zubat",
+    "description": "An NFT representing the Pokemon Zubat.",
+    "copy_number": 3,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/41.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 60
+            "value": 40
         },
         {
             "trait_type": "Attack",
-            "value": 59
+            "value": 45
         },
         {
             "trait_type": "Defense",
-            "value": 85
+            "value": 35
         },
         {
             "trait_type": "Special-attack",
-            "value": 79
+            "value": 30
         },
         {
             "trait_type": "Special-defense",
-            "value": 105
+            "value": 40
         },
         {
             "trait_type": "Speed",
-            "value": 36
+            "value": 55
         },
         {
             "trait_type": "Base Experience",
-            "value": 148
+            "value": 49
         },
         {
             "trait_type": "Rarity",

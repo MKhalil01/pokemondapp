@@ -1,11 +1,12 @@
 {
-    "name": "Tinkatink",
-    "description": "An NFT representing the Pokemon Tinkatink.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/957.png",
+    "name": "Onix",
+    "description": "An NFT representing the Pokemon Onix.",
+    "copy_number": 7,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/95.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 50
+            "value": 35
         },
         {
             "trait_type": "Attack",
@@ -13,23 +14,23 @@
         },
         {
             "trait_type": "Defense",
-            "value": 45
+            "value": 160
         },
         {
             "trait_type": "Special-attack",
-            "value": 35
+            "value": 30
         },
         {
             "trait_type": "Special-defense",
-            "value": 64
+            "value": 45
         },
         {
             "trait_type": "Speed",
-            "value": 58
+            "value": 70
         },
         {
             "trait_type": "Base Experience",
-            "value": 59
+            "value": 77
         },
         {
             "trait_type": "Rarity",

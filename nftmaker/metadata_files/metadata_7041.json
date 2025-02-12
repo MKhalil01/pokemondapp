@@ -1,0 +1,40 @@
+{
+    "name": "Goomy",
+    "description": "An NFT representing the Pokemon Goomy.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/704.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 45
+        },
+        {
+            "trait_type": "Attack",
+            "value": 50
+        },
+        {
+            "trait_type": "Defense",
+            "value": 35
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 55
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 75
+        },
+        {
+            "trait_type": "Speed",
+            "value": 40
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 60
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

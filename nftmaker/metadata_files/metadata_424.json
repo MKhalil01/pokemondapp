@@ -1,7 +1,8 @@
 {
-    "name": "Ambipom",
-    "description": "An NFT representing the Pokemon Ambipom.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/424.png",
+    "name": "Golbat",
+    "description": "An NFT representing the Pokemon Golbat.",
+    "copy_number": 4,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/42.png",
     "attributes": [
         {
             "trait_type": "Hp",
@@ -9,27 +10,27 @@
         },
         {
             "trait_type": "Attack",
-            "value": 100
+            "value": 80
         },
         {
             "trait_type": "Defense",
-            "value": 66
+            "value": 70
         },
         {
             "trait_type": "Special-attack",
-            "value": 60
+            "value": 65
         },
         {
             "trait_type": "Special-defense",
-            "value": 66
+            "value": 75
         },
         {
             "trait_type": "Speed",
-            "value": 115
+            "value": 90
         },
         {
             "trait_type": "Base Experience",
-            "value": 169
+            "value": 159
         },
         {
             "trait_type": "Rarity",

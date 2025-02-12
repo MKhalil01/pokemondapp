@@ -1,39 +1,40 @@
 {
-    "name": "Abra",
-    "description": "An NFT representing the Pokemon Abra.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/63.png",
+    "name": "Charizard",
+    "description": "An NFT representing the Pokemon Charizard.",
+    "copy_number": 3,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 25
+            "value": 78
         },
         {
             "trait_type": "Attack",
-            "value": 20
+            "value": 84
         },
         {
             "trait_type": "Defense",
-            "value": 15
+            "value": 78
         },
         {
             "trait_type": "Special-attack",
-            "value": 105
+            "value": 109
         },
         {
             "trait_type": "Special-defense",
-            "value": 55
+            "value": 85
         },
         {
             "trait_type": "Speed",
-            "value": 90
+            "value": 100
         },
         {
             "trait_type": "Base Experience",
-            "value": 62
+            "value": 267
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Rare"
         }
     ]
 }

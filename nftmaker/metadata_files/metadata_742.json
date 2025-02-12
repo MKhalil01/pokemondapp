@@ -1,7 +1,8 @@
 {
-    "name": "Cutiefly",
-    "description": "An NFT representing the Pokemon Cutiefly.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/742.png",
+    "name": "Geodude",
+    "description": "An NFT representing the Pokemon Geodude.",
+    "copy_number": 2,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/74.png",
     "attributes": [
         {
             "trait_type": "Hp",
@@ -9,27 +10,27 @@
         },
         {
             "trait_type": "Attack",
-            "value": 45
+            "value": 80
         },
         {
             "trait_type": "Defense",
-            "value": 40
+            "value": 100
         },
         {
             "trait_type": "Special-attack",
-            "value": 55
+            "value": 30
         },
         {
             "trait_type": "Special-defense",
-            "value": 40
+            "value": 30
         },
         {
             "trait_type": "Speed",
-            "value": 84
+            "value": 20
         },
         {
             "trait_type": "Base Experience",
-            "value": 61
+            "value": 60
         },
         {
             "trait_type": "Rarity",

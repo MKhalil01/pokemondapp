@@ -1,0 +1,40 @@
+{
+    "name": "Lopunny",
+    "description": "An NFT representing the Pokemon Lopunny.",
+    "copy_number": 7,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/428.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 65
+        },
+        {
+            "trait_type": "Attack",
+            "value": 76
+        },
+        {
+            "trait_type": "Defense",
+            "value": 84
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 54
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 96
+        },
+        {
+            "trait_type": "Speed",
+            "value": 105
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 168
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Uncommon"
+        }
+    ]
+}

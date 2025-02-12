@@ -1,0 +1,40 @@
+{
+    "name": "Sewaddle",
+    "description": "An NFT representing the Pokemon Sewaddle.",
+    "copy_number": 5,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/540.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 45
+        },
+        {
+            "trait_type": "Attack",
+            "value": 53
+        },
+        {
+            "trait_type": "Defense",
+            "value": 70
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 40
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 60
+        },
+        {
+            "trait_type": "Speed",
+            "value": 42
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 62
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

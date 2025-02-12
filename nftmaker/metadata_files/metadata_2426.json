@@ -1,0 +1,40 @@
+{
+    "name": "Blissey",
+    "description": "An NFT representing the Pokemon Blissey.",
+    "copy_number": 6,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/242.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 255
+        },
+        {
+            "trait_type": "Attack",
+            "value": 10
+        },
+        {
+            "trait_type": "Defense",
+            "value": 10
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 75
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 135
+        },
+        {
+            "trait_type": "Speed",
+            "value": 55
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 635
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Legendary"
+        }
+    ]
+}

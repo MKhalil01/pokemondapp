@@ -1,35 +1,36 @@
 {
-    "name": "Riolu",
-    "description": "An NFT representing the Pokemon Riolu.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/447.png",
+    "name": "Gloom",
+    "description": "An NFT representing the Pokemon Gloom.",
+    "copy_number": 7,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/44.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 40
-        },
-        {
-            "trait_type": "Attack",
-            "value": 70
-        },
-        {
-            "trait_type": "Defense",
-            "value": 40
-        },
-        {
-            "trait_type": "Special-attack",
-            "value": 35
-        },
-        {
-            "trait_type": "Special-defense",
-            "value": 40
-        },
-        {
-            "trait_type": "Speed",
             "value": 60
         },
         {
+            "trait_type": "Attack",
+            "value": 65
+        },
+        {
+            "trait_type": "Defense",
+            "value": 70
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 85
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 75
+        },
+        {
+            "trait_type": "Speed",
+            "value": 40
+        },
+        {
             "trait_type": "Base Experience",
-            "value": 57
+            "value": 138
         },
         {
             "trait_type": "Rarity",

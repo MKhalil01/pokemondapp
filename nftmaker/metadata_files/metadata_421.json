@@ -1,15 +1,16 @@
 {
-    "name": "Cherrim",
-    "description": "An NFT representing the Pokemon Cherrim.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/421.png",
+    "name": "Golbat",
+    "description": "An NFT representing the Pokemon Golbat.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/42.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 70
+            "value": 75
         },
         {
             "trait_type": "Attack",
-            "value": 60
+            "value": 80
         },
         {
             "trait_type": "Defense",
@@ -17,23 +18,23 @@
         },
         {
             "trait_type": "Special-attack",
-            "value": 87
+            "value": 65
         },
         {
             "trait_type": "Special-defense",
-            "value": 78
+            "value": 75
         },
         {
             "trait_type": "Speed",
-            "value": 85
+            "value": 90
         },
         {
             "trait_type": "Base Experience",
-            "value": 158
+            "value": 159
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Uncommon"
         }
     ]
 }

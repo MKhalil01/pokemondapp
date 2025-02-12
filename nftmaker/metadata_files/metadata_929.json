@@ -1,35 +1,36 @@
 {
-    "name": "Dolliv",
-    "description": "An NFT representing the Pokemon Dolliv.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/929.png",
+    "name": "Gastly",
+    "description": "An NFT representing the Pokemon Gastly.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/92.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 52
+            "value": 30
         },
         {
             "trait_type": "Attack",
-            "value": 53
+            "value": 35
         },
         {
             "trait_type": "Defense",
-            "value": 60
+            "value": 30
         },
         {
             "trait_type": "Special-attack",
-            "value": 78
+            "value": 100
         },
         {
             "trait_type": "Special-defense",
-            "value": 78
+            "value": 35
         },
         {
             "trait_type": "Speed",
-            "value": 33
+            "value": 80
         },
         {
             "trait_type": "Base Experience",
-            "value": 124
+            "value": 62
         },
         {
             "trait_type": "Rarity",

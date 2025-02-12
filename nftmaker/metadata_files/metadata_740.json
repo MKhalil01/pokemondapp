@@ -1,39 +1,40 @@
 {
-    "name": "Crabominable",
-    "description": "An NFT representing the Pokemon Crabominable.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/740.png",
+    "name": "Geodude",
+    "description": "An NFT representing the Pokemon Geodude.",
+    "copy_number": 0,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/74.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 97
+            "value": 40
         },
         {
             "trait_type": "Attack",
-            "value": 132
+            "value": 80
         },
         {
             "trait_type": "Defense",
-            "value": 77
+            "value": 100
         },
         {
             "trait_type": "Special-attack",
-            "value": 62
+            "value": 30
         },
         {
             "trait_type": "Special-defense",
-            "value": 67
+            "value": 30
         },
         {
             "trait_type": "Speed",
-            "value": 43
+            "value": 20
         },
         {
             "trait_type": "Base Experience",
-            "value": 167
+            "value": 60
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

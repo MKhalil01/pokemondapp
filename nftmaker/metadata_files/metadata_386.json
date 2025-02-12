@@ -1,39 +1,40 @@
 {
-    "name": "Deoxys-normal",
-    "description": "An NFT representing the Pokemon Deoxys-normal.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/386.png",
+    "name": "Ninetales",
+    "description": "An NFT representing the Pokemon Ninetales.",
+    "copy_number": 6,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/38.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 50
+            "value": 73
         },
         {
             "trait_type": "Attack",
-            "value": 150
+            "value": 76
         },
         {
             "trait_type": "Defense",
-            "value": 50
+            "value": 75
         },
         {
             "trait_type": "Special-attack",
-            "value": 150
+            "value": 81
         },
         {
             "trait_type": "Special-defense",
-            "value": 50
+            "value": 100
         },
         {
             "trait_type": "Speed",
-            "value": 150
+            "value": 100
         },
         {
             "trait_type": "Base Experience",
-            "value": 270
+            "value": 177
         },
         {
             "trait_type": "Rarity",
-            "value": "Rare"
+            "value": "Uncommon"
         }
     ]
 }

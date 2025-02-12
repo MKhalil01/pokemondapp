@@ -1,23 +1,24 @@
 {
-    "name": "Servine",
-    "description": "An NFT representing the Pokemon Servine.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/496.png",
+    "name": "Venomoth",
+    "description": "An NFT representing the Pokemon Venomoth.",
+    "copy_number": 6,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/49.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 60
+            "value": 70
         },
         {
             "trait_type": "Attack",
-            "value": 60
+            "value": 65
         },
         {
             "trait_type": "Defense",
-            "value": 75
+            "value": 60
         },
         {
             "trait_type": "Special-attack",
-            "value": 60
+            "value": 90
         },
         {
             "trait_type": "Special-defense",
@@ -25,11 +26,11 @@
         },
         {
             "trait_type": "Speed",
-            "value": 83
+            "value": 90
         },
         {
             "trait_type": "Base Experience",
-            "value": 145
+            "value": 158
         },
         {
             "trait_type": "Rarity",

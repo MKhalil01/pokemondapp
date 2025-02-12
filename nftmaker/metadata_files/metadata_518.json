@@ -1,39 +1,40 @@
 {
-    "name": "Musharna",
-    "description": "An NFT representing the Pokemon Musharna.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/518.png",
+    "name": "Dugtrio",
+    "description": "An NFT representing the Pokemon Dugtrio.",
+    "copy_number": 8,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/51.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 116
+            "value": 35
         },
         {
             "trait_type": "Attack",
-            "value": 55
+            "value": 100
         },
         {
             "trait_type": "Defense",
-            "value": 85
+            "value": 50
         },
         {
             "trait_type": "Special-attack",
-            "value": 107
+            "value": 50
         },
         {
             "trait_type": "Special-defense",
-            "value": 95
+            "value": 70
         },
         {
             "trait_type": "Speed",
-            "value": 29
+            "value": 120
         },
         {
             "trait_type": "Base Experience",
-            "value": 170
+            "value": 149
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

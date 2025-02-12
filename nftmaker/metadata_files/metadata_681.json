@@ -1,35 +1,36 @@
 {
-    "name": "Aegislash-shield",
-    "description": "An NFT representing the Pokemon Aegislash-shield.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/681.png",
+    "name": "Machamp",
+    "description": "An NFT representing the Pokemon Machamp.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/68.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 60
+            "value": 90
         },
         {
             "trait_type": "Attack",
-            "value": 50
+            "value": 130
         },
         {
             "trait_type": "Defense",
-            "value": 140
+            "value": 80
         },
         {
             "trait_type": "Special-attack",
-            "value": 50
+            "value": 65
         },
         {
             "trait_type": "Special-defense",
-            "value": 140
+            "value": 85
         },
         {
             "trait_type": "Speed",
-            "value": 60
+            "value": 55
         },
         {
             "trait_type": "Base Experience",
-            "value": 250
+            "value": 253
         },
         {
             "trait_type": "Rarity",

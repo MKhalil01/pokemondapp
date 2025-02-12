@@ -1,15 +1,16 @@
 {
-    "name": "Slowpoke",
-    "description": "An NFT representing the Pokemon Slowpoke.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/79.png",
+    "name": "Squirtle",
+    "description": "An NFT representing the Pokemon Squirtle.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 90
+            "value": 44
         },
         {
             "trait_type": "Attack",
-            "value": 65
+            "value": 48
         },
         {
             "trait_type": "Defense",
@@ -17,15 +18,15 @@
         },
         {
             "trait_type": "Special-attack",
-            "value": 40
+            "value": 50
         },
         {
             "trait_type": "Special-defense",
-            "value": 40
+            "value": 64
         },
         {
             "trait_type": "Speed",
-            "value": 15
+            "value": 43
         },
         {
             "trait_type": "Base Experience",

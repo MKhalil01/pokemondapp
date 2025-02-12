@@ -1,35 +1,36 @@
 {
-    "name": "Clodsire",
-    "description": "An NFT representing the Pokemon Clodsire.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/980.png",
+    "name": "Krabby",
+    "description": "An NFT representing the Pokemon Krabby.",
+    "copy_number": 0,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/98.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 130
+            "value": 30
         },
         {
             "trait_type": "Attack",
-            "value": 75
+            "value": 105
         },
         {
             "trait_type": "Defense",
-            "value": 60
+            "value": 90
         },
         {
             "trait_type": "Special-attack",
-            "value": 45
+            "value": 25
         },
         {
             "trait_type": "Special-defense",
-            "value": 100
+            "value": 25
         },
         {
             "trait_type": "Speed",
-            "value": 20
+            "value": 50
         },
         {
             "trait_type": "Base Experience",
-            "value": 151
+            "value": 65
         },
         {
             "trait_type": "Rarity",

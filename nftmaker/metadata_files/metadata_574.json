@@ -1,39 +1,40 @@
 {
-    "name": "Gothita",
-    "description": "An NFT representing the Pokemon Gothita.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/574.png",
+    "name": "Primeape",
+    "description": "An NFT representing the Pokemon Primeape.",
+    "copy_number": 4,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/57.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 45
-        },
-        {
-            "trait_type": "Attack",
-            "value": 30
-        },
-        {
-            "trait_type": "Defense",
-            "value": 50
-        },
-        {
-            "trait_type": "Special-attack",
-            "value": 55
-        },
-        {
-            "trait_type": "Special-defense",
             "value": 65
         },
         {
+            "trait_type": "Attack",
+            "value": 105
+        },
+        {
+            "trait_type": "Defense",
+            "value": 60
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 60
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 70
+        },
+        {
             "trait_type": "Speed",
-            "value": 45
+            "value": 95
         },
         {
             "trait_type": "Base Experience",
-            "value": 58
+            "value": 159
         },
         {
             "trait_type": "Rarity",
-            "value": "Common"
+            "value": "Uncommon"
         }
     ]
 }

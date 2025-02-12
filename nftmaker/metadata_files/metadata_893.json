@@ -1,7 +1,8 @@
 {
-    "name": "Zarude",
-    "description": "An NFT representing the Pokemon Zarude.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/893.png",
+    "name": "Muk",
+    "description": "An NFT representing the Pokemon Muk.",
+    "copy_number": 3,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/89.png",
     "attributes": [
         {
             "trait_type": "Hp",
@@ -9,31 +10,31 @@
         },
         {
             "trait_type": "Attack",
-            "value": 120
+            "value": 105
         },
         {
             "trait_type": "Defense",
-            "value": 105
+            "value": 75
         },
         {
             "trait_type": "Special-attack",
-            "value": 70
+            "value": 65
         },
         {
             "trait_type": "Special-defense",
-            "value": 95
+            "value": 100
         },
         {
             "trait_type": "Speed",
-            "value": 105
+            "value": 50
         },
         {
             "trait_type": "Base Experience",
-            "value": 300
+            "value": 175
         },
         {
             "trait_type": "Rarity",
-            "value": "Rare"
+            "value": "Uncommon"
         }
     ]
 }

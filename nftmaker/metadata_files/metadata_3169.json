@@ -1,0 +1,40 @@
+{
+    "name": "Gulpin",
+    "description": "An NFT representing the Pokemon Gulpin.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/316.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 70
+        },
+        {
+            "trait_type": "Attack",
+            "value": 43
+        },
+        {
+            "trait_type": "Defense",
+            "value": 53
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 43
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 53
+        },
+        {
+            "trait_type": "Speed",
+            "value": 40
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 60
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

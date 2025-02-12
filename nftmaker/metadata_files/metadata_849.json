@@ -1,27 +1,28 @@
 {
-    "name": "Toxtricity-amped",
-    "description": "An NFT representing the Pokemon Toxtricity-amped.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/849.png",
+    "name": "Doduo",
+    "description": "An NFT representing the Pokemon Doduo.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/84.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 75
+            "value": 35
         },
         {
             "trait_type": "Attack",
-            "value": 98
+            "value": 85
         },
         {
             "trait_type": "Defense",
-            "value": 70
+            "value": 45
         },
         {
             "trait_type": "Special-attack",
-            "value": 114
+            "value": 35
         },
         {
             "trait_type": "Special-defense",
-            "value": 70
+            "value": 35
         },
         {
             "trait_type": "Speed",
@@ -29,11 +30,11 @@
         },
         {
             "trait_type": "Base Experience",
-            "value": 176
+            "value": 62
         },
         {
             "trait_type": "Rarity",
-            "value": "Uncommon"
+            "value": "Common"
         }
     ]
 }

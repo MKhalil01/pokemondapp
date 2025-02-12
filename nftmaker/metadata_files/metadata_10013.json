@@ -1,0 +1,40 @@
+{
+    "name": "Wo-chien",
+    "description": "An NFT representing the Pokemon Wo-chien.",
+    "copy_number": 3,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1001.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 85
+        },
+        {
+            "trait_type": "Attack",
+            "value": 85
+        },
+        {
+            "trait_type": "Defense",
+            "value": 100
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 95
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 135
+        },
+        {
+            "trait_type": "Speed",
+            "value": 70
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 285
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Rare"
+        }
+    ]
+}

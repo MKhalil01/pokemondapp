@@ -1,35 +1,36 @@
 {
-    "name": "Brionne",
-    "description": "An NFT representing the Pokemon Brionne.",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/729.png",
+    "name": "Tentacool",
+    "description": "An NFT representing the Pokemon Tentacool.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/72.png",
     "attributes": [
         {
             "trait_type": "Hp",
-            "value": 60
+            "value": 40
         },
         {
             "trait_type": "Attack",
-            "value": 69
+            "value": 40
         },
         {
             "trait_type": "Defense",
-            "value": 69
+            "value": 35
         },
         {
             "trait_type": "Special-attack",
-            "value": 91
-        },
-        {
-            "trait_type": "Special-defense",
-            "value": 81
-        },
-        {
-            "trait_type": "Speed",
             "value": 50
         },
         {
+            "trait_type": "Special-defense",
+            "value": 100
+        },
+        {
+            "trait_type": "Speed",
+            "value": 70
+        },
+        {
             "trait_type": "Base Experience",
-            "value": 147
+            "value": 67
         },
         {
             "trait_type": "Rarity",
