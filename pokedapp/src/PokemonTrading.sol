@@ -122,8 +122,8 @@ contract PokemonTrading is Ownable, ReentrancyGuard {
         uint256 saleId
     ) external payable nonReentrant saleExists(saleId) {
         Sale storage sale = sales[saleId];
-        require(sale.saleType == SaleType.FixedPrice, "Not a fixed price sale");
-        require(msg.value == sale.price, "Incorrect price");
+        require(sale.saleType == SaleType.FixedPrice, "Not fixed price sale");
+        require(msg.value >= sale.price, "price is not correct");
         require(sale.active, "Sale not active");
 
         sale.active = false;
@@ -219,23 +219,23 @@ contract PokemonTrading is Ownable, ReentrancyGuard {
         return sales[saleId];
     }
 
-    // function getActiveSales() external view returns (Sale[] memory) {
-    //     uint256 activeCount = 0;
-    //     for (uint256 i = 0; i < saleCount; i++) {
-    //         if (sales[i].active) {
-    //             activeCount++;
-    //         }
-    //     }
+    function getActiveSales() external view returns (Sale[] memory) {
+        uint256 activeCount = 0;
+        for (uint256 i = 0; i < saleCount; i++) {
+            if (sales[i].active) {
+                activeCount++;
+            }
+        }
 
-    //     Sale[] memory activeSales = new Sale[](activeCount);
-    //     uint256 index = 0;
-    //     for (uint256 i = 0; i < saleCount; i++) {
-    //         if (sales[i].active) {
-    //             activeSales[index] = sales[i];
-    //             index++;
-    //         }
-    //     }
+        Sale[] memory activeSales = new Sale[](activeCount);
+        uint256 index = 0;
+        for (uint256 i = 0; i < saleCount; i++) {
+            if (sales[i].active) {
+                activeSales[index] = sales[i];
+                index++;
+            }
+        }
 
-    //     return activeSales;
-    // }
+        return activeSales;
+    }
 }

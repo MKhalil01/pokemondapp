@@ -2,14 +2,14 @@
 pragma solidity ^0.8.13;
 
 import {Script, console} from "forge-std/Script.sol";
-import {PokemonNFT} from "../src/PokemonNFT.sol";
+// import {PokemonNFT} from "../src/PokemonNFT.sol";
 import {PokemonTrading} from "../src/PokemonTrading.sol";
-import {MockVRFCoordinator} from "../src/MockVRFCoordinator.sol";
+// import {MockVRFCoordinator} from "../src/MockVRFCoordinator.sol";
 
 contract PokemonTradingScript is Script {
-    PokemonNFT public pokemonNFT;
+    // PokemonNFT public pokemonNFT;
     PokemonTrading public pokemonTrading;
-    MockVRFCoordinator public mockVRFCoordinator;
+    // MockVRFCoordinator public mockVRFCoordinator;
 
     function setUp() public {}
 
@@ -20,16 +20,16 @@ contract PokemonTradingScript is Script {
         vm.startBroadcast(deployerPrivateKey);
 
         // Deploy contracts
-        mockVRFCoordinator = new MockVRFCoordinator();
-        pokemonNFT = new PokemonNFT(address(mockVRFCoordinator));
-        pokemonTrading = new PokemonTrading(address(pokemonNFT));
+        // mockVRFCoordinator = new MockVRFCoordinator();
+        // pokemonNFT = new PokemonNFT(address(mockVRFCoordinator));
+        pokemonTrading = new PokemonTrading(address(0xf4F833c8649F913e251Bdec113bEFED33889e3d1));
 
         // Set the base URI for the NFT metadata
-        pokemonNFT.setBaseURI("http://localhost:3000/metadata_files/metadata_");
+        // pokemonNFT.setBaseURI("https://mkhalil01.github.io/pokemondapp/metadata_files/metadata_");
 
         console.log("Contracts deployed:");
-        console.log("MockVRFCoordinator:", address(mockVRFCoordinator));
-        console.log("PokemonNFT:", address(pokemonNFT));
+        // console.log("MockVRFCoordinator:", address(mockVRFCoordinator));
+        // console.log("PokemonNFT:", address(pokemonNFT));
         console.log("PokemonTrading:", address(pokemonTrading));
 
 
