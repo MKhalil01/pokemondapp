@@ -51,6 +51,7 @@ By: Mohammed + Preston
    ```sh
    npm run dev
    ```
+   Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Architecture Overview
 
@@ -77,7 +78,50 @@ The generated metadata files can be found in `docs/metadata_files/` with the fol
     - Base Experience
     - Rarity classification
 
-[Rest of Architecture sections coming soon]
+### Smart Contract Architecture
+
+The smart contracts, located in the `pokedapp` directory, are built and tested using Foundry, providing a robust foundation for the NFT and trading functionality.
+
+The project consists of two main smart contracts:
+
+1. **PokemonNFT Contract** (`src/PokemonNFT.sol`)
+   - Built on ERC721A instead of ERC721 for gas optimization:
+     - Significantly reduces gas costs when minting multiple NFTs in one transaction
+   - Features:
+     - Random minting using Chainlink VRF (simulated in testing via MockVRFCoordinator (`src/MockVRFCoordinator.sol`))
+     - Maximum supply of 10,250 tokens (1,025 Pokemon × 10 copies each)
+     - Fixed mint price of 0.08 ETH per token
+     - Spot minting instead of sequential minting
+
+2. **PokemonTrading Contract** (`src/PokemonTrading.sol`)
+   - Marketplace for trading Pokemon NFTs
+   - Supports two types of sales:
+     - Fixed Price: Direct purchase at seller's specified price
+     - Auction: 24-hour auctions with bidding system and seller-specified minimum price
+   - Features:
+     - Bid refunds for outbid auction participants
+     - Sale cancellation mechanism
+     - Auction expiration handling
+
+#### Deployment Script
+The `script/PokemonTrading.s.sol` handles contract deployment and initialization:
+- Deploys MockVRFCoordinator, PokemonNFT, and PokemonTrading contracts
+- Sets up the NFT metadata base URI for local development
+
+#### Testing File
+The `test/PokemonTrading.t.sol` provides comprehensive coverage of core functionality and security measures. Further details can be found in the Security Considerations section below.
+
+### Frontend Architecture
+
+The frontend application (`pokefrontend` directory) is built using Next.js and integrates with the Ethereum blockchain through Web3 libraries. The architecture follows a component-based structure:
+
+#### Core Components
+- **Wallet Integration**: Ethereum wallet connection and transaction management
+- **NFT Display**: Visualization of Pokemon NFTs with their attributes and rarity
+- **Trading Marketplace**: Central hub for NFT trading activities
+- **Bidding System**: Interface for auction participation and management
+
+[Detailed component breakdown coming soon]
 
 ## Security Considerations
 
@@ -86,3 +130,15 @@ The generated metadata files can be found in `docs/metadata_files/` with the fol
 - Access Control
 - Data Privacy
 - Known Limitations
+- Emergency stop functionality
+- Reentrancy protection
+
+### Testing Strategy
+The project includes comprehensive tests (`test/PokemonTrading.t.sol`) covering:
+- NFT minting functionality
+- Fixed price sale operations
+- Auction mechanics
+- Sale cancellations
+- Emergency scenarios
+- Access control
+- Edge cases and error conditions
