@@ -123,7 +123,7 @@ contract PokemonTrading is Ownable, ReentrancyGuard {
     ) external payable nonReentrant saleExists(saleId) {
         Sale storage sale = sales[saleId];
         require(sale.saleType == SaleType.FixedPrice, "Not a fixed price sale");
-        require(msg.value == sale.price, "Incorrect price");
+        require(msg.value >= sale.price, "Incorrect price");
         require(sale.active, "Sale not active");
 
         sale.active = false;
