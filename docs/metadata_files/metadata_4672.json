@@ -1,0 +1,40 @@
+{
+    "name": "Magmortar",
+    "description": "An NFT representing the Pokemon Magmortar.",
+    "copy_number": 2,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/467.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 75
+        },
+        {
+            "trait_type": "Attack",
+            "value": 95
+        },
+        {
+            "trait_type": "Defense",
+            "value": 67
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 125
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 95
+        },
+        {
+            "trait_type": "Speed",
+            "value": 83
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 270
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Rare"
+        }
+    ]
+}

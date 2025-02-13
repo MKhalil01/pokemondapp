@@ -1,0 +1,40 @@
+{
+    "name": "Delphox",
+    "description": "An NFT representing the Pokemon Delphox.",
+    "copy_number": 3,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/655.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 75
+        },
+        {
+            "trait_type": "Attack",
+            "value": 69
+        },
+        {
+            "trait_type": "Defense",
+            "value": 72
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 114
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 100
+        },
+        {
+            "trait_type": "Speed",
+            "value": 104
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 240
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Uncommon"
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "name": "Hatenna",
+    "description": "An NFT representing the Pokemon Hatenna.",
+    "copy_number": 8,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/856.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 42
+        },
+        {
+            "trait_type": "Attack",
+            "value": 30
+        },
+        {
+            "trait_type": "Defense",
+            "value": 45
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 56
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 53
+        },
+        {
+            "trait_type": "Speed",
+            "value": 39
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 53
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

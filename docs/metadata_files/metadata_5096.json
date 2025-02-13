@@ -1,0 +1,40 @@
+{
+    "name": "Purrloin",
+    "description": "An NFT representing the Pokemon Purrloin.",
+    "copy_number": 6,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/509.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 41
+        },
+        {
+            "trait_type": "Attack",
+            "value": 50
+        },
+        {
+            "trait_type": "Defense",
+            "value": 37
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 50
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 37
+        },
+        {
+            "trait_type": "Speed",
+            "value": 66
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 56
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "name": "Solgaleo",
+    "description": "An NFT representing the Pokemon Solgaleo.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/791.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 137
+        },
+        {
+            "trait_type": "Attack",
+            "value": 137
+        },
+        {
+            "trait_type": "Defense",
+            "value": 107
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 113
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 89
+        },
+        {
+            "trait_type": "Speed",
+            "value": 97
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 340
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Legendary"
+        }
+    ]
+}

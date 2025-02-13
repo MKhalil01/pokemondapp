@@ -1,0 +1,40 @@
+{
+    "name": "Dialga",
+    "description": "An NFT representing the Pokemon Dialga.",
+    "copy_number": 0,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/483.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 100
+        },
+        {
+            "trait_type": "Attack",
+            "value": 120
+        },
+        {
+            "trait_type": "Defense",
+            "value": 120
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 150
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 100
+        },
+        {
+            "trait_type": "Speed",
+            "value": 90
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 340
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Legendary"
+        }
+    ]
+}

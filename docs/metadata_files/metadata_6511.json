@@ -1,0 +1,40 @@
+{
+    "name": "Quilladin",
+    "description": "An NFT representing the Pokemon Quilladin.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/651.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 61
+        },
+        {
+            "trait_type": "Attack",
+            "value": 78
+        },
+        {
+            "trait_type": "Defense",
+            "value": 95
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 56
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 58
+        },
+        {
+            "trait_type": "Speed",
+            "value": 57
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 142
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

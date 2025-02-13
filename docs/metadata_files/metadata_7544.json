@@ -1,0 +1,40 @@
+{
+    "name": "Lurantis",
+    "description": "An NFT representing the Pokemon Lurantis.",
+    "copy_number": 4,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/754.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 70
+        },
+        {
+            "trait_type": "Attack",
+            "value": 105
+        },
+        {
+            "trait_type": "Defense",
+            "value": 90
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 80
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 90
+        },
+        {
+            "trait_type": "Speed",
+            "value": 45
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 168
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Uncommon"
+        }
+    ]
+}

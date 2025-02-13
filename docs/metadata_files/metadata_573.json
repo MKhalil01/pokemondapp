@@ -1,0 +1,40 @@
+{
+    "name": "Primeape",
+    "description": "An NFT representing the Pokemon Primeape.",
+    "copy_number": 3,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/57.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 65
+        },
+        {
+            "trait_type": "Attack",
+            "value": 105
+        },
+        {
+            "trait_type": "Defense",
+            "value": 60
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 60
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 70
+        },
+        {
+            "trait_type": "Speed",
+            "value": 95
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 159
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Uncommon"
+        }
+    ]
+}

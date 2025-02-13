@@ -1,0 +1,40 @@
+{
+    "name": "Dewpider",
+    "description": "An NFT representing the Pokemon Dewpider.",
+    "copy_number": 6,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/751.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 38
+        },
+        {
+            "trait_type": "Attack",
+            "value": 40
+        },
+        {
+            "trait_type": "Defense",
+            "value": 52
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 40
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 72
+        },
+        {
+            "trait_type": "Speed",
+            "value": 27
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 54
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

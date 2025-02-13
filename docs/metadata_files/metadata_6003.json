@@ -1,0 +1,40 @@
+{
+    "name": "Klang",
+    "description": "An NFT representing the Pokemon Klang.",
+    "copy_number": 3,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/600.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 60
+        },
+        {
+            "trait_type": "Attack",
+            "value": 80
+        },
+        {
+            "trait_type": "Defense",
+            "value": 95
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 70
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 85
+        },
+        {
+            "trait_type": "Speed",
+            "value": 50
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 154
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

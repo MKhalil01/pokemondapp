@@ -1,0 +1,40 @@
+{
+    "name": "Koraidon",
+    "description": "An NFT representing the Pokemon Koraidon.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1007.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 100
+        },
+        {
+            "trait_type": "Attack",
+            "value": 135
+        },
+        {
+            "trait_type": "Defense",
+            "value": 115
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 85
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 100
+        },
+        {
+            "trait_type": "Speed",
+            "value": 135
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 335
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Legendary"
+        }
+    ]
+}

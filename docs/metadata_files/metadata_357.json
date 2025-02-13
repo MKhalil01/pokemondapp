@@ -1,0 +1,40 @@
+{
+    "name": "Clefairy",
+    "description": "An NFT representing the Pokemon Clefairy.",
+    "copy_number": 7,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/35.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 70
+        },
+        {
+            "trait_type": "Attack",
+            "value": 45
+        },
+        {
+            "trait_type": "Defense",
+            "value": 48
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 60
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 65
+        },
+        {
+            "trait_type": "Speed",
+            "value": 35
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 113
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

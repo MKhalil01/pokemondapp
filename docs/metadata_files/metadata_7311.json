@@ -1,0 +1,40 @@
+{
+    "name": "Pikipek",
+    "description": "An NFT representing the Pokemon Pikipek.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/731.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 35
+        },
+        {
+            "trait_type": "Attack",
+            "value": 75
+        },
+        {
+            "trait_type": "Defense",
+            "value": 30
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 30
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 30
+        },
+        {
+            "trait_type": "Speed",
+            "value": 65
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 53
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

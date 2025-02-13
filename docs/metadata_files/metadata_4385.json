@@ -1,0 +1,40 @@
+{
+    "name": "Bonsly",
+    "description": "An NFT representing the Pokemon Bonsly.",
+    "copy_number": 5,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/438.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 50
+        },
+        {
+            "trait_type": "Attack",
+            "value": 80
+        },
+        {
+            "trait_type": "Defense",
+            "value": 95
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 10
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 45
+        },
+        {
+            "trait_type": "Speed",
+            "value": 10
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 58
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

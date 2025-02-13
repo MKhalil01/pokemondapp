@@ -1,0 +1,40 @@
+{
+    "name": "Machamp",
+    "description": "An NFT representing the Pokemon Machamp.",
+    "copy_number": 0,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/68.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 90
+        },
+        {
+            "trait_type": "Attack",
+            "value": 130
+        },
+        {
+            "trait_type": "Defense",
+            "value": 80
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 65
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 85
+        },
+        {
+            "trait_type": "Speed",
+            "value": 55
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 253
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Rare"
+        }
+    ]
+}

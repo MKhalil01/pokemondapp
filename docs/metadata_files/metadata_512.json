@@ -1,0 +1,40 @@
+{
+    "name": "Dugtrio",
+    "description": "An NFT representing the Pokemon Dugtrio.",
+    "copy_number": 2,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/51.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 35
+        },
+        {
+            "trait_type": "Attack",
+            "value": 100
+        },
+        {
+            "trait_type": "Defense",
+            "value": 50
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 50
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 70
+        },
+        {
+            "trait_type": "Speed",
+            "value": 120
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 149
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "name": "Ribombee",
+    "description": "An NFT representing the Pokemon Ribombee.",
+    "copy_number": 4,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/743.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 60
+        },
+        {
+            "trait_type": "Attack",
+            "value": 55
+        },
+        {
+            "trait_type": "Defense",
+            "value": 60
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 95
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 70
+        },
+        {
+            "trait_type": "Speed",
+            "value": 124
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 162
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Uncommon"
+        }
+    ]
+}

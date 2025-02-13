@@ -1,0 +1,40 @@
+{
+    "name": "Dipplin",
+    "description": "An NFT representing the Pokemon Dipplin.",
+    "copy_number": 4,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1011.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 80
+        },
+        {
+            "trait_type": "Attack",
+            "value": 80
+        },
+        {
+            "trait_type": "Defense",
+            "value": 110
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 95
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 80
+        },
+        {
+            "trait_type": "Speed",
+            "value": 40
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 170
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Uncommon"
+        }
+    ]
+}

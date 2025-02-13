@@ -1,0 +1,40 @@
+{
+    "name": "Archaludon",
+    "description": "An NFT representing the Pokemon Archaludon.",
+    "copy_number": 0,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1018.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 90
+        },
+        {
+            "trait_type": "Attack",
+            "value": 105
+        },
+        {
+            "trait_type": "Defense",
+            "value": 130
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 125
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 65
+        },
+        {
+            "trait_type": "Speed",
+            "value": 85
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 300
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Rare"
+        }
+    ]
+}

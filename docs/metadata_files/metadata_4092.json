@@ -1,0 +1,40 @@
+{
+    "name": "Rampardos",
+    "description": "An NFT representing the Pokemon Rampardos.",
+    "copy_number": 2,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/409.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 97
+        },
+        {
+            "trait_type": "Attack",
+            "value": 165
+        },
+        {
+            "trait_type": "Defense",
+            "value": 60
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 65
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 50
+        },
+        {
+            "trait_type": "Speed",
+            "value": 58
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 173
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Uncommon"
+        }
+    ]
+}

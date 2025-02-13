@@ -1,0 +1,40 @@
+{
+    "name": "Zigzagoon",
+    "description": "An NFT representing the Pokemon Zigzagoon.",
+    "copy_number": 2,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/263.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 38
+        },
+        {
+            "trait_type": "Attack",
+            "value": 30
+        },
+        {
+            "trait_type": "Defense",
+            "value": 41
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 30
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 41
+        },
+        {
+            "trait_type": "Speed",
+            "value": 60
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 56
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

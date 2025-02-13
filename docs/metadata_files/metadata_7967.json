@@ -1,0 +1,40 @@
+{
+    "name": "Xurkitree",
+    "description": "An NFT representing the Pokemon Xurkitree.",
+    "copy_number": 7,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/796.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 83
+        },
+        {
+            "trait_type": "Attack",
+            "value": 89
+        },
+        {
+            "trait_type": "Defense",
+            "value": 71
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 173
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 71
+        },
+        {
+            "trait_type": "Speed",
+            "value": 83
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 285
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Rare"
+        }
+    ]
+}

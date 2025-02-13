@@ -1,0 +1,40 @@
+{
+    "name": "Minun",
+    "description": "An NFT representing the Pokemon Minun.",
+    "copy_number": 8,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/312.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 60
+        },
+        {
+            "trait_type": "Attack",
+            "value": 40
+        },
+        {
+            "trait_type": "Defense",
+            "value": 50
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 75
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 85
+        },
+        {
+            "trait_type": "Speed",
+            "value": 95
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 142
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

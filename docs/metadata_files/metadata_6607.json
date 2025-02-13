@@ -1,0 +1,40 @@
+{
+    "name": "Diggersby",
+    "description": "An NFT representing the Pokemon Diggersby.",
+    "copy_number": 7,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/660.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 85
+        },
+        {
+            "trait_type": "Attack",
+            "value": 56
+        },
+        {
+            "trait_type": "Defense",
+            "value": 77
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 50
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 77
+        },
+        {
+            "trait_type": "Speed",
+            "value": 78
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 148
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}
