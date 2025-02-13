@@ -2,5 +2,10 @@
 src = "src"
 out = "out"
 libs = ["lib"]
+[rpc_endpoints]
+sepolia = "https://eth-sepolia.g.alchemy.com/v2/70yAay7lR250X795Z4tF3xlQ49wNi14L"
+
+[etherscan]
+sepolia = { key = "1NCD3A5HXVJQU7FVIZQNCNGUSHV9MEYP66" }
 
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
