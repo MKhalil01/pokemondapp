@@ -106,14 +106,16 @@ The project consists of two main smart contracts:
 #### Deployment Script
 The `script/PokemonTrading.s.sol` handles contract deployment and initialization:
 - Deploys MockVRFCoordinator, PokemonNFT, and PokemonTrading contracts
-- Sets up the NFT metadata base URI for local development
+- Sets up the NFT metadata base URI
 
 #### Testing File
 The `test/PokemonTrading.t.sol` provides comprehensive coverage of core functionality and security measures. Further details can be found in the Security Considerations section below.
 
 ### Frontend Architecture
 
-The frontend application (`pokefrontend` directory) is built using Next.js and integrates with the Ethereum blockchain through Web3 libraries. The architecture follows a component-based structure:
+The frontend application, located in the `pokefrontend` directory, is built using Next.js and integrates with the Ethereum blockchain through Web3 libraries.
+
+The architecture follows a component-based structure:
 
 #### Core Components
 - **Wallet Integration**: Ethereum wallet connection and transaction management
