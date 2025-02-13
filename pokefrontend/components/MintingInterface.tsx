@@ -1,12 +1,13 @@
 // components/MintingInterface.tsx
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { 
   useContractWrite, 
   usePrepareContractWrite, 
   useContractEvent,
   useContractRead, 
-  useAccount 
+  useAccount,
+  useWaitForTransaction
 } from 'wagmi';
 import { parseEther } from 'viem';
 import PokemonNFTAbi from '../abis/PokemonNFT.json';
@@ -14,9 +15,7 @@ import PokemonNFTAbi from '../abis/PokemonNFT.json';
 const MintingInterface = () => {
   const { address, isConnected } = useAccount();
   const [quantity, setQuantity] = useState(1);
-  const [isLoading, setIsLoading] = useState(false);
-  const [mintSuccess, setMintSuccess] = useState(false);
-  const [particles, setParticles] = useState<number[]>([]);
+  const [error, setError] = useState<string | null>(null);
 
   // Read mint price from contract
   const { data: mintPrice } = useContractRead({
@@ -25,17 +24,21 @@ const MintingInterface = () => {
     functionName: 'mintPrice',
   }) as { data: bigint };
 
-  // Prepare the contract write
+  // Prepare the mint transaction
   const { config: contractConfig, error: prepareError } = usePrepareContractWrite({
     address: process.env.NEXT_PUBLIC_POKEMON_NFT_ADDRESS as `0x${string}`,
     abi: PokemonNFTAbi,
     functionName: 'requestMint',
     args: [BigInt(quantity)],
     value: mintPrice ? mintPrice * BigInt(quantity) : BigInt(0),
-    enabled: Boolean(address && mintPrice),
+    enabled: Boolean(address && mintPrice && quantity > 0),
   });
 
-  const { write: mint, isLoading: isPending, data: txData } = useContractWrite(contractConfig);
+  const { write: mint, data: mintData, error: mintError } = useContractWrite(contractConfig);
+
+  const { isLoading: isMinting, isSuccess: mintSuccess } = useWaitForTransaction({
+    hash: mintData?.hash,
+  });
 
   // Watch for MintCompleted event
   useContractEvent({
@@ -43,122 +46,63 @@ const MintingInterface = () => {
     abi: PokemonNFTAbi,
     eventName: 'MintCompleted',
     listener(logs) {
-      setMintSuccess(true);
-      spawnParticles();
-      setTimeout(() => setMintSuccess(false), 5000);
+      console.log('Mint completed:', logs);
     },
   });
 
-  console.log('Contract config:', {
-    address: process.env.NEXT_PUBLIC_POKEMON_NFT_ADDRESS,
-    mintPrice,
-    hasAbi: !!PokemonNFTAbi,
-    prepareError
-  });
-
   const handleMint = async () => {
-    if (!isConnected) {
-      console.error('Wallet not connected');
-      return;
-    }
-
     try {
-      setIsLoading(true);
-      
-      if (!address) {
-        throw new Error('No wallet address');
-      }
-      if (!mintPrice) {
-        throw new Error('Mint price not loaded');
-      }
+      setError(null);
       if (!mint) {
-        throw new Error('Mint function not available');
+        throw new Error('Minting not ready');
       }
-
-      console.log('Pre-mint checks:', {
-        hasAddress: !!address,
-        hasMintPrice: !!mintPrice,
-        canMint: !!mint
-      });
-
-      mint?.();
-      
-      console.log('Transaction data:', txData);
-
-    } catch (error) {
-      console.error('Detailed mint error:', {
-        error,
-        errorMessage: error instanceof Error ? error.message : 'Unknown error',
-        errorStack: error instanceof Error ? error.stack : undefined
-      });
-    } finally {
-      setIsLoading(false);
+      mint();
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to mint');
     }
   };
-
-  const spawnParticles = () => {
-    setParticles(Array.from({ length: 10 }, (_, i) => i));
-    setTimeout(() => setParticles([]), 1000);
-  };
-
-  const totalPrice = mintPrice ? Number(mintPrice * BigInt(quantity)) / 1e18 : 0;
 
   return (
-    <div className="w-full max-w-xl mx-auto px-4">
-      <div className="bg-white rounded-lg shadow-lg p-8 w-full">
-        <h2 className="text-3xl font-bold mb-8 text-center">Mint your Pokemon NFT</h2>
+    <div className="p-6 bg-white rounded-lg shadow-lg">
+      <h2 className="text-2xl font-bold mb-4">Mint Pokemon NFT</h2>
+      <div className="flex flex-col gap-4">
+        <div className="flex items-center gap-4">
+          <label className="font-medium">Quantity:</label>
+          <input
+            type="number"
+            min="1"
+            max="10"
+            value={quantity}
+            onChange={(e) => setQuantity(Number(e.target.value))}
+            className="border rounded px-2 py-1"
+          />
+        </div>
         
-        <div className="space-y-6">
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Quantity:
-            </label>
-            <input
-              type="number"
-              min="1"
-              value={quantity}
-              onChange={(e) => setQuantity(Math.max(1, Number(e.target.value)))}
-              className="w-20 p-2 border rounded"
-            />
-          </div>
-          
-          <div className="flex justify-between items-center py-4 border-t border-b border-gray-200">
-            <span className="text-lg font-medium text-gray-700">Total Price:</span>
-            <span className="text-2xl font-bold">{totalPrice.toFixed(2)} ETH</span>
-          </div>
-          
-          <button
-            onClick={handleMint}
-            disabled={isLoading || isPending || !mintPrice || !isConnected}
-            className="w-full bg-[#3B4CCA] text-white font-bold py-4 px-6 rounded-md 
-                     transition duration-200 text-lg disabled:opacity-50 hover:bg-opacity-90"
-          >
-            {!isConnected ? 'Connect Wallet First' :
-             isLoading || isPending ? 'Minting...' : 'Mint Pokemon'}
-          </button>
+        <div className="text-sm">
+          Price: {mintPrice ? `${Number(mintPrice) / 10**18 * quantity} ETH` : 'Loading...'}
         </div>
 
-        {mintSuccess && (
-          <div className="mt-4 text-green-600 text-center">
-            Successfully minted your Pokemon NFT!
-          </div>
+        <button
+          onClick={handleMint}
+          disabled={!mint || isMinting}
+          className={`px-4 py-2 rounded ${
+            !mint || isMinting
+              ? 'bg-gray-300'
+              : 'bg-blue-500 hover:bg-blue-600 text-white'
+          }`}
+        >
+          {isMinting ? 'Minting...' : 'Mint NFT'}
+        </button>
+
+        {error && (
+          <div className="text-red-500 text-sm">{error}</div>
         )}
 
-        <AnimatePresence>
-          {particles.map((id) => (
-            <motion.div
-              key={id}
-              initial={{ scale: 0, y: 0 }}
-              animate={{ scale: 1, y: [-20, 20] }}
-              exit={{ scale: 0, opacity: 0 }}
-              className="absolute w-2 h-2 bg-yellow-400 rounded-full"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-            />
-          ))}
-        </AnimatePresence>
+        {mintSuccess && (
+          <div className="text-green-500 text-sm">
+            Successfully minted! Check your wallet for the NFT.
+          </div>
+        )}
       </div>
     </div>
   );
