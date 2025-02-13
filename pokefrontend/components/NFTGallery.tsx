@@ -1,6 +1,14 @@
 // components/NFTGallery.tsx
-import React, { useEffect, useState, useRef } from 'react';
-import { useAccount, useContractRead, usePublicClient, useContractWrite, usePrepareContractWrite, useWaitForTransaction } from 'wagmi';
+import React, { useEffect, useState } from 'react';
+import {
+  useAccount,
+  useContractRead,
+  usePublicClient,
+  useContractWrite,
+  usePrepareContractWrite,
+  useContractEvent,
+  useWaitForTransaction
+} from 'wagmi';
 import { readContract } from '@wagmi/core';
 import PokemonNFTAbi from '../abis/PokemonNFT.json';
 import Image from 'next/image';
@@ -83,16 +91,11 @@ const NFTGallery: React.FC<NFTGalleryProps> = ({ onCreateListing }) => {
   const [isListModalOpen, setIsListModalOpen] = useState(false);
   const publicClient = usePublicClient();
   const [selectedTokenId, setSelectedTokenId] = useState<number | null>(null);
-  const [selectedPrice, setSelectedPrice] = useState<number | null>(null);
-  const [selectedSaleType, setSelectedSaleType] = useState<SaleType | null>(null);
+  // const [selectedPrice, setSelectedPrice] = useState<number | null>(null);
+  // const [selectedSaleType, setSelectedSaleType] = useState<SaleType | null>(null);
   const [isApproving, setIsApproving] = useState(false);
   const [isListing, setIsListing] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
-  // Add refs for immediate access
-  const tokenIdRef = useRef<number | null>(null);
-  const priceRef = useRef<number | null>(null);
-  const saleTypeRef = useRef<SaleType | null>(null);
 
   // Read balance of user's NFTs
   const { data: balance } = useContractRead({
@@ -104,77 +107,81 @@ const NFTGallery: React.FC<NFTGalleryProps> = ({ onCreateListing }) => {
     enabled: !!address,
   });
 
-  // Update the prepare approval hook
-  const { config: approveConfig, error: prepareApprovalError, isError: isPrepareError } = usePrepareContractWrite({
+  // First log the addresses to verify they're correct
+  useEffect(() => {
+    console.log('Contract Addresses:', {
+      nftContract: CONTRACT_ADDRESS,
+      tradingContract: TRADING_CONTRACT_ADDRESS
+    });
+  }, []);
+
+  // Update the prepare hook to be more explicit
+  const { config: approveConfig, error: prepareError } = usePrepareContractWrite({
     address: CONTRACT_ADDRESS,
     abi: PokemonNFTAbi,
     functionName: 'approve',
-    args: tokenIdRef.current ? [
+    args: selectedTokenId ? [
       TRADING_CONTRACT_ADDRESS,
-      BigInt(tokenIdRef.current)
+      BigInt(selectedTokenId)
     ] : undefined,
-    enabled: !!tokenIdRef.current,
+    enabled: Boolean(address && selectedTokenId),
   });
 
-  // Update the write hook with more debugging
+  // Update the write hook
   const { 
     write: approve,
-    isLoading: isApprovalLoading,
-    isSuccess: isApprovalSuccess,
-    error: approvalError,
-    data: approvalData,
-    isError: isWriteError,
-    status: writeStatus,
+    data: approveData,
+    error: approveError
   } = useContractWrite(approveConfig);
 
-  // Add more detailed logging
-  useEffect(() => {
-    console.log('Write hook state:', {
-      hasWrite: !!approve,
-      isLoading: isApprovalLoading,
-      isSuccess: isApprovalSuccess,
-      writeStatus,
-      isWriteError,
-      approvalError: approvalError?.message,
-    });
-  }, [approve, isApprovalLoading, isApprovalSuccess, writeStatus, isWriteError, approvalError]);
-
-  // Wait for approval transaction
-  const { isSuccess: isApprovalConfirmed } = useWaitForTransaction({
-    hash: approvalData?.hash,
+  const { isLoading: isApprovingTx, isSuccess: approveSuccess } = useWaitForTransaction({
+    hash: approveData?.hash,
   });
 
-  // Prepare listing transaction
-  const { config: listConfig, error: prepareListingError } = usePrepareContractWrite({
-    address: TRADING_CONTRACT_ADDRESS,
-    abi: PokemonTradingAbi,
-    functionName: selectedSaleType === 'auction' ? 'createAuctionSale' : 'createFixedPriceSale',
-    args: selectedTokenId && selectedPrice ? [
-      BigInt(selectedTokenId),    // tokenId
-      parseEther(selectedPrice.toString()),  // price/startingPrice
-    ] : undefined,
-    enabled: !!selectedTokenId && !!selectedPrice && !!selectedSaleType && isApprovalConfirmed,
+  // Watch for Approval event
+  useContractEvent({
+    address: CONTRACT_ADDRESS,
+    abi: PokemonNFTAbi,
+    eventName: 'Approval',
+    listener(logs) {
+      console.log('Approve completed:', logs);
+    },
   });
 
-  const { 
-    write: listNFT,
-    isLoading: isListingLoading,
-    error: listingError,
-    data: listingData,
-  } = useContractWrite(listConfig);
+  // // Update the write hook status logging
+  // useEffect(() => {
+  //   console.log('Write hook status:', {
+  //     hasWrite: !!approve,
+  //     isLoading,
+  //     isSuccess: isApprovalSuccess,
+  //     writeError,
+  //     approveFunction: approve,
+  //     approveConfig: {
+  //       ...approveConfig,
+  //       args: approveConfig?.args,
+  //       address: approveConfig?.address,
+  //       enabled: approveConfig?.enabled
+  //     }
+  //   });
+  // }, [approve, isLoading, isApprovalSuccess, writeError, approveConfig]);
 
-  // Wait for listing transaction
-  const { isSuccess: isListingConfirmed } = useWaitForTransaction({
-    hash: listingData?.hash,
-  });
+  // // Prepare listing transaction
+  // const { config: listConfig } = usePrepareContractWrite({
+  //   address: TRADING_CONTRACT_ADDRESS,
+  //   abi: PokemonTradingAbi,
+  //   functionName: selectedSaleType === 'auction' ? 'createAuctionSale' : 'createFixedPriceSale',
+  //   args: selectedTokenId && selectedPrice ? [
+  //     BigInt(selectedTokenId),
+  //     parseEther(selectedPrice.toString()),
+  //   ] : undefined,
+  //   enabled: !!selectedTokenId && !!selectedPrice && !!selectedSaleType && isApprovalSuccess,
+  // });
 
-  // Add debug logging for prepare hook
-  console.log('Prepare approval config:', {
-    selectedTokenId,
-    tradingContract: TRADING_CONTRACT_ADDRESS,
-    prepareError: prepareApprovalError?.message,
-    hasConfig: !!approveConfig,
-  });
+  // const { 
+  //   write: listNFT,
+  //   isLoading: isListingLoading,
+  //   error: listingError
+  // } = useContractWrite(listConfig);
 
   // Fetch token IDs and metadata
   useEffect(() => {
@@ -254,150 +261,94 @@ const NFTGallery: React.FC<NFTGalleryProps> = ({ onCreateListing }) => {
     fetchNFTs();
   }, [address, balance, publicClient]);
 
+  // Update handleListNFT to wait for state updates
   const handleListNFT = async (tokenId: number, price: number, saleType: SaleType) => {
     try {
-      console.log('Starting listing process...', { tokenId, price, saleType });
-      
-      // Update refs immediately
-      tokenIdRef.current = tokenId;
-      priceRef.current = price;
-      saleTypeRef.current = saleType;
-
-      // Update state
-      setError(null);
-      setSelectedTokenId(tokenId);
-      setSelectedPrice(price);
-      setSelectedSaleType(saleType);
-
-      // Wait for prepare hooks to update
-      await new Promise(resolve => setTimeout(resolve, 500));
-
-      // Now check if approve is available
-      if (!approve) {
-        console.error('Approve function preparation state:', {
-          hasConfig: !!approveConfig,
-          isPrepareError,
-          prepareError: prepareApprovalError?.message,
-          selectedTokenId: tokenIdRef.current,
-          args: tokenIdRef.current ? [TRADING_CONTRACT_ADDRESS, BigInt(tokenIdRef.current)] : undefined
-        });
-        throw new Error('Failed to prepare approval transaction. Please try again.');
-      }
-
-      // Start approval
-      setIsApproving(true);
-      console.log('Sending approval transaction...');
-      const approveTx = await approve();
-      console.log('Approval transaction sent:', approveTx);
-
-      // Wait for approval confirmation
-      console.log('Waiting for approval confirmation...');
-      const approvalConfirmed = await new Promise((resolve) => {
-        const checkApproval = async () => {
-          try {
-            // Wait a bit for the transaction to be mined
-            if (!approveTx.hash) {
-              return;
-            }
-
-            const approvalEvents = await publicClient.getContractEvents({
-              address: CONTRACT_ADDRESS,
-              abi: PokemonNFTAbi,
-              eventName: 'Approval',
-              args: {
-                owner: address,
-                approved: TRADING_CONTRACT_ADDRESS,
-                tokenId: BigInt(selectedTokenId!)
-              },
-              // Use fromBlock: 'latest' instead of trying to access blockNumber
-              fromBlock: 'latest'
-            });
-
-            if (approvalEvents.length > 0) {
-              console.log('Found approval event:', approvalEvents[0]);
-              resolve(true);
-              return;
-            }
-          } catch (error) {
-            console.error('Error checking approval:', error);
-          }
-        };
-
-        // Check every second
-        const interval = setInterval(checkApproval, 1000);
-
-        // Timeout after 60 seconds
-        setTimeout(() => {
-          clearInterval(interval);
-          resolve(false);
-        }, 60000);
-
-        // Initial check
-        checkApproval();
-      });
-
-      if (!approvalConfirmed) {
-        throw new Error('Approval transaction timed out. Please check your wallet.');
-      }
-
-      // Wait for listing preparation
-      await new Promise(resolve => {
-        const checkListPrepare = setInterval(() => {
-          if (listNFT) {
-            clearInterval(checkListPrepare);
-            resolve(true);
-          }
-        }, 100);
-        // Timeout after 5 seconds
-        setTimeout(() => {
-          clearInterval(checkListPrepare);
-          resolve(false);
-        }, 5000);
-      });
-
-      if (!listNFT) {
-        throw new Error('Failed to prepare listing transaction. Please try again.');
-      }
-
-      // Start listing
-      setIsListing(true);
-      console.log('Starting listing...', {
+      console.log('Before state update:', {
         tokenId,
+        // selectedTokenId,
         price,
+        // selectedPrice,
         saleType,
-        listNFT: !!listNFT
+        // selectedSaleType,
+        address,
+        approveConfig,
+        configAddress: approveConfig?.address,
+        configArgs: approveConfig?.args
       });
 
-      const listTx = await listNFT();
-      console.log('Listing submitted:', listTx);
+      // Set states first
+      // setSelectedTokenId(tokenId);
+      // setSelectedPrice(price);
+      // setSelectedSaleType(saleType);
 
-      // Wait for listing confirmation
-      console.log('Waiting for listing confirmation...');
-      const listingConfirmed = await new Promise((resolve) => {
-        const checkListing = setInterval(() => {
-          if (isListingConfirmed) {
-            clearInterval(checkListing);
-            resolve(true);
-          }
-        }, 1000);
-        // Timeout after 60 seconds
-        setTimeout(() => {
-          clearInterval(checkListing);
-          resolve(false);
-        }, 60000);
+      console.log('Starting list process:', {
+        tokenId,
+        // selectedTokenId,
+        price,
+        // selectedPrice,
+        saleType,
+        // selectedSaleType,
+        address,
+        approveConfig,
+        configAddress: approveConfig?.address,
+        configArgs: approveConfig?.args
       });
 
-      if (!listingConfirmed) {
-        throw new Error('Listing transaction timed out. Please check your wallet.');
+      // Wait for state updates and prepare hook
+      await new Promise(resolve => setTimeout(resolve, 1000));
+
+      // Verify states are set
+      // console.log('Verification:', {
+      //   tokenId,
+      //   selectedTokenId,
+      //   hasConfig: !!approveConfig,
+      //   configAddress: approveConfig?.address,
+      //   configArgs: approveConfig?.args
+      // });
+
+      // if (!approveConfig?.address || !approveConfig?.args) {
+      //   throw new Error('Contract configuration not ready. Please try again.');
+      // }
+
+      // Now proceed with approval
+      setIsApproving(true);
+      
+      if (!approve) {
+        throw new Error('Approval function not ready.');
       }
 
-      // If everything succeeded
+      console.log('Sending approval transaction...');
+      approve();
+      console.log('Approval sent:');
+
+      // Wait for approval to be confirmed
+      // console.log('Waiting for approval confirmation...');
+      // await tx.wait();
+      // console.log('Approval confirmed');
+
+      // Now check if we can list
+      // if (!listNFT) {
+      //   throw new Error('Listing not ready - please try again after approval');
+      // }
+
+      // Then create the listing
+      // setIsListing(true);
+      // const listTx = await listNFT();
+      // console.log('Listing transaction sent:', listTx);
+
+      // Wait for listing to be confirmed
+      // await listTx.wait();
+      // console.log('Listing confirmed');
+
+      // Close modal and update UI
       setIsListModalOpen(false);
+      setSelectedTokenId(null);
       onCreateListing(tokenId, price, saleType);
 
     } catch (error) {
-      console.error('Error listing NFT:', error);
-      setError(error instanceof Error ? error.message : 'Failed to list NFT');
+      console.error('Error in process:', error);
+      setError(error instanceof Error ? error.message : 'Failed to complete transaction');
     } finally {
       setIsApproving(false);
       setIsListing(false);
@@ -492,11 +443,13 @@ const NFTGallery: React.FC<NFTGalleryProps> = ({ onCreateListing }) => {
         onClose={() => {
           setIsListModalOpen(false);
           setError(null);
+          setSelectedTokenId(null);
         }}
         ownedNFTs={nfts}
         onListNFT={handleListNFT}
         isLoading={isApproving || isListing}
         error={error}
+        onSelectNFT={setSelectedTokenId}
       />
     </div>
   );

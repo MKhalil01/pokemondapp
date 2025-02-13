@@ -22,6 +22,7 @@ interface ListNFTModalProps {
   onListNFT: (tokenId: number, price: number, saleType: SaleType) => void;
   isLoading?: boolean;
   error?: string | null;
+  onSelectNFT: (tokenId: number) => void;
 }
 
 const ListNFTModal: React.FC<ListNFTModalProps> = ({
@@ -30,11 +31,17 @@ const ListNFTModal: React.FC<ListNFTModalProps> = ({
   ownedNFTs,
   onListNFT,
   isLoading,
-  error
+  error,
+  onSelectNFT
 }) => {
   const [selectedNFT, setSelectedNFT] = useState<number | null>(null);
   const [saleType, setSaleType] = useState<SaleType>('fixed');
   const [price, setPrice] = useState<string>('');
+
+  const handleNFTSelect = (nft: { tokenId: number }) => {
+    setSelectedNFT(nft.tokenId);
+    onSelectNFT(nft.tokenId);
+  };
 
   const handleSubmit = () => {
     if (selectedNFT && price) {
@@ -63,7 +70,7 @@ const ListNFTModal: React.FC<ListNFTModalProps> = ({
                     className={`cursor-pointer rounded-lg p-2 border-2 ${
                       selectedNFT === nft.tokenId ? 'border-blue-500' : 'border-gray-200'
                     }`}
-                    onClick={() => setSelectedNFT(nft.tokenId)}
+                    onClick={() => handleNFTSelect(nft)}
                   >
                     <img 
                       src={nft.image} 
