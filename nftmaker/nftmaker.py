@@ -74,7 +74,7 @@ def main():
             for copy_num in range(copies_per_pokemon):
                 metadata = generate_metadata(data, copy_num)
                 filenum = pokemon_id * 10 + copy_num
-                filename = f"../pokefrontend/public/metadata_files/metadata_{filenum}.json"
+                filename = f"../docs/metadata_files/metadata_{filenum}.json"
                 with open(filename, "w") as f:
                     json.dump(metadata, f, indent=4)
             print(f"Generated metadata for Pokemon ID {pokemon_id}")

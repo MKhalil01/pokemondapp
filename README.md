@@ -33,7 +33,7 @@ By: Mohammed + Preston
 
 1. Clone the repository
    ```sh
-   git clone [https://github.com/MKhalil01/pokemondapp]
+   git clone https://github.com/MKhalil01/pokemondapp
    cd pokemondapp
    ```
 
@@ -58,10 +58,10 @@ By: Mohammed + Preston
 The `nftmaker` component is a Python-based metadata generator for Pokemon NFTs that:
 - Interacts with [PokeAPI](https://pokeapi.co/) to fetch Pokemon data
 - Implements a rarity system based on Pokemon base experience:
-  - Common (50%): base_experience < 159
-  - Uncommon (30%): 159 ≤ base_experience < 248
-  - Rare (15%): 248 ≤ base_experience < 301
-  - Legendary (5%): base_experience ≥ 301
+  - **Common (50%)**: base_experience < 159
+  - **Uncommon (30%)**: 159 ≤ base_experience < 248
+  - **Rare (15%)**: 248 ≤ base_experience < 301
+  - **Legendary (5%)**: base_experience ≥ 301
 - Generates standardized NFT metadata for each Pokemon
 
 #### Metadata File Structure
