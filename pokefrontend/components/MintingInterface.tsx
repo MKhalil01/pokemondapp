@@ -12,6 +12,8 @@ import {
 import { parseEther } from 'viem';
 import PokemonNFTAbi from '../abis/PokemonNFT.json';
 
+const CONTRACT_ADDRESS = '0xf4F833c8649F913e251Bdec113bEFED33889e3d1';
+
 const MintingInterface = () => {
   const { address, isConnected } = useAccount();
   const [quantity, setQuantity] = useState(1);
@@ -19,14 +21,15 @@ const MintingInterface = () => {
 
   // Read mint price from contract
   const { data: mintPrice } = useContractRead({
-    address: process.env.NEXT_PUBLIC_POKEMON_NFT_ADDRESS as `0x${string}`,
+    address: CONTRACT_ADDRESS,
     abi: PokemonNFTAbi,
     functionName: 'mintPrice',
+    watch: true,
   }) as { data: bigint };
 
   // Prepare the mint transaction
   const { config: contractConfig, error: prepareError } = usePrepareContractWrite({
-    address: process.env.NEXT_PUBLIC_POKEMON_NFT_ADDRESS as `0x${string}`,
+    address: CONTRACT_ADDRESS,
     abi: PokemonNFTAbi,
     functionName: 'requestMint',
     args: [BigInt(quantity)],
@@ -42,7 +45,7 @@ const MintingInterface = () => {
 
   // Watch for MintCompleted event
   useContractEvent({
-    address: process.env.NEXT_PUBLIC_POKEMON_NFT_ADDRESS as `0x${string}`,
+    address: CONTRACT_ADDRESS,
     abi: PokemonNFTAbi,
     eventName: 'MintCompleted',
     listener(logs) {
@@ -53,14 +56,26 @@ const MintingInterface = () => {
   const handleMint = async () => {
     try {
       setError(null);
+      if (!isConnected) {
+        throw new Error('Please connect your wallet first');
+      }
       if (!mint) {
         throw new Error('Minting not ready');
       }
       mint();
     } catch (err) {
+      console.error('Minting error:', err);
       setError(err instanceof Error ? err.message : 'Failed to mint');
     }
   };
+
+  // Show any prepare or mint errors
+  React.useEffect(() => {
+    if (prepareError || mintError) {
+      const errorMessage = (prepareError || mintError)?.message || 'Failed to mint';
+      setError(errorMessage);
+    }
+  }, [prepareError, mintError]);
 
   return (
     <div className="p-6 bg-white rounded-lg shadow-lg">
@@ -84,14 +99,18 @@ const MintingInterface = () => {
 
         <button
           onClick={handleMint}
-          disabled={!mint || isMinting}
+          disabled={!mint || isMinting || !isConnected}
           className={`px-4 py-2 rounded ${
-            !mint || isMinting
-              ? 'bg-gray-300'
+            !mint || isMinting || !isConnected
+              ? 'bg-gray-300 cursor-not-allowed'
               : 'bg-blue-500 hover:bg-blue-600 text-white'
           }`}
         >
-          {isMinting ? 'Minting...' : 'Mint NFT'}
+          {!isConnected 
+            ? 'Connect Wallet to Mint' 
+            : isMinting 
+              ? 'Minting...' 
+              : 'Mint NFT'}
         </button>
 
         {error && (

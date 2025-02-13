@@ -1,6 +1,7 @@
 // components/NFTGallery.tsx
 import React, { useEffect, useState } from 'react';
-import { useAccount, useContractRead } from 'wagmi';
+import { useAccount, useContractRead, usePublicClient } from 'wagmi';
+import { readContract } from '@wagmi/core';
 import PokemonNFTAbi from '../abis/PokemonNFT.json';
 import Image from 'next/image';
 import ListNFTModal from './ListNFTModal';
@@ -69,28 +70,76 @@ interface NFTGalleryProps {
   onCreateListing: (tokenId: number, price: number, saleType: SaleType) => void;
 }
 
+const CONTRACT_ADDRESS = '0xf4F833c8649F913e251Bdec113bEFED33889e3d1';
+
 const NFTGallery: React.FC<NFTGalleryProps> = ({ onCreateListing }) => {
   const { address } = useAccount();
   const [nfts, setNfts] = useState<NFTMetadata[]>([]);
   const [loading, setLoading] = useState(true);
   const [isListModalOpen, setIsListModalOpen] = useState(false);
+  const publicClient = usePublicClient();
 
-  // Hardcoded Pokemon IDs for testing
-  const testPokemonIds = [10, 949, 567, 4321, 10200, 10071, 7542];
+  // Read balance of user's NFTs
+  const { data: balance } = useContractRead({
+    address: CONTRACT_ADDRESS,
+    abi: PokemonNFTAbi,
+    functionName: 'balanceOf',
+    args: [address],
+    watch: true,
+    enabled: !!address,
+  });
 
   // Fetch token IDs and metadata
   useEffect(() => {
     const fetchNFTs = async () => {
+      if (!address || !balance) {
+        setLoading(false);
+        return;
+      }
+
       try {
-        const tokenPromises = testPokemonIds.map(async id => {
-          console.log(`Attempting to fetch metadata for Pokemon #${id}`);
+        // Get Transfer events where 'to' is the current address
+        const transferEvents = await publicClient.getContractEvents({
+          address: CONTRACT_ADDRESS,
+          abi: PokemonNFTAbi,
+          eventName: 'Transfer',
+          args: {
+            to: address
+          },
+          fromBlock: 0n
+        });
+
+        // Get all token IDs from transfer events
+        const tokenIds = transferEvents
+          .map(event => Number(event.args.tokenId))
+          // Filter out tokens that were later transferred away
+          .filter(async (tokenId) => {
+            const owner = await readContract({
+              address: CONTRACT_ADDRESS,
+              abi: PokemonNFTAbi,
+              functionName: 'ownerOf',
+              args: [BigInt(tokenId)],
+            });
+            return owner.toLowerCase() === address.toLowerCase();
+          });
+
+        // Fetch metadata for each token
+        const tokenPromises = tokenIds.map(async id => {
           try {
-            const response = await fetch(`/metadata_files/metadata_${id}.json`);
+            // Get token URI from contract
+            const uri = await readContract({
+              address: CONTRACT_ADDRESS,
+              abi: PokemonNFTAbi,
+              functionName: 'tokenURI',
+              args: [BigInt(id)],
+            });
+
+            // Fetch metadata from URI
+            const response = await fetch(uri);
             if (!response.ok) {
               throw new Error(`HTTP error! status: ${response.status}`);
             }
             const data = await response.json();
-            console.log(`Successfully fetched metadata for Pokemon #${id}`, data);
 
             // Transform the attribute array into our expected format
             const attributes = data.attributes.reduce((acc: any, curr: any) => {
@@ -113,25 +162,12 @@ const NFTGallery: React.FC<NFTGalleryProps> = ({ onCreateListing }) => {
               tokenId: id,
             };
           } catch (error) {
-            console.error(`Failed to fetch metadata for Pokemon #${id}:`, error);
-            return {
-              name: `Pokemon #${id}`,
-              image: '/placeholder-pokemon.png',
-              rarity: 'Common',
-              stats: {
-                hp: 50,
-                attack: 50,
-                defense: 50,
-                speed: 50,
-                spAttack: 50,
-                spDefense: 50,
-              },
-              tokenId: id,
-            };
+            console.error(`Failed to fetch metadata for token #${id}:`, error);
+            return null;
           }
         });
 
-        const metadata = await Promise.all(tokenPromises);
+        const metadata = (await Promise.all(tokenPromises)).filter((item): item is NFTMetadata => item !== null);
         setNfts(metadata);
       } catch (error) {
         console.error('Error fetching NFTs:', error);
@@ -141,7 +177,7 @@ const NFTGallery: React.FC<NFTGalleryProps> = ({ onCreateListing }) => {
     };
 
     fetchNFTs();
-  }, []); // Remove address and balance dependencies since we're using hardcoded IDs
+  }, [address, balance, publicClient]);
 
   const handleListNFT = async (tokenId: number, price: number) => {
     try {

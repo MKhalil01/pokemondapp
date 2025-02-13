@@ -25,14 +25,19 @@ const Header: React.FC = () => {
           </h1>
         </div>
         
-        <div>
+        <div className="flex items-center gap-3">
           {isConnected ? (
-            <button 
-              onClick={() => disconnect()}
-              className="bg-[#3B4CCA] text-white px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all"
-            >
-              {formatAddress(address)}
-            </button>
+            <>
+              <span className="bg-white px-4 py-2 rounded-lg font-medium text-[#3B4CCA]">
+                {formatAddress(address)}
+              </span>
+              <button 
+                onClick={() => disconnect()}
+                className="bg-[#3B4CCA] text-white px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all"
+              >
+                Disconnect
+              </button>
+            </>
           ) : (
             <w3m-button />
           )}
