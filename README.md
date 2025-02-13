@@ -127,20 +127,57 @@ The architecture follows a component-based structure:
 
 ## Security Considerations
 
-[Coming soon]
-- Smart Contract Security
-- Access Control
-- Data Privacy
-- Known Limitations
-- Emergency stop functionality
-- Reentrancy protection
+### Reentrancy Protection
+- ReentrancyGuard modifier from OpenZeppelin used on all external functions that handle ETH
+- State changes performed before external calls
+
+### Access Control
+- Ownable pattern implemented for administrative functions
+- Function modifiers restrict access:
+  - `onlyOwner` for administrative actions
+  - `onlySeller` for sale management
+  - `saleExists` for sale interactions
+- Clear separation between user and admin capabilities
+- No privileged roles beyond contract owner
+
+### Integer Safety
+- Automatic overflow/underflow checks in Solidity >=0.8.0
+- Additional SafeMath operations through OpenZeppelin's Math library
+- Explicit checks for:
+  - Maximum supply limits
+  - Payment amounts
+  - Auction bid values
+
+### Event Emission
+Strategic event logging for critical operations:
+- `MintRequested` and `MintCompleted` for NFT minting
+- `SaleCreated`, `SaleCancelled`, `SaleCompleted` for marketplace activities
+- `NewBid` for auction updates
+- Enables efficient off-chain tracking and frontend synchronization
+
+### Emergency Controls
+- `emergencyStop()` function allows owner to:
+  - Halt all trading activities
+  - Cancel active sales
+  - Refund pending bids
+  - Return NFTs to sellers
+- Can only be triggered by contract owner
+- Protects users in case of critical vulnerabilities
 
 ### Testing Strategy
-The project includes comprehensive tests (`test/PokemonTrading.t.sol`) covering:
-- NFT minting functionality
-- Fixed price sale operations
-- Auction mechanics
-- Sale cancellations
-- Emergency scenarios
-- Access control
+The project includes extensive test coverage through a comprehensive test suite (`pokedapp/test/PokemonTrading.t.sol`). The tests can be executed using Forge's testing framework:
+
+```sh
+forge test
+```
+
+The test suite provides thorough coverage of:
+- NFT minting functionality and supply management
+- Fixed price sale operations and payment handling
+- Auction mechanics including bidding, refunds, and timing
+- Sale cancellations and state management
+- Emergency scenarios and system recovery
+- Access control and permission boundaries
 - Edge cases and error conditions
+
+Each component is tested in isolation and in integration with other parts of the system, ensuring robust functionality and security. The tests simulate various user interactions and market conditions to validate system behavior under different scenarios.
