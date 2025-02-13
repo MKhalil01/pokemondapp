@@ -1,0 +1,40 @@
+{
+    "name": "Frogadier",
+    "description": "An NFT representing the Pokemon Frogadier.",
+    "copy_number": 3,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/657.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 54
+        },
+        {
+            "trait_type": "Attack",
+            "value": 63
+        },
+        {
+            "trait_type": "Defense",
+            "value": 52
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 83
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 56
+        },
+        {
+            "trait_type": "Speed",
+            "value": 97
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 142
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

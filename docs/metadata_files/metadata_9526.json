@@ -1,0 +1,40 @@
+{
+    "name": "Scovillain",
+    "description": "An NFT representing the Pokemon Scovillain.",
+    "copy_number": 6,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/952.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 65
+        },
+        {
+            "trait_type": "Attack",
+            "value": 108
+        },
+        {
+            "trait_type": "Defense",
+            "value": 65
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 108
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 65
+        },
+        {
+            "trait_type": "Speed",
+            "value": 75
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 170
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Uncommon"
+        }
+    ]
+}

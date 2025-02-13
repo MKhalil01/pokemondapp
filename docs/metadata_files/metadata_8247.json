@@ -1,0 +1,40 @@
+{
+    "name": "Blipbug",
+    "description": "An NFT representing the Pokemon Blipbug.",
+    "copy_number": 7,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/824.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 25
+        },
+        {
+            "trait_type": "Attack",
+            "value": 20
+        },
+        {
+            "trait_type": "Defense",
+            "value": 20
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 25
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 45
+        },
+        {
+            "trait_type": "Speed",
+            "value": 45
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 36
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

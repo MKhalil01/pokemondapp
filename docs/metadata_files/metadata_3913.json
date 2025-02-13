@@ -1,0 +1,40 @@
+{
+    "name": "Monferno",
+    "description": "An NFT representing the Pokemon Monferno.",
+    "copy_number": 3,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/391.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 64
+        },
+        {
+            "trait_type": "Attack",
+            "value": 78
+        },
+        {
+            "trait_type": "Defense",
+            "value": 52
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 78
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 52
+        },
+        {
+            "trait_type": "Speed",
+            "value": 81
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 142
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

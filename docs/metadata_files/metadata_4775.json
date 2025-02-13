@@ -1,0 +1,40 @@
+{
+    "name": "Dusknoir",
+    "description": "An NFT representing the Pokemon Dusknoir.",
+    "copy_number": 5,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/477.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 45
+        },
+        {
+            "trait_type": "Attack",
+            "value": 100
+        },
+        {
+            "trait_type": "Defense",
+            "value": 135
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 65
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 135
+        },
+        {
+            "trait_type": "Speed",
+            "value": 45
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 263
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Rare"
+        }
+    ]
+}

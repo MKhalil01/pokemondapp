@@ -1,0 +1,40 @@
+{
+    "name": "Ting-lu",
+    "description": "An NFT representing the Pokemon Ting-lu.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1003.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 155
+        },
+        {
+            "trait_type": "Attack",
+            "value": 110
+        },
+        {
+            "trait_type": "Defense",
+            "value": 125
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 55
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 80
+        },
+        {
+            "trait_type": "Speed",
+            "value": 45
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 285
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Rare"
+        }
+    ]
+}

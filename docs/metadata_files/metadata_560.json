@@ -1,0 +1,40 @@
+{
+    "name": "Mankey",
+    "description": "An NFT representing the Pokemon Mankey.",
+    "copy_number": 0,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/56.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 40
+        },
+        {
+            "trait_type": "Attack",
+            "value": 80
+        },
+        {
+            "trait_type": "Defense",
+            "value": 35
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 35
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 45
+        },
+        {
+            "trait_type": "Speed",
+            "value": 70
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 61
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

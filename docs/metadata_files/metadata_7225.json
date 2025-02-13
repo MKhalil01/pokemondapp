@@ -1,0 +1,40 @@
+{
+    "name": "Rowlet",
+    "description": "An NFT representing the Pokemon Rowlet.",
+    "copy_number": 5,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/722.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 68
+        },
+        {
+            "trait_type": "Attack",
+            "value": 55
+        },
+        {
+            "trait_type": "Defense",
+            "value": 55
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 50
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 50
+        },
+        {
+            "trait_type": "Speed",
+            "value": 42
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 64
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

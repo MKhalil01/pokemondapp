@@ -1,0 +1,40 @@
+{
+    "name": "Baxcalibur",
+    "description": "An NFT representing the Pokemon Baxcalibur.",
+    "copy_number": 5,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/998.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 115
+        },
+        {
+            "trait_type": "Attack",
+            "value": 145
+        },
+        {
+            "trait_type": "Defense",
+            "value": 92
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 75
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 86
+        },
+        {
+            "trait_type": "Speed",
+            "value": 87
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 300
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Rare"
+        }
+    ]
+}

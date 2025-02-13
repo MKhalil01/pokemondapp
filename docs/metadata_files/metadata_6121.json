@@ -1,0 +1,40 @@
+{
+    "name": "Haxorus",
+    "description": "An NFT representing the Pokemon Haxorus.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/612.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 76
+        },
+        {
+            "trait_type": "Attack",
+            "value": 147
+        },
+        {
+            "trait_type": "Defense",
+            "value": 90
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 60
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 70
+        },
+        {
+            "trait_type": "Speed",
+            "value": 97
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 270
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Rare"
+        }
+    ]
+}

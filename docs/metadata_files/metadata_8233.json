@@ -1,0 +1,40 @@
+{
+    "name": "Corviknight",
+    "description": "An NFT representing the Pokemon Corviknight.",
+    "copy_number": 3,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/823.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 98
+        },
+        {
+            "trait_type": "Attack",
+            "value": 87
+        },
+        {
+            "trait_type": "Defense",
+            "value": 105
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 53
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 85
+        },
+        {
+            "trait_type": "Speed",
+            "value": 67
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 248
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Rare"
+        }
+    ]
+}

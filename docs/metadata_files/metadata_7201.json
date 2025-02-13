@@ -1,0 +1,40 @@
+{
+    "name": "Hoopa",
+    "description": "An NFT representing the Pokemon Hoopa.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/720.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 80
+        },
+        {
+            "trait_type": "Attack",
+            "value": 110
+        },
+        {
+            "trait_type": "Defense",
+            "value": 60
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 150
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 130
+        },
+        {
+            "trait_type": "Speed",
+            "value": 70
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 270
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Rare"
+        }
+    ]
+}

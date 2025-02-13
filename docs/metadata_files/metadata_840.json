@@ -1,0 +1,40 @@
+{
+    "name": "Doduo",
+    "description": "An NFT representing the Pokemon Doduo.",
+    "copy_number": 0,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/84.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 35
+        },
+        {
+            "trait_type": "Attack",
+            "value": 85
+        },
+        {
+            "trait_type": "Defense",
+            "value": 45
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 35
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 35
+        },
+        {
+            "trait_type": "Speed",
+            "value": 75
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 62
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

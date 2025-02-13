@@ -1,0 +1,40 @@
+{
+    "name": "Furret",
+    "description": "An NFT representing the Pokemon Furret.",
+    "copy_number": 3,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/162.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 85
+        },
+        {
+            "trait_type": "Attack",
+            "value": 76
+        },
+        {
+            "trait_type": "Defense",
+            "value": 64
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 45
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 55
+        },
+        {
+            "trait_type": "Speed",
+            "value": 90
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 145
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "name": "Magearna",
+    "description": "An NFT representing the Pokemon Magearna.",
+    "copy_number": 2,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/801.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 80
+        },
+        {
+            "trait_type": "Attack",
+            "value": 95
+        },
+        {
+            "trait_type": "Defense",
+            "value": 115
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 130
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 115
+        },
+        {
+            "trait_type": "Speed",
+            "value": 65
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 300
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Rare"
+        }
+    ]
+}

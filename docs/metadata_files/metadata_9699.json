@@ -1,0 +1,40 @@
+{
+    "name": "Glimmet",
+    "description": "An NFT representing the Pokemon Glimmet.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/969.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 48
+        },
+        {
+            "trait_type": "Attack",
+            "value": 35
+        },
+        {
+            "trait_type": "Defense",
+            "value": 42
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 105
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 60
+        },
+        {
+            "trait_type": "Speed",
+            "value": 60
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 70
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

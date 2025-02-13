@@ -1,0 +1,40 @@
+{
+    "name": "Meloetta-aria",
+    "description": "An NFT representing the Pokemon Meloetta-aria.",
+    "copy_number": 3,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/648.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 100
+        },
+        {
+            "trait_type": "Attack",
+            "value": 77
+        },
+        {
+            "trait_type": "Defense",
+            "value": 77
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 128
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 128
+        },
+        {
+            "trait_type": "Speed",
+            "value": 90
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 270
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Rare"
+        }
+    ]
+}

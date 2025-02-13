@@ -1,0 +1,40 @@
+{
+    "name": "Elekid",
+    "description": "An NFT representing the Pokemon Elekid.",
+    "copy_number": 5,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/239.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 45
+        },
+        {
+            "trait_type": "Attack",
+            "value": 63
+        },
+        {
+            "trait_type": "Defense",
+            "value": 37
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 65
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 55
+        },
+        {
+            "trait_type": "Speed",
+            "value": 95
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 72
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

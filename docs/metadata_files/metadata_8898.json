@@ -1,0 +1,40 @@
+{
+    "name": "Zamazenta",
+    "description": "An NFT representing the Pokemon Zamazenta.",
+    "copy_number": 8,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/889.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 92
+        },
+        {
+            "trait_type": "Attack",
+            "value": 120
+        },
+        {
+            "trait_type": "Defense",
+            "value": 115
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 80
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 115
+        },
+        {
+            "trait_type": "Speed",
+            "value": 138
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 335
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Legendary"
+        }
+    ]
+}

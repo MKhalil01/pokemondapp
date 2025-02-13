@@ -1,0 +1,40 @@
+{
+    "name": "Whismur",
+    "description": "An NFT representing the Pokemon Whismur.",
+    "copy_number": 4,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/293.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 64
+        },
+        {
+            "trait_type": "Attack",
+            "value": 51
+        },
+        {
+            "trait_type": "Defense",
+            "value": 23
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 51
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 23
+        },
+        {
+            "trait_type": "Speed",
+            "value": 28
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 48
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

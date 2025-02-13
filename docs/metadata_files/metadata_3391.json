@@ -1,0 +1,40 @@
+{
+    "name": "Barboach",
+    "description": "An NFT representing the Pokemon Barboach.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/339.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 50
+        },
+        {
+            "trait_type": "Attack",
+            "value": 48
+        },
+        {
+            "trait_type": "Defense",
+            "value": 43
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 46
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 41
+        },
+        {
+            "trait_type": "Speed",
+            "value": 60
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 58
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

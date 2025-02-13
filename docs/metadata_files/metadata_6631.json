@@ -1,0 +1,40 @@
+{
+    "name": "Talonflame",
+    "description": "An NFT representing the Pokemon Talonflame.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/663.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 78
+        },
+        {
+            "trait_type": "Attack",
+            "value": 81
+        },
+        {
+            "trait_type": "Defense",
+            "value": 71
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 74
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 69
+        },
+        {
+            "trait_type": "Speed",
+            "value": 126
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 175
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Uncommon"
+        }
+    ]
+}

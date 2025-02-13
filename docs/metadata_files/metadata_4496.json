@@ -1,0 +1,40 @@
+{
+    "name": "Hippopotas",
+    "description": "An NFT representing the Pokemon Hippopotas.",
+    "copy_number": 6,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/449.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 68
+        },
+        {
+            "trait_type": "Attack",
+            "value": 72
+        },
+        {
+            "trait_type": "Defense",
+            "value": 78
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 38
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 42
+        },
+        {
+            "trait_type": "Speed",
+            "value": 32
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 66
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "name": "Miltank",
+    "description": "An NFT representing the Pokemon Miltank.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/241.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 95
+        },
+        {
+            "trait_type": "Attack",
+            "value": 80
+        },
+        {
+            "trait_type": "Defense",
+            "value": 105
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 40
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 70
+        },
+        {
+            "trait_type": "Speed",
+            "value": 100
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 172
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Uncommon"
+        }
+    ]
+}

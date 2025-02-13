@@ -1,0 +1,40 @@
+{
+    "name": "Palafin-zero",
+    "description": "An NFT representing the Pokemon Palafin-zero.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/964.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 100
+        },
+        {
+            "trait_type": "Attack",
+            "value": 70
+        },
+        {
+            "trait_type": "Defense",
+            "value": 72
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 53
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 62
+        },
+        {
+            "trait_type": "Speed",
+            "value": 100
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 160
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Uncommon"
+        }
+    ]
+}

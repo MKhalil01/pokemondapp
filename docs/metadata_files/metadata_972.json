@@ -1,0 +1,40 @@
+{
+    "name": "Hypno",
+    "description": "An NFT representing the Pokemon Hypno.",
+    "copy_number": 2,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/97.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 85
+        },
+        {
+            "trait_type": "Attack",
+            "value": 73
+        },
+        {
+            "trait_type": "Defense",
+            "value": 70
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 73
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 115
+        },
+        {
+            "trait_type": "Speed",
+            "value": 67
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 169
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Uncommon"
+        }
+    ]
+}

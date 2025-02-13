@@ -1,0 +1,40 @@
+{
+    "name": "Raticate",
+    "description": "An NFT representing the Pokemon Raticate.",
+    "copy_number": 1,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/20.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 55
+        },
+        {
+            "trait_type": "Attack",
+            "value": 81
+        },
+        {
+            "trait_type": "Defense",
+            "value": 60
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 50
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 70
+        },
+        {
+            "trait_type": "Speed",
+            "value": 97
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 145
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "name": "Entei",
+    "description": "An NFT representing the Pokemon Entei.",
+    "copy_number": 7,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/244.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 115
+        },
+        {
+            "trait_type": "Attack",
+            "value": 115
+        },
+        {
+            "trait_type": "Defense",
+            "value": 85
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 90
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 75
+        },
+        {
+            "trait_type": "Speed",
+            "value": 100
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 290
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Rare"
+        }
+    ]
+}

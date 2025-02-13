@@ -1,0 +1,40 @@
+{
+    "name": "Nihilego",
+    "description": "An NFT representing the Pokemon Nihilego.",
+    "copy_number": 8,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/793.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 109
+        },
+        {
+            "trait_type": "Attack",
+            "value": 53
+        },
+        {
+            "trait_type": "Defense",
+            "value": 47
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 127
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 131
+        },
+        {
+            "trait_type": "Speed",
+            "value": 103
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 285
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Rare"
+        }
+    ]
+}

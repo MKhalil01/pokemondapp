@@ -1,0 +1,40 @@
+{
+    "name": "Slowbro",
+    "description": "An NFT representing the Pokemon Slowbro.",
+    "copy_number": 4,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/80.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 95
+        },
+        {
+            "trait_type": "Attack",
+            "value": 75
+        },
+        {
+            "trait_type": "Defense",
+            "value": 110
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 100
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 80
+        },
+        {
+            "trait_type": "Speed",
+            "value": 30
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 172
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Uncommon"
+        }
+    ]
+}

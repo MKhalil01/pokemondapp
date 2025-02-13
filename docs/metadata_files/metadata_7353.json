@@ -1,0 +1,40 @@
+{
+    "name": "Gumshoos",
+    "description": "An NFT representing the Pokemon Gumshoos.",
+    "copy_number": 3,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/735.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 88
+        },
+        {
+            "trait_type": "Attack",
+            "value": 110
+        },
+        {
+            "trait_type": "Defense",
+            "value": 60
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 55
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 60
+        },
+        {
+            "trait_type": "Speed",
+            "value": 45
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 146
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

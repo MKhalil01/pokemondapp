@@ -1,0 +1,40 @@
+{
+    "name": "Gible",
+    "description": "An NFT representing the Pokemon Gible.",
+    "copy_number": 9,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/443.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 58
+        },
+        {
+            "trait_type": "Attack",
+            "value": 70
+        },
+        {
+            "trait_type": "Defense",
+            "value": 45
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 40
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 45
+        },
+        {
+            "trait_type": "Speed",
+            "value": 42
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 60
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}

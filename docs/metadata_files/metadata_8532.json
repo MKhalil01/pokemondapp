@@ -1,0 +1,40 @@
+{
+    "name": "Grapploct",
+    "description": "An NFT representing the Pokemon Grapploct.",
+    "copy_number": 2,
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/853.png",
+    "attributes": [
+        {
+            "trait_type": "Hp",
+            "value": 80
+        },
+        {
+            "trait_type": "Attack",
+            "value": 118
+        },
+        {
+            "trait_type": "Defense",
+            "value": 90
+        },
+        {
+            "trait_type": "Special-attack",
+            "value": 70
+        },
+        {
+            "trait_type": "Special-defense",
+            "value": 80
+        },
+        {
+            "trait_type": "Speed",
+            "value": 42
+        },
+        {
+            "trait_type": "Base Experience",
+            "value": 168
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Uncommon"
+        }
+    ]
+}
