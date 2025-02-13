@@ -127,6 +127,24 @@ The architecture follows a component-based structure:
 
 ## Security Considerations
 
+### Testing Strategy
+The project includes extensive test coverage through a comprehensive test suite (`pokedapp/test/PokemonTrading.t.sol`). The tests can be executed using Forge's testing framework:
+
+```sh
+forge test
+```
+
+The test suite provides thorough coverage of:
+- NFT minting functionality and supply management
+- Fixed price sale operations and payment handling
+- Auction mechanics including bidding, refunds, and timing
+- Sale cancellations and state management
+- Emergency scenarios and system recovery
+- Access control and permission boundaries
+- Edge cases and error conditions
+
+Each component is tested in isolation and in integration with other parts of the system, ensuring robust functionality and security. The tests simulate various user interactions and market conditions to validate system behavior under different scenarios.
+
 ### Reentrancy Protection
 - ReentrancyGuard modifier from OpenZeppelin used on all external functions that handle ETH
 - State changes performed before external calls
@@ -163,21 +181,3 @@ Strategic event logging for critical operations:
   - Return NFTs to sellers
 - Can only be triggered by contract owner
 - Protects users in case of critical vulnerabilities
-
-### Testing Strategy
-The project includes extensive test coverage through a comprehensive test suite (`pokedapp/test/PokemonTrading.t.sol`). The tests can be executed using Forge's testing framework:
-
-```sh
-forge test
-```
-
-The test suite provides thorough coverage of:
-- NFT minting functionality and supply management
-- Fixed price sale operations and payment handling
-- Auction mechanics including bidding, refunds, and timing
-- Sale cancellations and state management
-- Emergency scenarios and system recovery
-- Access control and permission boundaries
-- Edge cases and error conditions
-
-Each component is tested in isolation and in integration with other parts of the system, ensuring robust functionality and security. The tests simulate various user interactions and market conditions to validate system behavior under different scenarios.

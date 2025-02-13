@@ -1,0 +1,26 @@
+# Project Contribution and Development Notes
+
+## Work Distribution
+
+### Mohammed's Contributions
+[List Mohammed's main contributions here]
+
+### Preston's Contributions
+[List Preston's main contributions here]
+
+## AI Tools Used
+- List and describe the AI tools/platforms used during development
+- Include how each tool was utilized
+- Note any limitations or challenges encountered with AI assistance
+
+## Future Improvements
+Areas we would enhance given more time:
+
+### Technical Improvements
+[List technical improvements]
+
+### Feature Enhancements
+[List feature additions/improvements]
+
+### Security Enhancements
+[List security improvements]
