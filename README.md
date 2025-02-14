@@ -78,6 +78,8 @@ The generated metadata files can be found in `docs/metadata_files/` with the fol
     - Base Experience
     - Rarity classification
 
+The files are hosted at [https://mkhalil01.github.io/pokemondapp/metadata_files/](https://mkhalil01.github.io/pokemondapp/metadata_files/).
+
 ### Smart Contract Architecture
 
 The smart contracts, located in the `pokedapp` directory, are built and tested using Foundry, providing a robust foundation for the NFT and trading functionality.
@@ -138,8 +140,6 @@ The architecture follows a component-based structure:
 - **Trading Marketplace**: Central hub for NFT trading activities
 - **Bidding System**: Interface for auction participation and management
 
-[Detailed component breakdown coming soon]
-
 ## Security Considerations
 
 ### Testing Strategy
@@ -172,6 +172,11 @@ Each component is tested in isolation and in integration with other parts of the
   - `saleExists` for sale interactions
 - Clear separation between user and admin capabilities
 - No privileged roles beyond contract owner
+
+### Marketplace Security
+- Marketplace operations are protected by the `onlySeller` modifier
+- Sellers can only interact with their own sales
+- Ensures that third parties cannot arbitrarily cancel sales
 
 ### Integer Safety
 - Automatic overflow/underflow checks in Solidity >=0.8.0
