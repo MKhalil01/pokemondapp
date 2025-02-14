@@ -25,7 +25,7 @@ contract PokemonTradingScript is Script {
         pokemonTrading = new PokemonTrading(address(pokemonNFT));
 
         // Set the base URI for the NFT metadata
-        pokemonNFT.setBaseURI("http://localhost:3000/metadata_files/metadata_");
+        pokemonNFT.setBaseURI("https://mkhalil01.github.io/pokemondapp/metadata_files/metadata_");
 
         console.log("Contracts deployed:");
         console.log("MockVRFCoordinator:", address(mockVRFCoordinator));
