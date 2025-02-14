@@ -13,7 +13,7 @@ import { readContract } from '@wagmi/core';
 import PokemonNFTAbi from '../abis/PokemonNFT.json';
 import Image from 'next/image';
 import ListNFTModal from './ListNFTModal';
-import { SaleType } from '../types/Sale';
+import { SaleType } from '../types/trading';
 import { parseEther } from 'viem';
 import PokemonTradingAbi from '../abis/PokemonTrading.json';
 
