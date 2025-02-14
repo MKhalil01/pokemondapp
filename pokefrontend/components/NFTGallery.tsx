@@ -96,6 +96,7 @@ const NFTGallery: React.FC<NFTGalleryProps> = ({ onCreateListing }) => {
   const [isApproving, setIsApproving] = useState(false);
   const [isListing, setIsListing] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [isApproved, setIsApproved] = useState(false);
 
   // Read balance of user's NFTs
   const { data: balance } = useContractRead({
@@ -169,6 +170,23 @@ const NFTGallery: React.FC<NFTGalleryProps> = ({ onCreateListing }) => {
       console.log('Listing completed:', logs);
     },
   });
+
+  // Add this after the existing contract reads
+  const { data: isTokenApproved } = useContractRead({
+    address: CONTRACT_ADDRESS,
+    abi: PokemonNFTAbi,
+    functionName: 'getApproved',
+    args: selectedTokenId ? [BigInt(selectedTokenId)] : undefined,
+    enabled: Boolean(selectedTokenId),
+    watch: true,
+  });
+
+  // Update useEffect to check approval status when token is selected
+  useEffect(() => {
+    if (selectedTokenId && isTokenApproved) {
+      setIsApproved(isTokenApproved === TRADING_CONTRACT_ADDRESS);
+    }
+  }, [selectedTokenId, isTokenApproved]);
 
   // Fetch token IDs and metadata
   useEffect(() => {
@@ -248,9 +266,10 @@ const NFTGallery: React.FC<NFTGalleryProps> = ({ onCreateListing }) => {
     fetchNFTs();
   }, [address, balance, publicClient]);
 
-  const handleListNFT = async (tokenId: number, price: number, saleType: SaleType) => {
+  const handleApproveNFT = async (tokenId: number) => {
     try {
       setIsApproving(true);
+      setError(null);
       
       if (!approve) {
         throw new Error('Approval function not ready.');
@@ -259,15 +278,26 @@ const NFTGallery: React.FC<NFTGalleryProps> = ({ onCreateListing }) => {
       console.log('Sending approval transaction...');
       approve();
       console.log('Approval sent');
-
-      // TODO: Wait for approval to be confirmed before listing
-
+      
+      // Wait for approval confirmation
+      await approveData?.wait();
+      setIsApproved(true);
+      
+    } catch (error) {
+      console.error('Error in approval:', error);
+      setError(error instanceof Error ? error.message : 'Failed to approve NFT');
+    } finally {
       setIsApproving(false);
-      setIsListing(true);
+    }
+  };
 
-      // Now check if we can list
+  const handleListNFT = async (tokenId: number, price: number, saleType: SaleType) => {
+    try {
+      setIsListing(true);
+      setError(null);
+
       if (!listNFT) {
-        throw new Error('Listing not ready - please try again after approval');
+        throw new Error('Listing not ready');
       }
 
       console.log('Sending listing transaction...');
@@ -277,13 +307,13 @@ const NFTGallery: React.FC<NFTGalleryProps> = ({ onCreateListing }) => {
       // Close modal and update UI
       setIsListModalOpen(false);
       setSelectedTokenId(null);
+      setIsApproved(false);
       onCreateListing(tokenId, price, saleType);
 
     } catch (error) {
-      console.error('Error in process:', error);
-      setError(error instanceof Error ? error.message : 'Failed to complete transaction');
+      console.error('Error in listing:', error);
+      setError(error instanceof Error ? error.message : 'Failed to list NFT');
     } finally {
-      setIsApproving(false);
       setIsListing(false);
     }
   };
@@ -377,12 +407,18 @@ const NFTGallery: React.FC<NFTGalleryProps> = ({ onCreateListing }) => {
           setIsListModalOpen(false);
           setError(null);
           setSelectedTokenId(null);
+          setIsApproved(false);
         }}
         ownedNFTs={nfts}
         onListNFT={handleListNFT}
-        isLoading={isApproving || isListing}
+        onApproveNFT={handleApproveNFT}
+        isLoading={isListing}
+        isApproving={isApproving}
+        isApproved={isApproved || isTokenApproved === TRADING_CONTRACT_ADDRESS}
         error={error}
-        onSelectNFT={setSelectedTokenId}
+        onSelectNFT={(tokenId) => {
+          setSelectedTokenId(tokenId);
+        }}
       />
     </div>
   );
