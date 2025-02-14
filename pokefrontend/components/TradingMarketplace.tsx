@@ -6,12 +6,16 @@ import { useAccount, useContractRead } from 'wagmi';
 import { readContract } from '@wagmi/core';
 import { formatEther } from 'viem';
 import PokemonTradingAbi from '../abis/PokemonTrading.json';
+import PokemonNFTAbi from '../abis/PokemonNFT.json';
+import CancelListingModal from './CancelListingModal';
+
 
 const TRADING_CONTRACT_ADDRESS = '0xeD370F9777eAA47317e90803a6A3c0Ea540B0cE3';
 
 type SaleType = 'fixed' | 'auction';
 
 interface Sale {
+  saleId: number;
   tokenId: number;
   seller: string;
   price: number;
@@ -41,6 +45,8 @@ interface TradingMarketplaceProps {
 const TradingMarketplace: React.FC<TradingMarketplaceProps> = ({ activeSales }) => {
   const { address } = useAccount();
   const [contractSales, setContractSales] = useState<Sale[]>([]);
+  const [selectedSale, setSelectedSale] = useState<Sale | null>(null);
+  const [isCancelModalOpen, setIsCancelModalOpen] = useState(false);
 
   // Keep only the read functionality
   const { data: saleCount } = useContractRead({
@@ -78,6 +84,7 @@ const TradingMarketplace: React.FC<TradingMarketplaceProps> = ({ activeSales }) 
               }, {});
 
               return {
+                saleId: i,
                 tokenId: Number(saleDetails.tokenId),
                 seller: saleDetails.seller,
                 price: Number(formatEther(saleDetails.price)),
@@ -127,7 +134,7 @@ const TradingMarketplace: React.FC<TradingMarketplaceProps> = ({ activeSales }) 
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {contractSales.map((sale) => (
+          {contractSales.map((sale, index) => (
             <div 
               key={sale.tokenId} 
               className={`bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow
@@ -201,10 +208,41 @@ const TradingMarketplace: React.FC<TradingMarketplaceProps> = ({ activeSales }) 
                     <span className="font-medium">{sale.stats.spDefense}</span>
                   </div>
                 </div>
+
+                {address?.toLowerCase() === sale.seller.toLowerCase() && (
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation(); // Prevent card click
+                      setSelectedSale(sale);
+                      setIsCancelModalOpen(true);
+                    }}
+                    className="w-full mt-4 bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600 
+                              transition-colors font-medium"
+                  >
+                    Cancel Sale
+                  </button>
+                )}
               </div>
             </div>
           ))}
         </div>
+      )}
+
+      {selectedSale && (
+        <CancelListingModal
+          isOpen={isCancelModalOpen}
+          onClose={() => {
+            setIsCancelModalOpen(false);
+            setSelectedSale(null);
+          }}
+          saleId={selectedSale.saleId}
+          tokenId={selectedSale.tokenId}
+          nftName={selectedSale.name}
+          image={selectedSale.image}
+          rarity={selectedSale.rarity}
+          saleType={selectedSale.saleType}
+          price={selectedSale.price}
+        />
       )}
     </div>
   );
