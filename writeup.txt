@@ -9,18 +9,5 @@
 [List Preston's main contributions here]
 
 ## AI Tools Used
-- List and describe the AI tools/platforms used during development
-- Include how each tool was utilized
-- Note any limitations or challenges encountered with AI assistance
-
-## Future Improvements
-Areas we would enhance given more time:
-
-### Technical Improvements
-[List technical improvements]
-
-### Feature Enhancements
-[List feature additions/improvements]
-
-### Security Enhancements
-[List security improvements]
+Generative AI was used extensively to help with the development of the project.
+We utilized Claude, ChatGPT, and DeepSeek.
