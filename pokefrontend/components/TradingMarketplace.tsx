@@ -8,6 +8,7 @@ import { formatEther } from 'viem';
 import PokemonTradingAbi from '../abis/PokemonTrading.json';
 import PokemonNFTAbi from '../abis/PokemonNFT.json';
 import CancelListingModal from './CancelListingModal';
+import BuyModal from './BuyModal';
 
 
 const TRADING_CONTRACT_ADDRESS = '0xeD370F9777eAA47317e90803a6A3c0Ea540B0cE3';
@@ -47,6 +48,8 @@ const TradingMarketplace: React.FC<TradingMarketplaceProps> = ({ activeSales }) 
   const [contractSales, setContractSales] = useState<Sale[]>([]);
   const [selectedSale, setSelectedSale] = useState<Sale | null>(null);
   const [isCancelModalOpen, setIsCancelModalOpen] = useState(false);
+  const [selectedBuySale, setSelectedBuySale] = useState<Sale | null>(null);
+  const [isBuyModalOpen, setIsBuyModalOpen] = useState(false);
 
   // Keep only the read functionality
   const { data: saleCount } = useContractRead({
@@ -222,6 +225,20 @@ const TradingMarketplace: React.FC<TradingMarketplaceProps> = ({ activeSales }) 
                     Cancel Sale
                   </button>
                 )}
+
+                {sale.saleType === 'fixed' && sale.seller.toLowerCase() !== address?.toLowerCase() && (
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setSelectedBuySale(sale);
+                      setIsBuyModalOpen(true);
+                    }}
+                    className="w-full mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 
+                              transition-colors font-medium"
+                  >
+                    Buy for {sale.price} ETH
+                  </button>
+                )}
               </div>
             </div>
           ))}
@@ -242,6 +259,22 @@ const TradingMarketplace: React.FC<TradingMarketplaceProps> = ({ activeSales }) 
           rarity={selectedSale.rarity}
           saleType={selectedSale.saleType}
           price={selectedSale.price}
+        />
+      )}
+
+      {selectedBuySale && (
+        <BuyModal
+          isOpen={isBuyModalOpen}
+          onClose={() => {
+            setIsBuyModalOpen(false);
+            setSelectedBuySale(null);
+          }}
+          saleId={selectedBuySale.saleId}
+          tokenId={selectedBuySale.tokenId}
+          nftName={selectedBuySale.name}
+          image={selectedBuySale.image}
+          rarity={selectedBuySale.rarity}
+          price={selectedBuySale.price}
         />
       )}
     </div>
