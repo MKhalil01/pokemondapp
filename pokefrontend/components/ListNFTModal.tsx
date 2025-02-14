@@ -20,12 +20,28 @@ interface ListNFTModalProps {
     };
   }[];
   onListNFT: (tokenId: number, price: number, saleType: SaleType) => void;
+  isLoading?: boolean;
+  error?: string | null;
+  onSelectNFT: (tokenId: number) => void;
 }
 
-const ListNFTModal: React.FC<ListNFTModalProps> = ({ isOpen, onClose, ownedNFTs, onListNFT }) => {
+const ListNFTModal: React.FC<ListNFTModalProps> = ({
+  isOpen,
+  onClose,
+  ownedNFTs,
+  onListNFT,
+  isLoading,
+  error,
+  onSelectNFT
+}) => {
   const [selectedNFT, setSelectedNFT] = useState<number | null>(null);
   const [saleType, setSaleType] = useState<SaleType>('fixed');
   const [price, setPrice] = useState<string>('');
+
+  const handleNFTSelect = (nft: { tokenId: number }) => {
+    setSelectedNFT(nft.tokenId);
+    onSelectNFT(nft.tokenId);
+  };
 
   const handleSubmit = () => {
     if (selectedNFT && price) {
@@ -54,7 +70,7 @@ const ListNFTModal: React.FC<ListNFTModalProps> = ({ isOpen, onClose, ownedNFTs,
                     className={`cursor-pointer rounded-lg p-2 border-2 ${
                       selectedNFT === nft.tokenId ? 'border-blue-500' : 'border-gray-200'
                     }`}
-                    onClick={() => setSelectedNFT(nft.tokenId)}
+                    onClick={() => handleNFTSelect(nft)}
                   >
                     <img 
                       src={nft.image} 
@@ -134,6 +150,12 @@ const ListNFTModal: React.FC<ListNFTModalProps> = ({ isOpen, onClose, ownedNFTs,
               )}
             </div>
 
+            {error && (
+              <div className="mt-4 p-2 bg-red-100 text-red-600 rounded">
+                {error}
+              </div>
+            )}
+
             <div className="flex justify-end gap-4 mt-4 pt-4 border-t">
               <button
                 onClick={onClose}
@@ -143,10 +165,14 @@ const ListNFTModal: React.FC<ListNFTModalProps> = ({ isOpen, onClose, ownedNFTs,
               </button>
               <button
                 onClick={handleSubmit}
-                disabled={!selectedNFT || !price}
-                className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 disabled:opacity-50"
+                disabled={isLoading || !selectedNFT || !price}
+                className={`w-full mt-4 px-4 py-2 rounded ${
+                  isLoading || !selectedNFT || !price
+                    ? 'bg-gray-300 cursor-not-allowed'
+                    : 'bg-blue-500 hover:bg-blue-600 text-white'
+                }`}
               >
-                {saleType === 'fixed' ? 'List for Sale' : 'Start Auction'}
+                {isLoading ? 'Processing...' : 'List NFT'}
               </button>
             </div>
           </div>

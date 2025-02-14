@@ -1,10 +1,21 @@
 // components/NFTGallery.tsx
 import React, { useEffect, useState } from 'react';
-import { useAccount, useContractRead, usePublicClient } from 'wagmi';
+import {
+  useAccount,
+  useContractRead,
+  usePublicClient,
+  useContractWrite,
+  usePrepareContractWrite,
+  useContractEvent,
+  useWaitForTransaction
+} from 'wagmi';
 import { readContract } from '@wagmi/core';
 import PokemonNFTAbi from '../abis/PokemonNFT.json';
 import Image from 'next/image';
 import ListNFTModal from './ListNFTModal';
+import { SaleType } from '../types/Sale';
+import { parseEther } from 'viem';
+import PokemonTradingAbi from '../abis/PokemonTrading.json';
 
 interface PokemonStats {
   hp: number;
@@ -71,6 +82,7 @@ interface NFTGalleryProps {
 }
 
 const CONTRACT_ADDRESS = '0xf4F833c8649F913e251Bdec113bEFED33889e3d1';
+const TRADING_CONTRACT_ADDRESS = '0xeD370F9777eAA47317e90803a6A3c0Ea540B0cE3';
 
 const NFTGallery: React.FC<NFTGalleryProps> = ({ onCreateListing }) => {
   const { address } = useAccount();
@@ -78,6 +90,12 @@ const NFTGallery: React.FC<NFTGalleryProps> = ({ onCreateListing }) => {
   const [loading, setLoading] = useState(true);
   const [isListModalOpen, setIsListModalOpen] = useState(false);
   const publicClient = usePublicClient();
+  const [selectedTokenId, setSelectedTokenId] = useState<number | null>(null);
+  const [selectedPrice, setSelectedPrice] = useState<number | null>(null);
+  const [selectedSaleType, setSelectedSaleType] = useState<SaleType | null>(null);
+  const [isApproving, setIsApproving] = useState(false);
+  const [isListing, setIsListing] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   // Read balance of user's NFTs
   const { data: balance } = useContractRead({
@@ -86,7 +104,70 @@ const NFTGallery: React.FC<NFTGalleryProps> = ({ onCreateListing }) => {
     functionName: 'balanceOf',
     args: [address],
     watch: true,
-    enabled: !!address,
+    enabled: Boolean(address),
+  });
+
+  const { config: approveConfig, error: prepareError } = usePrepareContractWrite({
+    address: CONTRACT_ADDRESS,
+    abi: PokemonNFTAbi,
+    functionName: 'approve',
+    args: selectedTokenId ? [
+      TRADING_CONTRACT_ADDRESS,
+      BigInt(selectedTokenId)
+    ] : undefined,
+    enabled: Boolean(address && selectedTokenId),
+  });
+
+  const { 
+    write: approve,
+    data: approveData,
+    error: approveError
+  } = useContractWrite(approveConfig);
+
+  const { isLoading: isApprovingTx, isSuccess: approveSuccess } = useWaitForTransaction({
+    hash: approveData?.hash,
+  });
+
+  // Watch for Approval event
+  useContractEvent({
+    address: CONTRACT_ADDRESS,
+    abi: PokemonNFTAbi,
+    eventName: 'Approval',
+    listener(logs) {
+      console.log('Approve completed:', logs);
+    },
+  });
+
+  // Prepare listing transaction
+  const { config: listConfig, error: listError } = usePrepareContractWrite({
+    address: TRADING_CONTRACT_ADDRESS,
+    abi: PokemonTradingAbi,
+    functionName: selectedSaleType === 'auction' ? 'createAuctionSale' : 'createFixedPriceSale',
+    args: selectedTokenId && selectedPrice ? [
+      BigInt(selectedTokenId),
+      parseEther(selectedPrice.toString()),
+    ] : undefined,
+    enabled: Boolean(address && selectedTokenId && selectedPrice && selectedSaleType),
+  });
+
+  const { 
+    write: listNFT,
+    data: listData,
+    error: listingError
+  } = useContractWrite(listConfig);
+
+  const { isLoading: isListingTx, isSuccess: listingSuccess } = useWaitForTransaction({
+    hash: listData?.hash,
+  });
+
+  // Watch for Listing event
+  useContractEvent({
+    address: TRADING_CONTRACT_ADDRESS,
+    abi: PokemonTradingAbi,
+    eventName: 'SaleCreated',
+    listener(logs) {
+      console.log('Listing completed:', logs);
+    },
   });
 
   // Fetch token IDs and metadata
@@ -98,77 +179,65 @@ const NFTGallery: React.FC<NFTGalleryProps> = ({ onCreateListing }) => {
       }
 
       try {
-        // Get Transfer events where 'to' is the current address
+        // Get all Transfer events to and from the address
         const transferEvents = await publicClient.getContractEvents({
           address: CONTRACT_ADDRESS,
           abi: PokemonNFTAbi,
           eventName: 'Transfer',
-          args: {
-            to: address
-          },
           fromBlock: 0n
         });
 
-        // Get all token IDs from transfer events
-        const tokenIds = transferEvents
-          .map(event => Number(event.args.tokenId))
-          // Filter out tokens that were later transferred away
-          .filter(async (tokenId) => {
-            const owner = await readContract({
-              address: CONTRACT_ADDRESS,
-              abi: PokemonNFTAbi,
-              functionName: 'ownerOf',
-              args: [BigInt(tokenId)],
-            });
-            return owner.toLowerCase() === address.toLowerCase();
-          });
+        // Create a map to track the current owner of each token
+        const tokenOwnership = new Map<number, string>();
 
-        // Fetch metadata for each token
-        const tokenPromises = tokenIds.map(async id => {
-          try {
-            // Get token URI from contract
-            const uri = await readContract({
-              address: CONTRACT_ADDRESS,
-              abi: PokemonNFTAbi,
-              functionName: 'tokenURI',
-              args: [BigInt(id)],
-            });
-
-            // Fetch metadata from URI
-            const response = await fetch(uri);
-            if (!response.ok) {
-              throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            const data = await response.json();
-
-            // Transform the attribute array into our expected format
-            const attributes = data.attributes.reduce((acc: any, curr: any) => {
-              acc[curr.trait_type.toLowerCase()] = curr.value;
-              return acc;
-            }, {});
-
-            return {
-              name: data.name,
-              image: data.image,
-              rarity: attributes.rarity || 'Common',
-              stats: {
-                hp: attributes.hp || 50,
-                attack: attributes.attack || 50,
-                defense: attributes.defense || 50,
-                speed: attributes.speed || 50,
-                spAttack: attributes['special-attack'] || 50,
-                spDefense: attributes['special-defense'] || 50,
-              },
-              tokenId: id,
-            };
-          } catch (error) {
-            console.error(`Failed to fetch metadata for token #${id}:`, error);
-            return null;
-          }
+        // Process events in chronological order to track current ownership
+        transferEvents.forEach(event => {
+          const tokenId = Number(event.args.tokenId);
+          const to = event.args.to.toLowerCase();
+          tokenOwnership.set(tokenId, to);
         });
 
-        const metadata = (await Promise.all(tokenPromises)).filter((item): item is NFTMetadata => item !== null);
-        setNfts(metadata);
+        // Filter for tokens currently owned by the address
+        const ownedTokenIds = Array.from(tokenOwnership.entries())
+          .filter(([_, owner]) => owner === address.toLowerCase())
+          .map(([tokenId]) => tokenId);
+
+        // Fetch metadata for owned tokens
+        const metadataPromises = ownedTokenIds.map(async (tokenId) => {
+          const uri = await readContract({
+            address: CONTRACT_ADDRESS,
+            abi: PokemonNFTAbi,
+            functionName: 'tokenURI',
+            args: [BigInt(tokenId)],
+          });
+
+          const response = await fetch(uri as string);
+          const metadata = await response.json();
+
+          // Helper function to get attribute value
+          const getAttributeValue = (attributes: any[], traitType: string, defaultValue: number | string) => {
+            const attr = attributes.find(a => a.trait_type.toLowerCase() === traitType.toLowerCase());
+            return attr ? attr.value : defaultValue;
+          };
+
+          return {
+            tokenId,
+            name: metadata.name,
+            image: metadata.image,
+            rarity: getAttributeValue(metadata.attributes, 'rarity', 'Common'),
+            stats: {
+              hp: getAttributeValue(metadata.attributes, 'hp', 50),
+              attack: getAttributeValue(metadata.attributes, 'attack', 50),
+              defense: getAttributeValue(metadata.attributes, 'defense', 50),
+              speed: getAttributeValue(metadata.attributes, 'speed', 50),
+              spAttack: getAttributeValue(metadata.attributes, 'special-attack', 50),
+              spDefense: getAttributeValue(metadata.attributes, 'special-defense', 50),
+            },
+          };
+        });
+
+        const nftMetadata = await Promise.all(metadataPromises);
+        setNfts(nftMetadata);
       } catch (error) {
         console.error('Error fetching NFTs:', error);
       } finally {
@@ -179,11 +248,43 @@ const NFTGallery: React.FC<NFTGalleryProps> = ({ onCreateListing }) => {
     fetchNFTs();
   }, [address, balance, publicClient]);
 
-  const handleListNFT = async (tokenId: number, price: number) => {
+  const handleListNFT = async (tokenId: number, price: number, saleType: SaleType) => {
     try {
-      console.log(`Listing NFT ${tokenId} for ${price} ETH`);
+      setIsApproving(true);
+      
+      if (!approve) {
+        throw new Error('Approval function not ready.');
+      }
+
+      console.log('Sending approval transaction...');
+      approve();
+      console.log('Approval sent');
+
+      // TODO: Wait for approval to be confirmed before listing
+
+      setIsApproving(false);
+      setIsListing(true);
+
+      // Now check if we can list
+      if (!listNFT) {
+        throw new Error('Listing not ready - please try again after approval');
+      }
+
+      console.log('Sending listing transaction...');
+      listNFT();
+      console.log('Listing sent');
+
+      // Close modal and update UI
+      setIsListModalOpen(false);
+      setSelectedTokenId(null);
+      onCreateListing(tokenId, price, saleType);
+
     } catch (error) {
-      console.error('Error listing NFT:', error);
+      console.error('Error in process:', error);
+      setError(error instanceof Error ? error.message : 'Failed to complete transaction');
+    } finally {
+      setIsApproving(false);
+      setIsListing(false);
     }
   };
 
@@ -272,9 +373,16 @@ const NFTGallery: React.FC<NFTGalleryProps> = ({ onCreateListing }) => {
 
       <ListNFTModal
         isOpen={isListModalOpen}
-        onClose={() => setIsListModalOpen(false)}
+        onClose={() => {
+          setIsListModalOpen(false);
+          setError(null);
+          setSelectedTokenId(null);
+        }}
         ownedNFTs={nfts}
-        onListNFT={onCreateListing}
+        onListNFT={handleListNFT}
+        isLoading={isApproving || isListing}
+        error={error}
+        onSelectNFT={setSelectedTokenId}
       />
     </div>
   );
