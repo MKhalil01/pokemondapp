@@ -4,18 +4,11 @@ import {
   useAccount,
   useContractRead,
   usePublicClient,
-  useContractWrite,
-  usePrepareContractWrite,
-  useContractEvent,
-  useWaitForTransaction
 } from 'wagmi';
 import { readContract } from '@wagmi/core';
 import PokemonNFTAbi from '../abis/PokemonNFT.json';
-import Image from 'next/image';
-import ListNFTModal from './ListNFTModal';
-import { SaleType } from '../types/trading';
-import { parseEther } from 'viem';
-import PokemonTradingAbi from '../abis/PokemonTrading.json';
+import ListingModal from './ListingModal';
+
 
 interface PokemonStats {
   hp: number;
@@ -77,26 +70,15 @@ const getCardStyle = (rarity: string) => {
   }
 };
 
-interface NFTGalleryProps {
-  onCreateListing: (tokenId: number, price: number, saleType: SaleType) => void;
-}
-
 const CONTRACT_ADDRESS = '0xf4F833c8649F913e251Bdec113bEFED33889e3d1';
-const TRADING_CONTRACT_ADDRESS = '0xeD370F9777eAA47317e90803a6A3c0Ea540B0cE3';
 
-const NFTGallery: React.FC<NFTGalleryProps> = ({ onCreateListing }) => {
+const NFTGallery: React.FC = () => {
   const { address } = useAccount();
   const [nfts, setNfts] = useState<NFTMetadata[]>([]);
   const [loading, setLoading] = useState(true);
-  const [isListModalOpen, setIsListModalOpen] = useState(false);
   const publicClient = usePublicClient();
-  const [selectedTokenId, setSelectedTokenId] = useState<number | null>(null);
-  const [selectedPrice, setSelectedPrice] = useState<number | null>(null);
-  const [selectedSaleType, setSelectedSaleType] = useState<SaleType | null>(null);
-  const [isApproving, setIsApproving] = useState(false);
-  const [isListing, setIsListing] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [isApproved, setIsApproved] = useState(false);
+  const [selectedNFT, setSelectedNFT] = useState<NFTMetadata | null>(null);
+  const [isListingModalOpen, setIsListingModalOpen] = useState(false);
 
   // Read balance of user's NFTs
   const { data: balance } = useContractRead({
@@ -107,86 +89,6 @@ const NFTGallery: React.FC<NFTGalleryProps> = ({ onCreateListing }) => {
     watch: true,
     enabled: Boolean(address),
   });
-
-  const { config: approveConfig, error: prepareError } = usePrepareContractWrite({
-    address: CONTRACT_ADDRESS,
-    abi: PokemonNFTAbi,
-    functionName: 'approve',
-    args: selectedTokenId ? [
-      TRADING_CONTRACT_ADDRESS,
-      BigInt(selectedTokenId)
-    ] : undefined,
-    enabled: Boolean(address && selectedTokenId),
-  });
-
-  const { 
-    write: approve,
-    data: approveData,
-    error: approveError
-  } = useContractWrite(approveConfig);
-
-  const { isLoading: isApprovingTx, isSuccess: approveSuccess } = useWaitForTransaction({
-    hash: approveData?.hash,
-  });
-
-  // Watch for Approval event
-  useContractEvent({
-    address: CONTRACT_ADDRESS,
-    abi: PokemonNFTAbi,
-    eventName: 'Approval',
-    listener(logs) {
-      console.log('Approve completed:', logs);
-    },
-  });
-
-  // Prepare listing transaction
-  const { config: listConfig, error: listError } = usePrepareContractWrite({
-    address: TRADING_CONTRACT_ADDRESS,
-    abi: PokemonTradingAbi,
-    functionName: selectedSaleType === 'auction' ? 'createAuctionSale' : 'createFixedPriceSale',
-    args: selectedTokenId && selectedPrice ? [
-      BigInt(selectedTokenId),
-      parseEther(selectedPrice.toString()),
-    ] : undefined,
-    enabled: Boolean(address && selectedTokenId && selectedPrice && selectedSaleType),
-  });
-
-  const { 
-    write: listNFT,
-    data: listData,
-    error: listingError
-  } = useContractWrite(listConfig);
-
-  const { isLoading: isListingTx, isSuccess: listingSuccess } = useWaitForTransaction({
-    hash: listData?.hash,
-  });
-
-  // Watch for Listing event
-  useContractEvent({
-    address: TRADING_CONTRACT_ADDRESS,
-    abi: PokemonTradingAbi,
-    eventName: 'SaleCreated',
-    listener(logs) {
-      console.log('Listing completed:', logs);
-    },
-  });
-
-  // Add this after the existing contract reads
-  const { data: isTokenApproved } = useContractRead({
-    address: CONTRACT_ADDRESS,
-    abi: PokemonNFTAbi,
-    functionName: 'getApproved',
-    args: selectedTokenId ? [BigInt(selectedTokenId)] : undefined,
-    enabled: Boolean(selectedTokenId),
-    watch: true,
-  });
-
-  // Update useEffect to check approval status when token is selected
-  useEffect(() => {
-    if (selectedTokenId && isTokenApproved) {
-      setIsApproved(isTokenApproved === TRADING_CONTRACT_ADDRESS);
-    }
-  }, [selectedTokenId, isTokenApproved]);
 
   // Fetch token IDs and metadata
   useEffect(() => {
@@ -266,71 +168,6 @@ const NFTGallery: React.FC<NFTGalleryProps> = ({ onCreateListing }) => {
     fetchNFTs();
   }, [address, balance, publicClient]);
 
-  const handleApproveNFT = async (tokenId: number) => {
-    try {
-      setIsApproving(true);
-      setError(null);
-      
-      if (!approve) {
-        throw new Error('Approval function not ready.');
-      }
-
-      console.log('Sending approval transaction...');
-      approve();
-      console.log('Approval sent');
-      
-      // Wait for approval confirmation
-      await approveData?.wait();
-      setIsApproved(true);
-      
-    } catch (error) {
-      console.error('Error in approval:', error);
-      setError(error instanceof Error ? error.message : 'Failed to approve NFT');
-    } finally {
-      setIsApproving(false);
-    }
-  };
-
-  const handleListNFT = async (tokenId: number, price: number, saleType: SaleType) => {
-    try {
-      setIsListing(true);
-      setError(null);
-
-      if (!listNFT) {
-        throw new Error('Listing not ready');
-      }
-
-      console.log('Sending listing transaction...');
-      listNFT();
-      console.log('Listing sent');
-
-      // Close modal and update UI
-      setIsListModalOpen(false);
-      setSelectedTokenId(null);
-      setIsApproved(false);
-      onCreateListing(tokenId, price, saleType);
-
-    } catch (error) {
-      console.error('Error in listing:', error);
-      setError(error instanceof Error ? error.message : 'Failed to list NFT');
-    } finally {
-      setIsListing(false);
-    }
-  };
-
-  const getRarityStyle = (rarity: string) => {
-    switch (rarity.toLowerCase()) {
-      case 'legendary':
-        return 'bg-gradient-to-r from-orange-400 via-amber-500 to-orange-400 text-white font-bold animate-pulse shadow-lg shadow-amber-200';
-      case 'rare':
-        return 'bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold shadow-md';
-      case 'uncommon':
-        return 'bg-gradient-to-r from-green-400 to-emerald-500 text-white';
-      default: // Common
-        return 'bg-gray-100 text-gray-600';
-    }
-  };
-
   if (!address) {
     return (
       <div className="text-center py-8">
@@ -359,67 +196,55 @@ const NFTGallery: React.FC<NFTGalleryProps> = ({ onCreateListing }) => {
     <div className="container mx-auto px-6 py-8">
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold">My Pokemon Collection</h1>
-        <button
-          onClick={() => setIsListModalOpen(true)}
-          className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md transition-colors"
-        >
-          List NFT
-        </button>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {nfts.map((nft) => (
           <div 
-            key={nft.tokenId}
-            className={`rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow 
-              ${getCardStyle(nft.rarity)}`}
-          >
-            <img 
-              src={nft.image} 
-              alt={nft.name}
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-4">
-              <div className="flex justify-between items-start mb-2">
-                <h3 className="font-bold text-lg">{nft.name}</h3>
-                <span className={`px-3 py-1 text-xs rounded-full ${getRarityStyle(nft.rarity)} 
-                  transition-all duration-300 hover:scale-105`}>
-                  {nft.rarity}
-                </span>
-              </div>
-              
-              <div className="mt-4 space-y-2">
-                <StatBar value={nft.stats.hp} maxValue={MAX_STATS.hp} label="HP" />
-                <StatBar value={nft.stats.attack} maxValue={MAX_STATS.attack} label="ATK" />
-                <StatBar value={nft.stats.defense} maxValue={MAX_STATS.defense} label="DEF" />
-                <StatBar value={nft.stats.speed} maxValue={MAX_STATS.speed} label="SPD" />
-                <StatBar value={nft.stats.spAttack} maxValue={MAX_STATS.spAttack} label="SP.A" />
-                <StatBar value={nft.stats.spDefense} maxValue={MAX_STATS.spDefense} label="SP.D" />
-              </div>
+          key={nft.tokenId}
+          className={`rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer
+            ${getCardStyle(nft.rarity)}`}
+          onClick={() => {
+            setSelectedNFT(nft);
+            setIsListingModalOpen(true);
+          }}
+        >
+          <img 
+            src={nft.image} 
+            alt={nft.name}
+            className="w-full h-48 object-cover"
+          />
+          <div className="p-4">
+            <div className="flex justify-between items-start mb-2">
+              <h3 className="font-bold text-lg">{nft.name}</h3>
+            </div>
+            
+            <div className="mt-4 space-y-2">
+              <StatBar value={nft.stats.hp} maxValue={MAX_STATS.hp} label="HP" />
+              <StatBar value={nft.stats.attack} maxValue={MAX_STATS.attack} label="ATK" />
+              <StatBar value={nft.stats.defense} maxValue={MAX_STATS.defense} label="DEF" />
+              <StatBar value={nft.stats.speed} maxValue={MAX_STATS.speed} label="SPD" />
+              <StatBar value={nft.stats.spAttack} maxValue={MAX_STATS.spAttack} label="SP.A" />
+              <StatBar value={nft.stats.spDefense} maxValue={MAX_STATS.spDefense} label="SP.D" />
             </div>
           </div>
+        </div>
         ))}
       </div>
 
-      <ListNFTModal
-        isOpen={isListModalOpen}
-        onClose={() => {
-          setIsListModalOpen(false);
-          setError(null);
-          setSelectedTokenId(null);
-          setIsApproved(false);
-        }}
-        ownedNFTs={nfts}
-        onListNFT={handleListNFT}
-        onApproveNFT={handleApproveNFT}
-        isLoading={isListing}
-        isApproving={isApproving}
-        isApproved={isApproved || isTokenApproved === TRADING_CONTRACT_ADDRESS}
-        error={error}
-        onSelectNFT={(tokenId) => {
-          setSelectedTokenId(tokenId);
-        }}
-      />
+      {selectedNFT && (
+  <ListingModal
+    isOpen={isListingModalOpen}
+    onClose={() => {
+      setIsListingModalOpen(false);
+      setSelectedNFT(null);
+    }}
+    tokenId={selectedNFT.tokenId}
+    nftName={selectedNFT.name}
+    image={selectedNFT.image}
+    rarity={selectedNFT.rarity}
+  />
+)}
     </div>
   );
 };
