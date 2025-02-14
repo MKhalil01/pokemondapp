@@ -119,6 +119,10 @@ forge script script/PokemonTrading.s.sol --rpc-url $SEPOLIA_RPC_URL --private-ke
 ```
 Replace `$SEPOLIA_RPC_URL` with your Sepolia RPC provider URL and `$PRIVATE_KEY` with the private key of your deployer account.
 
+Our contracts are deployed to the Sepolia testnet at the following addresses:
+- PokemonNFT: [0xf4F833c8649F913e251Bdec113bEFED33889e3d1](https://sepolia.etherscan.io/address/0xf4F833c8649F913e251Bdec113bEFED33889e3d1)
+- PokemonTrading: [0xeD370F9777eAA47317e90803a6A3c0Ea540B0cE3](https://sepolia.etherscan.io/address/0xeD370F9777eAA47317e90803a6A3c0Ea540B0cE3)
+
 #### Testing File
 The `test/PokemonTrading.t.sol` provides comprehensive coverage of core functionality and security measures. Further details can be found in the Security Considerations section below.
 
