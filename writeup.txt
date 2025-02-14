@@ -1,0 +1,13 @@
+# Project Contribution and Development Notes
+
+## Work Distribution
+
+### Mohammed's Contributions
+[List Mohammed's main contributions here]
+
+### Preston's Contributions
+[List Preston's main contributions here]
+
+## AI Tools Used
+Generative AI was used extensively to help with the development of the project.
+We utilized Claude, ChatGPT, and DeepSeek.
