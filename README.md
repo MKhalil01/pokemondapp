@@ -107,6 +107,17 @@ The project consists of two main smart contracts:
 The `script/PokemonTrading.s.sol` handles contract deployment and initialization:
 - Deploys MockVRFCoordinator, PokemonNFT, and PokemonTrading contracts
 - Sets up the NFT metadata base URI
+- We deployed the contracts to the **Sepolia testnet** for testing and verification
+  - Uses Foundry's `forge script` command to deploy contracts
+  - Requires a funded Sepolia account with ETH for gas fees
+  - Configured to use an RPC endpoint for Sepolia
+  - Verifies the deployed contracts on [Etherscan Sepolia](https://sepolia.etherscan.io/) for transparency and accessibility
+
+To deploy the contracts to Sepolia, run the following command:
+```sh
+forge script script/PokemonTrading.s.sol --rpc-url $SEPOLIA_RPC_URL --private-key $PRIVATE_KEY --broadcast
+```
+Replace `$SEPOLIA_RPC_URL` with your Sepolia RPC provider URL and `$PRIVATE_KEY` with the private key of your deployer account.
 
 #### Testing File
 The `test/PokemonTrading.t.sol` provides comprehensive coverage of core functionality and security measures. Further details can be found in the Security Considerations section below.
