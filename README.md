@@ -140,8 +140,6 @@ The architecture follows a component-based structure:
 - **Trading Marketplace**: Central hub for NFT trading activities
 - **Bidding System**: Interface for auction participation and management
 
-[Detailed component breakdown coming soon]
-
 ## Security Considerations
 
 ### Testing Strategy
