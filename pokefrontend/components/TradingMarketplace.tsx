@@ -9,6 +9,7 @@ import PokemonTradingAbi from '../abis/PokemonTrading.json';
 import PokemonNFTAbi from '../abis/PokemonNFT.json';
 import CancelListingModal from './CancelListingModal';
 import BuyModal from './BuyModal';
+import BidModal from './BidModal';
 
 
 const TRADING_CONTRACT_ADDRESS = '0xeD370F9777eAA47317e90803a6A3c0Ea540B0cE3';
@@ -50,6 +51,8 @@ const TradingMarketplace: React.FC<TradingMarketplaceProps> = ({ activeSales }) 
   const [isCancelModalOpen, setIsCancelModalOpen] = useState(false);
   const [selectedBuySale, setSelectedBuySale] = useState<Sale | null>(null);
   const [isBuyModalOpen, setIsBuyModalOpen] = useState(false);
+  const [selectedBidSale, setSelectedBidSale] = useState<Sale | null>(null);
+  const [isBidModalOpen, setIsBidModalOpen] = useState(false);
 
   // Keep only the read functionality
   const { data: saleCount } = useContractRead({
@@ -239,6 +242,22 @@ const TradingMarketplace: React.FC<TradingMarketplaceProps> = ({ activeSales }) 
                     Buy for {sale.price} ETH
                   </button>
                 )}
+
+                {sale.saleType === 'auction' && (
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setSelectedBidSale(sale);
+                      setIsBidModalOpen(true);
+                    }}
+                    className="w-full mt-4 bg-purple-500 text-white py-2 px-4 rounded hover:bg-purple-600 
+                              transition-colors font-medium"
+                  >
+                    {sale.seller.toLowerCase() === address?.toLowerCase() 
+                      ? `Accept Highest Bid (${sale.highestBid} ETH)`
+                      : `Place Bid (Min: ${sale.minimumBid} ETH)`}
+                  </button>
+                )}
               </div>
             </div>
           ))}
@@ -275,6 +294,24 @@ const TradingMarketplace: React.FC<TradingMarketplaceProps> = ({ activeSales }) 
           image={selectedBuySale.image}
           rarity={selectedBuySale.rarity}
           price={selectedBuySale.price}
+        />
+      )}
+
+      {selectedBidSale && (
+        <BidModal
+          isOpen={isBidModalOpen}
+          onClose={() => {
+            setIsBidModalOpen(false);
+            setSelectedBidSale(null);
+          }}
+          saleId={selectedBidSale.saleId}
+          tokenId={selectedBidSale.tokenId}
+          nftName={selectedBidSale.name}
+          image={selectedBidSale.image}
+          rarity={selectedBidSale.rarity}
+          minimumBid={selectedBidSale.minimumBid || 0}
+          currentHighestBid={selectedBidSale.highestBid || 0}
+          isSeller={selectedBidSale.seller.toLowerCase() === address?.toLowerCase()}
         />
       )}
     </div>
