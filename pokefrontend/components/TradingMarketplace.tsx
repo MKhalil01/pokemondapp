@@ -2,10 +2,9 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import CountdownTimer from './CountdownTimer';
-import { useAccount, useContractRead, useContractWrite, usePrepareContractWrite } from 'wagmi';
+import { useAccount, useContractRead } from 'wagmi';
 import { readContract } from '@wagmi/core';
-import { formatEther, parseEther } from 'viem';
-import BidModal from './BidModal';
+import { formatEther } from 'viem';
 import PokemonTradingAbi from '../abis/PokemonTrading.json';
 
 const TRADING_CONTRACT_ADDRESS = '0xeD370F9777eAA47317e90803a6A3c0Ea540B0cE3';
@@ -28,46 +27,28 @@ interface Sale {
     spAttack: number;
     spDefense: number;
   };
-  // Auction specific fields
   minimumBid?: number;
   highestBid?: number;
   highestBidder?: string;
   endTime?: number;
 }
 
+// Simplified props - removed trading-related props
 interface TradingMarketplaceProps {
   activeSales: Sale[];
-  onCancelSale: (tokenId: number) => void;
-  onPlaceBid: (tokenId: number, bidAmount: number) => void;
-  onAcceptBid: (tokenId: number) => void;
 }
 
-const TradingMarketplace: React.FC<TradingMarketplaceProps> = ({ 
-  activeSales, 
-  onCancelSale,
-  onPlaceBid,
-  onAcceptBid
-}) => {
+const TradingMarketplace: React.FC<TradingMarketplaceProps> = ({ activeSales }) => {
   const { address } = useAccount();
-  const [selectedAuction, setSelectedAuction] = useState<Sale | null>(null);
   const [contractSales, setContractSales] = useState<Sale[]>([]);
 
-  // Read sale count from contract
+  // Keep only the read functionality
   const { data: saleCount } = useContractRead({
     address: TRADING_CONTRACT_ADDRESS,
     abi: PokemonTradingAbi,
     functionName: 'saleCount',
     watch: true,
   });
-
-  // Add prepare and write hooks for cancel sale
-  const { config: cancelConfig } = usePrepareContractWrite({
-    address: TRADING_CONTRACT_ADDRESS,
-    abi: PokemonTradingAbi,
-    functionName: 'cancelSale',
-  });
-
-  const { write: cancelSale } = useContractWrite(cancelConfig);
 
   // Fetch individual sale details
   useEffect(() => {
@@ -136,46 +117,9 @@ const TradingMarketplace: React.FC<TradingMarketplaceProps> = ({
     fetchSales();
   }, [saleCount]);
 
-  const isOwner = (seller: string) => 
-    address && seller.toLowerCase() === address.toLowerCase();
-
-  const handleActionClick = (sale: Sale) => {
-    if (sale.saleType === 'auction') {
-      setSelectedAuction(sale);
-    } else {
-      // TODO: Handle fixed price purchase
-      console.log('Purchasing NFT at fixed price:', sale.price);
-    }
-  };
-
-  // Modify the cancel sale handler
-  const handleCancelSale = async (tokenId: number) => {
-    try {
-      // Find the sale index by iterating through sales until we find matching tokenId
-      for (let i = 0; i < Number(saleCount); i++) {
-        const saleDetails = await readContract({
-          address: TRADING_CONTRACT_ADDRESS,
-          abi: PokemonTradingAbi,
-          functionName: 'getSaleDetails',
-          args: [BigInt(i)],
-        });
-
-        if (saleDetails && saleDetails.tokenId === BigInt(tokenId) && saleDetails.active) {
-          await cancelSale?.({
-            args: [BigInt(i)], // Use the index as saleId
-          });
-          onCancelSale(tokenId);
-          return;
-        }
-      }
-    } catch (error) {
-      console.error('Error canceling sale:', error);
-    }
-  };
-
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8">Pokemon Trading Marketplace</h1>
+      <h1 className="text-3xl font-bold mb-8">Pokemon Marketplace Listings</h1>
       
       {contractSales.length === 0 ? (
         <div className="text-center py-12 text-gray-500">
@@ -257,55 +201,10 @@ const TradingMarketplace: React.FC<TradingMarketplaceProps> = ({
                     <span className="font-medium">{sale.stats.spDefense}</span>
                   </div>
                 </div>
-
-                <div className="flex gap-2">
-                  {isOwner(sale.seller) ? (
-                    <>
-                      {sale.saleType === 'auction' && sale.highestBid ? (
-                        <button
-                          onClick={() => onAcceptBid(sale.tokenId)}
-                          className="w-full bg-green-500 text-white py-2 px-4 rounded 
-                                    hover:bg-green-600 transition-colors"
-                        >
-                          Accept Bid ({sale.highestBid} ETH)
-                        </button>
-                      ) : (
-                        <button
-                          onClick={() => handleCancelSale(sale.tokenId)}
-                          className="w-full bg-red-500 text-white py-2 px-4 rounded 
-                                    hover:bg-red-600 transition-colors"
-                        >
-                          Cancel Sale
-                        </button>
-                      )}
-                    </>
-                  ) : (
-                    <button
-                      onClick={() => handleActionClick(sale)}
-                      className="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 
-                                transition-colors"
-                    >
-                      {sale.saleType === 'fixed' ? 'Buy Now' : 'Place Bid'}
-                    </button>
-                  )}
-                </div>
               </div>
             </div>
           ))}
         </div>
-      )}
-
-      {selectedAuction && (
-        <BidModal
-          isOpen={!!selectedAuction}
-          onClose={() => setSelectedAuction(null)}
-          tokenId={selectedAuction.tokenId}
-          nftName={selectedAuction.name}
-          image={selectedAuction.image}
-          minimumBid={selectedAuction.minimumBid || 0}
-          highestBid={selectedAuction.highestBid || 0}
-          onPlaceBid={onPlaceBid}
-        />
       )}
     </div>
   );

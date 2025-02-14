@@ -68,35 +68,6 @@ const ListingModal: React.FC<ListingModalProps> = ({
     }
   };
 
-  const handleCancelSale = async (tokenId: number) => {
-    try {
-      // Find the sale index
-      for (let i = 0; i < Number(saleCount); i++) {
-        const saleDetails = await readContract({
-          address: TRADING_CONTRACT_ADDRESS,
-          abi: PokemonTradingAbi,
-          functionName: 'getSaleDetails',
-          args: [BigInt(i)],
-        });
-
-        if (saleDetails && saleDetails.tokenId === BigInt(tokenId) && saleDetails.active) {
-          // Call the contract's cancelSale function
-          await cancelSale?.({
-            args: [BigInt(i)], // Use the index as saleId
-          });
-          
-          // Wait for the transaction to be mined
-          // Only call onCancelSale callback after successful transaction
-          onCancelSale(tokenId);
-          return;
-        }
-      }
-    } catch (error) {
-      console.error('Error canceling sale:', error);
-      // You might want to add some error UI feedback here
-    }
-  };
-
   if (!isOpen) return null;
 
   return (
