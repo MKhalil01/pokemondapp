@@ -1,118 +1,159 @@
 import React, { useState } from 'react';
+import { useContractWrite, usePrepareContractWrite } from 'wagmi';
+import { parseEther } from 'viem';
+import PokemonTradingAbi from '../abis/PokemonTrading.json';
+
+const TRADING_CONTRACT_ADDRESS = '0xeD370F9777eAA47317e90803a6A3c0Ea540B0cE3';
 
 interface BidModalProps {
   isOpen: boolean;
   onClose: () => void;
+  saleId: number;
   tokenId: number;
   nftName: string;
   image: string;
+  rarity: string;
   minimumBid: number;
-  highestBid: number;
-  onPlaceBid: (tokenId: number, bidAmount: number) => void;
+  currentHighestBid: number;
+  isSeller: boolean;
 }
 
 const BidModal: React.FC<BidModalProps> = ({
   isOpen,
   onClose,
+  saleId,
   tokenId,
   nftName,
   image,
+  rarity,
   minimumBid,
-  highestBid,
-  onPlaceBid,
+  currentHighestBid,
+  isSeller,
 }) => {
-  const minRequired = Math.max(minimumBid, highestBid || 0);
-  const [bidAmount, setBidAmount] = useState<string>(minRequired.toString());
+  const [bidAmount, setBidAmount] = useState<string>('');
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = () => {
-    const amount = parseFloat(bidAmount);
-    if (amount > minRequired) {
-      onPlaceBid(tokenId, amount);
+  // Prepare bid transaction
+  const { config: bidConfig, error: prepareBidError } = usePrepareContractWrite({
+    address: TRADING_CONTRACT_ADDRESS,
+    abi: PokemonTradingAbi,
+    functionName: 'bid',
+    args: [BigInt(saleId)],
+    value: parseEther(bidAmount || '0'),
+    enabled: !isSeller && Boolean(bidAmount),
+  });
+
+  // Prepare accept bid transaction
+  const { config: acceptConfig, error: prepareAcceptError } = usePrepareContractWrite({
+    address: TRADING_CONTRACT_ADDRESS,
+    abi: PokemonTradingAbi,
+    functionName: 'acceptHighestBid',
+    args: [BigInt(saleId)],
+    enabled: isSeller,
+  });
+
+  const { write: placeBid, isLoading: isBidLoading } = useContractWrite(bidConfig);
+  const { write: acceptBid, isLoading: isAcceptLoading } = useContractWrite(acceptConfig);
+
+  const handleAction = async () => {
+    try {
+      setError(null);
+      if (isSeller) {
+        if (!acceptBid) throw new Error("Unable to accept bid at this time");
+        await acceptBid();
+      } else {
+        if (!placeBid || !bidAmount) throw new Error("Unable to place bid at this time");
+        if (parseFloat(bidAmount) <= currentHighestBid) {
+          throw new Error("Bid must be higher than current highest bid");
+        }
+        if (parseFloat(bidAmount) < minimumBid) {
+          throw new Error("Bid must be at least the minimum bid amount");
+        }
+        await placeBid();
+      }
       onClose();
-      setBidAmount(minRequired.toString());
+    } catch (err) {
+      console.error('Error with bid action:', err);
+      setError(err instanceof Error ? err.message : 'Failed to process bid action');
     }
   };
 
+  if (!isOpen) return null;
+
   return (
-    <div className={`fixed inset-0 ${isOpen ? 'block' : 'hidden'}`}>
-      <div className="absolute inset-0 bg-black opacity-50" onClick={onClose}></div>
-      <div className="fixed inset-0 overflow-y-auto">
-        <div className="flex min-h-full items-center justify-center p-4">
-          <div className="relative bg-white rounded-lg w-full max-w-md p-6">
-            <h2 className="text-2xl font-bold mb-4">Place Bid</h2>
-            
-            <div className="mb-6">
-              <div className="flex items-center space-x-4">
-                <img 
-                  src={image} 
-                  alt={nftName}
-                  className="w-24 h-24 object-cover rounded"
-                />
-                <div>
-                  <h3 className="font-semibold text-lg">{nftName}</h3>
-                  <p className="text-sm text-gray-500">#{tokenId}</p>
-                </div>
-              </div>
-            </div>
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+      <div className="bg-white rounded-lg p-6 max-w-md w-full">
+        <div className="flex justify-between items-start mb-4">
+          <h2 className="text-xl font-bold">
+            {isSeller ? 'Accept Highest Bid' : 'Place Bid'}
+          </h2>
+          <button onClick={onClose} className="text-gray-500 hover:text-gray-700">
+            ✕
+          </button>
+        </div>
 
-            <div className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Current Highest Bid
-                </label>
-                <p className="text-lg font-semibold">
-                  {highestBid ? `${highestBid} ETH` : 'No bids yet'}
-                </p>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Minimum Required Bid: {minRequired} ETH
-                </label>
-                <input
-                  type="number"
-                  step="0.01"
-                  min="0"
-                  value={bidAmount}
-                  onChange={(e) => {
-                    const value = parseFloat(e.target.value);
-                    if (value >= 0 || e.target.value === '') {
-                      setBidAmount(e.target.value);
-                    }
-                  }}
-                  className="w-full p-2 border rounded"
-                  placeholder={`Enter bid amount (current highest: ${minRequired} ETH)`}
-                  onKeyDown={(e) => {
-                    if (e.key === '-' || e.key === 'e') {
-                      e.preventDefault();
-                    }
-                  }}
-                />
-                {bidAmount && parseFloat(bidAmount) <= minRequired && (
-                  <p className="mt-1 text-sm text-red-500">
-                    Bid must be higher than {minRequired} ETH
-                  </p>
-                )}
-              </div>
-            </div>
-
-            <div className="flex justify-end gap-4 mt-6 pt-4 border-t">
-              <button
-                onClick={onClose}
-                className="px-4 py-2 text-gray-600 hover:text-gray-800"
-              >
-                Cancel
-              </button>
-              <button
-                onClick={handleSubmit}
-                disabled={!bidAmount || parseFloat(bidAmount) <= minRequired}
-                className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 
-                          transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                Place Bid
-              </button>
-            </div>
+        <div className="mb-4">
+          <img src={image} alt={nftName} className="w-32 h-32 object-contain mx-auto" />
+          <div className="text-center mt-2">
+            <span className={`px-2 py-1 rounded-full text-sm ${
+              rarity === 'Legendary' ? 'bg-purple-200' :
+              rarity === 'Rare' ? 'bg-blue-200' :
+              'bg-gray-200'
+            }`}>
+              {rarity}
+            </span>
           </div>
+        </div>
+
+        <div className="mb-6">
+          {!isSeller && (
+            <div className="mb-4">
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Your Bid Amount (ETH)
+              </label>
+              <input
+                type="number"
+                step="0.001"
+                min={minimumBid}
+                value={bidAmount}
+                onChange={(e) => setBidAmount(e.target.value)}
+                className="w-full p-2 border rounded focus:ring-2 focus:ring-blue-500"
+                placeholder={`Min bid: ${minimumBid} ETH`}
+              />
+            </div>
+          )}
+          
+          <div className="text-sm text-gray-600 mb-2">
+            Current Highest Bid: {currentHighestBid} ETH
+          </div>
+          <div className="text-sm text-gray-600 mb-2">
+            Minimum Bid: {minimumBid} ETH
+          </div>
+          
+          {(error || prepareBidError || prepareAcceptError) && (
+            <p className="text-center text-red-500 text-sm mt-2">
+              {error || prepareBidError?.message || prepareAcceptError?.message}
+            </p>
+          )}
+        </div>
+
+        <div className="flex justify-end gap-4">
+          <button
+            onClick={onClose}
+            className="px-4 py-2 text-gray-600 hover:text-gray-800"
+            disabled={isBidLoading || isAcceptLoading}
+          >
+            Cancel
+          </button>
+          <button
+            onClick={handleAction}
+            disabled={(!placeBid && !acceptBid) || isBidLoading || isAcceptLoading}
+            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 
+                      transition-colors disabled:bg-blue-300 disabled:cursor-not-allowed"
+          >
+            {isBidLoading || isAcceptLoading ? 'Processing...' : 
+             isSeller ? 'Accept Highest Bid' : 'Place Bid'}
+          </button>
         </div>
       </div>
     </div>
