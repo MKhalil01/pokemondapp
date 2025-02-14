@@ -20,7 +20,10 @@ interface ListNFTModalProps {
     };
   }[];
   onListNFT: (tokenId: number, price: number, saleType: SaleType) => void;
+  onApproveNFT: (tokenId: number) => void;
   isLoading?: boolean;
+  isApproving?: boolean;
+  isApproved?: boolean;
   error?: string | null;
   onSelectNFT: (tokenId: number) => void;
 }
@@ -30,7 +33,10 @@ const ListNFTModal: React.FC<ListNFTModalProps> = ({
   onClose,
   ownedNFTs,
   onListNFT,
+  onApproveNFT,
   isLoading,
+  isApproving,
+  isApproved,
   error,
   onSelectNFT
 }) => {
@@ -156,24 +162,41 @@ const ListNFTModal: React.FC<ListNFTModalProps> = ({
               </div>
             )}
 
-            <div className="flex justify-end gap-4 mt-4 pt-4 border-t">
+            <div className="mt-6 space-y-4">
               <button
                 onClick={onClose}
-                className="px-4 py-2 text-gray-600 hover:text-gray-800"
+                className="w-full px-4 py-2 text-gray-600 hover:text-gray-800 border border-gray-300 rounded"
               >
                 Cancel
               </button>
-              <button
-                onClick={handleSubmit}
-                disabled={isLoading || !selectedNFT || !price}
-                className={`w-full mt-4 px-4 py-2 rounded ${
-                  isLoading || !selectedNFT || !price
-                    ? 'bg-gray-300 cursor-not-allowed'
-                    : 'bg-blue-500 hover:bg-blue-600 text-white'
-                }`}
-              >
-                {isLoading ? 'Processing...' : 'List NFT'}
-              </button>
+              
+              {selectedNFT && (
+                isApproved ? (
+                  <button
+                    onClick={handleSubmit}
+                    disabled={isLoading || !selectedNFT || !price}
+                    className={`w-full px-4 py-2 rounded ${
+                      isLoading || !selectedNFT || !price
+                        ? 'bg-gray-300 cursor-not-allowed'
+                        : 'bg-blue-500 hover:bg-blue-600 text-white'
+                    }`}
+                  >
+                    {isLoading ? 'Processing...' : 'List NFT'}
+                  </button>
+                ) : (
+                  <button
+                    onClick={() => onApproveNFT(selectedNFT)}
+                    disabled={isApproving || !selectedNFT}
+                    className={`w-full px-4 py-2 rounded ${
+                      isApproving || !selectedNFT
+                        ? 'bg-gray-300 cursor-not-allowed'
+                        : 'bg-green-500 hover:bg-green-600 text-white'
+                    }`}
+                  >
+                    {isApproving ? 'Approving...' : 'Approve NFT'}
+                  </button>
+                )
+              )}
             </div>
           </div>
         </div>
